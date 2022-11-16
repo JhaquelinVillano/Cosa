@@ -16,13 +16,11 @@ namespace Proyecto.Entradas_y_Salidas
     public partial class frmSalidas : Form
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
-        Excel export = new Excel();
-        MySqlConnection conexionDB = Conexion.conexion();
         public frmSalidas()
         {
             InitializeComponent();
             inventario.cargarCategorias(cbxNombreArticulo);
-            txtCodigo.Enabled = false;
+            inventario.cargarID(cbxID);
             inventario.actualizarSalida(dgvSalidas);
         }
 
@@ -66,8 +64,9 @@ namespace Proyecto.Entradas_y_Salidas
             //Guardando la fecha en dato tipo string con formato
             fechita = fecha.ToShortDateString().ToString();
             //Metodo
-            inventario.registroSalida(cbxNombreArticulo.Text, txtCodigo.Text, int.Parse(txtCantidad.Text), fechita);
+            inventario.registroSalida(cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
+            inventario.cargarID(cbxID);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -77,7 +76,8 @@ namespace Proyecto.Entradas_y_Salidas
             DateTime fecha = DateTime.Today;
             //Guardando la fecha en dato tipo string con formato
             fechita = fecha.ToShortDateString().ToString();
-            inventario.modificarSalida(cbxNombreArticulo.Text, txtCodigo.Text, int.Parse(txtCantidad.Text), fechita);
+            inventario.modificarSalida(int.Parse(cbxID.Text), cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
+            inventario.cargarID(cbxID);
             inventario.actualizarSalida(dgvSalidas);
         }
 
@@ -88,29 +88,18 @@ namespace Proyecto.Entradas_y_Salidas
 
         private void cbxNombreArticulo_SelectedIndexChanged(object sender, EventArgs e)
         {   
-            //inventario.RellenarSalida(cbxNombreArticulo.Text, txtCodigo.Text); 
-            string sql = "select * from entradas where nombreArticulo_e='" + cbxNombreArticulo.Text + "'";
-            try
-            {
-                conexionDB.Open();
-                //Ejecutando comando
-                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
-                MySqlDataReader dr = comando.ExecuteReader();
-                if (dr.Read() == true)
-                {   //Agarrando variable de la base
-                    txtCodigo.Text = dr["codigoArticulo_e"].ToString();
-                }
-                conexionDB.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar: " + ex.Message);
-            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            inventario.eliminarSalidas(txtCodigo.Text);
+            inventario.eliminarSalidas(int.Parse(cbxID.Text));
+            inventario.cargarID(cbxID);
+            inventario.actualizarSalida(dgvSalidas);
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

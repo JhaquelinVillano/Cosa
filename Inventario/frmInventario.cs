@@ -1,5 +1,6 @@
 ﻿using Proyecto.Entradas_y_Salidas;
 using Proyecto.Menu;
+using Proyecto.Metodos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,12 @@ namespace Proyecto.Inventario
 {
     public partial class frmInventario : Form
     {
+        Metodos.Inventa inventario = new Metodos.Inventa();
+        Excel export = new Excel();
         public frmInventario()
         {
             InitializeComponent();
+            inventario.actualizarInventario(dgvInventario);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -63,6 +67,16 @@ namespace Proyecto.Inventario
             frmSalidas salidas = new frmSalidas();
             salidas.Show();
             this.Hide();
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picExcel_Click(object sender, EventArgs e)
+        {   //Llamando metodo
+            export.exportar(dgvInventario);
         }
     }
 }

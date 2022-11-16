@@ -439,6 +439,7 @@
             this.txtConsultar.TabIndex = 73;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConsultar_KeyDown);
             // 
             // btnConsultar
             // 
@@ -463,6 +464,7 @@
             this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnConsultar.UseAccentColor = false;
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // picExcel
             // 
@@ -521,6 +523,7 @@
             this.Name = "frmEntradas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmEntradas_Load);
             this.pnlInventario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();

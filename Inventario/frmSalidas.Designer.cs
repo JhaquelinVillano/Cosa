@@ -43,12 +43,12 @@
             this.btnRegistrar = new MaterialSkin.Controls.MaterialButton();
             this.lblSalidas = new System.Windows.Forms.TextBox();
             this.txtCantidad = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtCodigo = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCantidad = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.TextBox();
             this.picSalidas = new System.Windows.Forms.PictureBox();
             this.cbxNombreArticulo = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbxID = new MaterialSkin.Controls.MaterialComboBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -179,6 +179,7 @@
             this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnConsultar.UseAccentColor = false;
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvSalidas
             // 
@@ -299,23 +300,6 @@
             this.txtCantidad.Text = "";
             this.txtCantidad.TrailingIcon = null;
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.AnimateReadOnly = false;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Depth = 0;
-            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtCodigo.LeadingIcon = null;
-            this.txtCodigo.Location = new System.Drawing.Point(32, 269);
-            this.txtCodigo.MaxLength = 50;
-            this.txtCodigo.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtCodigo.Multiline = false;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(223, 50);
-            this.txtCodigo.TabIndex = 95;
-            this.txtCodigo.Text = "";
-            this.txtCodigo.TrailingIcon = null;
-            // 
             // lblCantidad
             // 
             this.lblCantidad.BackColor = System.Drawing.Color.White;
@@ -380,7 +364,7 @@
             this.cbxNombreArticulo.FormattingEnabled = true;
             this.cbxNombreArticulo.IntegralHeight = false;
             this.cbxNombreArticulo.ItemHeight = 43;
-            this.cbxNombreArticulo.Location = new System.Drawing.Point(281, 270);
+            this.cbxNombreArticulo.Location = new System.Drawing.Point(278, 270);
             this.cbxNombreArticulo.MaxDropDownItems = 4;
             this.cbxNombreArticulo.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxNombreArticulo.Name = "cbxNombreArticulo";
@@ -389,12 +373,35 @@
             this.cbxNombreArticulo.TabIndex = 111;
             this.cbxNombreArticulo.SelectedIndexChanged += new System.EventHandler(this.cbxNombreArticulo_SelectedIndexChanged);
             // 
+            // cbxID
+            // 
+            this.cbxID.AutoResize = false;
+            this.cbxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxID.Depth = 0;
+            this.cbxID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbxID.DropDownHeight = 174;
+            this.cbxID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxID.DropDownWidth = 121;
+            this.cbxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbxID.FormattingEnabled = true;
+            this.cbxID.IntegralHeight = false;
+            this.cbxID.ItemHeight = 43;
+            this.cbxID.Location = new System.Drawing.Point(32, 270);
+            this.cbxID.MaxDropDownItems = 4;
+            this.cbxID.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbxID.Name = "cbxID";
+            this.cbxID.Size = new System.Drawing.Size(223, 49);
+            this.cbxID.StartIndex = 0;
+            this.cbxID.TabIndex = 112;
+            // 
             // frmSalidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.cbxID);
             this.Controls.Add(this.cbxNombreArticulo);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.btnConsultar);
@@ -406,7 +413,6 @@
             this.Controls.Add(this.lblSalidas);
             this.Controls.Add(this.picSalidas);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
@@ -446,10 +452,10 @@
         private System.Windows.Forms.TextBox lblSalidas;
         private System.Windows.Forms.PictureBox picSalidas;
         private MaterialSkin.Controls.MaterialTextBox txtCantidad;
-        private MaterialSkin.Controls.MaterialTextBox txtCodigo;
         private System.Windows.Forms.TextBox lblCantidad;
         private System.Windows.Forms.TextBox lblCodigo;
         private System.Windows.Forms.TextBox lblNombre;
         private MaterialSkin.Controls.MaterialComboBox cbxNombreArticulo;
+        private MaterialSkin.Controls.MaterialComboBox cbxID;
     }
 }

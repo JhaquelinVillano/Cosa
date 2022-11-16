@@ -175,6 +175,7 @@
             this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnConsultar.UseAccentColor = false;
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvInventario
             // 
@@ -262,6 +263,7 @@
             this.picExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picExcel.TabIndex = 80;
             this.picExcel.TabStop = false;
+            this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
             // 
             // btnInventario
             // 

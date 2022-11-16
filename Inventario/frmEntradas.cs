@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using MySql.Data.MySqlClient;
 using Proyecto.Menu;
 using Proyecto.Metodos;
 using System;
@@ -18,6 +19,7 @@ namespace Proyecto.Inventario
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
         Propiedades propie = new Propiedades();
+        MySqlConnection conexionDB = Conexion.conexion();
 
         public frmEntradas()
         {
@@ -129,6 +131,21 @@ namespace Proyecto.Inventario
         {   //Metodos
             inventario.eliminarEntradas(txtCodigo.Text);
             inventario.actualizarEntrada(dgvEntradas);
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConsultar_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void frmEntradas_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
