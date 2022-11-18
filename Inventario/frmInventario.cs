@@ -17,8 +17,6 @@ namespace Proyecto.Inventario
     {
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
-        frmEntradas entra = new frmEntradas();
-        frmEntradas.datos datitos = new frmEntradas.datos();
         public frmInventario()
         {
             InitializeComponent();

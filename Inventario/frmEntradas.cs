@@ -65,13 +65,7 @@ namespace Proyecto.Inventario
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            datos info;
-            info.codigo = txtCodigo.Text;
-            info.nombreArticulo = txtNombre.Text;
-            info.cantidad = int.Parse(txtCantidad.Text);
- 
-            //Declarando variable para los radio buttons
+        {   //Declarando variable para los radio buttons
             string tipo = "";
             if (rbtnCompra.Checked == true)
             {   //Si esta activo lo pasamos a la variable tipo
@@ -127,7 +121,6 @@ namespace Proyecto.Inventario
         private void btnEliminar_Click(object sender, EventArgs e)
         {   //Metodos
             inventario.eliminarEntradas(txtCodigo.Text);
-            inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
@@ -153,13 +146,6 @@ namespace Proyecto.Inventario
         private void frmEntradas_Load(object sender, EventArgs e)
         {
             
-        }
-        public struct datos
-        {
-            public string codigo;
-            public string nombreArticulo;
-            public int cantidad;
-            public List<string> lista;
         }
     }
 }
