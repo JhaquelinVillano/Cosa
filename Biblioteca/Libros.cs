@@ -58,7 +58,7 @@ namespace Proyecto.Biblioteca
 
         private void frmBiblioteca_Load(object sender, EventArgs e)
         {
-            //tmrTiempo.Start();
+            tmrTiempo.Start();
         }
 
         private void picBiblioteca_Click(object sender, EventArgs e)

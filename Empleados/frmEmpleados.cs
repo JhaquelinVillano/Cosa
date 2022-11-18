@@ -52,7 +52,7 @@ namespace Proyecto.Empleados
 
         private void frmEmpleados_Load(object sender, EventArgs e)
         {
-            //tmrTiempo.Start();
+            tmrTiempo.Start();
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)

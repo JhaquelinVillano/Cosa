@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,7 @@
             this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.txtID = new MaterialSkin.Controls.MaterialTextBox();
             this.lblID = new System.Windows.Forms.TextBox();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -473,6 +475,11 @@
             this.lblID.Text = "ID";
             this.lblID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,5 +553,6 @@
         private MaterialSkin.Controls.MaterialButton btnConsultar;
         private MaterialSkin.Controls.MaterialTextBox txtID;
         private System.Windows.Forms.TextBox lblID;
+        private System.Windows.Forms.Timer tmrTiempo;
     }
 }

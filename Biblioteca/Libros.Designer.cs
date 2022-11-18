@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.picLibros = new System.Windows.Forms.PictureBox();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.txtExistencias = new MaterialSkin.Controls.MaterialTextBox();
             this.lblExistencias = new System.Windows.Forms.TextBox();
             this.pnlBiblioteca.SuspendLayout();
@@ -487,6 +489,11 @@
             this.picLibros.TabStop = false;
             this.picLibros.Click += new System.EventHandler(this.picBiblioteca_Click);
             // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // txtExistencias
             // 
             this.txtExistencias.AnimateReadOnly = false;
@@ -590,6 +597,7 @@
         private MaterialSkin.Controls.MaterialComboBox cbxIdioma;
         private System.Windows.Forms.DataGridView dgvLibros;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
+        private System.Windows.Forms.Timer tmrTiempo;
         private MaterialSkin.Controls.MaterialTextBox txtExistencias;
         private System.Windows.Forms.TextBox lblExistencias;
     }

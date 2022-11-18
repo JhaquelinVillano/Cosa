@@ -120,7 +120,7 @@ namespace Proyecto.Usuarios
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            //tmrUsuarios.Start();
+            tmrUsuarios.Start();
         }
 
         private void tmrUsuarios_Tick(object sender, EventArgs e)

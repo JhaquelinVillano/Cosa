@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -52,6 +53,7 @@
             this.cbxInvitado = new MaterialSkin.Controls.MaterialCheckbox();
             this.txtPermisos = new System.Windows.Forms.TextBox();
             this.cbxEncargado = new MaterialSkin.Controls.MaterialCheckbox();
+            this.tmrUsuarios = new System.Windows.Forms.Timer(this.components);
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -435,6 +437,11 @@
             this.cbxEncargado.UseVisualStyleBackColor = true;
             this.cbxEncargado.CheckedChanged += new System.EventHandler(this.cbxEmpleado_CheckedChanged);
             // 
+            // tmrUsuarios
+            // 
+            this.tmrUsuarios.Interval = 1500;
+            this.tmrUsuarios.Tick += new System.EventHandler(this.tmrUsuarios_Tick);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -504,5 +511,6 @@
         private MaterialSkin.Controls.MaterialCheckbox cbxInvitado;
         private System.Windows.Forms.TextBox txtPermisos;
         private MaterialSkin.Controls.MaterialCheckbox cbxEncargado;
+        private System.Windows.Forms.Timer tmrUsuarios;
     }
 }

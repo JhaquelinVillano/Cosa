@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,7 @@
             this.lblTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCorreo = new System.Windows.Forms.TextBox();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.pnlUsuario.SuspendLayout();
@@ -461,6 +463,11 @@
             this.lblCorreo.Text = "Correo";
             this.lblCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
             // txtConsultar
             // 
             this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -579,6 +586,7 @@
         private System.Windows.Forms.TextBox lblTelefono;
         private MaterialSkin.Controls.MaterialTextBox txtCorreo;
         private System.Windows.Forms.TextBox lblCorreo;
+        private System.Windows.Forms.Timer tmrTiempo;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
         private MaterialSkin.Controls.MaterialButton btnConsultar;
     }
