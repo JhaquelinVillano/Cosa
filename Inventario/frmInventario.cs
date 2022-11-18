@@ -17,6 +17,8 @@ namespace Proyecto.Inventario
     {
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
+        frmEntradas entra = new frmEntradas();
+        frmEntradas.datos datitos = new frmEntradas.datos();
         public frmInventario()
         {
             InitializeComponent();
@@ -77,6 +79,23 @@ namespace Proyecto.Inventario
         private void picExcel_Click(object sender, EventArgs e)
         {   //Llamando metodo
             export.exportar(dgvInventario);
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            inventario.actualizarInventario(dgvInventario);
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            inventario.modificarInventario(txtCodigo.Text, txtNombre.Text, int.Parse(txtCantidad.Text));
+            inventario.actualizarInventario(dgvInventario);
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            inventario.eliminarInventario(txtCodigo.Text);
+            inventario.actualizarInventario(dgvInventario);
         }
     }
 }

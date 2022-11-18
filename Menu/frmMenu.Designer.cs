@@ -263,6 +263,7 @@
             this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picInventario.TabIndex = 25;
             this.picInventario.TabStop = false;
+            this.picInventario.Click += new System.EventHandler(this.picInventario_Click_1);
             // 
             // picClientes
             // 

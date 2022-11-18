@@ -18,16 +18,14 @@ namespace Proyecto.Metodos
         //Clase Conexion
         MySqlConnection conexionDB = Conexion.conexion();
 
-        public void ingresarEntrada(string codigo, string nombre, int cantidad, string descripcion, string tipo, string fecha)
+        public void ingresarEntrada(string codigo, string nombre, int cantidad, string descripcion, string tipo)
         {   //Manejar errores
             try
             {   //Conectando
                 conexionDB.Open();
                 //Comando para insertar datos
                 string sql = "insert into entradas (codigoArticulo_e, nombreArticulo_e, cantidad_e, descripcion_e, fecha_e, " +
-                               "tipo_e) values ('" + codigo + "', '" + nombre + "', '" + cantidad + "', '" + descripcion + "', " + fecha + "," +
-                               "'" + tipo + "')";
-
+                               "tipo_e) values ('" + codigo + "', '" + nombre + "', '" + cantidad + "', '" + descripcion + "', now(), '" + tipo + "')";
                 //Conectando comandos con base de datos
                 MySqlCommand comando = new MySqlCommand(sql, conexionDB);
                 //Ejecuntando comando en MySQL e ingresando la insercion
@@ -82,10 +80,10 @@ namespace Proyecto.Metodos
             }//Cargando datos
             dgvInventario.DataSource = tabla;
         }
-        public void modificarEntrada(string codigo, string nombre, int cantidad, string descripcion, string tipo, string fecha)
+        public void modificarEntrada(string codigo, string nombre, int cantidad, string descripcion, string tipo)
         {   //Query
             string sql = "update entradas set codigoArticulo_e='" + codigo + "', nombreArticulo_e='" + nombre + "', cantidad_e='" + cantidad + "', " +
-                "descripcion_e='" + descripcion + "', fecha_e='" + fecha + "', tipo_e='" + tipo + "' where codigoArticulo_e='" + codigo +"'";
+                "descripcion_e='" + descripcion + "', fecha_e= now(), tipo_e='" + tipo + "' where codigoArticulo_e='" + codigo +"'";
             try
             {
                 conexionDB.Open();
@@ -300,6 +298,62 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al consultar: " + ex.Message);
             }//Cargando datos
             dgvInventario.DataSource = tabla;
+        }
+        //Inventario donde se encuentran las existencias
+        public void ingresarInventario(string codigo, string nombre, int cantidad)
+        {   //Manejar errores
+            try
+            {   //Conectando
+                conexionDB.Open();
+                //Comando para insertar datos
+                string sql = "insert into productos (codigo_p, nombreArticulo_p, existencias_p) " +
+                    "values ('" + codigo + "', '" + nombre + "', '" + cantidad + "')";
+
+                //Conectando comandos con base de datos
+                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                //Ejecuntando comando en MySQL e ingresando la insercion
+                comando.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {   //Mensaje de error
+                MessageBox.Show("Error al ingresar" + ex.Message);
+            }
+            finally
+            {   //Finalizando conexion
+                conexionDB.Close();
+            }
+        }
+        public void modificarInventario(string codigo, string nombre, int cantidad)
+        {   //Query
+            string sql = "update productos set codigo_p='" + codigo + "', nombreArticulo_p='" + nombre + "', existencias_p='" + cantidad + "' where codigo_p = '" + codigo + "'";
+            try
+            {
+                conexionDB.Open();
+                //Comandito
+                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                comando.ExecuteNonQuery();
+                conexionDB.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar: " + ex.Message);
+            }
+        }
+        
+        public void eliminarInventario(string id)
+        {   //Query
+            string sql = "delete from productos where codigo_p='" + id + "'";
+            try
+            {   //Ejecutando conexion y comando
+                conexionDB.Open();
+                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                comando.ExecuteNonQuery();
+                conexionDB.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar: " + ex.Message);
+            }
         }
     }
 }

@@ -57,7 +57,7 @@ namespace Proyecto.Clientes
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            tmrTiempo.Start();
+            //tmrTiempo.Start();
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)

@@ -65,10 +65,14 @@ namespace Proyecto.Inventario
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {   //Declarando variable para los radio buttons
+        {
+            datos info;
+            info.codigo = txtCodigo.Text;
+            info.nombreArticulo = txtNombre.Text;
+            info.cantidad = int.Parse(txtCantidad.Text);
+ 
+            //Declarando variable para los radio buttons
             string tipo = "";
-            string fechita = "";
-
             if (rbtnCompra.Checked == true)
             {   //Si esta activo lo pasamos a la variable tipo
                 tipo = rbtnCompra.Text;
@@ -77,10 +81,6 @@ namespace Proyecto.Inventario
             {   //Si esta activo lo pasamos a la variable tipo
                 tipo = rbtnDonacion.Text;
             }
-            //Convirtiendo fecha a string
-            DateTime fecha = DateTime.Today;
-            //Guardando la fecha en dato tipo string con formato
-            fechita = fecha.ToShortDateString().ToString();
             //Propiedades
             propie.CodigoArticulo = txtCodigo.Text;
             propie.NombreArticulo = txtNombre.Text;
@@ -90,9 +90,11 @@ namespace Proyecto.Inventario
                                 propie.NombreArticulo,
                                 propie.Cantidad,
                                 txtDescripcion.Text,
-                                tipo,
-                                fechita);
+                                tipo);
+
+            inventario.ingresarInventario(propie.CodigoArticulo, propie.NombreArticulo, propie.Cantidad);
             inventario.actualizarEntrada(dgvEntradas);
+            limpiar();
         }
 
         private void picExcel_Click(object sender, EventArgs e)
@@ -103,7 +105,6 @@ namespace Proyecto.Inventario
         private void btnModificar_Click(object sender, EventArgs e)
         {   //Declarando variable para los radio buttons
             string tipo = "";
-            string fechita = "";
             //Checando que boton utilizar
             if (rbtnCompra.Checked == true)
             {   //Si esta activo lo pasamos a la variable tipo
@@ -113,26 +114,36 @@ namespace Proyecto.Inventario
             {   //Si esta activo lo pasamos a la variable tipo
                 tipo = rbtnDonacion.Text;
             }
-            //Convirtiendo fecha a string
-            DateTime fecha = DateTime.Today;
-            //Guardando la fecha en dato tipo string con formato
-            fechita = fecha.ToShortDateString().ToString();
             //Llamando metodos
             inventario.modificarEntrada(txtCodigo.Text,
                                 txtNombre.Text,
                                 int.Parse(txtCantidad.Text),
                                 txtDescripcion.Text,
-                                tipo,
-                                fechita);
+                                tipo);
+
+            /*inventario.modificarInventario(propie.CodigoArticulo,
+                                propie.NombreArticulo,
+                                propie.Cantidad);*/
             inventario.actualizarEntrada(dgvEntradas);
+            limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {   //Metodos
             inventario.eliminarEntradas(txtCodigo.Text);
+            inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarEntrada(dgvEntradas);
+            limpiar();
         }
 
+        private void limpiar()
+        {
+            txtCantidad.Text = "";
+            txtCodigo.Text = "";
+            txtConsultar.Text = "";
+            txtDescripcion.Text = "";
+            txtNombre.Text = "";
+        }
         private void btnConsultar_Click(object sender, EventArgs e)
         {
 
@@ -146,6 +157,13 @@ namespace Proyecto.Inventario
         private void frmEntradas_Load(object sender, EventArgs e)
         {
             
+        }
+        public struct datos
+        {
+            public string codigo;
+            public string nombreArticulo;
+            public int cantidad;
+            public List<string> lista;
         }
     }
 }

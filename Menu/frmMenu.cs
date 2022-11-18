@@ -111,5 +111,12 @@ namespace Proyecto.Menu
             clientes.Show();
             this.Hide();
         }
+
+        private void picInventario_Click_1(object sender, EventArgs e)
+        {
+            Inventario.frmInventario inventarios = new frmInventario();
+            inventarios.Show();
+            this.Hide();
+        }
     }
 }

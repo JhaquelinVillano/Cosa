@@ -53,7 +53,7 @@ namespace Proyecto.Biblioteca
 
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
-            tmrTiempo.Start();
+            //tmrTiempo.Start();
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)

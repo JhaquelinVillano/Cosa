@@ -56,6 +56,12 @@ namespace Proyecto.Entradas_y_Salidas
             picMaximizar.Visible = true;
         }
 
+        private void limpiar()
+        {
+            txtCantidad.Text = "";
+            txtConsultar.Text = "";
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {   //Declarando variable para los radio buttons
             string fechita = "";
@@ -67,6 +73,7 @@ namespace Proyecto.Entradas_y_Salidas
             inventario.registroSalida(cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
             inventario.cargarID(cbxID);
+            limpiar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -79,6 +86,7 @@ namespace Proyecto.Entradas_y_Salidas
             inventario.modificarSalida(int.Parse(cbxID.Text), cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.cargarID(cbxID);
             inventario.actualizarSalida(dgvSalidas);
+            limpiar();
         }
 
         private void cbxNombreArticulo_SelectionChangeCommitted(object sender, EventArgs e)
@@ -95,6 +103,7 @@ namespace Proyecto.Entradas_y_Salidas
             inventario.eliminarSalidas(int.Parse(cbxID.Text));
             inventario.cargarID(cbxID);
             inventario.actualizarSalida(dgvSalidas);
+            limpiar();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)

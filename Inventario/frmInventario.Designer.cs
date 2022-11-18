@@ -44,6 +44,11 @@
             this.picExcel = new System.Windows.Forms.PictureBox();
             this.btnInventario = new MaterialSkin.Controls.MaterialButton();
             this.btnSalidas = new MaterialSkin.Controls.MaterialButton();
+            this.txtCodigo = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
+            this.txtCantidad = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtNombre = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -281,10 +286,11 @@
             this.btnInventario.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnInventario.Size = new System.Drawing.Size(202, 36);
             this.btnInventario.TabIndex = 82;
-            this.btnInventario.Text = "Inventario";
+            this.btnInventario.Text = "Actualizar";
             this.btnInventario.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnInventario.UseAccentColor = false;
             this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
             // btnSalidas
             // 
@@ -308,12 +314,108 @@
             this.btnSalidas.UseVisualStyleBackColor = true;
             this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.AnimateReadOnly = false;
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigo.Depth = 0;
+            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCodigo.LeadingIcon = null;
+            this.txtCodigo.Location = new System.Drawing.Point(21, 398);
+            this.txtCodigo.MaxLength = 50;
+            this.txtCodigo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCodigo.Multiline = false;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(202, 50);
+            this.txtCodigo.TabIndex = 84;
+            this.txtCodigo.Text = "";
+            this.txtCodigo.TrailingIcon = null;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(81, 632);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(158, 36);
+            this.materialButton1.TabIndex = 85;
+            this.materialButton1.Text = "Modificar";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(21, 565);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(158, 36);
+            this.materialButton2.TabIndex = 86;
+            this.materialButton2.Text = "materialButton2";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = false;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.AnimateReadOnly = false;
+            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCantidad.Depth = 0;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCantidad.LeadingIcon = null;
+            this.txtCantidad.Location = new System.Drawing.Point(21, 510);
+            this.txtCantidad.MaxLength = 50;
+            this.txtCantidad.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtCantidad.Multiline = false;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(202, 50);
+            this.txtCantidad.TabIndex = 87;
+            this.txtCantidad.Text = "";
+            this.txtCantidad.TrailingIcon = null;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.AnimateReadOnly = false;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombre.Depth = 0;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.LeadingIcon = null;
+            this.txtNombre.Location = new System.Drawing.Point(21, 454);
+            this.txtNombre.MaxLength = 50;
+            this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNombre.Multiline = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(202, 50);
+            this.txtNombre.TabIndex = 88;
+            this.txtNombre.Text = "";
+            this.txtNombre.TrailingIcon = null;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.materialButton2);
+            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnSalidas);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.txtExportar);
@@ -360,5 +462,10 @@
         private System.Windows.Forms.PictureBox picExcel;
         private MaterialSkin.Controls.MaterialButton btnInventario;
         private MaterialSkin.Controls.MaterialButton btnSalidas;
+        private MaterialSkin.Controls.MaterialTextBox txtCodigo;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialButton materialButton2;
+        private MaterialSkin.Controls.MaterialTextBox txtCantidad;
+        private MaterialSkin.Controls.MaterialTextBox txtNombre;
     }
 }

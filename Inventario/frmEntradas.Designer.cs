@@ -38,7 +38,6 @@
             this.lblDescripción = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.TextBox();
-            this.dtpInventario = new System.Windows.Forms.DateTimePicker();
             this.dgvEntradas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
             this.btnModificar = new MaterialSkin.Controls.MaterialButton();
@@ -200,13 +199,6 @@
             this.lblNombre.TabIndex = 28;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dtpInventario
-            // 
-            this.dtpInventario.Location = new System.Drawing.Point(270, 337);
-            this.dtpInventario.Name = "dtpInventario";
-            this.dtpInventario.Size = new System.Drawing.Size(202, 20);
-            this.dtpInventario.TabIndex = 36;
             // 
             // dgvEntradas
             // 
@@ -512,7 +504,6 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.dgvEntradas);
-            this.Controls.Add(this.dtpInventario);
             this.Controls.Add(this.picEntradas);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDescripción);
@@ -551,7 +542,6 @@
         private System.Windows.Forms.TextBox lblCodigo;
         private System.Windows.Forms.TextBox lblNombre;
         private System.Windows.Forms.PictureBox picEntradas;
-        private System.Windows.Forms.DateTimePicker dtpInventario;
         private System.Windows.Forms.DataGridView dgvEntradas;
         private MaterialSkin.Controls.MaterialButton btnEliminar;
         private MaterialSkin.Controls.MaterialButton btnModificar;

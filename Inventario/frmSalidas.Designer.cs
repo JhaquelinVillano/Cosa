@@ -37,7 +37,6 @@
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.dgvSalidas = new System.Windows.Forms.DataGridView();
-            this.dtpDonadores = new System.Windows.Forms.DateTimePicker();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
             this.btnModificar = new MaterialSkin.Controls.MaterialButton();
             this.btnRegistrar = new MaterialSkin.Controls.MaterialButton();
@@ -192,13 +191,6 @@
             this.dgvSalidas.Name = "dgvSalidas";
             this.dgvSalidas.Size = new System.Drawing.Size(636, 557);
             this.dgvSalidas.TabIndex = 108;
-            // 
-            // dtpDonadores
-            // 
-            this.dtpDonadores.Location = new System.Drawing.Point(278, 354);
-            this.dtpDonadores.Name = "dtpDonadores";
-            this.dtpDonadores.Size = new System.Drawing.Size(223, 20);
-            this.dtpDonadores.TabIndex = 107;
             // 
             // btnEliminar
             // 
@@ -406,7 +398,6 @@
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dgvSalidas);
-            this.Controls.Add(this.dtpDonadores);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistrar);
@@ -445,7 +436,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
         private MaterialSkin.Controls.MaterialButton btnConsultar;
         private System.Windows.Forms.DataGridView dgvSalidas;
-        private System.Windows.Forms.DateTimePicker dtpDonadores;
         private MaterialSkin.Controls.MaterialButton btnEliminar;
         private MaterialSkin.Controls.MaterialButton btnModificar;
         private MaterialSkin.Controls.MaterialButton btnRegistrar;
