@@ -120,10 +120,6 @@ namespace Proyecto.Inventario
                                 int.Parse(txtCantidad.Text),
                                 txtDescripcion.Text,
                                 tipo);
-
-            /*inventario.modificarInventario(propie.CodigoArticulo,
-                                propie.NombreArticulo,
-                                propie.Cantidad);*/
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
