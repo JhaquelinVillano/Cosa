@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -46,6 +47,7 @@
             this.btnRegistrar = new MaterialSkin.Controls.MaterialButton();
             this.picBiblioteca = new System.Windows.Forms.PictureBox();
             this.btnDevolver = new MaterialSkin.Controls.MaterialButton();
+            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.txtPrestamoID = new MaterialSkin.Controls.MaterialTextBox();
             this.lblPrestamoID = new System.Windows.Forms.TextBox();
             this.pnlBiblioteca.SuspendLayout();
@@ -348,6 +350,11 @@
             this.btnDevolver.UseVisualStyleBackColor = false;
             this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
             // 
+            // tmrTiempo
+            // 
+            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
             // txtPrestamoID
             // 
             this.txtPrestamoID.AnimateReadOnly = false;
@@ -437,6 +444,7 @@
         private MaterialSkin.Controls.MaterialButton btnEliminar;
         private MaterialSkin.Controls.MaterialButton btnRegistrar;
         private MaterialSkin.Controls.MaterialButton btnDevolver;
+        private System.Windows.Forms.Timer tmrTiempo;
         private MaterialSkin.Controls.MaterialTextBox txtPrestamoID;
         private System.Windows.Forms.TextBox lblPrestamoID;
     }
