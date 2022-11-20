@@ -13,9 +13,11 @@ namespace Proyecto.Empleados
 {
     public partial class frmEmpleados : Form
     {
+        Metodos.Empleados empleados = new Metodos.Empleados();
         public frmEmpleados()
         {
             InitializeComponent();
+            empleados.consultarEmpleados(dgvEmpleados);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -57,25 +59,21 @@ namespace Proyecto.Empleados
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            Metodos.Empleados empleados = new Metodos.Empleados();
             empleados.consultarEmpleados(dgvEmpleados);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Metodos.Empleados empleados = new Metodos.Empleados();
             empleados.registrarEmpleados(txtID,txtDniEmpleado,txtNombre,txtApellidos,txtDireccion,txtTelefono,txtCorreo);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Metodos.Empleados empleados = new Metodos.Empleados();
             empleados.modificarEmpleados(txtID, txtDniEmpleado, txtNombre, txtApellidos, txtDireccion, txtTelefono, txtCorreo);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Metodos.Empleados empleados = new Metodos.Empleados();
             empleados.eliminarEmpleados(txtID, txtDniEmpleado, txtNombre, txtApellidos, txtDireccion, txtTelefono, txtCorreo);
         }
     }

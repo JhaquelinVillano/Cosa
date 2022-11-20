@@ -74,7 +74,7 @@ namespace Proyecto.Inventario
             else if (rbtnDonacion.Checked == true)
             {   //Si esta activo lo pasamos a la variable tipo
                 tipo = rbtnDonacion.Text;
-            }
+            }/*
             //Propiedades
             propie.CodigoArticulo = txtCodigo.Text;
             propie.NombreArticulo = txtNombre.Text;
@@ -88,7 +88,7 @@ namespace Proyecto.Inventario
 
             inventario.ingresarInventario(propie.CodigoArticulo, propie.NombreArticulo, propie.Cantidad);
             inventario.actualizarEntrada(dgvEntradas);
-            limpiar();
+            limpiar();*/
         }
 
         private void picExcel_Click(object sender, EventArgs e)

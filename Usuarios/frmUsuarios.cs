@@ -18,6 +18,7 @@ namespace Proyecto.Usuarios
         public frmUsuarios()
         {
             InitializeComponent();
+            usuarios.consultarUsuarios(dgvUsuarios);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -109,6 +110,7 @@ namespace Proyecto.Usuarios
                 cbxAdmin.Enabled = true;
                 cbxInvitado.Enabled = true;
                 cbxBiblioteca.Checked=false;
+                cbxInventario.Checked=false;
                 cbxInvitado.Checked = false;
             }
         }

@@ -14,9 +14,11 @@ namespace Proyecto.Biblioteca
 {
     public partial class frmLibros : Form
     {
+        Metodos.Libros libros = new Metodos.Libros();
         public frmLibros()
         {
             InitializeComponent();
+            libros.consultarLibros(dgvLibros);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -112,7 +114,6 @@ namespace Proyecto.Biblioteca
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Metodos.Libros libros = new Metodos.Libros();
             if (txtConsultar.Text=="")
             {
                 libros.consultarLibros(dgvLibros);
@@ -125,19 +126,16 @@ namespace Proyecto.Biblioteca
         
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Metodos.Libros libros = new Metodos.Libros();
             libros.registrarLibros(txtID,txtNombre,txtAutor,cbxCategoria,cbxIdioma,txtEdicion,txtExistencias);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Metodos.Libros libros = new Metodos.Libros();
             libros.eliminarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Metodos.Libros libros = new Metodos.Libros();
             libros.modificarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
         }
     }

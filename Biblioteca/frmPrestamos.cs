@@ -13,10 +13,12 @@ namespace Proyecto.Biblioteca
 {
     public partial class frmPrestamos : Form
     {
+        Metodos.Prestamos prestamos = new Metodos.Prestamos();
         public string Usuario;
         public frmPrestamos()
         {
             InitializeComponent();
+            prestamos.consultarPrestamos(dgvP);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -58,25 +60,21 @@ namespace Proyecto.Biblioteca
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            Metodos.Prestamos prestamos = new Metodos.Prestamos();
             prestamos.consultarPrestamos(dgvP);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Metodos.Prestamos prestamos = new Metodos.Prestamos();
             prestamos.registrarPrestamos(txtLibroID,txtNombreSolicitante,Usuario,txtPrestamoID);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Metodos.Prestamos prestamos = new Metodos.Prestamos();
             prestamos.EliminarPrestamos(txtLibroID, txtNombreSolicitante,txtPrestamoID);
         }
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
-            Metodos.Prestamos prestamos = new Metodos.Prestamos();
             prestamos.hacerDevolucion(txtLibroID, txtNombreSolicitante, txtPrestamoID,Usuario);
         }
     }

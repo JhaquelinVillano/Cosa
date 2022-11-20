@@ -13,9 +13,11 @@ namespace Proyecto.Clientes
 {
     public partial class frmClientes : Form
     {
+        Metodos.Clientes clientes = new Metodos.Clientes();
         public frmClientes()
         {
             InitializeComponent();
+            clientes.consultarClientes(dgvClientes);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -62,25 +64,21 @@ namespace Proyecto.Clientes
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            Metodos.Clientes clientes = new Metodos.Clientes();
             clientes.consultarClientes(dgvClientes);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Metodos.Clientes clientes = new Metodos.Clientes();
             clientes.registrarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Metodos.Clientes clientes = new Metodos.Clientes();
             clientes.modificarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            Metodos.Clientes clientes = new Metodos.Clientes();
             clientes.eliminarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
         }
     }
