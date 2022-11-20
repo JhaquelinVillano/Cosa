@@ -21,7 +21,7 @@ namespace Proyecto.Metodos
                 DataTable dataTable = new DataTable();
                 MySqlDataReader resultado;
                 //Consultado datos sin la contraseña
-                MySqlCommand command = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios;", consultaDB);
+                MySqlCommand command = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios order by empleados_idEmpleado;", consultaDB);
                 command.CommandType = CommandType.Text;
                 consultaDB.Open();
                 resultado = command.ExecuteReader();

@@ -13,6 +13,7 @@ namespace Proyecto.Metodos
 {
     internal class Login
     {
+        public int verificar = 0;
         internal void iniciarSesion(string usuario,string contraseña)
         {
             try
@@ -59,18 +60,21 @@ namespace Proyecto.Metodos
                         MessageBox.Show("Bienvenido "+usuario);
                         Menu.frmMenu admin = new Menu.frmMenu();
                         admin.Usuario = usuario;
+                        verificar = 1;
                         admin.Show();
                     }
                     if (Rol == "Encargado")
                     {
                         MessageBox.Show("Bienvenido " + usuario);
                         Menu.frmMenuTrabajadores trabajadores = new Menu.frmMenuTrabajadores();
+                        trabajadores.Usuario = usuario;
                         trabajadores.Show();
                     }
                     if (Rol == "Invitado")
                     {
                         MessageBox.Show("Bienvenido " + usuario);
                         Menu.frmMenuTrabajadores trabajadores = new Menu.frmMenuTrabajadores();
+                        trabajadores.Usuario= usuario;
                         trabajadores.Show();
                     }
                 }

@@ -13,6 +13,7 @@ namespace Proyecto.Menu
 {
     public partial class frmMenuTrabajadores : Form
     {
+        public string Usuario;
         public frmMenuTrabajadores()
         {
             InitializeComponent();

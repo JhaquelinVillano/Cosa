@@ -16,11 +16,12 @@ namespace Proyecto
 {
     public partial class frmLogin : Form
     {
+        Login login = new Login();
         public frmLogin()
         {
             InitializeComponent();
         }
-
+        public int verificar=0;
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -75,8 +76,11 @@ namespace Proyecto
 
         private void btnAcceder_Click_1(object sender, EventArgs e)
         {
-            Login login = new Login();
             login.iniciarSesion(txtUsuario.Text,txtContraseña.Text);
+            if (login.verificar==1)
+            {
+                this.Hide();
+            }
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

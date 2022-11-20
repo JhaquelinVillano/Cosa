@@ -56,24 +56,7 @@ namespace Proyecto.Usuarios
 
         private void cbxAdmin_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxAdmin.Checked==true)
-            {
-                cbxBiblioteca.Checked = false;
-                cbxEncargado.Checked = false;
-                cbxInventario.Checked = false;
-                cbxInvitado.Checked = false;
-                cbxBiblioteca.Enabled = false;
-                cbxEncargado.Enabled = false;
-                cbxInventario.Enabled = false;
-                cbxInvitado.Enabled = false;
-            }
-            if (cbxAdmin.Checked == false)
-            {
-                cbxBiblioteca.Enabled = true;
-                cbxEncargado.Enabled = true;
-                cbxInventario.Enabled = true;
-                cbxInvitado.Enabled = true;
-            }
+            
         }
 
         private void cbxEmpleados_CheckedChanged(object sender, EventArgs e)
@@ -154,6 +137,28 @@ namespace Proyecto.Usuarios
         private void btnModificar_Click(object sender, EventArgs e)
         {
             usuarios.modificarUsuarios(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario, cbxInvitado);
+        }
+
+        private void cbxAdmin_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (cbxAdmin.Checked == true)
+            {
+                cbxBiblioteca.Checked = false;
+                cbxEncargado.Checked = false;
+                cbxInventario.Checked = false;
+                cbxInvitado.Checked = false;
+                cbxBiblioteca.Enabled = false;
+                cbxEncargado.Enabled = false;
+                cbxInventario.Enabled = false;
+                cbxInvitado.Enabled = false;
+            }
+            if (cbxAdmin.Checked == false)
+            {
+                cbxBiblioteca.Enabled = true;
+                cbxEncargado.Enabled = true;
+                cbxInventario.Enabled = true;
+                cbxInvitado.Enabled = true;
+            }
         }
     }
 }

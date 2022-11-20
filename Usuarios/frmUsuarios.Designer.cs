@@ -36,7 +36,6 @@
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.TextBox();
-            this.cbxAdmin = new MaterialSkin.Controls.MaterialCheckbox();
             this.cbxBiblioteca = new MaterialSkin.Controls.MaterialCheckbox();
             this.cbxInventario = new MaterialSkin.Controls.MaterialCheckbox();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
@@ -54,6 +53,7 @@
             this.txtPermisos = new System.Windows.Forms.TextBox();
             this.cbxEncargado = new MaterialSkin.Controls.MaterialCheckbox();
             this.tmrUsuarios = new System.Windows.Forms.Timer(this.components);
+            this.cbxAdmin = new MaterialSkin.Controls.MaterialCheckbox();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -154,23 +154,6 @@
             this.lblNombre.TabIndex = 11;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // cbxAdmin
-            // 
-            this.cbxAdmin.AutoSize = true;
-            this.cbxAdmin.Depth = 0;
-            this.cbxAdmin.Location = new System.Drawing.Point(40, 394);
-            this.cbxAdmin.Margin = new System.Windows.Forms.Padding(0);
-            this.cbxAdmin.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cbxAdmin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cbxAdmin.Name = "cbxAdmin";
-            this.cbxAdmin.ReadOnly = false;
-            this.cbxAdmin.Ripple = true;
-            this.cbxAdmin.Size = new System.Drawing.Size(135, 37);
-            this.cbxAdmin.TabIndex = 16;
-            this.cbxAdmin.Text = "Administrador";
-            this.cbxAdmin.UseVisualStyleBackColor = true;
-            this.cbxAdmin.CheckedChanged += new System.EventHandler(this.cbxAdmin_CheckedChanged);
             // 
             // cbxBiblioteca
             // 
@@ -442,12 +425,30 @@
             this.tmrUsuarios.Interval = 1500;
             this.tmrUsuarios.Tick += new System.EventHandler(this.tmrUsuarios_Tick);
             // 
+            // cbxAdmin
+            // 
+            this.cbxAdmin.AutoSize = true;
+            this.cbxAdmin.Depth = 0;
+            this.cbxAdmin.Location = new System.Drawing.Point(40, 394);
+            this.cbxAdmin.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxAdmin.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cbxAdmin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cbxAdmin.Name = "cbxAdmin";
+            this.cbxAdmin.ReadOnly = false;
+            this.cbxAdmin.Ripple = true;
+            this.cbxAdmin.Size = new System.Drawing.Size(135, 37);
+            this.cbxAdmin.TabIndex = 36;
+            this.cbxAdmin.Text = "Administrador";
+            this.cbxAdmin.UseVisualStyleBackColor = true;
+            this.cbxAdmin.CheckedChanged += new System.EventHandler(this.cbxAdmin_CheckedChanged_1);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.cbxAdmin);
             this.Controls.Add(this.cbxEncargado);
             this.Controls.Add(this.txtPermisos);
             this.Controls.Add(this.cbxInvitado);
@@ -464,7 +465,6 @@
             this.Controls.Add(this.dgvUsuarios);
             this.Controls.Add(this.cbxInventario);
             this.Controls.Add(this.cbxBiblioteca);
-            this.Controls.Add(this.cbxAdmin);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -493,7 +493,6 @@
         private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.PictureBox picRestaurar;
         private System.Windows.Forms.TextBox lblNombre;
-        private MaterialSkin.Controls.MaterialCheckbox cbxAdmin;
         private MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca;
         private MaterialSkin.Controls.MaterialCheckbox cbxInventario;
         private System.Windows.Forms.DataGridView dgvUsuarios;
@@ -512,5 +511,6 @@
         private System.Windows.Forms.TextBox txtPermisos;
         private MaterialSkin.Controls.MaterialCheckbox cbxEncargado;
         private System.Windows.Forms.Timer tmrUsuarios;
+        private MaterialSkin.Controls.MaterialCheckbox cbxAdmin;
     }
 }

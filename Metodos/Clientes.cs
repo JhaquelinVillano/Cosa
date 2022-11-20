@@ -21,7 +21,7 @@ namespace Proyecto.Metodos
                 DataTable dataTable = new DataTable();
                 MySqlDataReader resultado;
                 //Consultado datos 
-                MySqlCommand command = new MySqlCommand("select * from clientes;", consultaDB);
+                MySqlCommand command = new MySqlCommand("select * from clientes order by idCliente;", consultaDB);
                 command.CommandType = CommandType.Text;
                 consultaDB.Open();
                 resultado = command.ExecuteReader();
