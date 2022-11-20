@@ -17,7 +17,7 @@ namespace Proyecto.Empleados
         public frmEmpleados()
         {
             InitializeComponent();
-            empleados.consultarEmpleados(dgvEmpleados);
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Proyecto.Empleados
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            empleados.consultarEmpleados(dgvEmpleados);
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -75,6 +75,20 @@ namespace Proyecto.Empleados
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             empleados.eliminarEmpleados(txtID, txtDniEmpleado, txtNombre, txtApellidos, txtDireccion, txtTelefono, txtCorreo);
+        }
+
+        private void picBusquedaPR_Click(object sender, EventArgs e)
+        {
+            if (tmrTiempo.Enabled == true)
+            {
+                tmrTiempo.Enabled = false;
+                return;
+            }
+            if (tmrTiempo.Enabled == false)
+            {
+                tmrTiempo.Enabled = true;
+                return;
+            }
         }
     }
 }
