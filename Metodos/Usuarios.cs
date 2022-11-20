@@ -13,22 +13,72 @@ namespace Proyecto.Metodos
 {
     internal class Usuarios
     {
-        internal void consultarUsuarios(DataGridView dgvUsuarios)
+        internal void consultarUsuarios(DataGridView dgvUsuarios, MaterialSkin.Controls.MaterialTextBox txtConsultar, MaterialSkin.Controls.MaterialComboBox cbxBusqueda)
         {
             try
             {
-                MySqlConnection consultaDB = Conexion.conexion();
-                DataTable dataTable = new DataTable();
-                MySqlDataReader resultado;
-                //Consultado datos sin la contraseña
-                MySqlCommand command = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios order by empleados_idEmpleado;", consultaDB);
-                command.CommandType = CommandType.Text;
-                consultaDB.Open();
-                resultado = command.ExecuteReader();
-                dataTable.Load(resultado);
-                dgvUsuarios.DataSource = dataTable;
-                consultaDB.Close();
-            }catch (Exception)
+                if (txtConsultar.Text == "")
+                {
+                    MySqlConnection consultaDB = Conexion.conexion();
+                    DataTable dataTable = new DataTable();
+                    MySqlDataReader resultado;
+                    //Consultado datos sin la contraseña
+                    MySqlCommand command = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios order by empleados_idEmpleado;", consultaDB);
+                    command.CommandType = CommandType.Text;
+                    consultaDB.Open();
+                    resultado = command.ExecuteReader();
+                    dataTable.Load(resultado);
+                    dgvUsuarios.DataSource = dataTable;
+                    consultaDB.Close();
+                }
+                if (txtConsultar.Text != "")
+                {
+                    if (cbxBusqueda.Text == "ID")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where empleados_idEmpleado like '%" + txtConsultar.Text + "%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvUsuarios.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "Nombre")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where id_usuario like '%" + txtConsultar.Text + "%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvUsuarios.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "DNI")
+                    {
+                        MySqlConnection consultaDB3 = Conexion.conexion();
+                        DataTable dataTable3 = new DataTable();
+                        MySqlDataReader resultado3;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command3 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where empleados_dni_empleado like '%" + txtConsultar.Text + "%';", consultaDB3);
+                        command3.CommandType = CommandType.Text;
+                        consultaDB3.Open();
+                        resultado3 = command3.ExecuteReader();
+                        dataTable3.Load(resultado3);
+                        dgvUsuarios.DataSource = dataTable3;
+                        consultaDB3.Close();
+                    }
+                }
+
+            }
+            catch (Exception)
             {
                 MessageBox.Show("ERROR ");
             }

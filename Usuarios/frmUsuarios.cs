@@ -18,7 +18,7 @@ namespace Proyecto.Usuarios
         public frmUsuarios()
         {
             InitializeComponent();
-            usuarios.consultarUsuarios(dgvUsuarios);
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -110,7 +110,7 @@ namespace Proyecto.Usuarios
 
         private void tmrUsuarios_Tick(object sender, EventArgs e)
         {
-            usuarios.consultarUsuarios(dgvUsuarios);
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
         private void cbxBiblioteca_CheckedChanged(object sender, EventArgs e)
@@ -158,6 +158,20 @@ namespace Proyecto.Usuarios
                 cbxEncargado.Enabled = true;
                 cbxInventario.Enabled = true;
                 cbxInvitado.Enabled = true;
+            }
+        }
+
+        private void picBusquedaPR_Click(object sender, EventArgs e)
+        {
+            if (tmrUsuarios.Enabled == true)
+            {
+                tmrUsuarios.Enabled = false;
+                return;
+            }
+            if (tmrUsuarios.Enabled == false)
+            {
+                tmrUsuarios.Enabled = true;
+                return;
             }
         }
     }

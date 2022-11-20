@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,9 @@
             this.cbxEncargado = new MaterialSkin.Controls.MaterialCheckbox();
             this.tmrUsuarios = new System.Windows.Forms.Timer(this.components);
             this.cbxAdmin = new MaterialSkin.Controls.MaterialCheckbox();
+            this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
+            this.picBusquedaPR = new System.Windows.Forms.PictureBox();
+            this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -62,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuario
@@ -148,7 +153,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(40, 163);
+            this.lblNombre.Location = new System.Drawing.Point(42, 247);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 11;
@@ -159,7 +164,7 @@
             // 
             this.cbxBiblioteca.AutoSize = true;
             this.cbxBiblioteca.Depth = 0;
-            this.cbxBiblioteca.Location = new System.Drawing.Point(70, 468);
+            this.cbxBiblioteca.Location = new System.Drawing.Point(72, 517);
             this.cbxBiblioteca.Margin = new System.Windows.Forms.Padding(0);
             this.cbxBiblioteca.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxBiblioteca.MouseState = MaterialSkin.MouseState.HOVER;
@@ -176,7 +181,7 @@
             // 
             this.cbxInventario.AutoSize = true;
             this.cbxInventario.Depth = 0;
-            this.cbxInventario.Location = new System.Drawing.Point(70, 505);
+            this.cbxInventario.Location = new System.Drawing.Point(72, 554);
             this.cbxInventario.Margin = new System.Windows.Forms.Padding(0);
             this.cbxInventario.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxInventario.MouseState = MaterialSkin.MouseState.HOVER;
@@ -208,7 +213,7 @@
             this.lblContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblContraseña.Enabled = false;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(156, 248);
+            this.lblContraseña.Location = new System.Drawing.Point(158, 332);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(202, 23);
             this.lblContraseña.TabIndex = 22;
@@ -222,7 +227,7 @@
             this.txtContraseña.Depth = 0;
             this.txtContraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtContraseña.LeadingIcon = null;
-            this.txtContraseña.Location = new System.Drawing.Point(156, 277);
+            this.txtContraseña.Location = new System.Drawing.Point(158, 361);
             this.txtContraseña.MaxLength = 50;
             this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.txtContraseña.Multiline = false;
@@ -307,7 +312,7 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(40, 192);
+            this.txtNombre.Location = new System.Drawing.Point(42, 276);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -325,7 +330,7 @@
             this.lblUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblUsuarios.Enabled = false;
             this.lblUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(684, 52);
+            this.lblUsuarios.Location = new System.Drawing.Point(158, 51);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(202, 45);
             this.lblUsuarios.TabIndex = 29;
@@ -336,7 +341,7 @@
             // 
             this.picUsuarios.Enabled = false;
             this.picUsuarios.Image = global::Proyecto.Properties.Resources._327527;
-            this.picUsuarios.Location = new System.Drawing.Point(186, 30);
+            this.picUsuarios.Location = new System.Drawing.Point(188, 114);
             this.picUsuarios.Name = "picUsuarios";
             this.picUsuarios.Size = new System.Drawing.Size(145, 114);
             this.picUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -350,7 +355,7 @@
             this.txtDniEmpleado.Depth = 0;
             this.txtDniEmpleado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDniEmpleado.LeadingIcon = null;
-            this.txtDniEmpleado.Location = new System.Drawing.Point(253, 192);
+            this.txtDniEmpleado.Location = new System.Drawing.Point(255, 276);
             this.txtDniEmpleado.MaxLength = 50;
             this.txtDniEmpleado.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDniEmpleado.Multiline = false;
@@ -366,7 +371,7 @@
             this.lblDniEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDniEmpleado.Enabled = false;
             this.lblDniEmpleado.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDniEmpleado.Location = new System.Drawing.Point(253, 163);
+            this.lblDniEmpleado.Location = new System.Drawing.Point(255, 247);
             this.lblDniEmpleado.Name = "lblDniEmpleado";
             this.lblDniEmpleado.Size = new System.Drawing.Size(202, 23);
             this.lblDniEmpleado.TabIndex = 30;
@@ -377,7 +382,7 @@
             // 
             this.cbxInvitado.AutoSize = true;
             this.cbxInvitado.Depth = 0;
-            this.cbxInvitado.Location = new System.Drawing.Point(40, 542);
+            this.cbxInvitado.Location = new System.Drawing.Point(42, 591);
             this.cbxInvitado.Margin = new System.Windows.Forms.Padding(0);
             this.cbxInvitado.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxInvitado.MouseState = MaterialSkin.MouseState.HOVER;
@@ -396,7 +401,7 @@
             this.txtPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPermisos.Enabled = false;
             this.txtPermisos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPermisos.Location = new System.Drawing.Point(26, 368);
+            this.txtPermisos.Location = new System.Drawing.Point(28, 417);
             this.txtPermisos.Name = "txtPermisos";
             this.txtPermisos.Size = new System.Drawing.Size(182, 23);
             this.txtPermisos.TabIndex = 34;
@@ -407,7 +412,7 @@
             // 
             this.cbxEncargado.AutoSize = true;
             this.cbxEncargado.Depth = 0;
-            this.cbxEncargado.Location = new System.Drawing.Point(40, 431);
+            this.cbxEncargado.Location = new System.Drawing.Point(42, 480);
             this.cbxEncargado.Margin = new System.Windows.Forms.Padding(0);
             this.cbxEncargado.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxEncargado.MouseState = MaterialSkin.MouseState.HOVER;
@@ -422,14 +427,15 @@
             // 
             // tmrUsuarios
             // 
-            this.tmrUsuarios.Interval = 1500;
+            this.tmrUsuarios.Enabled = true;
+            this.tmrUsuarios.Interval = 1000;
             this.tmrUsuarios.Tick += new System.EventHandler(this.tmrUsuarios_Tick);
             // 
             // cbxAdmin
             // 
             this.cbxAdmin.AutoSize = true;
             this.cbxAdmin.Depth = 0;
-            this.cbxAdmin.Location = new System.Drawing.Point(40, 394);
+            this.cbxAdmin.Location = new System.Drawing.Point(42, 443);
             this.cbxAdmin.Margin = new System.Windows.Forms.Padding(0);
             this.cbxAdmin.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxAdmin.MouseState = MaterialSkin.MouseState.HOVER;
@@ -442,12 +448,72 @@
             this.cbxAdmin.UseVisualStyleBackColor = true;
             this.cbxAdmin.CheckedChanged += new System.EventHandler(this.cbxAdmin_CheckedChanged_1);
             // 
+            // cbxBusqueda
+            // 
+            this.cbxBusqueda.AutoResize = false;
+            this.cbxBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxBusqueda.Depth = 0;
+            this.cbxBusqueda.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbxBusqueda.DropDownHeight = 174;
+            this.cbxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBusqueda.DropDownWidth = 121;
+            this.cbxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbxBusqueda.FormattingEnabled = true;
+            this.cbxBusqueda.IntegralHeight = false;
+            this.cbxBusqueda.ItemHeight = 43;
+            this.cbxBusqueda.Items.AddRange(new object[] {
+            "ID",
+            "Nombre",
+            "DNI"});
+            this.cbxBusqueda.Location = new System.Drawing.Point(884, 58);
+            this.cbxBusqueda.MaxDropDownItems = 4;
+            this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbxBusqueda.Name = "cbxBusqueda";
+            this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
+            this.cbxBusqueda.StartIndex = 0;
+            this.cbxBusqueda.TabIndex = 102;
+            // 
+            // picBusquedaPR
+            // 
+            this.picBusquedaPR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBusquedaPR.Image = ((System.Drawing.Image)(resources.GetObject("picBusquedaPR.Image")));
+            this.picBusquedaPR.Location = new System.Drawing.Point(1092, 58);
+            this.picBusquedaPR.Name = "picBusquedaPR";
+            this.picBusquedaPR.Size = new System.Drawing.Size(53, 49);
+            this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBusquedaPR.TabIndex = 101;
+            this.picBusquedaPR.TabStop = false;
+            this.picBusquedaPR.Click += new System.EventHandler(this.picBusquedaPR_Click);
+            // 
+            // txtConsultar
+            // 
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.AnimateReadOnly = false;
+            this.txtConsultar.BackColor = System.Drawing.Color.White;
+            this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsultar.Depth = 0;
+            this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtConsultar.LeadingIcon = null;
+            this.txtConsultar.Location = new System.Drawing.Point(509, 58);
+            this.txtConsultar.MaxLength = 50;
+            this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtConsultar.Multiline = false;
+            this.txtConsultar.Name = "txtConsultar";
+            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
+            this.txtConsultar.TabIndex = 100;
+            this.txtConsultar.Text = "";
+            this.txtConsultar.TrailingIcon = null;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.cbxBusqueda);
+            this.Controls.Add(this.picBusquedaPR);
+            this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxAdmin);
             this.Controls.Add(this.cbxEncargado);
             this.Controls.Add(this.txtPermisos);
@@ -480,6 +546,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +579,8 @@
         private MaterialSkin.Controls.MaterialCheckbox cbxEncargado;
         private System.Windows.Forms.Timer tmrUsuarios;
         private MaterialSkin.Controls.MaterialCheckbox cbxAdmin;
+        private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
+        private System.Windows.Forms.PictureBox picBusquedaPR;
+        private MaterialSkin.Controls.MaterialTextBox txtConsultar;
     }
 }

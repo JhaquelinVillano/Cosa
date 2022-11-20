@@ -468,7 +468,8 @@
             // 
             // tmrTiempo
             // 
-            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Enabled = true;
+            this.tmrTiempo.Interval = 1000;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
             // 
             // cbxBusqueda
