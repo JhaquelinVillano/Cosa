@@ -81,5 +81,19 @@ namespace Proyecto.Clientes
         {
             clientes.eliminarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
         }
+
+        private void picBusquedaPR_Click(object sender, EventArgs e)
+        {
+            if (tmrTiempo.Enabled == true)
+            {
+                tmrTiempo.Enabled = false;
+                return;
+            }
+            if (tmrTiempo.Enabled == false)
+            {
+                tmrTiempo.Enabled = true;
+                return;
+            }
+        }
     }
 }

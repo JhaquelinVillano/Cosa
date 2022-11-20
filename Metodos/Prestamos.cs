@@ -13,21 +13,70 @@ namespace Proyecto.Metodos
 {
     internal class Prestamos
     {
-        internal void consultarPrestamos(DataGridView dgvPrestamos)
+        internal void consultarPrestamos(DataGridView dgvPrestamos, MaterialSkin.Controls.MaterialTextBox txtConsultar, MaterialSkin.Controls.MaterialComboBox cbxBusqueda)
         {
             try
             {
-                MySqlConnection consultaDB = Conexion.conexion();
-                DataTable dataTable = new DataTable();
-                MySqlDataReader resultado;
-                //Consultado datos de prestamos 
-                MySqlCommand command = new MySqlCommand("select * from prestamos order by idPrestamo_p;", consultaDB);
-                command.CommandType = CommandType.Text;
-                consultaDB.Open();
-                resultado = command.ExecuteReader();
-                dataTable.Load(resultado);
-                dgvPrestamos.DataSource = dataTable;
-                consultaDB.Close();
+                if (txtConsultar.Text == "")
+                {
+
+                    MySqlConnection consultaDB = Conexion.conexion();
+                    DataTable dataTable = new DataTable();
+                    MySqlDataReader resultado;
+                    //Consultado datos de prestamos 
+                    MySqlCommand command = new MySqlCommand("select * from prestamos order by idPrestamo_p;", consultaDB);
+                    command.CommandType = CommandType.Text;
+                    consultaDB.Open();
+                    resultado = command.ExecuteReader();
+                    dataTable.Load(resultado);
+                    dgvPrestamos.DataSource = dataTable;
+                    consultaDB.Close();
+                }
+                if (txtConsultar.Text != "")
+                {
+                    if (cbxBusqueda.Text == "ID Prestamo")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select * from prestamos where idPrestamo_p like '%"+txtConsultar.Text+"%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvPrestamos.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "ID Libro")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select * from prestamos where libros_idLibro_l like '%" + txtConsultar.Text + "%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvPrestamos.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "ID Cliente")
+                    {
+                        MySqlConnection consultaDB3 = Conexion.conexion();
+                        DataTable dataTable3 = new DataTable();
+                        MySqlDataReader resultado3;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command3 = new MySqlCommand("select * from prestamos where clientes_idCliente like '%" + txtConsultar.Text + "%';", consultaDB3);
+                        command3.CommandType = CommandType.Text;
+                        consultaDB3.Open();
+                        resultado3 = command3.ExecuteReader();
+                        dataTable3.Load(resultado3);
+                        dgvPrestamos.DataSource = dataTable3;
+                        consultaDB3.Close();
+                    }
+                }
             }
             catch (Exception)
             {

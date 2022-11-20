@@ -478,6 +478,7 @@
             this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBusquedaPR.TabIndex = 95;
             this.picBusquedaPR.TabStop = false;
+            this.picBusquedaPR.Click += new System.EventHandler(this.picBusquedaPR_Click);
             // 
             // txtConsultar
             // 
