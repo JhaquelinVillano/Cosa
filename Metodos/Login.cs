@@ -14,13 +14,15 @@ namespace Proyecto.Metodos
     internal class Login
     {
         public int verificar = 0;
-        internal void iniciarSesion(string usuario,string contraseña)
+        public string Rol = "";
+        public string biblioteca = "";
+        public string inventario = "";
+        internal void iniciarSesion(string usuario, string contraseña)
         {
             try
             {
                 string usuarioBD = "";
                 string contrasenaBD = "";
-                string Rol="";
                 MySqlConnection conexionDB = Conexion.conexion();
                 DataTable dataTable = new DataTable();
                 MySqlDataReader resultado;
@@ -43,11 +45,11 @@ namespace Proyecto.Metodos
                 contrasenaBD = (Convert.ToString(command2.ExecuteScalar()));
                 conexionDB.Close();
                 //Verificacion de usuario y contraseña
-                if (usuario==usuarioBD && contraseña==contrasenaBD){
+                if (usuario == usuarioBD && contraseña == contrasenaBD) {
                     //Proceso de verificacion para saber si es admin o no
                     DataTable dataTable3 = new DataTable();
                     MySqlDataReader resultado3;
-                    MySqlCommand command3 = new MySqlCommand("select id_tipo from usuarios where id_usuario='"+usuario+"';", conexionDB);
+                    MySqlCommand command3 = new MySqlCommand("select id_tipo from usuarios where id_usuario='" + usuario + "';", conexionDB);
                     command3.CommandType = CommandType.Text;
                     conexionDB.Open();
                     resultado3 = command3.ExecuteReader();
@@ -55,9 +57,9 @@ namespace Proyecto.Metodos
                     Rol = (Convert.ToString(command3.ExecuteScalar()));
                     conexionDB.Close();
                     //Admin | Trabajador | Invitado
-                    if (Rol== "Administrador")
+                    if (Rol == "Administrador")
                     {
-                        MessageBox.Show("Bienvenido "+usuario);
+                        MessageBox.Show("Bienvenido " + usuario);
                         Menu.frmMenu admin = new Menu.frmMenu();
                         admin.Usuario = usuario;
                         verificar = 1;
@@ -70,13 +72,6 @@ namespace Proyecto.Metodos
                         trabajadores.Usuario = usuario;
                         trabajadores.Show();
                     }
-                    if (Rol == "Invitado")
-                    {
-                        MessageBox.Show("Bienvenido " + usuario);
-                        Menu.frmMenuTrabajadores trabajadores = new Menu.frmMenuTrabajadores();
-                        trabajadores.Usuario= usuario;
-                        trabajadores.Show();
-                    }
                 }
                 if (usuario != usuarioBD || contraseña != contrasenaBD)
                 {
@@ -87,6 +82,10 @@ namespace Proyecto.Metodos
             {
                 MessageBox.Show("Ups... algo ha salido mal");
             }
+        }
+        internal void verificarUsuario(string usuario)
+        {
+
         }
     }
 }

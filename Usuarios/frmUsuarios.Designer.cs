@@ -50,7 +50,6 @@
             this.picUsuarios = new System.Windows.Forms.PictureBox();
             this.txtDniEmpleado = new MaterialSkin.Controls.MaterialTextBox();
             this.lblDniEmpleado = new System.Windows.Forms.TextBox();
-            this.cbxInvitado = new MaterialSkin.Controls.MaterialCheckbox();
             this.txtPermisos = new System.Windows.Forms.TextBox();
             this.cbxEncargado = new MaterialSkin.Controls.MaterialCheckbox();
             this.tmrUsuarios = new System.Windows.Forms.Timer(this.components);
@@ -378,23 +377,6 @@
             this.lblDniEmpleado.Text = "DNI Empleado";
             this.lblDniEmpleado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cbxInvitado
-            // 
-            this.cbxInvitado.AutoSize = true;
-            this.cbxInvitado.Depth = 0;
-            this.cbxInvitado.Location = new System.Drawing.Point(42, 591);
-            this.cbxInvitado.Margin = new System.Windows.Forms.Padding(0);
-            this.cbxInvitado.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cbxInvitado.MouseState = MaterialSkin.MouseState.HOVER;
-            this.cbxInvitado.Name = "cbxInvitado";
-            this.cbxInvitado.ReadOnly = false;
-            this.cbxInvitado.Ripple = true;
-            this.cbxInvitado.Size = new System.Drawing.Size(92, 37);
-            this.cbxInvitado.TabIndex = 33;
-            this.cbxInvitado.Text = "Invitado";
-            this.cbxInvitado.UseVisualStyleBackColor = true;
-            this.cbxInvitado.CheckedChanged += new System.EventHandler(this.cbxEmpleados_CheckedChanged);
-            // 
             // txtPermisos
             // 
             this.txtPermisos.BackColor = System.Drawing.Color.White;
@@ -517,7 +499,6 @@
             this.Controls.Add(this.cbxAdmin);
             this.Controls.Add(this.cbxEncargado);
             this.Controls.Add(this.txtPermisos);
-            this.Controls.Add(this.cbxInvitado);
             this.Controls.Add(this.txtDniEmpleado);
             this.Controls.Add(this.lblDniEmpleado);
             this.Controls.Add(this.lblUsuarios);
@@ -574,7 +555,6 @@
         private System.Windows.Forms.TextBox lblUsuarios;
         private MaterialSkin.Controls.MaterialTextBox txtDniEmpleado;
         private System.Windows.Forms.TextBox lblDniEmpleado;
-        private MaterialSkin.Controls.MaterialCheckbox cbxInvitado;
         private System.Windows.Forms.TextBox txtPermisos;
         private MaterialSkin.Controls.MaterialCheckbox cbxEncargado;
         private System.Windows.Forms.Timer tmrUsuarios;

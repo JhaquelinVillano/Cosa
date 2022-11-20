@@ -84,7 +84,7 @@ namespace Proyecto.Metodos
             }
 
         }
-        internal void registrarUsuarios(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario, MaterialSkin.Controls.MaterialCheckbox cbxInvitado)
+        internal void registrarUsuarios(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario)
         {
             try
             {
@@ -121,7 +121,7 @@ namespace Proyecto.Metodos
                 {
                     if (dniEmpleado != "")
                     {
-                        if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false && cbxInvitado.Checked == false)
+                        if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false)
                         {
                             MessageBox.Show("No elegiste los permisos");
                         }
@@ -143,7 +143,6 @@ namespace Proyecto.Metodos
                             cbxBiblioteca.Checked = false;
                             cbxEmpleado.Checked = false;
                             cbxInventario.Checked = false;
-                            cbxInvitado.Checked = false;
                             MessageBox.Show("El usuario se ha registrado correctamente");
                         }
                         if (cbxEmpleado.Checked==true && cbxInventario.Checked==false && cbxBiblioteca.Checked==false)
@@ -170,7 +169,6 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha registrado correctamente");
                             }
                             if (cbxBiblioteca.Checked==true && cbxInventario.Checked==false)
@@ -191,7 +189,6 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha registrado correctamente");
                             }
                             if (cbxInventario.Checked==true && cbxBiblioteca.Checked==false)
@@ -212,30 +209,8 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha registrado correctamente");
                             }
-                        }
-                        if (cbxInvitado.Checked == true)
-                        {
-                            DataTable dataTableInvitado = new DataTable();
-                            MySqlDataReader resultadoInvitado;
-                            //ingresando datos de nuevo usuario invitado
-                            MySqlCommand commandInvitado = new MySqlCommand("insert into usuarios (empleados_idEmpleado,id_usuario,empleados_dni_empleado,contraseña,id_tipo,biblioteca,inventario) values ("+EmpleadoID+",'" + txtnombre.Text + "','" + txtDNI.Text + "','" + txtcontraseña.Text + "','Invitado','SI','SI');", conexionDB);
-                            commandInvitado.CommandType = CommandType.Text;
-                            conexionDB.Open();
-                            resultadoInvitado = commandInvitado.ExecuteReader();
-                            dataTableInvitado.Load(resultadoInvitado);
-                            conexionDB.Close();
-                            txtnombre.Text = "";
-                            txtcontraseña.Text = "";
-                            txtDNI.Text = "";
-                            cbxAdmin.Checked = false;
-                            cbxBiblioteca.Checked = false;
-                            cbxEmpleado.Checked = false;
-                            cbxInventario.Checked = false;
-                            cbxInvitado.Checked = false;
-                            MessageBox.Show("El usuario se ha registrado correctamente");
                         }
                     }
                     if (dniEmpleado == "")
@@ -249,7 +224,7 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Ups... algo ha salido mal, Verifica los datos introducidos");
             }
         }
-        internal void modificarUsuarios(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario, MaterialSkin.Controls.MaterialCheckbox cbxInvitado)
+        internal void modificarUsuarios(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario)
         {
             try
             {
@@ -277,7 +252,7 @@ namespace Proyecto.Metodos
                 {
                     if (dniEmpleado != "")
                     {
-                        if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false && cbxInvitado.Checked == false)
+                        if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false)
                         {
                             MessageBox.Show("No elegiste los permisos");
                         }
@@ -299,7 +274,6 @@ namespace Proyecto.Metodos
                             cbxBiblioteca.Checked = false;
                             cbxEmpleado.Checked = false;
                             cbxInventario.Checked = false;
-                            cbxInvitado.Checked = false;
                             MessageBox.Show("El usuario se ha modificado correctamente");
                         }
                         if (cbxEmpleado.Checked == true && cbxInventario.Checked == false && cbxBiblioteca.Checked == false)
@@ -326,7 +300,6 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha modificado correctamente");
                             }
                             if (cbxBiblioteca.Checked == true && cbxInventario.Checked == false)
@@ -347,7 +320,6 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha modificado correctamente");
                             }
                             if (cbxInventario.Checked == true && cbxBiblioteca.Checked == false)
@@ -368,30 +340,8 @@ namespace Proyecto.Metodos
                                 cbxBiblioteca.Checked = false;
                                 cbxEmpleado.Checked = false;
                                 cbxInventario.Checked = false;
-                                cbxInvitado.Checked = false;
                                 MessageBox.Show("El usuario se ha modificado correctamente");
                             }
-                        }
-                        if (cbxInvitado.Checked == true)
-                        {
-                            DataTable dataTableInvitado = new DataTable();
-                            MySqlDataReader resultadoInvitado;
-                            //modificando datos de usuario invitado
-                            MySqlCommand commandInvitado = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Invitado',biblioteca='SI',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
-                            commandInvitado.CommandType = CommandType.Text;
-                            conexionDB.Open();
-                            resultadoInvitado = commandInvitado.ExecuteReader();
-                            dataTableInvitado.Load(resultadoInvitado);
-                            conexionDB.Close();
-                            txtnombre.Text = "";
-                            txtcontraseña.Text = "";
-                            txtDNI.Text = "";
-                            cbxAdmin.Checked = false;
-                            cbxBiblioteca.Checked = false;
-                            cbxEmpleado.Checked = false;
-                            cbxInventario.Checked = false;
-                            cbxInvitado.Checked = false;
-                            MessageBox.Show("El usuario se ha modificado correctamente");
                         }
                     }
                     if (dniEmpleado == "")
@@ -409,7 +359,6 @@ namespace Proyecto.Metodos
                     cbxBiblioteca.Checked = false;
                     cbxEmpleado.Checked = false;
                     cbxInventario.Checked = false;
-                    cbxInvitado.Checked = false;
                     MessageBox.Show("No se modificado el usuario");
                 }
             }
@@ -418,7 +367,7 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Ups... algo ha salido mal, Verifica los datos introducidos");
             }
         }
-        internal void eliminarUsuario(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario, MaterialSkin.Controls.MaterialCheckbox cbxInvitado)
+        internal void eliminarUsuario(MaterialSkin.Controls.MaterialTextBox txtnombre, MaterialSkin.Controls.MaterialTextBox txtcontraseña, MaterialSkin.Controls.MaterialTextBox txtDNI, MaterialSkin.Controls.MaterialCheckbox cbxAdmin, MaterialSkin.Controls.MaterialCheckbox cbxEmpleado, MaterialSkin.Controls.MaterialCheckbox cbxBiblioteca, MaterialSkin.Controls.MaterialCheckbox cbxInventario)
         {
             try
             {
@@ -442,7 +391,6 @@ namespace Proyecto.Metodos
                     cbxBiblioteca.Checked = false;
                     cbxEmpleado.Checked = false;
                     cbxInventario.Checked = false;
-                    cbxInvitado.Checked = false;
                     MessageBox.Show("Se ha eliminado el usuario");
                 }
                 else
@@ -454,7 +402,6 @@ namespace Proyecto.Metodos
                     cbxBiblioteca.Checked = false;
                     cbxEmpleado.Checked = false;
                     cbxInventario.Checked = false;
-                    cbxInvitado.Checked = false;
                     MessageBox.Show("No se elimino el usuario");
                 }
             }

@@ -61,24 +61,6 @@ namespace Proyecto.Usuarios
 
         private void cbxEmpleados_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxInvitado.Checked == true)
-            {
-                cbxBiblioteca.Checked = false;
-                cbxEncargado.Checked = false;
-                cbxInventario.Checked = false;
-                cbxAdmin.Checked = false;
-                cbxBiblioteca.Enabled = false;
-                cbxEncargado.Enabled = false;
-                cbxInventario.Enabled = false;
-                cbxAdmin.Enabled = false;
-            }
-            if (cbxInvitado.Checked == false)
-            {
-                cbxBiblioteca.Enabled = true;
-                cbxEncargado.Enabled = true;
-                cbxInventario.Enabled = true;
-                cbxAdmin.Enabled = true;
-            }
         }
 
         private void cbxEmpleado_CheckedChanged(object sender, EventArgs e)
@@ -86,21 +68,18 @@ namespace Proyecto.Usuarios
             if (cbxEncargado.Checked == true)
             {
                 cbxAdmin.Enabled = false;
-                cbxInvitado.Enabled=false;
             }
             if (cbxEncargado.Checked == false)
             {
                 cbxAdmin.Enabled = true;
-                cbxInvitado.Enabled = true;
                 cbxBiblioteca.Checked=false;
                 cbxInventario.Checked=false;
-                cbxInvitado.Checked = false;
             }
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            usuarios.registrarUsuarios(txtNombre,txtContraseña, txtDniEmpleado, cbxAdmin,cbxEncargado,cbxBiblioteca,cbxInventario,cbxInvitado);
+            usuarios.registrarUsuarios(txtNombre,txtContraseña, txtDniEmpleado, cbxAdmin,cbxEncargado,cbxBiblioteca,cbxInventario);
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
@@ -131,12 +110,12 @@ namespace Proyecto.Usuarios
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            usuarios.eliminarUsuario(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario, cbxInvitado);
+            usuarios.eliminarUsuario(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            usuarios.modificarUsuarios(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario, cbxInvitado);
+            usuarios.modificarUsuarios(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario);
         }
 
         private void cbxAdmin_CheckedChanged_1(object sender, EventArgs e)
@@ -146,18 +125,15 @@ namespace Proyecto.Usuarios
                 cbxBiblioteca.Checked = false;
                 cbxEncargado.Checked = false;
                 cbxInventario.Checked = false;
-                cbxInvitado.Checked = false;
                 cbxBiblioteca.Enabled = false;
                 cbxEncargado.Enabled = false;
                 cbxInventario.Enabled = false;
-                cbxInvitado.Enabled = false;
             }
             if (cbxAdmin.Checked == false)
             {
                 cbxBiblioteca.Enabled = true;
                 cbxEncargado.Enabled = true;
                 cbxInventario.Enabled = true;
-                cbxInvitado.Enabled = true;
             }
         }
 
