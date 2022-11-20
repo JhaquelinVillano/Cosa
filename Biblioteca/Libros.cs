@@ -18,7 +18,7 @@ namespace Proyecto.Biblioteca
         public frmLibros()
         {
             InitializeComponent();
-            libros.consultarLibros(dgvLibros);
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -114,14 +114,7 @@ namespace Proyecto.Biblioteca
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (txtConsultar.Text=="")
-            {
-                libros.consultarLibros(dgvLibros);
-            }
-            if (txtConsultar.Text!="")
-            {
-
-            }
+                libros.consultarLibros(dgvLibros,txtConsultar,cbxBusqueda);
         }
         
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -137,6 +130,20 @@ namespace Proyecto.Biblioteca
         private void btnModificar_Click(object sender, EventArgs e)
         {
             libros.modificarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
+        }
+
+        private void picBusquedaPR_Click(object sender, EventArgs e)
+        {
+            if (tmrTiempo.Enabled==true)
+            {
+                tmrTiempo.Enabled=false;
+                return;
+            }
+            if (tmrTiempo.Enabled == false)
+            {
+                tmrTiempo.Enabled = true;
+                return;
+            }
         }
     }
 }

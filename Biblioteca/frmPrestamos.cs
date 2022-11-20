@@ -77,5 +77,9 @@ namespace Proyecto.Biblioteca
         {
             prestamos.hacerDevolucion(txtLibroID, txtNombreSolicitante, txtPrestamoID,Usuario);
         }
+
+        private void dgvP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }

@@ -237,6 +237,7 @@
             this.dgvP.Name = "dgvP";
             this.dgvP.Size = new System.Drawing.Size(697, 547);
             this.dgvP.TabIndex = 75;
+            this.dgvP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvP_CellClick);
             // 
             // txtNombreSolicitante
             // 
