@@ -17,7 +17,7 @@ namespace Proyecto.Clientes
         public frmClientes()
         {
             InitializeComponent();
-            clientes.consultarClientes(dgvClientes);
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace Proyecto.Clientes
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            clientes.consultarClientes(dgvClientes);
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

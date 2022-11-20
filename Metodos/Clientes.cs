@@ -13,21 +13,83 @@ namespace Proyecto.Metodos
 {
     internal class Clientes
     {
-        internal void consultarClientes(DataGridView dgvClientes)
+        internal void consultarClientes(DataGridView dgvClientes, MaterialSkin.Controls.MaterialTextBox txtConsultar, MaterialSkin.Controls.MaterialComboBox cbxBusqueda)
         {
             try
             {
-                MySqlConnection consultaDB = Conexion.conexion();
-                DataTable dataTable = new DataTable();
-                MySqlDataReader resultado;
-                //Consultado datos 
-                MySqlCommand command = new MySqlCommand("select * from clientes order by idCliente;", consultaDB);
-                command.CommandType = CommandType.Text;
-                consultaDB.Open();
-                resultado = command.ExecuteReader();
-                dataTable.Load(resultado);
-                dgvClientes.DataSource = dataTable;
-                consultaDB.Close();
+                if (txtConsultar.Text == "")
+                {
+                    MySqlConnection consultaDB = Conexion.conexion();
+                    DataTable dataTable = new DataTable();
+                    MySqlDataReader resultado;
+                    //Consultado datos 
+                    MySqlCommand command = new MySqlCommand("select * from clientes order by idCliente;", consultaDB);
+                    command.CommandType = CommandType.Text;
+                    consultaDB.Open();
+                    resultado = command.ExecuteReader();
+                    dataTable.Load(resultado);
+                    dgvClientes.DataSource = dataTable;
+                    consultaDB.Close();
+                }
+                if (txtConsultar.Text != "")
+                {
+                    if (cbxBusqueda.Text == "ID")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select * from clientes where idCliente like '%"+txtConsultar.Text+"%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvClientes.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "DNI")
+                    {
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command2 = new MySqlCommand("select * from clientes where dni_cliente like '%" + txtConsultar.Text + "%';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        dgvClientes.DataSource = dataTable2;
+                        consultaDB2.Close();
+                    }
+                    if (cbxBusqueda.Text == "Nombre")
+                    {
+                        MySqlConnection consultaDB3 = Conexion.conexion();
+                        DataTable dataTable3 = new DataTable();
+                        MySqlDataReader resultado3;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command3 = new MySqlCommand("select * from clientes where nombre like '%" + txtConsultar.Text + "%';", consultaDB3);
+                        command3.CommandType = CommandType.Text;
+                        consultaDB3.Open();
+                        resultado3 = command3.ExecuteReader();
+                        dataTable3.Load(resultado3);
+                        dgvClientes.DataSource = dataTable3;
+                        consultaDB3.Close();
+                    }
+                    if (cbxBusqueda.Text == "Teléfono")
+                    {
+                        MySqlConnection consultaDB3 = Conexion.conexion();
+                        DataTable dataTable3 = new DataTable();
+                        MySqlDataReader resultado3;
+                        //Consultado datos de la tabla libros
+                        MySqlCommand command3 = new MySqlCommand("select * from clientes where telefono like '%" + txtConsultar.Text + "%';", consultaDB3);
+                        command3.CommandType = CommandType.Text;
+                        consultaDB3.Open();
+                        resultado3 = command3.ExecuteReader();
+                        dataTable3.Load(resultado3);
+                        dgvClientes.DataSource = dataTable3;
+                        consultaDB3.Close();
+                    }
+                }
             }
             catch (Exception)
             {

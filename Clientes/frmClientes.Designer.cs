@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmClientes));
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -51,11 +52,12 @@
             this.picUsuarios = new System.Windows.Forms.PictureBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.lblNombre = new System.Windows.Forms.TextBox();
-            this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.txtID = new MaterialSkin.Controls.MaterialTextBox();
             this.lblID = new System.Windows.Forms.TextBox();
             this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
+            this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
+            this.picBusquedaPR = new System.Windows.Forms.PictureBox();
+            this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -64,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBiblioteca
@@ -402,49 +405,6 @@
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtConsultar
-            // 
-            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConsultar.AnimateReadOnly = false;
-            this.txtConsultar.BackColor = System.Drawing.Color.White;
-            this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConsultar.Depth = 0;
-            this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(515, 49);
-            this.txtConsultar.MaxLength = 50;
-            this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtConsultar.Multiline = false;
-            this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(493, 50);
-            this.txtConsultar.TabIndex = 91;
-            this.txtConsultar.Text = "";
-            this.txtConsultar.TrailingIcon = null;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.AutoSize = false;
-            this.btnConsultar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnConsultar.Depth = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.HighEmphasis = true;
-            this.btnConsultar.Icon = null;
-            this.btnConsultar.Location = new System.Drawing.Point(1015, 49);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnConsultar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnConsultar.Size = new System.Drawing.Size(136, 45);
-            this.btnConsultar.TabIndex = 90;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnConsultar.UseAccentColor = false;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            // 
             // txtID
             // 
             this.txtID.AnimateReadOnly = false;
@@ -477,8 +437,66 @@
             // 
             // tmrTiempo
             // 
-            this.tmrTiempo.Interval = 1500;
+            this.tmrTiempo.Enabled = true;
+            this.tmrTiempo.Interval = 1000;
             this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
+            // 
+            // cbxBusqueda
+            // 
+            this.cbxBusqueda.AutoResize = false;
+            this.cbxBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxBusqueda.Depth = 0;
+            this.cbxBusqueda.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbxBusqueda.DropDownHeight = 174;
+            this.cbxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBusqueda.DropDownWidth = 121;
+            this.cbxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbxBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbxBusqueda.FormattingEnabled = true;
+            this.cbxBusqueda.IntegralHeight = false;
+            this.cbxBusqueda.ItemHeight = 43;
+            this.cbxBusqueda.Items.AddRange(new object[] {
+            "ID",
+            "DNI",
+            "Nombre",
+            "Teléfono"});
+            this.cbxBusqueda.Location = new System.Drawing.Point(890, 47);
+            this.cbxBusqueda.MaxDropDownItems = 4;
+            this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbxBusqueda.Name = "cbxBusqueda";
+            this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
+            this.cbxBusqueda.StartIndex = 0;
+            this.cbxBusqueda.TabIndex = 96;
+            // 
+            // picBusquedaPR
+            // 
+            this.picBusquedaPR.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBusquedaPR.Image = ((System.Drawing.Image)(resources.GetObject("picBusquedaPR.Image")));
+            this.picBusquedaPR.Location = new System.Drawing.Point(1098, 47);
+            this.picBusquedaPR.Name = "picBusquedaPR";
+            this.picBusquedaPR.Size = new System.Drawing.Size(53, 49);
+            this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBusquedaPR.TabIndex = 95;
+            this.picBusquedaPR.TabStop = false;
+            // 
+            // txtConsultar
+            // 
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.AnimateReadOnly = false;
+            this.txtConsultar.BackColor = System.Drawing.Color.White;
+            this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConsultar.Depth = 0;
+            this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtConsultar.LeadingIcon = null;
+            this.txtConsultar.Location = new System.Drawing.Point(515, 47);
+            this.txtConsultar.MaxLength = 50;
+            this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtConsultar.Multiline = false;
+            this.txtConsultar.Name = "txtConsultar";
+            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
+            this.txtConsultar.TabIndex = 94;
+            this.txtConsultar.Text = "";
+            this.txtConsultar.TrailingIcon = null;
             // 
             // frmClientes
             // 
@@ -486,10 +504,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1164, 641);
+            this.Controls.Add(this.cbxBusqueda);
+            this.Controls.Add(this.picBusquedaPR);
+            this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtConsultar);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.txtDireccion);
@@ -520,6 +539,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,10 +569,11 @@
         private System.Windows.Forms.PictureBox picUsuarios;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.TextBox lblNombre;
-        private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private MaterialSkin.Controls.MaterialButton btnConsultar;
         private MaterialSkin.Controls.MaterialTextBox txtID;
         private System.Windows.Forms.TextBox lblID;
         private System.Windows.Forms.Timer tmrTiempo;
+        private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
+        private System.Windows.Forms.PictureBox picBusquedaPR;
+        private MaterialSkin.Controls.MaterialTextBox txtConsultar;
     }
 }
