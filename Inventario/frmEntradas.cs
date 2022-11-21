@@ -18,7 +18,6 @@ namespace Proyecto.Inventario
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
-        Propiedades propie = new Propiedades();
         MySqlConnection conexionDB = Conexion.conexion();
 
         public frmEntradas()
@@ -74,21 +73,10 @@ namespace Proyecto.Inventario
             else if (rbtnDonacion.Checked == true)
             {   //Si esta activo lo pasamos a la variable tipo
                 tipo = rbtnDonacion.Text;
-            }/*
-            //Propiedades
-            propie.CodigoArticulo = txtCodigo.Text;
-            propie.NombreArticulo = txtNombre.Text;
-            propie.Cantidad = Convert.ToInt32(txtCantidad.Text);
+            }
             //LLamando metodo
-            inventario.ingresarEntrada(propie.CodigoArticulo,
-                                propie.NombreArticulo,
-                                propie.Cantidad,
-                                txtDescripcion.Text,
-                                tipo);
-
-            inventario.ingresarInventario(propie.CodigoArticulo, propie.NombreArticulo, propie.Cantidad);
             inventario.actualizarEntrada(dgvEntradas);
-            limpiar();*/
+            limpiar();
         }
 
         private void picExcel_Click(object sender, EventArgs e)

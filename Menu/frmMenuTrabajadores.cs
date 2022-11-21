@@ -14,6 +14,9 @@ namespace Proyecto.Menu
     public partial class frmMenuTrabajadores : Form
     {
         public string Usuario;
+        public string Rol;
+        public string biblioteca;
+        public string inventario;
         public frmMenuTrabajadores()
         {
             InitializeComponent();

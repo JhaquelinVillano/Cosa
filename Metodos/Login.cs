@@ -70,6 +70,9 @@ namespace Proyecto.Metodos
                         MessageBox.Show("Bienvenido " + usuario);
                         Menu.frmMenuTrabajadores trabajadores = new Menu.frmMenuTrabajadores();
                         trabajadores.Usuario = usuario;
+                        trabajadores.Rol = Rol;
+                        trabajadores.biblioteca = biblioteca;
+                        trabajadores.inventario = inventario; ;
                         trabajadores.Show();
                     }
                 }
@@ -82,10 +85,6 @@ namespace Proyecto.Metodos
             {
                 MessageBox.Show("Ups... algo ha salido mal");
             }
-        }
-        internal void verificarUsuario(string usuario)
-        {
-
         }
     }
 }

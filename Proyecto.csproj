@@ -219,7 +219,6 @@
     <Compile Include="Metodos\Libros.cs" />
     <Compile Include="Metodos\Login.cs" />
     <Compile Include="Metodos\Prestamos.cs" />
-    <Compile Include="Metodos\Propiedades.cs" />
     <Compile Include="Metodos\Respaldo.cs" />
     <Compile Include="Metodos\Usuarios.cs" />
     <Compile Include="Program.cs" />
