@@ -99,44 +99,27 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al registrar: " + ex.Message);
             }
         }
-        /*
-        public void buscarEntrada(string dato, DataGridView dgvdEntradas)
-        {   //Query para buscar
-            string sql = "select * from entradas where codigoArticulo_e like '%" + dato + "%' or nombreArticulo_e" +
-                "like '%" + dato + "'or cantidad_e like'%" + dato + "%'or descripcion_e like '%"+ dato +"%'" +
-                "or fecha_e like '%"+ dato + "%'or tipo_e like '%"+ dato +"%'";
-            //Generando variables
-            string nombreArticulo, descripcion, fecha, tipo, codigoArticulo;
-            int cantidad;
-            //Controland errores
+        public DataTable busquedaEntradas(string sql)
+        {   //Comandos para nuestra busqueda
+            MySqlDataAdapter da = new MySqlDataAdapter(sql, conexionDB);
+            DataTable tb = new DataTable();
             try
-            {   //Conectando e introduciendo codigo
+            {   //Abriendo conexion
                 conexionDB.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
-                comando.CommandText = dato;
-                //Lectura
-                MySqlDataReader consultar;
-                consultar = comando.ExecuteReader();
-                //Ciclando todos los datos
-                while (consultar.Read())
-                {
-                    codigoArticulo = consultar.GetString(0);
-                    nombreArticulo = consultar.GetString(1);
-                    cantidad = consultar.GetInt32(2);
-                    descripcion = consultar.GetString(3);
-                    fecha = consultar.GetString(4);
-                    tipo = consultar.GetString(5);
-                    dgvdEntradas.Rows.Add(codigoArticulo, nombreArticulo, Convert.ToInt32(cantidad), descripcion,
-                        fecha, tipo);
-                }
+                //Pasando datos
+                da.Fill(tb);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error al buscar: " + ex.Message);
             }
-            conexionDB.Close();
-        }*/
-
+            finally
+            {   //Cerrar conexion
+                conexionDB.Close();
+            }//Devolviendo datos
+            return tb;
+        }
+        
         //Formulario de salida
         public void registroSalida(string codigo, int cantidad, string fecha)
         {
@@ -248,35 +231,7 @@ namespace Proyecto.Metodos
                 conexionDB.Close();
             }
         }
-        public void cargarID(ComboBox cbx)
-        {   //Limpiando combobox
-            cbx.DataSource = null;
-            cbx.Items.Clear();
-            try
-            {
-                string sql = "select id_salidas, nombreArticulo_s from salidas order by nombreArticulo_s asc";
-                conexionDB.Open();
-                MySqlCommand comando = new MySqlCommand(sql, conexionDB);
-                //Adaptador
-                MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
-                //Cargando al objeto
-                DataTable dt = new DataTable();
-                adaptador.Fill(dt);
-                //Cargarle los datos que queremos
-                cbx.ValueMember = "nombreArticulo_s";
-                cbx.DisplayMember = "id_salidas";
-                //Cargarlo al combobox
-                cbx.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar: " + ex.Message);
-            }
-            finally
-            {   //Cerrando
-                conexionDB.Close();
-            }
-        }
+        
         public void actualizarInventario(DataGridView dgvInventario)
         {
             string sql = "select * from productos;";
@@ -339,7 +294,7 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al registrar: " + ex.Message);
             }
         }
-        
+
         public void eliminarInventario(string id)
         {   //Query
             string sql = "delete from productos where codigo_p='" + id + "'";

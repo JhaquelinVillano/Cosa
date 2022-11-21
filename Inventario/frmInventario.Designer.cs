@@ -156,6 +156,7 @@
             this.txtConsultar.TabIndex = 76;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConsultar_KeyUp);
             // 
             // btnConsultar
             // 
@@ -208,6 +209,7 @@
             this.lblInventario.TabIndex = 78;
             this.lblInventario.Text = "Inventario";
             this.lblInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblInventario.TextChanged += new System.EventHandler(this.lblInventario_TextChanged);
             // 
             // picInventario
             // 
@@ -343,7 +345,7 @@
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
             this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(158, 36);
+            this.materialButton1.Size = new System.Drawing.Size(99, 36);
             this.materialButton1.TabIndex = 85;
             this.materialButton1.Text = "Modificar";
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -376,7 +378,7 @@
             this.txtCantidad.AnimateReadOnly = false;
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Depth = 0;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCantidad.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCantidad.LeadingIcon = null;
             this.txtCantidad.Location = new System.Drawing.Point(21, 510);
             this.txtCantidad.MaxLength = 50;
@@ -393,7 +395,7 @@
             this.txtNombre.AnimateReadOnly = false;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Depth = 0;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
             this.txtNombre.Location = new System.Drawing.Point(21, 454);
             this.txtNombre.MaxLength = 50;
@@ -430,6 +432,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmInventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             this.pnlInventario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();

@@ -1,4 +1,5 @@
-﻿using Proyecto.Entradas_y_Salidas;
+﻿using MySql.Data.MySqlClient;
+using Proyecto.Entradas_y_Salidas;
 using Proyecto.Menu;
 using Proyecto.Metodos;
 using System;
@@ -17,6 +18,7 @@ namespace Proyecto.Inventario
     {
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
+        //DataView miFiltro;
         public frmInventario()
         {
             InitializeComponent();
@@ -95,5 +97,19 @@ namespace Proyecto.Inventario
             inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarInventario(dgvInventario);
         }
+
+        private void lblInventario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void txtConsultar_KeyUp(object sender, KeyEventArgs e)
+        {
+        }
+        
     }
 }

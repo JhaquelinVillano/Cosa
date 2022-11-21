@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using Microsoft.Ajax.Utilities;
 using MySql.Data.MySqlClient;
 using Proyecto.Menu;
 using Proyecto.Metodos;
@@ -75,6 +76,14 @@ namespace Proyecto.Inventario
                 tipo = rbtnDonacion.Text;
             }
             //LLamando metodo
+            inventario.ingresarEntrada(txtCodigo.Text,
+                                txtNombre.Text,
+                                int.Parse(txtCantidad.Text),
+                                txtDescripcion.Text,
+                                tipo);
+            inventario.ingresarInventario(txtCodigo.Text,
+                                txtNombre.Text,
+                                int.Parse(txtCantidad.Text));
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
@@ -115,11 +124,11 @@ namespace Proyecto.Inventario
 
         private void limpiar()
         {
-            txtCantidad.Text = "";
-            txtCodigo.Text = "";
-            txtConsultar.Text = "";
-            txtDescripcion.Text = "";
-            txtNombre.Text = "";
+            txtCantidad.Clear();
+            txtCodigo.Clear();
+            txtConsultar.Clear();
+            txtDescripcion.Clear();
+            txtNombre.Clear();
         }
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -128,12 +137,35 @@ namespace Proyecto.Inventario
 
         private void txtConsultar_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void frmEntradas_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void dgvEntradas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {   //Rellenar celdas con informacion
+            txtCodigo.Text = dgvEntradas.SelectedCells[0].Value.ToString();
+            txtNombre.Text = dgvEntradas.SelectedCells[1].Value.ToString();
+            txtCantidad.Text = dgvEntradas.SelectedCells[2].Value.ToString();
+            txtDescripcion.Text = dgvEntradas.SelectedCells[3].Value.ToString();
+        }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {   //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "") {
+                dgvEntradas.DataSource = inventario.busquedaEntradas("select * from `entradas` where " +
+                    "`codigoArticulo_e` like '%" + txtConsultar.Text + "%' or nombreArticulo_e like '%" + txtConsultar.Text + "' " +
+                    " or descripcion_e like '%" + txtConsultar.Text + "%' or fecha_e like '%" + 
+                    txtConsultar.Text + "%' or tipo_e like '%" + txtConsultar.Text + "%'");
+                
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarEntrada(dgvEntradas);
+            }
         }
     }
 }
