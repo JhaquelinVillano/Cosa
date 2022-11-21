@@ -151,7 +151,7 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(24, 239);
+            this.txtNombre.Location = new System.Drawing.Point(24, 323);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -180,7 +180,7 @@
             this.lblCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCodigo.Enabled = false;
             this.lblCodigo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(24, 294);
+            this.lblCodigo.Location = new System.Drawing.Point(24, 204);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(202, 23);
             this.lblCodigo.TabIndex = 29;
@@ -193,7 +193,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(24, 210);
+            this.lblNombre.Location = new System.Drawing.Point(24, 294);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 28;
@@ -209,8 +209,11 @@
             this.dgvEntradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEntradas.Location = new System.Drawing.Point(500, 103);
             this.dgvEntradas.Name = "dgvEntradas";
+            this.dgvEntradas.ReadOnly = true;
+            this.dgvEntradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEntradas.Size = new System.Drawing.Size(668, 546);
             this.dgvEntradas.TabIndex = 37;
+            this.dgvEntradas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntradas_CellClick);
             // 
             // btnEliminar
             // 
@@ -357,7 +360,7 @@
             this.txtCodigo.Depth = 0;
             this.txtCodigo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCodigo.LeadingIcon = null;
-            this.txtCodigo.Location = new System.Drawing.Point(24, 323);
+            this.txtCodigo.Location = new System.Drawing.Point(24, 233);
             this.txtCodigo.MaxLength = 50;
             this.txtCodigo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCodigo.Multiline = false;
@@ -431,6 +434,7 @@
             this.txtConsultar.TabIndex = 73;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             this.txtConsultar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConsultar_KeyDown);
             // 
             // btnConsultar

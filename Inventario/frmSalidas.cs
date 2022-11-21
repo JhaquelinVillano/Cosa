@@ -20,7 +20,6 @@ namespace Proyecto.Entradas_y_Salidas
         {
             InitializeComponent();
             inventario.cargarCategorias(cbxNombreArticulo);
-            inventario.cargarID(cbxID);
             inventario.actualizarSalida(dgvSalidas);
         }
 
@@ -72,7 +71,6 @@ namespace Proyecto.Entradas_y_Salidas
             //Metodo
             inventario.registroSalida(cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
-            inventario.cargarID(cbxID);
             limpiar();
         }
 
@@ -83,8 +81,7 @@ namespace Proyecto.Entradas_y_Salidas
             DateTime fecha = DateTime.Today;
             //Guardando la fecha en dato tipo string con formato
             fechita = fecha.ToShortDateString().ToString();
-            inventario.modificarSalida(int.Parse(cbxID.Text), cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
-            inventario.cargarID(cbxID);
+            inventario.modificarSalida(int.Parse(txtId.Text), cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
         }
@@ -100,8 +97,7 @@ namespace Proyecto.Entradas_y_Salidas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            inventario.eliminarSalidas(int.Parse(cbxID.Text));
-            inventario.cargarID(cbxID);
+            inventario.eliminarSalidas(int.Parse(txtId.Text));
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
         }
@@ -109,6 +105,12 @@ namespace Proyecto.Entradas_y_Salidas
         private void btnConsultar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvSalidas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtId.Text = dgvSalidas.SelectedCells[0].Value.ToString();
+            txtCantidad.Text = dgvSalidas.SelectedCells[2].Value.ToString();
         }
     }
 }
