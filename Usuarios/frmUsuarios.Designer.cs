@@ -151,7 +151,7 @@
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 11;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Usuario";
             this.lblNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbxBiblioteca
@@ -198,8 +198,11 @@
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Location = new System.Drawing.Point(509, 114);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(628, 494);
             this.dgvUsuarios.TabIndex = 19;
+            this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
             // lblContraseña
             // 

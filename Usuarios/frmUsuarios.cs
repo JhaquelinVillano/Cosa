@@ -146,5 +146,20 @@ namespace Proyecto.Usuarios
         {
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
+
+        private void dgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtNombre.Text = dgvUsuarios.SelectedCells[1].Value.ToString();
+                txtDniEmpleado.Text = dgvUsuarios.SelectedCells[2].Value.ToString();
+            }
+            catch (Exception)
+            {
+                txtNombre.Text = "";
+                txtDniEmpleado.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
+            }
+        }
     }
 }

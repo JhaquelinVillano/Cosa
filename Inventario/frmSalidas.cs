@@ -116,7 +116,7 @@ namespace Proyecto.Entradas_y_Salidas
             {
                 txtId.Text = "";
                 txtCantidad.Text = "";
-                MessageBox.Show("Selecciona según la fila deseada y desde la primera columna.", "Ventana informativa");
+                MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
 }
     }

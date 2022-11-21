@@ -150,7 +150,7 @@ namespace Proyecto.Biblioteca
                 txtAutor.Text = "";
                 txtEdicion.Text = "";
                 txtExistencias.Text = "";
-                MessageBox.Show("Selecciona según la fila deseada y desde la primera columna.", "Ventana informativa");
+                MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
         }
     }

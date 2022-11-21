@@ -85,5 +85,30 @@ namespace Proyecto.Empleados
         {
             empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
+
+        private void dgvEmpleados_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtID.Text = dgvEmpleados.SelectedCells[0].Value.ToString();
+                txtDniEmpleado.Text = dgvEmpleados.SelectedCells[1].Value.ToString();
+                txtNombre.Text = dgvEmpleados.SelectedCells[2].Value.ToString();
+                txtApellidos.Text = dgvEmpleados.SelectedCells[3].Value.ToString();
+                txtDireccion.Text = dgvEmpleados.SelectedCells[4].Value.ToString();
+                txtTelefono.Text = dgvEmpleados.SelectedCells[5].Value.ToString();
+                txtCorreo.Text = dgvEmpleados.SelectedCells[6].Value.ToString();
+            }
+            catch (Exception)
+            {
+                txtID.Text = "";
+                txtDniEmpleado.Text = "";
+                txtNombre.Text = "";
+                txtApellidos.Text = "";
+                txtDireccion.Text = "";
+                txtTelefono.Text = "";
+                txtCorreo.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
+            }
+        }
     }
 }

@@ -90,5 +90,28 @@ namespace Proyecto.Clientes
         {
             clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
+
+        private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtID.Text = dgvClientes.SelectedCells[0].Value.ToString();
+                txtDniCliente.Text = dgvClientes.SelectedCells[1].Value.ToString();
+                txtNombre.Text = dgvClientes.SelectedCells[2].Value.ToString();
+                txtApellidos.Text = dgvClientes.SelectedCells[3].Value.ToString();
+                txtDireccion.Text = dgvClientes.SelectedCells[4].Value.ToString();
+                txtTelefono.Text = dgvClientes.SelectedCells[5].Value.ToString();
+            }
+            catch (Exception)
+            {
+                txtID.Text = "";
+                txtDniCliente.Text = "";
+                txtNombre.Text = "";
+                txtApellidos.Text = "";
+                txtDireccion.Text = "";
+                txtTelefono.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
+            }
+        }
     }
 }
