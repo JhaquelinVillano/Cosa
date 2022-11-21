@@ -66,16 +66,19 @@ namespace Proyecto.Biblioteca
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             prestamos.registrarPrestamos(txtLibroID,txtNombreSolicitante,Usuario,txtPrestamoID);
+            prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             prestamos.EliminarPrestamos(txtLibroID, txtNombreSolicitante,txtPrestamoID);
+            prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
         }
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
             prestamos.hacerDevolucion(txtLibroID, txtNombreSolicitante, txtPrestamoID,Usuario);
+            prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
         }
 
         private void dgvP_CellClick(object sender, DataGridViewCellEventArgs e)

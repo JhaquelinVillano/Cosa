@@ -65,16 +65,19 @@ namespace Proyecto.Empleados
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             empleados.registrarEmpleados(txtID,txtDniEmpleado,txtNombre,txtApellidos,txtDireccion,txtTelefono,txtCorreo);
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             empleados.modificarEmpleados(txtID, txtDniEmpleado, txtNombre, txtApellidos, txtDireccion, txtTelefono, txtCorreo);
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             empleados.eliminarEmpleados(txtID, txtDniEmpleado, txtNombre, txtApellidos, txtDireccion, txtTelefono, txtCorreo);
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
 
         private void picBusquedaPR_Click(object sender, EventArgs e)

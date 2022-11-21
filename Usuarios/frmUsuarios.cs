@@ -80,6 +80,7 @@ namespace Proyecto.Usuarios
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             usuarios.registrarUsuarios(txtNombre,txtContraseña, txtDniEmpleado, cbxAdmin,cbxEncargado,cbxBiblioteca,cbxInventario);
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
         private void frmUsuarios_Load(object sender, EventArgs e)
@@ -111,11 +112,13 @@ namespace Proyecto.Usuarios
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             usuarios.eliminarUsuario(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario);
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             usuarios.modificarUsuarios(txtNombre, txtContraseña, txtDniEmpleado, cbxAdmin, cbxEncargado, cbxBiblioteca, cbxInventario);
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
         private void cbxAdmin_CheckedChanged_1(object sender, EventArgs e)

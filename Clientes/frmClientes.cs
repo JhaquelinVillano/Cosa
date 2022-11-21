@@ -70,16 +70,19 @@ namespace Proyecto.Clientes
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clientes.registrarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             clientes.modificarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             clientes.eliminarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
         private void picBusquedaPR_Click(object sender, EventArgs e)

@@ -116,16 +116,19 @@ namespace Proyecto.Biblioteca
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             libros.registrarLibros(txtID,txtNombre,txtAutor,cbxCategoria,cbxIdioma,txtEdicion,txtExistencias);
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             libros.eliminarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             libros.modificarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
         private void picBusquedaPR_Click(object sender, EventArgs e)
