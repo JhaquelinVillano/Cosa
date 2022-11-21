@@ -75,6 +75,7 @@ namespace Proyecto.Inventario
                 tipo = rbtnDonacion.Text;
             }
             //LLamando metodo
+            inventario.ingresarEntrada(txtCodigo.Text,txtNombre.Text,Convert.ToInt32(txtCantidad.Text),txtDescripcion.Text,tipo);
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
