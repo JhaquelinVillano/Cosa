@@ -54,12 +54,12 @@ namespace Proyecto.Empleados
 
         private void frmEmpleados_Load(object sender, EventArgs e)
         {
-            tmrTiempo.Start();
+            
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
+            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -79,16 +79,11 @@ namespace Proyecto.Empleados
 
         private void picBusquedaPR_Click(object sender, EventArgs e)
         {
-            if (tmrTiempo.Enabled == true)
-            {
-                tmrTiempo.Enabled = false;
-                return;
-            }
-            if (tmrTiempo.Enabled == false)
-            {
-                tmrTiempo.Enabled = true;
-                return;
-            }
+        }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
         }
     }
 }

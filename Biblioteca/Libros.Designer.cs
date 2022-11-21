@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibros));
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -46,7 +44,7 @@
             this.lblAutor = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.TextBox();
             this.txtEdicion = new MaterialSkin.Controls.MaterialTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblIdioma = new System.Windows.Forms.TextBox();
             this.txtNombre = new MaterialSkin.Controls.MaterialTextBox();
             this.lblEdicion = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.TextBox();
@@ -55,10 +53,8 @@
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.picLibros = new System.Windows.Forms.PictureBox();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.txtExistencias = new MaterialSkin.Controls.MaterialTextBox();
             this.lblExistencias = new System.Windows.Forms.TextBox();
-            this.picBusquedaPR = new System.Windows.Forms.PictureBox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
@@ -68,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBiblioteca
@@ -326,18 +321,18 @@
             this.txtEdicion.Text = "";
             this.txtEdicion.TrailingIcon = null;
             // 
-            // textBox1
+            // lblIdioma
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 374);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(202, 23);
-            this.textBox1.TabIndex = 64;
-            this.textBox1.Text = "Idioma";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblIdioma.BackColor = System.Drawing.Color.White;
+            this.lblIdioma.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblIdioma.Enabled = false;
+            this.lblIdioma.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdioma.Location = new System.Drawing.Point(12, 374);
+            this.lblIdioma.Name = "lblIdioma";
+            this.lblIdioma.Size = new System.Drawing.Size(202, 23);
+            this.lblIdioma.TabIndex = 64;
+            this.lblIdioma.Text = "Idioma";
+            this.lblIdioma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNombre
             // 
@@ -458,7 +453,7 @@
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.Size = new System.Drawing.Size(636, 547);
             this.dgvLibros.TabIndex = 70;
-            this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBiblioteca_CellContentClick);
+            this.dgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellClick);
             // 
             // txtConsultar
             // 
@@ -469,12 +464,12 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(520, 51);
+            this.txtConsultar.Location = new System.Drawing.Point(520, 49);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(428, 50);
             this.txtConsultar.TabIndex = 71;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
@@ -492,12 +487,6 @@
             this.picLibros.TabIndex = 52;
             this.picLibros.TabStop = false;
             this.picLibros.Click += new System.EventHandler(this.picBiblioteca_Click);
-            // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Enabled = true;
-            this.tmrTiempo.Interval = 1000;
-            this.tmrTiempo.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // txtExistencias
             // 
@@ -529,18 +518,6 @@
             this.lblExistencias.Text = "Existencias";
             this.lblExistencias.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // picBusquedaPR
-            // 
-            this.picBusquedaPR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBusquedaPR.Image = ((System.Drawing.Image)(resources.GetObject("picBusquedaPR.Image")));
-            this.picBusquedaPR.Location = new System.Drawing.Point(1103, 51);
-            this.picBusquedaPR.Name = "picBusquedaPR";
-            this.picBusquedaPR.Size = new System.Drawing.Size(53, 49);
-            this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBusquedaPR.TabIndex = 74;
-            this.picBusquedaPR.TabStop = false;
-            this.picBusquedaPR.Click += new System.EventHandler(this.picBusquedaPR_Click);
-            // 
             // cbxBusqueda
             // 
             this.cbxBusqueda.AutoResize = false;
@@ -559,7 +536,7 @@
             "ID",
             "Nombre",
             "Categoría"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(895, 51);
+            this.cbxBusqueda.Location = new System.Drawing.Point(954, 49);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -574,7 +551,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.cbxBusqueda);
-            this.Controls.Add(this.picBusquedaPR);
             this.Controls.Add(this.txtExistencias);
             this.Controls.Add(this.lblExistencias);
             this.Controls.Add(this.txtConsultar);
@@ -582,7 +558,7 @@
             this.Controls.Add(this.cbxIdioma);
             this.Controls.Add(this.cbxCategoria);
             this.Controls.Add(this.txtEdicion);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblIdioma);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblEdicion);
             this.Controls.Add(this.lblNombre);
@@ -610,7 +586,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,7 +610,7 @@
         private System.Windows.Forms.TextBox lblAutor;
         private System.Windows.Forms.TextBox lblID;
         private MaterialSkin.Controls.MaterialTextBox txtEdicion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lblIdioma;
         private MaterialSkin.Controls.MaterialTextBox txtNombre;
         private System.Windows.Forms.TextBox lblEdicion;
         private System.Windows.Forms.TextBox lblNombre;
@@ -643,10 +618,8 @@
         private MaterialSkin.Controls.MaterialComboBox cbxIdioma;
         private System.Windows.Forms.DataGridView dgvLibros;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private System.Windows.Forms.Timer tmrTiempo;
         private MaterialSkin.Controls.MaterialTextBox txtExistencias;
         private System.Windows.Forms.TextBox lblExistencias;
-        private System.Windows.Forms.PictureBox picBusquedaPR;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
     }
 }

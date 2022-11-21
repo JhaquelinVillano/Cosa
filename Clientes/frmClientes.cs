@@ -59,12 +59,12 @@ namespace Proyecto.Clientes
 
         private void frmClientes_Load(object sender, EventArgs e)
         {
-            tmrTiempo.Start();
+            
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)
         {
-            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
+            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -84,16 +84,11 @@ namespace Proyecto.Clientes
 
         private void picBusquedaPR_Click(object sender, EventArgs e)
         {
-            if (tmrTiempo.Enabled == true)
-            {
-                tmrTiempo.Enabled = false;
-                return;
-            }
-            if (tmrTiempo.Enabled == false)
-            {
-                tmrTiempo.Enabled = true;
-                return;
-            }
+        }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {
+            clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
     }
 }

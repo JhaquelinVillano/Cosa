@@ -109,8 +109,15 @@ namespace Proyecto.Entradas_y_Salidas
 
         private void dgvSalidas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try {
             txtId.Text = dgvSalidas.SelectedCells[0].Value.ToString();
             txtCantidad.Text = dgvSalidas.SelectedCells[2].Value.ToString();
-        }
+        }catch (Exception)
+            {
+                txtId.Text = "";
+                txtCantidad.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada y desde la primera columna.", "Ventana informativa");
+            }
+}
     }
 }

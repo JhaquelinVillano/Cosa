@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmpleados));
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -56,9 +54,7 @@
             this.lblTelefono = new System.Windows.Forms.TextBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCorreo = new System.Windows.Forms.TextBox();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
-            this.picBusquedaPR = new System.Windows.Forms.PictureBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
@@ -68,7 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuario
@@ -466,12 +461,6 @@
             this.lblCorreo.Text = "Correo";
             this.lblCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tmrTiempo
-            // 
-            this.tmrTiempo.Enabled = true;
-            this.tmrTiempo.Interval = 1000;
-            this.tmrTiempo.Tick += new System.EventHandler(this.tmrTiempo_Tick);
-            // 
             // cbxBusqueda
             // 
             this.cbxBusqueda.AutoResize = false;
@@ -491,25 +480,13 @@
             "DNI",
             "Nombre",
             "Teléfono"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(906, 39);
+            this.cbxBusqueda.Location = new System.Drawing.Point(964, 39);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
             this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
             this.cbxBusqueda.StartIndex = 0;
             this.cbxBusqueda.TabIndex = 99;
-            // 
-            // picBusquedaPR
-            // 
-            this.picBusquedaPR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBusquedaPR.Image = ((System.Drawing.Image)(resources.GetObject("picBusquedaPR.Image")));
-            this.picBusquedaPR.Location = new System.Drawing.Point(1114, 39);
-            this.picBusquedaPR.Name = "picBusquedaPR";
-            this.picBusquedaPR.Size = new System.Drawing.Size(53, 49);
-            this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBusquedaPR.TabIndex = 98;
-            this.picBusquedaPR.TabStop = false;
-            this.picBusquedaPR.Click += new System.EventHandler(this.picBusquedaPR_Click);
             // 
             // txtConsultar
             // 
@@ -525,10 +502,11 @@
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(427, 50);
             this.txtConsultar.TabIndex = 97;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
             // frmEmpleados
             // 
@@ -537,7 +515,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.cbxBusqueda);
-            this.Controls.Add(this.picBusquedaPR);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.lblCorreo);
@@ -573,7 +550,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,9 +583,7 @@
         private System.Windows.Forms.TextBox lblTelefono;
         private MaterialSkin.Controls.MaterialTextBox txtCorreo;
         private System.Windows.Forms.TextBox lblCorreo;
-        private System.Windows.Forms.Timer tmrTiempo;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
-        private System.Windows.Forms.PictureBox picBusquedaPR;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
     }
 }

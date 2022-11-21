@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
             this.pnlUsuario = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -52,10 +50,8 @@
             this.lblDniEmpleado = new System.Windows.Forms.TextBox();
             this.txtPermisos = new System.Windows.Forms.TextBox();
             this.cbxEncargado = new MaterialSkin.Controls.MaterialCheckbox();
-            this.tmrUsuarios = new System.Windows.Forms.Timer(this.components);
             this.cbxAdmin = new MaterialSkin.Controls.MaterialCheckbox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
-            this.picBusquedaPR = new System.Windows.Forms.PictureBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
@@ -65,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuario
@@ -407,12 +402,6 @@
             this.cbxEncargado.UseVisualStyleBackColor = true;
             this.cbxEncargado.CheckedChanged += new System.EventHandler(this.cbxEmpleado_CheckedChanged);
             // 
-            // tmrUsuarios
-            // 
-            this.tmrUsuarios.Enabled = true;
-            this.tmrUsuarios.Interval = 1000;
-            this.tmrUsuarios.Tick += new System.EventHandler(this.tmrUsuarios_Tick);
-            // 
             // cbxAdmin
             // 
             this.cbxAdmin.AutoSize = true;
@@ -448,25 +437,13 @@
             "ID",
             "Nombre",
             "DNI"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(884, 58);
+            this.cbxBusqueda.Location = new System.Drawing.Point(935, 59);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
             this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
             this.cbxBusqueda.StartIndex = 0;
             this.cbxBusqueda.TabIndex = 102;
-            // 
-            // picBusquedaPR
-            // 
-            this.picBusquedaPR.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBusquedaPR.Image = ((System.Drawing.Image)(resources.GetObject("picBusquedaPR.Image")));
-            this.picBusquedaPR.Location = new System.Drawing.Point(1092, 58);
-            this.picBusquedaPR.Name = "picBusquedaPR";
-            this.picBusquedaPR.Size = new System.Drawing.Size(53, 49);
-            this.picBusquedaPR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBusquedaPR.TabIndex = 101;
-            this.picBusquedaPR.TabStop = false;
-            this.picBusquedaPR.Click += new System.EventHandler(this.picBusquedaPR_Click);
             // 
             // txtConsultar
             // 
@@ -477,15 +454,16 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(509, 58);
+            this.txtConsultar.Location = new System.Drawing.Point(509, 59);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(420, 50);
             this.txtConsultar.TabIndex = 100;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
             // frmUsuarios
             // 
@@ -494,7 +472,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.cbxBusqueda);
-            this.Controls.Add(this.picBusquedaPR);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxAdmin);
             this.Controls.Add(this.cbxEncargado);
@@ -527,7 +504,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBusquedaPR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,10 +533,8 @@
         private System.Windows.Forms.TextBox lblDniEmpleado;
         private System.Windows.Forms.TextBox txtPermisos;
         private MaterialSkin.Controls.MaterialCheckbox cbxEncargado;
-        private System.Windows.Forms.Timer tmrUsuarios;
         private MaterialSkin.Controls.MaterialCheckbox cbxAdmin;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
-        private System.Windows.Forms.PictureBox picBusquedaPR;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
     }
 }

@@ -84,12 +84,12 @@ namespace Proyecto.Usuarios
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            tmrUsuarios.Start();
+            
         }
 
         private void tmrUsuarios_Tick(object sender, EventArgs e)
         {
-            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
+            
         }
 
         private void cbxBiblioteca_CheckedChanged(object sender, EventArgs e)
@@ -139,16 +139,12 @@ namespace Proyecto.Usuarios
 
         private void picBusquedaPR_Click(object sender, EventArgs e)
         {
-            if (tmrUsuarios.Enabled == true)
-            {
-                tmrUsuarios.Enabled = false;
-                return;
-            }
-            if (tmrUsuarios.Enabled == false)
-            {
-                tmrUsuarios.Enabled = true;
-                return;
-            }
+            
+        }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
     }
 }

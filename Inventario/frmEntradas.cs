@@ -147,11 +147,20 @@ namespace Proyecto.Inventario
 
         private void dgvEntradas_CellClick(object sender, DataGridViewCellEventArgs e)
         {   //Rellenar celdas con informacion
+            try {
             txtCodigo.Text = dgvEntradas.SelectedCells[0].Value.ToString();
             txtNombre.Text = dgvEntradas.SelectedCells[1].Value.ToString();
             txtCantidad.Text = dgvEntradas.SelectedCells[2].Value.ToString();
             txtDescripcion.Text = dgvEntradas.SelectedCells[3].Value.ToString();
-        }
+        }catch (Exception)
+            {
+                txtCodigo.Text = "";
+                txtNombre.Text = "";
+                txtCantidad.Text = "";
+                txtDescripcion.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada y desde la primera columna.", "Ventana informativa");
+            }
+}
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {   //Si esta vacio le ingresamos los valores

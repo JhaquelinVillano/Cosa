@@ -60,7 +60,7 @@ namespace Proyecto.Biblioteca
 
         private void frmBiblioteca_Load(object sender, EventArgs e)
         {
-            tmrTiempo.Start();
+            
         }
 
         private void picBiblioteca_Click(object sender, EventArgs e)
@@ -98,13 +98,9 @@ namespace Proyecto.Biblioteca
 
         }
 
-        private void dgvBiblioteca_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -114,7 +110,7 @@ namespace Proyecto.Biblioteca
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-                libros.consultarLibros(dgvLibros,txtConsultar,cbxBusqueda);
+                
         }
         
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -134,15 +130,27 @@ namespace Proyecto.Biblioteca
 
         private void picBusquedaPR_Click(object sender, EventArgs e)
         {
-            if (tmrTiempo.Enabled==true)
+        }
+
+        private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
             {
-                tmrTiempo.Enabled=false;
-                return;
-            }
-            if (tmrTiempo.Enabled == false)
+                txtID.Text = dgvLibros.SelectedCells[0].Value.ToString();
+                txtNombre.Text = dgvLibros.SelectedCells[1].Value.ToString();
+                txtAutor.Text = dgvLibros.SelectedCells[2].Value.ToString();
+                cbxCategoria.Text = dgvLibros.SelectedCells[3].Value.ToString();
+                cbxIdioma.Text = dgvLibros.SelectedCells[4].Value.ToString();
+                txtEdicion.Text = dgvLibros.SelectedCells[5].Value.ToString();
+                txtExistencias.Text = dgvLibros.SelectedCells[6].Value.ToString();
+            }catch (Exception)
             {
-                tmrTiempo.Enabled = true;
-                return;
+                txtID.Text = "";
+                txtNombre.Text = "";
+                txtAutor.Text = "";
+                txtEdicion.Text = "";
+                txtExistencias.Text = "";
+                MessageBox.Show("Selecciona según la fila deseada y desde la primera columna.", "Ventana informativa");
             }
         }
     }
