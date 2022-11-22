@@ -110,6 +110,20 @@ namespace Proyecto.Inventario
         private void txtConsultar_KeyUp(object sender, KeyEventArgs e)
         {
         }
-        
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {   //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "")
+            {
+                dgvInventario.DataSource = inventario.busqueda("select * from `productos` where " +
+                    "`codigo_p` like '%" + txtConsultar.Text + "%' or nombreArticulo_p like '%" + txtConsultar.Text + "' " +
+                    " or existencias_p like '%" + txtConsultar.Text + "%'");
+
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarSalida(dgvInventario);
+            }
+        }
     }
 }

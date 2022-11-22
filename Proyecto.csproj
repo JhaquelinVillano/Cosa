@@ -221,6 +221,7 @@
     <Compile Include="Metodos\Prestamos.cs" />
     <Compile Include="Metodos\Respaldo.cs" />
     <Compile Include="Metodos\Usuarios.cs" />
+    <Compile Include="Metodos\Validaciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Restauración\frmRestauracion.cs">

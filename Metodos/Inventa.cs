@@ -99,7 +99,7 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al registrar: " + ex.Message);
             }
         }
-        public DataTable busquedaEntradas(string sql)
+        public DataTable busqueda(string sql)
         {   //Comandos para nuestra busqueda
             MySqlDataAdapter da = new MySqlDataAdapter(sql, conexionDB);
             DataTable tb = new DataTable();

@@ -160,6 +160,8 @@
             this.txtNombre.TabIndex = 33;
             this.txtNombre.Text = "";
             this.txtNombre.TrailingIcon = null;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // lblDescripción
             // 
@@ -339,6 +341,9 @@
             this.txtCantidad.TabIndex = 46;
             this.txtCantidad.Text = "";
             this.txtCantidad.TrailingIcon = null;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // lblCantidad
             // 
@@ -369,6 +374,8 @@
             this.txtCodigo.TabIndex = 47;
             this.txtCodigo.Text = "";
             this.txtCodigo.TrailingIcon = null;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
+            this.txtCodigo.Leave += new System.EventHandler(this.txtCodigo_Leave);
             // 
             // rbtnDonacion
             // 

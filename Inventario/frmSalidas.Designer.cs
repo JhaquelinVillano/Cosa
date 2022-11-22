@@ -154,6 +154,7 @@
             this.txtConsultar.TabIndex = 110;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
+            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
             // btnConsultar
             // 
@@ -294,6 +295,8 @@
             this.txtCantidad.TabIndex = 96;
             this.txtCantidad.Text = "";
             this.txtCantidad.TrailingIcon = null;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
+            this.txtCantidad.Leave += new System.EventHandler(this.txtCantidad_Leave);
             // 
             // lblCantidad
             // 
@@ -373,7 +376,7 @@
             this.txtId.AnimateReadOnly = false;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtId.LeadingIcon = null;
             this.txtId.Location = new System.Drawing.Point(32, 269);
             this.txtId.MaxLength = 50;

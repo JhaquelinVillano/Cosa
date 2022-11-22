@@ -16,6 +16,7 @@ namespace Proyecto.Entradas_y_Salidas
     public partial class frmSalidas : Form
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
+        ErrorProvider error = new ErrorProvider();
         public frmSalidas()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace Proyecto.Entradas_y_Salidas
         private void limpiar()
         {
             txtCantidad.Text = "";
-            txtConsultar.Text = "";
+            txtId.Text = "";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -119,5 +120,46 @@ namespace Proyecto.Entradas_y_Salidas
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
 }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {   //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "")
+            {
+                dgvSalidas.DataSource = inventario.busqueda("select * from `salidas` where " +
+                    "`id_salidas` like '%" + txtConsultar.Text + "%' or nombreArticulo_s like '%" + txtConsultar.Text + "' " +
+                    " or fecha_s like '%" + txtConsultar.Text + "%'");
+
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarSalida(dgvSalidas);
+            }
+        }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            if (Validaciones.vacios(txtCantidad))
+            {
+                error.SetError(txtCantidad, "No puede dejar vacio!");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtCantidad, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
     }
 }

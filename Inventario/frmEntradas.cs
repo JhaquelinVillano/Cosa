@@ -19,7 +19,7 @@ namespace Proyecto.Inventario
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
-        MySqlConnection conexionDB = Conexion.conexion();
+        ErrorProvider error = new ErrorProvider();
 
         public frmEntradas()
         {
@@ -111,6 +111,10 @@ namespace Proyecto.Inventario
                                 int.Parse(txtCantidad.Text),
                                 txtDescripcion.Text,
                                 tipo);
+            //Modificacion para el inventario
+            inventario.modificarInventario(txtCodigo.Text,
+                                txtNombre.Text,
+                                int.Parse(txtCantidad.Text));
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
@@ -118,6 +122,7 @@ namespace Proyecto.Inventario
         private void btnEliminar_Click(object sender, EventArgs e)
         {   //Metodos
             inventario.eliminarEntradas(txtCodigo.Text);
+            inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
@@ -165,7 +170,7 @@ namespace Proyecto.Inventario
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {   //Si esta vacio le ingresamos los valores
             if (txtConsultar.Text != "") {
-                dgvEntradas.DataSource = inventario.busquedaEntradas("select * from `entradas` where " +
+                dgvEntradas.DataSource = inventario.busqueda("select * from `entradas` where " +
                     "`codigoArticulo_e` like '%" + txtConsultar.Text + "%' or nombreArticulo_e like '%" + txtConsultar.Text + "' " +
                     " or descripcion_e like '%" + txtConsultar.Text + "%' or fecha_e like '%" + 
                     txtConsultar.Text + "%' or tipo_e like '%" + txtConsultar.Text + "%'");
@@ -175,6 +180,71 @@ namespace Proyecto.Inventario
             {
                 inventario.actualizarEntrada(dgvEntradas);
             }
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {   
+
+        }
+
+        private void txtCodigo_Leave(object sender, EventArgs e)
+        {
+            if (Validaciones.vacios(txtCodigo))
+            {
+                error.SetError(txtCodigo, "No puede dejar vacio!");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (Validaciones.vacios(txtNombre))
+            {
+                error.SetError(txtNombre, "No puede dejar vacio!");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtCantidad, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtCantidad_Leave(object sender, EventArgs e)
+        {
+            if (Validaciones.vacios(txtCantidad))
+            {
+                error.SetError(txtCantidad, "No puede dejar vacio!");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
