@@ -87,11 +87,6 @@ namespace Proyecto.Entradas_y_Salidas
             limpiar();
         }
 
-        private void cbxNombreArticulo_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbxNombreArticulo_SelectedIndexChanged(object sender, EventArgs e)
         {   
         }
