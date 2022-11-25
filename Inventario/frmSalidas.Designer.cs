@@ -47,7 +47,7 @@
             this.lblNombre = new System.Windows.Forms.TextBox();
             this.picSalidas = new System.Windows.Forms.PictureBox();
             this.cbxNombreArticulo = new MaterialSkin.Controls.MaterialComboBox();
-            this.txtId = new MaterialSkin.Controls.MaterialTextBox();
+            this.cbxID = new MaterialSkin.Controls.MaterialComboBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -362,7 +362,7 @@
             this.cbxNombreArticulo.FormattingEnabled = true;
             this.cbxNombreArticulo.IntegralHeight = false;
             this.cbxNombreArticulo.ItemHeight = 43;
-            this.cbxNombreArticulo.Location = new System.Drawing.Point(278, 270);
+            this.cbxNombreArticulo.Location = new System.Drawing.Point(32, 269);
             this.cbxNombreArticulo.MaxDropDownItems = 4;
             this.cbxNombreArticulo.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxNombreArticulo.Name = "cbxNombreArticulo";
@@ -371,22 +371,28 @@
             this.cbxNombreArticulo.TabIndex = 111;
             this.cbxNombreArticulo.SelectedIndexChanged += new System.EventHandler(this.cbxNombreArticulo_SelectedIndexChanged);
             // 
-            // txtId
+            // cbxID
             // 
-            this.txtId.AnimateReadOnly = false;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(32, 269);
-            this.txtId.MaxLength = 50;
-            this.txtId.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(223, 50);
-            this.txtId.TabIndex = 112;
-            this.txtId.Text = "";
-            this.txtId.TrailingIcon = null;
+            this.cbxID.AutoResize = false;
+            this.cbxID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbxID.Depth = 0;
+            this.cbxID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbxID.DropDownHeight = 174;
+            this.cbxID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxID.DropDownWidth = 121;
+            this.cbxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbxID.FormattingEnabled = true;
+            this.cbxID.IntegralHeight = false;
+            this.cbxID.ItemHeight = 43;
+            this.cbxID.Location = new System.Drawing.Point(278, 269);
+            this.cbxID.MaxDropDownItems = 4;
+            this.cbxID.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbxID.Name = "cbxID";
+            this.cbxID.Size = new System.Drawing.Size(223, 49);
+            this.cbxID.StartIndex = 0;
+            this.cbxID.TabIndex = 113;
+            this.cbxID.SelectedIndexChanged += new System.EventHandler(this.cbxID_SelectedIndexChanged);
             // 
             // frmSalidas
             // 
@@ -394,7 +400,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.cbxID);
             this.Controls.Add(this.cbxNombreArticulo);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.btnConsultar);
@@ -447,6 +453,6 @@
         private System.Windows.Forms.TextBox lblCodigo;
         private System.Windows.Forms.TextBox lblNombre;
         private MaterialSkin.Controls.MaterialComboBox cbxNombreArticulo;
-        private MaterialSkin.Controls.MaterialTextBox txtId;
+        private MaterialSkin.Controls.MaterialComboBox cbxID;
     }
 }

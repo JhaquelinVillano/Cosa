@@ -121,21 +121,31 @@ namespace Proyecto.Metodos
         }
         
         //Formulario de salida
-        public void registroSalida(string codigo, int cantidad, string fecha)
+        public void registroSalida(string id, string codigo, int cantidad, string fecha)
         {
             //Manejar errores
             try
             {   //Conectando
                 conexionDB.Open();
                 //Comando para insertar datos
-                string sql = "insert into salidas (nombreArticulo_s, cantidad_s, fecha_s) values " +
-                    "('" + codigo + "', '" + cantidad + "', '" + fecha + "')";
+                string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
+                    "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
 
                 //Conectando comandos con base de datos
                 MySqlCommand comando = new MySqlCommand(sql, conexionDB);
                 //Ejecuntando comando en MySQL e ingresando la insercion
                 comando.ExecuteNonQuery();
                 MessageBox.Show("Devuelto con exito");
+
+                //Para estar existencias
+                string query = "update productos set existencias_p = existencias_p - @cantidad where codigo_p= @ID";
+                //Comando para restar existencias
+                MySqlCommand coman = new MySqlCommand(query, conexionDB);
+                //Parametros
+                coman.Parameters.AddWithValue("@ID", codigo);
+                coman.Parameters.AddWithValue("@cantidad", cantidad);
+                //Ejecuntadolo
+                coman.ExecuteNonQuery();
             }
             catch (MySqlException ex)
             {   //Mensaje de error
@@ -146,10 +156,10 @@ namespace Proyecto.Metodos
                 conexionDB.Close();
             }
         }
-        public void modificarSalida(int id, string articulo, int cantidad, string fecha)
+        public void modificarSalida(string id, string articulo, int cantidad, string fecha)
         {   //Query
-            string sql = "update salidas set id_salidas='"+ id +"' ,nombreArticulo_s='"+ articulo + "', cantidad_s='"+ cantidad +"', " +
-                "fecha_s='" + fecha + "' where id_salidas='" + id + "'";
+            string sql = "update salidas set id_salidas='"+ articulo + "' ,nombreArticulo_s='"+ id + "', cantidad_s='"+ cantidad +"', " +
+                "fecha_s='" + fecha + "' where id_salidas='" + articulo + "'";
             try
             {
                 conexionDB.Open();
@@ -186,9 +196,9 @@ namespace Proyecto.Metodos
             }//Cargando datos
             dgvInventario.DataSource = tabla;
         }
-        public void eliminarSalidas(int id)
+        public void eliminarSalidas(string id)
         {   //Query
-            string sql = "delete from salidas where nombreArticulo_s='" + id + "'";
+            string sql = "delete from salidas where id_salidas='" + id + "'";
             try
             {   //Ejecutando conexion y comando
                 conexionDB.Open();
@@ -202,13 +212,13 @@ namespace Proyecto.Metodos
             }
             conexionDB.Close();
         }
-        public void cargarCategorias(ComboBox cbx)
+        public void cargarCategorias(ComboBox cbx, ComboBox txt)
         {   //Limpiando combobox
             cbx.DataSource = null;
             cbx.Items.Clear();
             try
             {
-                string sql = "select codigoArticulo_e, nombreArticulo_e from entradas order by codigoArticulo_e asc";
+                string sql = "select codigo_p, nombreArticulo_p from productos order by codigo_p asc";
                 conexionDB.Open();
                 MySqlCommand comando = new MySqlCommand(sql, conexionDB);
                 //Adaptador
@@ -217,10 +227,14 @@ namespace Proyecto.Metodos
                 DataTable dt = new DataTable();
                 adaptador.Fill(dt);
                 //Cargarle los datos que queremos
-                cbx.ValueMember = "codigoArticulo_e";
-                cbx.DisplayMember = "nombreArticulo_e";
+                cbx.ValueMember = "nombreArticulo_p";
+                cbx.DisplayMember = "codigo_p";
+
+                txt.ValueMember = "codigo_p";
+                txt.DisplayMember = "nombreArticulo_p";
                 //Cargarlo al combobox
                 cbx.DataSource = dt;
+                txt.DataSource = dt;
             }
             catch (Exception ex)
             {

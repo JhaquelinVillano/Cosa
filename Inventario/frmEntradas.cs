@@ -29,7 +29,7 @@ namespace Proyecto.Inventario
 
         private void picAtras_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
+            frmInventario menu = new frmInventario();
             menu.Show();
             this.Hide();
         }

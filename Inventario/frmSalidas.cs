@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Proyecto.Inventario;
 using Proyecto.Menu;
 using Proyecto.Metodos;
 using System;
@@ -20,7 +21,7 @@ namespace Proyecto.Entradas_y_Salidas
         public frmSalidas()
         {
             InitializeComponent();
-            inventario.cargarCategorias(cbxNombreArticulo);
+            inventario.cargarCategorias(cbxNombreArticulo, cbxID);
             inventario.actualizarSalida(dgvSalidas);
         }
 
@@ -44,7 +45,7 @@ namespace Proyecto.Entradas_y_Salidas
 
         private void picAtras_Click(object sender, EventArgs e)
         {
-            frmMenu menu = new frmMenu();
+            frmInventario menu = new frmInventario();
             menu.Show();
             this.Hide();
         }
@@ -59,7 +60,6 @@ namespace Proyecto.Entradas_y_Salidas
         private void limpiar()
         {
             txtCantidad.Text = "";
-            txtId.Text = "";
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -70,7 +70,7 @@ namespace Proyecto.Entradas_y_Salidas
             //Guardando la fecha en dato tipo string con formato
             fechita = fecha.ToShortDateString().ToString();
             //Metodo
-            inventario.registroSalida(cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
+            inventario.registroSalida(cbxID.Text, cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
         }
@@ -82,7 +82,7 @@ namespace Proyecto.Entradas_y_Salidas
             DateTime fecha = DateTime.Today;
             //Guardando la fecha en dato tipo string con formato
             fechita = fecha.ToShortDateString().ToString();
-            inventario.modificarSalida(int.Parse(txtId.Text), cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
+            inventario.modificarSalida(cbxID.Text, cbxNombreArticulo.Text, int.Parse(txtCantidad.Text), fechita);
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
         }
@@ -98,7 +98,7 @@ namespace Proyecto.Entradas_y_Salidas
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            inventario.eliminarSalidas(int.Parse(txtId.Text));
+            inventario.eliminarSalidas(cbxNombreArticulo.Text);
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
         }
@@ -111,11 +111,11 @@ namespace Proyecto.Entradas_y_Salidas
         private void dgvSalidas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try {
-            txtId.Text = dgvSalidas.SelectedCells[0].Value.ToString();
+                cbxID.Text = dgvSalidas.SelectedCells[0].Value.ToString();
             txtCantidad.Text = dgvSalidas.SelectedCells[2].Value.ToString();
         }catch (Exception)
             {
-                txtId.Text = "";
+                cbxID.Text = "";
                 txtCantidad.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
@@ -160,6 +160,10 @@ namespace Proyecto.Entradas_y_Salidas
             {
                 error.Clear();
             }
+        }
+
+        private void cbxID_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

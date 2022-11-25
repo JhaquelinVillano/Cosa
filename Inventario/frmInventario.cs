@@ -18,7 +18,6 @@ namespace Proyecto.Inventario
     {
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
-        //DataView miFiltro;
         public frmInventario()
         {
             InitializeComponent();
