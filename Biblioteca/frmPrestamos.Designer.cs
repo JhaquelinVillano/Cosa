@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBiblioteca = new System.Windows.Forms.Panel();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
@@ -48,6 +49,8 @@
             this.lblPrestamoID = new System.Windows.Forms.TextBox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
+            this.prestamos_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPrestamo_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -187,7 +190,19 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvP.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.prestamos_id,
+            this.idPrestamo_p});
+            this.dgvP.EnableHeadersVisualStyles = false;
             this.dgvP.Location = new System.Drawing.Point(458, 105);
             this.dgvP.Name = "dgvP";
             this.dgvP.Size = new System.Drawing.Size(697, 547);
@@ -382,6 +397,16 @@
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
+            // prestamos_id
+            // 
+            this.prestamos_id.HeaderText = "Prestamos";
+            this.prestamos_id.Name = "prestamos_id";
+            // 
+            // idPrestamo_p
+            // 
+            this.idPrestamo_p.HeaderText = "ID Prestamo";
+            this.idPrestamo_p.Name = "idPrestamo_p";
+            // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,5 +468,7 @@
         private System.Windows.Forms.TextBox lblPrestamoID;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prestamos_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo_p;
     }
 }
