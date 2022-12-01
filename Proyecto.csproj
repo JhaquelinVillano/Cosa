@@ -393,6 +393,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\lupa.png" />
+    <None Include="Resources\buscar.png" />
     <None Include="Resources\Entradas.png" />
     <None Include="Resources\Clientes.png" />
     <None Include="Resources\Salidas.png" />
