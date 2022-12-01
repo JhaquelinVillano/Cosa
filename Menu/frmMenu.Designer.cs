@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.lblUsuarios = new System.Windows.Forms.TextBox();
             this.lblLibros = new System.Windows.Forms.TextBox();
             this.lblRespaldo = new System.Windows.Forms.TextBox();
@@ -42,6 +40,8 @@
             this.lblSalidas = new System.Windows.Forms.TextBox();
             this.lblClientes = new System.Windows.Forms.TextBox();
             this.lblInventario = new System.Windows.Forms.TextBox();
+            this.txtDevoluciones = new System.Windows.Forms.TextBox();
+            this.picDevoluciones = new System.Windows.Forms.PictureBox();
             this.picInventario = new System.Windows.Forms.PictureBox();
             this.picClientes = new System.Windows.Forms.PictureBox();
             this.picSalidas = new System.Windows.Forms.PictureBox();
@@ -53,12 +53,13 @@
             this.picRestauracion = new System.Windows.Forms.PictureBox();
             this.picEntradas = new System.Windows.Forms.PictureBox();
             this.picLibros = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picUsuarios = new System.Windows.Forms.PictureBox();
             this.picVerde = new System.Windows.Forms.PictureBox();
             this.picNaranja = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDevoluciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalidas)).BeginInit();
@@ -70,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picRestauracion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVerde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNaranja)).BeginInit();
@@ -83,32 +86,8 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(989, 26);
+            this.pnlMenu.Size = new System.Drawing.Size(779, 26);
             this.pnlMenu.TabIndex = 1;
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(921, 4);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 3;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(952, 4);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(25, 19);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 2;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // lblUsuarios
             // 
@@ -116,7 +95,7 @@
             this.lblUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblUsuarios.Enabled = false;
             this.lblUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(527, 42);
+            this.lblUsuarios.Location = new System.Drawing.Point(495, 104);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(114, 23);
             this.lblUsuarios.TabIndex = 10;
@@ -129,7 +108,7 @@
             this.lblLibros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblLibros.Enabled = false;
             this.lblLibros.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibros.Location = new System.Drawing.Point(686, 42);
+            this.lblLibros.Location = new System.Drawing.Point(40, 274);
             this.lblLibros.Name = "lblLibros";
             this.lblLibros.Size = new System.Drawing.Size(114, 23);
             this.lblLibros.TabIndex = 11;
@@ -142,7 +121,7 @@
             this.lblRespaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblRespaldo.Enabled = false;
             this.lblRespaldo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespaldo.Location = new System.Drawing.Point(844, 216);
+            this.lblRespaldo.Location = new System.Drawing.Point(495, 440);
             this.lblRespaldo.Name = "lblRespaldo";
             this.lblRespaldo.Size = new System.Drawing.Size(114, 23);
             this.lblRespaldo.TabIndex = 12;
@@ -155,7 +134,7 @@
             this.lblEntradas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEntradas.Enabled = false;
             this.lblEntradas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntradas.Location = new System.Drawing.Point(686, 389);
+            this.lblEntradas.Location = new System.Drawing.Point(348, 440);
             this.lblEntradas.Name = "lblEntradas";
             this.lblEntradas.Size = new System.Drawing.Size(114, 23);
             this.lblEntradas.TabIndex = 13;
@@ -168,7 +147,7 @@
             this.txtDonadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDonadores.Enabled = false;
             this.txtDonadores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonadores.Location = new System.Drawing.Point(844, 42);
+            this.txtDonadores.Location = new System.Drawing.Point(642, 274);
             this.txtDonadores.Name = "txtDonadores";
             this.txtDonadores.Size = new System.Drawing.Size(114, 23);
             this.txtDonadores.TabIndex = 14;
@@ -181,7 +160,7 @@
             this.lblLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblLogin.Enabled = false;
             this.lblLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(844, 389);
+            this.lblLogin.Location = new System.Drawing.Point(642, 440);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(114, 23);
             this.lblLogin.TabIndex = 15;
@@ -194,9 +173,9 @@
             this.lblP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblP.Enabled = false;
             this.lblP.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP.Location = new System.Drawing.Point(647, 216);
+            this.lblP.Location = new System.Drawing.Point(194, 274);
             this.lblP.Name = "lblP";
-            this.lblP.Size = new System.Drawing.Size(190, 23);
+            this.lblP.Size = new System.Drawing.Size(114, 23);
             this.lblP.TabIndex = 17;
             this.lblP.Text = "Prestamos";
             this.lblP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -207,7 +186,7 @@
             this.lblEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEmpleados.Enabled = false;
             this.lblEmpleados.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.Location = new System.Drawing.Point(527, 216);
+            this.lblEmpleados.Location = new System.Drawing.Point(642, 104);
             this.lblEmpleados.Name = "lblEmpleados";
             this.lblEmpleados.Size = new System.Drawing.Size(114, 23);
             this.lblEmpleados.TabIndex = 20;
@@ -220,7 +199,7 @@
             this.lblSalidas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblSalidas.Enabled = false;
             this.lblSalidas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalidas.Location = new System.Drawing.Point(527, 389);
+            this.lblSalidas.Location = new System.Drawing.Point(194, 440);
             this.lblSalidas.Name = "lblSalidas";
             this.lblSalidas.Size = new System.Drawing.Size(114, 23);
             this.lblSalidas.TabIndex = 22;
@@ -233,7 +212,7 @@
             this.lblClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblClientes.Enabled = false;
             this.lblClientes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(231, 389);
+            this.lblClientes.Location = new System.Drawing.Point(495, 274);
             this.lblClientes.Name = "lblClientes";
             this.lblClientes.Size = new System.Drawing.Size(114, 23);
             this.lblClientes.TabIndex = 24;
@@ -246,18 +225,42 @@
             this.lblInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblInventario.Enabled = false;
             this.lblInventario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventario.Location = new System.Drawing.Point(378, 389);
+            this.lblInventario.Location = new System.Drawing.Point(40, 440);
             this.lblInventario.Name = "lblInventario";
             this.lblInventario.Size = new System.Drawing.Size(114, 23);
             this.lblInventario.TabIndex = 26;
             this.lblInventario.Text = "Inventario";
             this.lblInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtDevoluciones
+            // 
+            this.txtDevoluciones.BackColor = System.Drawing.Color.White;
+            this.txtDevoluciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDevoluciones.Enabled = false;
+            this.txtDevoluciones.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDevoluciones.Location = new System.Drawing.Point(348, 274);
+            this.txtDevoluciones.Name = "txtDevoluciones";
+            this.txtDevoluciones.Size = new System.Drawing.Size(114, 23);
+            this.txtDevoluciones.TabIndex = 28;
+            this.txtDevoluciones.Text = "Devoluciones";
+            this.txtDevoluciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // picDevoluciones
+            // 
+            this.picDevoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picDevoluciones.Image = global::Proyecto.Properties.Resources.bitacora;
+            this.picDevoluciones.Location = new System.Drawing.Point(348, 303);
+            this.picDevoluciones.Name = "picDevoluciones";
+            this.picDevoluciones.Size = new System.Drawing.Size(114, 111);
+            this.picDevoluciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDevoluciones.TabIndex = 27;
+            this.picDevoluciones.TabStop = false;
+            // 
             // picInventario
             // 
             this.picInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picInventario.Image = global::Proyecto.Properties.Resources.inventario;
-            this.picInventario.Location = new System.Drawing.Point(378, 418);
+            this.picInventario.Location = new System.Drawing.Point(40, 469);
             this.picInventario.Name = "picInventario";
             this.picInventario.Size = new System.Drawing.Size(114, 111);
             this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -269,7 +272,7 @@
             // 
             this.picClientes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picClientes.Image = global::Proyecto.Properties.Resources.Clientes;
-            this.picClientes.Location = new System.Drawing.Point(231, 418);
+            this.picClientes.Location = new System.Drawing.Point(495, 303);
             this.picClientes.Name = "picClientes";
             this.picClientes.Size = new System.Drawing.Size(114, 111);
             this.picClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -281,7 +284,7 @@
             // 
             this.picSalidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picSalidas.Image = global::Proyecto.Properties.Resources.Salidas;
-            this.picSalidas.Location = new System.Drawing.Point(527, 418);
+            this.picSalidas.Location = new System.Drawing.Point(194, 469);
             this.picSalidas.Name = "picSalidas";
             this.picSalidas.Size = new System.Drawing.Size(114, 111);
             this.picSalidas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -293,7 +296,7 @@
             // 
             this.picEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEmpleados.Image = global::Proyecto.Properties.Resources.empleados;
-            this.picEmpleados.Location = new System.Drawing.Point(527, 245);
+            this.picEmpleados.Location = new System.Drawing.Point(642, 133);
             this.picEmpleados.Name = "picEmpleados";
             this.picEmpleados.Size = new System.Drawing.Size(114, 111);
             this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,9 +308,9 @@
             // 
             this.picLogo.Enabled = false;
             this.picLogo.Image = global::Proyecto.Properties.Resources.logos_educarte_letra_negro;
-            this.picLogo.Location = new System.Drawing.Point(52, 42);
+            this.picLogo.Location = new System.Drawing.Point(40, 42);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(424, 190);
+            this.picLogo.Size = new System.Drawing.Size(422, 202);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 18;
             this.picLogo.TabStop = false;
@@ -316,7 +319,7 @@
             // 
             this.picP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picP.Image = global::Proyecto.Properties.Resources.libros_011;
-            this.picP.Location = new System.Drawing.Point(686, 245);
+            this.picP.Location = new System.Drawing.Point(194, 303);
             this.picP.Name = "picP";
             this.picP.Size = new System.Drawing.Size(114, 111);
             this.picP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,7 +331,7 @@
             // 
             this.picDonadores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picDonadores.Image = global::Proyecto.Properties.Resources.Solicitud_1;
-            this.picDonadores.Location = new System.Drawing.Point(844, 71);
+            this.picDonadores.Location = new System.Drawing.Point(642, 303);
             this.picDonadores.Name = "picDonadores";
             this.picDonadores.Size = new System.Drawing.Size(114, 111);
             this.picDonadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -340,7 +343,7 @@
             // 
             this.picCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrarSesion.Image = global::Proyecto.Properties.Resources.salir;
-            this.picCerrarSesion.Location = new System.Drawing.Point(844, 418);
+            this.picCerrarSesion.Location = new System.Drawing.Point(642, 469);
             this.picCerrarSesion.Name = "picCerrarSesion";
             this.picCerrarSesion.Size = new System.Drawing.Size(114, 111);
             this.picCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +355,7 @@
             // 
             this.picRestauracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picRestauracion.Image = global::Proyecto.Properties.Resources.Respaldo;
-            this.picRestauracion.Location = new System.Drawing.Point(844, 245);
+            this.picRestauracion.Location = new System.Drawing.Point(495, 469);
             this.picRestauracion.Name = "picRestauracion";
             this.picRestauracion.Size = new System.Drawing.Size(114, 111);
             this.picRestauracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -364,7 +367,7 @@
             // 
             this.picEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picEntradas.Image = global::Proyecto.Properties.Resources.Entradas;
-            this.picEntradas.Location = new System.Drawing.Point(686, 418);
+            this.picEntradas.Location = new System.Drawing.Point(348, 469);
             this.picEntradas.Name = "picEntradas";
             this.picEntradas.Size = new System.Drawing.Size(114, 111);
             this.picEntradas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -376,7 +379,7 @@
             // 
             this.picLibros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picLibros.Image = global::Proyecto.Properties.Resources.Biblioteca1;
-            this.picLibros.Location = new System.Drawing.Point(686, 71);
+            this.picLibros.Location = new System.Drawing.Point(40, 303);
             this.picLibros.Name = "picLibros";
             this.picLibros.Size = new System.Drawing.Size(114, 111);
             this.picLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -384,11 +387,35 @@
             this.picLibros.TabStop = false;
             this.picLibros.Click += new System.EventHandler(this.picLibros_Click);
             // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
+            this.picMinimizar.Location = new System.Drawing.Point(700, 4);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 3;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
+            this.picCerrar.Location = new System.Drawing.Point(731, 4);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(25, 19);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrar.TabIndex = 2;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
             // picUsuarios
             // 
             this.picUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUsuarios.Image = global::Proyecto.Properties.Resources._327527;
-            this.picUsuarios.Location = new System.Drawing.Point(527, 71);
+            this.picUsuarios.Location = new System.Drawing.Point(495, 133);
             this.picUsuarios.Name = "picUsuarios";
             this.picUsuarios.Size = new System.Drawing.Size(114, 111);
             this.picUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -400,7 +427,7 @@
             // 
             this.picVerde.Enabled = false;
             this.picVerde.Image = global::Proyecto.Properties.Resources.icone_cercle_rempli_vert;
-            this.picVerde.Location = new System.Drawing.Point(896, 565);
+            this.picVerde.Location = new System.Drawing.Point(688, 545);
             this.picVerde.Name = "picVerde";
             this.picVerde.Size = new System.Drawing.Size(253, 232);
             this.picVerde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -423,7 +450,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(989, 619);
+            this.ClientSize = new System.Drawing.Size(779, 619);
+            this.Controls.Add(this.txtDevoluciones);
+            this.Controls.Add(this.picDevoluciones);
             this.Controls.Add(this.picInventario);
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.picClientes);
@@ -456,8 +485,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDevoluciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSalidas)).EndInit();
@@ -469,6 +497,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.picRestauracion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVerde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNaranja)).EndInit();
@@ -507,5 +537,7 @@
         private System.Windows.Forms.TextBox lblClientes;
         private System.Windows.Forms.PictureBox picInventario;
         private System.Windows.Forms.TextBox lblInventario;
+        private System.Windows.Forms.PictureBox picDevoluciones;
+        private System.Windows.Forms.TextBox txtDevoluciones;
     }
 }
