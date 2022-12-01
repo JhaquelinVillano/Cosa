@@ -186,13 +186,13 @@ namespace Proyecto.Metodos
                             conexionDB.Close();
                         }
                 }//Cuando la persona pida el ultimo recurso se borrara automaticamente del inventario
-                 else if (existencias == cantidad)
-                 {   //Manejar errores
-                     try
-                     {   //Conectando
-                         conexionDB.Open();
-                         //Comando para insertar datos
-                         string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
+                else if (existencias == cantidad)
+                {   //Manejar errores
+                    try
+                    {   //Conectando
+                        conexionDB.Open();
+                        //Comando para insertar datos
+                        string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
                                 "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
                         //Conectando comandos con base de datos
                         MySqlCommand comando = new MySqlCommand(sql, conexionDB);
@@ -202,20 +202,20 @@ namespace Proyecto.Metodos
                         conexionDB.Close();
                         //Llamando metodo para eliminar
                         eliminarInventario(codigo);
-                     }
-                     catch (MySqlException ex)
-                     {   //Mensaje de error
-                         MessageBox.Show("Error al devolver: " + ex.Message);
-                     }
-                     finally
-                     {   //Finalizando conexion
-                         conexionDB.Close();
-                     }
-                 }
-                 else
-                 {
-                    MessageBox.Show("No tiene el suficiente material para pedir mas");
-                 }
+                    }
+                    catch (MySqlException ex)
+                    {   //Mensaje de error
+                        MessageBox.Show("Error al devolver: " + ex.Message);
+                    }
+                    finally
+                    {   //Finalizando conexion
+                        conexionDB.Close();
+                    }
+                }
+                else
+                {
+                   MessageBox.Show("No tiene el suficiente material para pedir mas");
+                }
             }
             catch (Exception ix)
             {
