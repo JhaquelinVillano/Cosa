@@ -126,7 +126,7 @@ CREATE TABLE `entradas` (
 
 LOCK TABLES `entradas` WRITE;
 /*!40000 ALTER TABLE `entradas` DISABLE KEYS */;
-INSERT INTO `entradas` VALUES ('1','Besos',15,'Besotes plebes','2022-11-24 19:14:55','Compra'),('2','Lapices',5,'Hola a todos','2022-11-20 20:37:55','Donación'),('4','Caca',10,'Cacquitas','2022-11-24 18:02:30','Donación');
+INSERT INTO `entradas` VALUES ('1','Besos',15,'Besotes plebes','2022-11-24 19:14:55','Compra'),('2','Lapices',5,'Hola a todos','2022-11-20 20:37:55','Donación'),('4','Caca',10,'Cacquitas','2022-11-24 18:02:30','Donación'),('6','Ela',20,'mplSVmlsdv','2022-12-01 14:06:21','Compra'),('7','gkg',10,'guktgk','2022-12-01 13:17:23','Compra');
 /*!40000 ALTER TABLE `entradas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -215,7 +215,6 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES ('1','Besos',15);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,8 +229,7 @@ CREATE TABLE `salidas` (
   `id_salidas` varchar(6) NOT NULL,
   `nombreArticulo_s` varchar(45) NOT NULL,
   `cantidad_s` int NOT NULL,
-  `fecha_s` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_salidas`)
+  `fecha_s` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -241,6 +239,7 @@ CREATE TABLE `salidas` (
 
 LOCK TABLES `salidas` WRITE;
 /*!40000 ALTER TABLE `salidas` DISABLE KEYS */;
+INSERT INTO `salidas` VALUES ('1','Besos',3,'01/12/2022'),('7','gkg',10,'01/12/2022'),('6','Ela',10,'01/12/2022'),('6','Ela',10,'01/12/2022');
 /*!40000 ALTER TABLE `salidas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -275,14 +274,6 @@ LOCK TABLES `usuarios` WRITE;
 INSERT INTO `usuarios` VALUES (1,'Armenta','ARGNLS01072326H200','1234','Administrador','SI','SI'),(2,'JuanVG','RTBNLS01072326H159','1234','Encargado','SI','SI');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'credu'
---
-
---
--- Dumping routines for database 'credu'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -293,4 +284,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-24 19:28:32
+-- Dump completed on 2022-12-01 14:09:06
