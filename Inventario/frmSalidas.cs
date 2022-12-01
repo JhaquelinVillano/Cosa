@@ -18,6 +18,7 @@ namespace Proyecto.Entradas_y_Salidas
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
         ErrorProvider error = new ErrorProvider();
+        MySqlConnection conexionDB = Conexion.conexion();
         public frmSalidas()
         {
             InitializeComponent();

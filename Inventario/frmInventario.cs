@@ -87,7 +87,6 @@ namespace Proyecto.Inventario
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarInventario(dgvInventario);
         }
 

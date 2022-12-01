@@ -136,57 +136,86 @@ namespace Proyecto.Metodos
         
         //Formulario de salida
         public void registroSalida(string id, string codigo, int cantidad, string fecha)
-        {
+        {   //Errores
             try
-            {
-                if (true == true)
-                {   //Query ejecutando si esta la consulta
-                    string consulta = "select existencias_p > @existencia from productos where codigo_p= @id";
-                    conexionDB.Open();
-                    //Conectando comandos con base de datos
-                    MySqlCommand com = new MySqlCommand(consulta, conexionDB);
-                    com.Parameters.AddWithValue("@id", id);
-                    com.Parameters.AddWithValue("@existencia", cantidad);
-                    //Ejecuntando comando en MySQL e ingresando la insercion
-                    com.ExecuteNonQuery();
-                    conexionDB.Close();
-                    //Manejar errores
-                    try
-                    {   //Conectando
-                        conexionDB.Open();
-                        //Comando para insertar datos
-                        string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
-                            "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
+            {   //Creando variable
+                int existencias = 0;
+                //Query para jalar el dato
+                string consulta = "select existencias_p from productos where codigo_p = @id";
+                conexionDB.Open();
+                MySqlCommand comandito = new MySqlCommand(consulta, conexionDB);
+                comandito.Parameters.AddWithValue("@id", codigo);
+                //Guardand en dato tipo string y obteniendo valor de la base de datos
+                string dato = comandito.ExecuteScalar().ToString();
+                //Cerrando conexion
+                conexionDB.Close();
+                //Convirtiendo a entero
+                existencias = Convert.ToInt32(dato);
+                //Si lo que se encuentra en la base es mayor a la cantidad solicitada se ejecutara la salida
+                if (existencias > cantidad)
+                {   //Manejar errores
+                        try
+                        {   //Conectando
+                            conexionDB.Open();
+                            //Comando para insertar datos
+                            string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
+                                "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
 
+                            //Conectando comandos con base de datos
+                            MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                            //Ejecuntando comando en MySQL e ingresando la insercion
+                            comando.ExecuteNonQuery();
+                            MessageBox.Show("Devuelto con exito");
+
+                            //Para estar existencias
+                            string query = "update productos set existencias_p = existencias_p - @cantidad where codigo_p= @ID";
+                            //Comando para restar existencias
+                            MySqlCommand coman = new MySqlCommand(query, conexionDB);
+                            //Parametros
+                            coman.Parameters.AddWithValue("@ID", codigo);
+                            coman.Parameters.AddWithValue("@cantidad", cantidad);
+                            //Ejecuntadolo
+                            coman.ExecuteNonQuery();
+                        }
+                        catch (MySqlException ex)
+                        {   //Mensaje de error
+                            MessageBox.Show("Error al devolver: " + ex.Message);
+                        }
+                        finally
+                        {   //Finalizando conexion
+                            conexionDB.Close();
+                        }
+                }//Cuando la persona pida el ultimo recurso se borrara automaticamente del inventario
+                 else if (existencias == cantidad)
+                 {   //Manejar errores
+                     try
+                     {   //Conectando
+                         conexionDB.Open();
+                         //Comando para insertar datos
+                         string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
+                                "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
                         //Conectando comandos con base de datos
                         MySqlCommand comando = new MySqlCommand(sql, conexionDB);
                         //Ejecuntando comando en MySQL e ingresando la insercion
                         comando.ExecuteNonQuery();
                         MessageBox.Show("Devuelto con exito");
-
-                        //Para estar existencias
-                        string query = "update productos set existencias_p = existencias_p - @cantidad where codigo_p= @ID";
-                        //Comando para restar existencias
-                        MySqlCommand coman = new MySqlCommand(query, conexionDB);
-                        //Parametros
-                        coman.Parameters.AddWithValue("@ID", codigo);
-                        coman.Parameters.AddWithValue("@cantidad", cantidad);
-                        //Ejecuntadolo
-                        coman.ExecuteNonQuery();
-                    }
-                    catch (MySqlException ex)
-                    {   //Mensaje de error
-                        MessageBox.Show("Error al devolver" + ex.Message);
-                    }
-                    finally
-                    {   //Finalizando conexion
                         conexionDB.Close();
-                    }
-                }/*
-                else
-                {
+                        //Llamando metodo para eliminar
+                        eliminarInventario(codigo);
+                     }
+                     catch (MySqlException ex)
+                     {   //Mensaje de error
+                         MessageBox.Show("Error al devolver: " + ex.Message);
+                     }
+                     finally
+                     {   //Finalizando conexion
+                         conexionDB.Close();
+                     }
+                 }
+                 else
+                 {
                     MessageBox.Show("No tiene el suficiente material para pedir mas");
-                }*/
+                 }
             }
             catch (Exception ix)
             {

@@ -35,7 +35,6 @@
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.lblInventario = new System.Windows.Forms.TextBox();
             this.picInventario = new System.Windows.Forms.PictureBox();
@@ -44,8 +43,6 @@
             this.picExcel = new System.Windows.Forms.PictureBox();
             this.btnInventario = new MaterialSkin.Controls.MaterialButton();
             this.btnSalidas = new MaterialSkin.Controls.MaterialButton();
-            this.txtCodigo = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.pnlInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -155,31 +152,6 @@
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             this.txtConsultar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtConsultar_KeyUp);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.AutoSize = false;
-            this.btnConsultar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnConsultar.Depth = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.HighEmphasis = true;
-            this.btnConsultar.Icon = null;
-            this.btnConsultar.Location = new System.Drawing.Point(1032, 42);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnConsultar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnConsultar.Size = new System.Drawing.Size(136, 45);
-            this.btnConsultar.TabIndex = 75;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnConsultar.UseAccentColor = false;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvInventario
             // 
@@ -314,51 +286,12 @@
             this.btnSalidas.UseVisualStyleBackColor = true;
             this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.AnimateReadOnly = false;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigo.Depth = 0;
-            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtCodigo.LeadingIcon = null;
-            this.txtCodigo.Location = new System.Drawing.Point(21, 398);
-            this.txtCodigo.MaxLength = 50;
-            this.txtCodigo.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtCodigo.Multiline = false;
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(202, 50);
-            this.txtCodigo.TabIndex = 84;
-            this.txtCodigo.Text = "";
-            this.txtCodigo.TrailingIcon = null;
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(21, 457);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(158, 36);
-            this.materialButton2.TabIndex = 86;
-            this.materialButton2.Text = "materialButton2";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
-            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
-            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
-            this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.btnSalidas);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.txtExportar);
@@ -367,7 +300,6 @@
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.picInventario);
             this.Controls.Add(this.txtConsultar);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dgvInventario);
             this.Controls.Add(this.pnlInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -397,7 +329,6 @@
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picCerrar;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private MaterialSkin.Controls.MaterialButton btnConsultar;
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.TextBox lblInventario;
         private System.Windows.Forms.PictureBox picInventario;
@@ -406,7 +337,5 @@
         private System.Windows.Forms.PictureBox picExcel;
         private MaterialSkin.Controls.MaterialButton btnInventario;
         private MaterialSkin.Controls.MaterialButton btnSalidas;
-        private MaterialSkin.Controls.MaterialTextBox txtCodigo;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
     }
 }
