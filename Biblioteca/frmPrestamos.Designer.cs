@@ -51,6 +51,7 @@
             this.picRestaurar = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBiblioteca)).BeginInit();
@@ -59,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBiblioteca
@@ -303,7 +305,7 @@
             "ID Prestamo",
             "ID Libro",
             "ID Cliente"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(953, 53);
+            this.cbxBusqueda.Location = new System.Drawing.Point(894, 54);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -320,12 +322,12 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(513, 53);
+            this.txtConsultar.Location = new System.Drawing.Point(458, 53);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(434, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(430, 50);
             this.txtConsultar.TabIndex = 97;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
@@ -407,12 +409,24 @@
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
+            // picBuscar
+            // 
+            this.picBuscar.Enabled = false;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
+            this.picBuscar.Location = new System.Drawing.Point(1102, 53);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(53, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 100;
+            this.picBuscar.TabStop = false;
+            // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtPrestamoID);
@@ -441,6 +455,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,5 +485,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
         private System.Windows.Forms.DataGridViewTextBoxColumn prestamos_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo_p;
+        private System.Windows.Forms.PictureBox picBuscar;
     }
 }

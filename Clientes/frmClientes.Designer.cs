@@ -54,6 +54,7 @@
             this.lblID = new System.Windows.Forms.TextBox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -62,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBiblioteca
@@ -452,13 +454,14 @@
             "DNI",
             "Nombre",
             "Teléfono"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(949, 49);
+            this.cbxBusqueda.Location = new System.Drawing.Point(890, 48);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
             this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
             this.cbxBusqueda.StartIndex = 0;
             this.cbxBusqueda.TabIndex = 96;
+            this.cbxBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbxBusqueda_SelectedIndexChanged);
             // 
             // txtConsultar
             // 
@@ -474,11 +477,22 @@
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(428, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(369, 50);
             this.txtConsultar.TabIndex = 94;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.Enabled = false;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
+            this.picBuscar.Location = new System.Drawing.Point(1098, 49);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(53, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 101;
+            this.picBuscar.TabStop = false;
             // 
             // frmClientes
             // 
@@ -486,6 +500,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1164, 641);
+            this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.txtID);
@@ -520,6 +535,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,5 +569,6 @@
         private System.Windows.Forms.TextBox lblID;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
+        private System.Windows.Forms.PictureBox picBuscar;
     }
 }

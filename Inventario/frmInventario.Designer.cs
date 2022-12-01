@@ -42,6 +42,7 @@
             this.txtExportar = new System.Windows.Forms.TextBox();
             this.picExcel = new System.Windows.Forms.PictureBox();
             this.btnSalidas = new MaterialSkin.Controls.MaterialButton();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -51,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInventario
@@ -140,12 +142,12 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(401, 40);
+            this.txtConsultar.Location = new System.Drawing.Point(258, 40);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(767, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(848, 50);
             this.txtConsultar.TabIndex = 76;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
@@ -263,12 +265,24 @@
             this.btnSalidas.UseVisualStyleBackColor = true;
             this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
             // 
+            // picBuscar
+            // 
+            this.picBuscar.Enabled = false;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
+            this.picBuscar.Location = new System.Drawing.Point(1112, 40);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(56, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 91;
+            this.picBuscar.TabStop = false;
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.btnSalidas);
             this.Controls.Add(this.txtExportar);
             this.Controls.Add(this.picExcel);
@@ -291,6 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +327,6 @@
         private System.Windows.Forms.TextBox txtExportar;
         private System.Windows.Forms.PictureBox picExcel;
         private MaterialSkin.Controls.MaterialButton btnSalidas;
+        private System.Windows.Forms.PictureBox picBuscar;
     }
 }

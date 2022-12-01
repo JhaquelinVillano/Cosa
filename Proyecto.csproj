@@ -393,6 +393,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\buscar_Inventario.png" />
+    <None Include="Resources\buscar_libros.png" />
+    <None Include="Resources\buscar_personal.png" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\buscar.png" />
     <None Include="Resources\Entradas.png" />

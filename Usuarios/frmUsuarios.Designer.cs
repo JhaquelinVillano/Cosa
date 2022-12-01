@@ -53,6 +53,7 @@
             this.cbxAdmin = new MaterialSkin.Controls.MaterialCheckbox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
@@ -61,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlUsuario
@@ -147,7 +149,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(42, 247);
+            this.lblNombre.Location = new System.Drawing.Point(22, 241);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 11;
@@ -158,7 +160,7 @@
             // 
             this.cbxBiblioteca.AutoSize = true;
             this.cbxBiblioteca.Depth = 0;
-            this.cbxBiblioteca.Location = new System.Drawing.Point(72, 517);
+            this.cbxBiblioteca.Location = new System.Drawing.Point(48, 518);
             this.cbxBiblioteca.Margin = new System.Windows.Forms.Padding(0);
             this.cbxBiblioteca.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxBiblioteca.MouseState = MaterialSkin.MouseState.HOVER;
@@ -175,7 +177,7 @@
             // 
             this.cbxInventario.AutoSize = true;
             this.cbxInventario.Depth = 0;
-            this.cbxInventario.Location = new System.Drawing.Point(72, 554);
+            this.cbxInventario.Location = new System.Drawing.Point(48, 555);
             this.cbxInventario.Margin = new System.Windows.Forms.Padding(0);
             this.cbxInventario.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxInventario.MouseState = MaterialSkin.MouseState.HOVER;
@@ -196,11 +198,11 @@
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(509, 114);
+            this.dgvUsuarios.Location = new System.Drawing.Point(509, 102);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(628, 494);
+            this.dgvUsuarios.Size = new System.Drawing.Size(659, 506);
             this.dgvUsuarios.TabIndex = 19;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
@@ -210,7 +212,7 @@
             this.lblContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblContraseña.Enabled = false;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(158, 332);
+            this.lblContraseña.Location = new System.Drawing.Point(21, 327);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(202, 23);
             this.lblContraseña.TabIndex = 22;
@@ -224,7 +226,7 @@
             this.txtContraseña.Depth = 0;
             this.txtContraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtContraseña.LeadingIcon = null;
-            this.txtContraseña.Location = new System.Drawing.Point(158, 361);
+            this.txtContraseña.Location = new System.Drawing.Point(21, 356);
             this.txtContraseña.MaxLength = 50;
             this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.txtContraseña.Multiline = false;
@@ -243,12 +245,12 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(297, 432);
+            this.btnRegistrar.Location = new System.Drawing.Point(269, 349);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnRegistrar.Size = new System.Drawing.Size(158, 36);
+            this.btnRegistrar.Size = new System.Drawing.Size(202, 36);
             this.btnRegistrar.TabIndex = 23;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -265,12 +267,12 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(297, 506);
+            this.btnModificar.Location = new System.Drawing.Point(269, 397);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnModificar.Size = new System.Drawing.Size(158, 36);
+            this.btnModificar.Size = new System.Drawing.Size(202, 36);
             this.btnModificar.TabIndex = 24;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -289,12 +291,12 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(297, 580);
+            this.btnEliminar.Location = new System.Drawing.Point(269, 445);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEliminar.Size = new System.Drawing.Size(158, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(202, 36);
             this.btnEliminar.TabIndex = 25;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -309,7 +311,7 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(42, 276);
+            this.txtNombre.Location = new System.Drawing.Point(22, 270);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -338,7 +340,7 @@
             // 
             this.picUsuarios.Enabled = false;
             this.picUsuarios.Image = global::Proyecto.Properties.Resources._327527;
-            this.picUsuarios.Location = new System.Drawing.Point(188, 114);
+            this.picUsuarios.Location = new System.Drawing.Point(179, 102);
             this.picUsuarios.Name = "picUsuarios";
             this.picUsuarios.Size = new System.Drawing.Size(145, 114);
             this.picUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -352,7 +354,7 @@
             this.txtDniEmpleado.Depth = 0;
             this.txtDniEmpleado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDniEmpleado.LeadingIcon = null;
-            this.txtDniEmpleado.Location = new System.Drawing.Point(255, 276);
+            this.txtDniEmpleado.Location = new System.Drawing.Point(269, 270);
             this.txtDniEmpleado.MaxLength = 50;
             this.txtDniEmpleado.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDniEmpleado.Multiline = false;
@@ -368,7 +370,7 @@
             this.lblDniEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDniEmpleado.Enabled = false;
             this.lblDniEmpleado.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDniEmpleado.Location = new System.Drawing.Point(255, 247);
+            this.lblDniEmpleado.Location = new System.Drawing.Point(269, 241);
             this.lblDniEmpleado.Name = "lblDniEmpleado";
             this.lblDniEmpleado.Size = new System.Drawing.Size(202, 23);
             this.lblDniEmpleado.TabIndex = 30;
@@ -381,7 +383,7 @@
             this.txtPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPermisos.Enabled = false;
             this.txtPermisos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPermisos.Location = new System.Drawing.Point(28, 417);
+            this.txtPermisos.Location = new System.Drawing.Point(34, 418);
             this.txtPermisos.Name = "txtPermisos";
             this.txtPermisos.Size = new System.Drawing.Size(182, 23);
             this.txtPermisos.TabIndex = 34;
@@ -392,7 +394,7 @@
             // 
             this.cbxEncargado.AutoSize = true;
             this.cbxEncargado.Depth = 0;
-            this.cbxEncargado.Location = new System.Drawing.Point(42, 480);
+            this.cbxEncargado.Location = new System.Drawing.Point(48, 481);
             this.cbxEncargado.Margin = new System.Windows.Forms.Padding(0);
             this.cbxEncargado.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxEncargado.MouseState = MaterialSkin.MouseState.HOVER;
@@ -409,7 +411,7 @@
             // 
             this.cbxAdmin.AutoSize = true;
             this.cbxAdmin.Depth = 0;
-            this.cbxAdmin.Location = new System.Drawing.Point(42, 443);
+            this.cbxAdmin.Location = new System.Drawing.Point(48, 444);
             this.cbxAdmin.Margin = new System.Windows.Forms.Padding(0);
             this.cbxAdmin.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbxAdmin.MouseState = MaterialSkin.MouseState.HOVER;
@@ -440,7 +442,7 @@
             "ID",
             "Nombre",
             "DNI"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(935, 59);
+            this.cbxBusqueda.Location = new System.Drawing.Point(907, 46);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -457,16 +459,27 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(509, 59);
+            this.txtConsultar.Location = new System.Drawing.Point(509, 46);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(420, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(392, 50);
             this.txtConsultar.TabIndex = 100;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
+            // 
+            // picBuscar
+            // 
+            this.picBuscar.Enabled = false;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
+            this.picBuscar.Location = new System.Drawing.Point(1115, 46);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(53, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 103;
+            this.picBuscar.TabStop = false;
             // 
             // frmUsuarios
             // 
@@ -474,6 +487,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxAdmin);
@@ -507,6 +521,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,5 +554,6 @@
         private MaterialSkin.Controls.MaterialCheckbox cbxAdmin;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
+        private System.Windows.Forms.PictureBox picBuscar;
     }
 }

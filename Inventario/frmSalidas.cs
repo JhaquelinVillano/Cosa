@@ -161,5 +161,10 @@ namespace Proyecto.Entradas_y_Salidas
         private void cbxID_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void lblNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

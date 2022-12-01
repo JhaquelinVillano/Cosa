@@ -116,5 +116,10 @@ namespace Proyecto.Clientes
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
         }
+
+        private void cbxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
