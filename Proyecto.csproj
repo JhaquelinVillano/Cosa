@@ -393,6 +393,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\bitacora.png" />
     <None Include="Resources\buscar_Inventario.png" />
     <None Include="Resources\buscar_libros.png" />
     <None Include="Resources\buscar_personal.png" />
