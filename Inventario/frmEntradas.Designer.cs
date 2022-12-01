@@ -51,7 +51,6 @@
             this.txtExportar = new System.Windows.Forms.TextBox();
             this.rbtnCompra = new MaterialSkin.Controls.MaterialRadioButton();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.picExcel = new System.Windows.Forms.PictureBox();
             this.picEntradas = new System.Windows.Forms.PictureBox();
             this.pnlInventario.SuspendLayout();
@@ -204,6 +203,8 @@
             // 
             // dgvEntradas
             // 
+            this.dgvEntradas.AllowUserToAddRows = false;
+            this.dgvEntradas.AllowUserToDeleteRows = false;
             this.dgvEntradas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -432,42 +433,17 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(500, 49);
+            this.txtConsultar.Location = new System.Drawing.Point(851, 49);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(525, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(317, 50);
             this.txtConsultar.TabIndex = 73;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             this.txtConsultar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtConsultar_KeyDown);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.AutoSize = false;
-            this.btnConsultar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnConsultar.Depth = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.HighEmphasis = true;
-            this.btnConsultar.Icon = null;
-            this.btnConsultar.Location = new System.Drawing.Point(1032, 49);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnConsultar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnConsultar.Size = new System.Drawing.Size(136, 45);
-            this.btnConsultar.TabIndex = 72;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnConsultar.UseAccentColor = false;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // picExcel
             // 
@@ -501,7 +477,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.txtConsultar);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.rbtnCompra);
             this.Controls.Add(this.txtExportar);
             this.Controls.Add(this.rbtnDonacion);
@@ -567,6 +542,5 @@
         private System.Windows.Forms.TextBox txtExportar;
         private MaterialSkin.Controls.MaterialRadioButton rbtnCompra;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private MaterialSkin.Controls.MaterialButton btnConsultar;
     }
 }

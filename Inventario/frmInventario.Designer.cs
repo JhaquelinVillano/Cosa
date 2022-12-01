@@ -41,7 +41,6 @@
             this.btnEntradas = new MaterialSkin.Controls.MaterialButton();
             this.txtExportar = new System.Windows.Forms.TextBox();
             this.picExcel = new System.Windows.Forms.PictureBox();
-            this.btnInventario = new MaterialSkin.Controls.MaterialButton();
             this.btnSalidas = new MaterialSkin.Controls.MaterialButton();
             this.pnlInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
@@ -141,7 +140,7 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(258, 42);
+            this.txtConsultar.Location = new System.Drawing.Point(401, 40);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
@@ -242,28 +241,6 @@
             this.picExcel.TabStop = false;
             this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
             // 
-            // btnInventario
-            // 
-            this.btnInventario.AutoSize = false;
-            this.btnInventario.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnInventario.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnInventario.Depth = 0;
-            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventario.HighEmphasis = true;
-            this.btnInventario.Icon = null;
-            this.btnInventario.Location = new System.Drawing.Point(21, 242);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnInventario.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnInventario.Name = "btnInventario";
-            this.btnInventario.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnInventario.Size = new System.Drawing.Size(202, 36);
-            this.btnInventario.TabIndex = 82;
-            this.btnInventario.Text = "Actualizar";
-            this.btnInventario.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnInventario.UseAccentColor = false;
-            this.btnInventario.UseVisualStyleBackColor = true;
-            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
             // btnSalidas
             // 
             this.btnSalidas.AutoSize = false;
@@ -293,7 +270,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.btnSalidas);
-            this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.txtExportar);
             this.Controls.Add(this.picExcel);
             this.Controls.Add(this.btnEntradas);
@@ -335,7 +311,6 @@
         private MaterialSkin.Controls.MaterialButton btnEntradas;
         private System.Windows.Forms.TextBox txtExportar;
         private System.Windows.Forms.PictureBox picExcel;
-        private MaterialSkin.Controls.MaterialButton btnInventario;
         private MaterialSkin.Controls.MaterialButton btnSalidas;
     }
 }

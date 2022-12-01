@@ -35,7 +35,6 @@
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnConsultar = new MaterialSkin.Controls.MaterialButton();
             this.dgvSalidas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
             this.btnModificar = new MaterialSkin.Controls.MaterialButton();
@@ -145,7 +144,7 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(524, 44);
+            this.txtConsultar.Location = new System.Drawing.Point(667, 44);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
@@ -155,31 +154,6 @@
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.AutoSize = false;
-            this.btnConsultar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnConsultar.Depth = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnConsultar.HighEmphasis = true;
-            this.btnConsultar.Icon = null;
-            this.btnConsultar.Location = new System.Drawing.Point(1024, 44);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnConsultar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnConsultar.Size = new System.Drawing.Size(136, 45);
-            this.btnConsultar.TabIndex = 109;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnConsultar.UseAccentColor = false;
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dgvSalidas
             // 
@@ -403,7 +377,6 @@
             this.Controls.Add(this.cbxID);
             this.Controls.Add(this.cbxNombreArticulo);
             this.Controls.Add(this.txtConsultar);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.dgvSalidas);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -441,7 +414,6 @@
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picCerrar;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private MaterialSkin.Controls.MaterialButton btnConsultar;
         private System.Windows.Forms.DataGridView dgvSalidas;
         private MaterialSkin.Controls.MaterialButton btnEliminar;
         private MaterialSkin.Controls.MaterialButton btnModificar;
