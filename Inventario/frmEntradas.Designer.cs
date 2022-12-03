@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlInventario = new System.Windows.Forms.Panel();
+            this.picAtras = new System.Windows.Forms.PictureBox();
+            this.picMaximizar = new System.Windows.Forms.PictureBox();
+            this.picRestaurar = new System.Windows.Forms.PictureBox();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.txtNombre = new MaterialSkin.Controls.MaterialTextBox();
             this.lblDescripción = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.TextBox();
@@ -49,21 +54,16 @@
             this.picBuscar = new System.Windows.Forms.PictureBox();
             this.picExcel = new System.Windows.Forms.PictureBox();
             this.picEntradas = new System.Windows.Forms.PictureBox();
-            this.picAtras = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
-            this.picRestaurar = new System.Windows.Forms.PictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.pnlInventario.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlInventario
@@ -81,12 +81,76 @@
             this.pnlInventario.TabIndex = 1;
             this.pnlInventario.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlInventario_Paint);
             // 
+            // picAtras
+            // 
+            this.picAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picAtras.Image = global::Proyecto.Properties.Resources.atras;
+            this.picAtras.Location = new System.Drawing.Point(6, 4);
+            this.picAtras.Name = "picAtras";
+            this.picAtras.Size = new System.Drawing.Size(24, 17);
+            this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAtras.TabIndex = 8;
+            this.picAtras.TabStop = false;
+            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
+            // 
+            // picMaximizar
+            // 
+            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
+            this.picMaximizar.Location = new System.Drawing.Point(1112, 3);
+            this.picMaximizar.Name = "picMaximizar";
+            this.picMaximizar.Size = new System.Drawing.Size(25, 19);
+            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximizar.TabIndex = 5;
+            this.picMaximizar.TabStop = false;
+            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
+            // 
+            // picRestaurar
+            // 
+            this.picRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRestaurar.Image = global::Proyecto.Properties.Resources._159699;
+            this.picRestaurar.Location = new System.Drawing.Point(1112, 3);
+            this.picRestaurar.Name = "picRestaurar";
+            this.picRestaurar.Size = new System.Drawing.Size(25, 19);
+            this.picRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRestaurar.TabIndex = 7;
+            this.picRestaurar.TabStop = false;
+            this.picRestaurar.Click += new System.EventHandler(this.picRestaurar_Click);
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
+            this.picMinimizar.Location = new System.Drawing.Point(1081, 3);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimizar.TabIndex = 6;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
+            this.picCerrar.Location = new System.Drawing.Point(1143, 3);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(25, 19);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCerrar.TabIndex = 4;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
             // txtNombre
             // 
             this.txtNombre.AnimateReadOnly = false;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Depth = 0;
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
             this.txtNombre.Location = new System.Drawing.Point(24, 323);
             this.txtNombre.MaxLength = 50;
@@ -269,7 +333,7 @@
             this.txtCantidad.AnimateReadOnly = false;
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Depth = 0;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCantidad.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCantidad.LeadingIcon = null;
             this.txtCantidad.Location = new System.Drawing.Point(24, 408);
             this.txtCantidad.MaxLength = 50;
@@ -302,7 +366,7 @@
             this.txtCodigo.AnimateReadOnly = false;
             this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigo.Depth = 0;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCodigo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCodigo.LeadingIcon = null;
             this.txtCodigo.Location = new System.Drawing.Point(24, 233);
             this.txtCodigo.MaxLength = 50;
@@ -369,7 +433,7 @@
             this.txtConsultar.BackColor = System.Drawing.Color.White;
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsultar.Depth = 0;
-            this.txtConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
             this.txtConsultar.Location = new System.Drawing.Point(500, 49);
             this.txtConsultar.MaxLength = 50;
@@ -419,70 +483,6 @@
             this.picEntradas.TabIndex = 34;
             this.picEntradas.TabStop = false;
             // 
-            // picAtras
-            // 
-            this.picAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAtras.Image = global::Proyecto.Properties.Resources.atras;
-            this.picAtras.Location = new System.Drawing.Point(6, 4);
-            this.picAtras.Name = "picAtras";
-            this.picAtras.Size = new System.Drawing.Size(24, 17);
-            this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAtras.TabIndex = 8;
-            this.picAtras.TabStop = false;
-            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
-            this.picMaximizar.Location = new System.Drawing.Point(1112, 3);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(25, 19);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 5;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
-            // 
-            // picRestaurar
-            // 
-            this.picRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRestaurar.Image = global::Proyecto.Properties.Resources._159699;
-            this.picRestaurar.Location = new System.Drawing.Point(1112, 3);
-            this.picRestaurar.Name = "picRestaurar";
-            this.picRestaurar.Size = new System.Drawing.Size(25, 19);
-            this.picRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRestaurar.TabIndex = 7;
-            this.picRestaurar.TabStop = false;
-            this.picRestaurar.Click += new System.EventHandler(this.picRestaurar_Click);
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(1081, 3);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 6;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(1143, 3);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(25, 19);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 4;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
-            // 
             // frmEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,22 +510,21 @@
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pnlInventario);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEntradas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInventario";
             this.Load += new System.EventHandler(this.frmEntradas_Load);
             this.pnlInventario.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
