@@ -87,6 +87,13 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al consultar: " + ex.Message);
             }//Cargando datos
             dgvInventario.DataSource = tabla;
+            //Agregando nombres a columnas
+            dgvInventario.Columns[0].HeaderText = "Codigo";
+            dgvInventario.Columns[1].HeaderText = "Nombre del producto";
+            dgvInventario.Columns[2].HeaderText = "Cantidad";
+            dgvInventario.Columns[3].HeaderText = "Descripción";
+            dgvInventario.Columns[4].HeaderText = "Fecha";
+            dgvInventario.Columns[5].HeaderText = "Tipo";
         }
         public void modificarEntrada(string codigo, string nombre, int cantidad, string descripcion, string tipo)
         {   //Query
@@ -112,6 +119,29 @@ namespace Proyecto.Metodos
             {
                 MessageBox.Show("Error al registrar: " + ex.Message);
             }
+        }
+
+        public void sumarEntrada(string id, int cantidad)
+        {
+            try
+            {   //Conexion
+                conexionDB.Open();
+                //Para estar existencias
+                string query = "update entradas set cantidad_e = cantidad_e + @cantidad where codigoArticulo_e= @ID";
+                //Comando para restar existencias
+                MySqlCommand coman = new MySqlCommand(query, conexionDB);
+                //Parametros
+                coman.Parameters.AddWithValue("@ID", id);
+                coman.Parameters.AddWithValue("@cantidad", cantidad);
+                //Ejecuntadolo
+                coman.ExecuteNonQuery();
+                MessageBox.Show("Se sumo con exito!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se sumo, error: " + ex.Message);
+            }
+            conexionDB.Close();
         }
         public DataTable busqueda(string sql)
         {   //Comandos para nuestra busqueda
@@ -261,6 +291,11 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al consultar: " + ex.Message);
             }//Cargando datos
             dgvInventario.DataSource = tabla;
+            //Agregando nombres a columnas
+            dgvInventario.Columns[0].HeaderText = "ID";
+            dgvInventario.Columns[1].HeaderText = "Nombre del producto";
+            dgvInventario.Columns[2].HeaderText = "Cantidad";
+            dgvInventario.Columns[3].HeaderText = "Fecha";
         }
         public void eliminarSalidas(string id)
         {   //Query
@@ -341,6 +376,10 @@ namespace Proyecto.Metodos
                 MessageBox.Show("Error al consultar: " + ex.Message);
             }//Cargando datos
             dgvInventario.DataSource = tabla;
+            //Agregando nombres a columnas
+            dgvInventario.Columns[0].HeaderText = "ID del producto";
+            dgvInventario.Columns[1].HeaderText = "Nombre del producto";
+            dgvInventario.Columns[2].HeaderText = "Existencias";
         }
         //Inventario donde se encuentran las existencias
         public void ingresarInventario(string codigo, string nombre, int cantidad)

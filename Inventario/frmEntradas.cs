@@ -246,5 +246,10 @@ namespace Proyecto.Inventario
         {
 
         }
+
+        private void txtSumar_Click(object sender, EventArgs e)
+        {
+            inventario.sumarEntrada(txtCodigo.Text, int.Parse(txtCantidad.Text));
+        }
     }
 }
