@@ -164,5 +164,11 @@ namespace Proyecto.Usuarios
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
         }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace Proyecto.Metodos
                     //Admin | Trabajador | Invitado
                     if (Rol == "Administrador")
                     {
-                        MessageBox.Show("Bienvenido " + usuario);
+                        MessageBox.Show("Bienvenido " + usuario,"Ventana de bienvenida");
                         Menu.frmMenu admin = new Menu.frmMenu();
                         admin.Usuario = usuario;
                         verificar = 1;
@@ -67,7 +67,7 @@ namespace Proyecto.Metodos
                     }
                     if (Rol == "Encargado")
                     {
-                        MessageBox.Show("Bienvenido " + usuario);
+                        MessageBox.Show("Bienvenido " + usuario, "Ventana de bienvenida");
                         Menu.frmMenuTrabajadores trabajadores = new Menu.frmMenuTrabajadores();
                         trabajadores.Usuario = usuario;
                         trabajadores.Rol = Rol;

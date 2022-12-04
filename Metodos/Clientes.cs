@@ -29,6 +29,13 @@ namespace Proyecto.Metodos
                     resultado = command.ExecuteReader();
                     dataTable.Load(resultado);
                     dgvClientes.DataSource = dataTable;
+                    //Agregando nombres a columnas
+                    dgvClientes.Columns[0].HeaderText = "ID";
+                    dgvClientes.Columns[1].HeaderText = "DNI";
+                    dgvClientes.Columns[2].HeaderText = "Nombres";
+                    dgvClientes.Columns[3].HeaderText = "Apellidos";
+                    dgvClientes.Columns[4].HeaderText = "Dirección";
+                    dgvClientes.Columns[5].HeaderText = "Teléfono";
                     consultaDB.Close();
                 }
                 if (txtConsultar.Text != "")
@@ -45,6 +52,13 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvClientes.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvClientes.Columns[0].HeaderText = "ID";
+                        dgvClientes.Columns[1].HeaderText = "DNI";
+                        dgvClientes.Columns[2].HeaderText = "Nombres";
+                        dgvClientes.Columns[3].HeaderText = "Apellidos";
+                        dgvClientes.Columns[4].HeaderText = "Dirección";
+                        dgvClientes.Columns[5].HeaderText = "Teléfono";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "DNI")
@@ -59,6 +73,13 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvClientes.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvClientes.Columns[0].HeaderText = "ID";
+                        dgvClientes.Columns[1].HeaderText = "DNI";
+                        dgvClientes.Columns[2].HeaderText = "Nombres";
+                        dgvClientes.Columns[3].HeaderText = "Apellidos";
+                        dgvClientes.Columns[4].HeaderText = "Dirección";
+                        dgvClientes.Columns[5].HeaderText = "Teléfono";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "Nombre")
@@ -73,6 +94,13 @@ namespace Proyecto.Metodos
                         resultado3 = command3.ExecuteReader();
                         dataTable3.Load(resultado3);
                         dgvClientes.DataSource = dataTable3;
+                        //Agregando nombres a columnas
+                        dgvClientes.Columns[0].HeaderText = "ID";
+                        dgvClientes.Columns[1].HeaderText = "DNI";
+                        dgvClientes.Columns[2].HeaderText = "Nombres";
+                        dgvClientes.Columns[3].HeaderText = "Apellidos";
+                        dgvClientes.Columns[4].HeaderText = "Dirección";
+                        dgvClientes.Columns[5].HeaderText = "Teléfono";
                         consultaDB3.Close();
                     }
                     if (cbxBusqueda.Text == "Teléfono")
@@ -87,6 +115,13 @@ namespace Proyecto.Metodos
                         resultado3 = command3.ExecuteReader();
                         dataTable3.Load(resultado3);
                         dgvClientes.DataSource = dataTable3;
+                        //Agregando nombres a columnas
+                        dgvClientes.Columns[0].HeaderText = "ID";
+                        dgvClientes.Columns[1].HeaderText = "DNI";
+                        dgvClientes.Columns[2].HeaderText = "Nombres";
+                        dgvClientes.Columns[3].HeaderText = "Apellidos";
+                        dgvClientes.Columns[4].HeaderText = "Dirección";
+                        dgvClientes.Columns[5].HeaderText = "Teléfono";
                         consultaDB3.Close();
                     }
                 }

@@ -15,6 +15,7 @@ namespace Proyecto.Biblioteca
     public partial class frmLibros : Form
     {
         Metodos.Libros libros = new Metodos.Libros();
+        ErrorProvider error = new ErrorProvider();
         public frmLibros()
         {
             InitializeComponent();
@@ -154,6 +155,40 @@ namespace Proyecto.Biblioteca
                 txtEdicion.Text = "";
                 txtExistencias.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
+            }
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Metodos.Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtID, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Metodos.Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtExistencias, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
             }
         }
     }

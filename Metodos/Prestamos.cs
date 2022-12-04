@@ -30,6 +30,14 @@ namespace Proyecto.Metodos
                     resultado = command.ExecuteReader();
                     dataTable.Load(resultado);
                     dgvPrestamos.DataSource = dataTable;
+                    //Agregando nombres a columnas
+                    dgvPrestamos.Columns[0].HeaderText = "ID del prestamo";
+                    dgvPrestamos.Columns[1].HeaderText = "ID del libro";
+                    dgvPrestamos.Columns[2].HeaderText = "Nombre del libro";
+                    dgvPrestamos.Columns[3].HeaderText = "ID del cliente";
+                    dgvPrestamos.Columns[4].HeaderText = "DNI del cliente";
+                    dgvPrestamos.Columns[5].HeaderText = "Usuario que hizo el préstamo";
+                    dgvPrestamos.Columns[6].HeaderText = "Fecha del prestamo";
                     consultaDB.Close();
                 }
                 if (txtConsultar.Text != "")
@@ -46,6 +54,14 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvPrestamos.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvPrestamos.Columns[0].HeaderText = "ID del prestamo";
+                        dgvPrestamos.Columns[1].HeaderText = "ID del libro";
+                        dgvPrestamos.Columns[2].HeaderText = "Nombre del libro";
+                        dgvPrestamos.Columns[3].HeaderText = "ID del cliente";
+                        dgvPrestamos.Columns[4].HeaderText = "DNI del cliente";
+                        dgvPrestamos.Columns[5].HeaderText = "Usuario que hizo el préstamo";
+                        dgvPrestamos.Columns[6].HeaderText = "Fecha del prestamo";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "ID Libro")
@@ -60,6 +76,14 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvPrestamos.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvPrestamos.Columns[0].HeaderText = "ID del prestamo";
+                        dgvPrestamos.Columns[1].HeaderText = "ID del libro";
+                        dgvPrestamos.Columns[2].HeaderText = "Nombre del libro";
+                        dgvPrestamos.Columns[3].HeaderText = "ID del cliente";
+                        dgvPrestamos.Columns[4].HeaderText = "DNI del cliente";
+                        dgvPrestamos.Columns[5].HeaderText = "Usuario que hizo el préstamo";
+                        dgvPrestamos.Columns[6].HeaderText = "Fecha del prestamo";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "ID Cliente")
@@ -74,6 +98,14 @@ namespace Proyecto.Metodos
                         resultado3 = command3.ExecuteReader();
                         dataTable3.Load(resultado3);
                         dgvPrestamos.DataSource = dataTable3;
+                        //Agregando nombres a columnas
+                        dgvPrestamos.Columns[0].HeaderText = "ID del prestamo";
+                        dgvPrestamos.Columns[1].HeaderText = "ID del libro";
+                        dgvPrestamos.Columns[2].HeaderText = "Nombre del libro";
+                        dgvPrestamos.Columns[3].HeaderText = "ID del cliente";
+                        dgvPrestamos.Columns[4].HeaderText = "DNI del cliente";
+                        dgvPrestamos.Columns[5].HeaderText = "Usuario que hizo el préstamo";
+                        dgvPrestamos.Columns[6].HeaderText = "Fecha del prestamo";
                         consultaDB3.Close();
                     }
                 }
@@ -86,13 +118,13 @@ namespace Proyecto.Metodos
         }
         internal void registrarPrestamos(MaterialSkin.Controls.MaterialTextBox txtLibroID, MaterialSkin.Controls.MaterialTextBox txtNombreSolicitante,string usuario, MaterialSkin.Controls.MaterialTextBox txtPrestamoID)
         {
+            int x = 0;
+            int y = 0;
+            int clienteValor = 0;
+            string nombreLibro;
+            string clienteDNI;
             try
             {
-                int x = 0;
-                int y = 0;
-                int clienteValor =0;
-                string nombreLibro;
-                string clienteDNI;
                 try
                 {
                     MySqlConnection consultaDB = Conexion.conexion();
@@ -185,6 +217,17 @@ namespace Proyecto.Metodos
                             clienteDNI = (Convert.ToString(command5.ExecuteScalar()));
                             consultaDB5.Close();
                             /////
+                            MySqlConnection consultaDB55 = Conexion.conexion();
+                            DataTable dataTable55 = new DataTable();
+                            MySqlDataReader resultado55;
+                            //instruccion para buscar el DNI del cliente
+                            MySqlCommand command55 = new MySqlCommand("set foreign_key_checks=0;", consultaDB55);
+                            command55.CommandType = CommandType.Text;
+                            consultaDB55.Open();
+                            resultado55 = command55.ExecuteReader();
+                            dataTable55.Load(resultado55);
+                            consultaDB55.Close();
+                            /////
                             try
                             {
                                 MySqlConnection consultaDB6 = Conexion.conexion();
@@ -203,8 +246,8 @@ namespace Proyecto.Metodos
                                 clienteDNI = "";
                                 MessageBox.Show("El prestamo ha sido registrado.");
                             }
-                            catch (Exception) {
-                                MessageBox.Show("Ups... algo ha salido mal al momento de registrar el prestamo.");
+                            catch (Exception ex) {
+                                MessageBox.Show("Ups... algo ha salido mal al momento de registrar el prestamo."+ex);
                             }
 
                         }
@@ -278,15 +321,15 @@ namespace Proyecto.Metodos
         }
         internal void hacerDevolucion(MaterialSkin.Controls.MaterialTextBox txtLibroID, MaterialSkin.Controls.MaterialTextBox txtNombreSolicitante, MaterialSkin.Controls.MaterialTextBox txtPrestamoID,string usuario)
         {
+            int libroID = 0;
+            string nombreLibro;
+            int clienteID = 0;
+            string clienteDNI;
+            int empleadoID=0;
+            string empleadoDNI;
+            string fechaPrestamo;
             try
             {
-                int libroID=0;
-                string nombreLibro="";
-                int clienteID = 0;
-                string clienteDNI = "";
-                int empleadoID = 0;
-                string empleadoDNI = "";
-                string fechaPrestamo;
                 if (MessageBox.Show("Deseas continuar con la devolución del libro?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     if (txtPrestamoID.Text == "" || txtLibroID.Text != "" || txtNombreSolicitante.Text != "")
@@ -338,7 +381,7 @@ namespace Proyecto.Metodos
                         DataTable dataTable6 = new DataTable();
                         MySqlDataReader resultado6;
                         //instruccion para buscar el DNI del cliente en el prestamo especificado
-                        MySqlCommand command6 = new MySqlCommand("select clientes_dni_cliente from prestamos where idPrestamo_p=" + txtPrestamoID.Text + ";", consultaDB6);
+                        MySqlCommand command6 = new MySqlCommand("select clientes_dni_cliente from prestamos where idPrestamo_p="+txtPrestamoID.Text+";", consultaDB6);
                         command6.CommandType = CommandType.Text;
                         consultaDB6.Open();
                         resultado6 = command6.ExecuteReader();
@@ -386,7 +429,7 @@ namespace Proyecto.Metodos
                         DataTable dataTable10 = new DataTable();
                         MySqlDataReader resultado10;
                         //instruccion para ingresar los datos anteriormente buscados a la tabla de devoluciones (hacer la devolucion)
-                        MySqlCommand command10 = new MySqlCommand("insert into devoluciones (idDevolucion_d,libroID,nombreLibro_d,clienteID,clienteDNI,empleadoID,empleadoDNI,fechaPrestamo,fechaDevolucion_d) values (default,"+libroID+",'"+nombreLibro+"',"+clienteID+",'"+clienteDNI+"',"+empleadoID+",'"+empleadoDNI+"','"+fechaPrestamo+"',now());", consultaDB10);
+                        MySqlCommand command10 = new MySqlCommand("insert into devoluciones (idDevolucion_d,nombreLibro_d,clienteDNI,empleadoID,empleadoDNI,fechaPrestamo,fechaDevolucion_d) values (default,'" + nombreLibro+"','"+clienteDNI+"',"+empleadoID+",'"+empleadoDNI+"','"+fechaPrestamo+"',now());", consultaDB10);
                         command10.CommandType = CommandType.Text;
                         consultaDB10.Open();
                         resultado10 = command10.ExecuteReader();

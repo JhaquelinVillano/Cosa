@@ -160,10 +160,11 @@
             this.txtTelefono.TabIndex = 69;
             this.txtTelefono.Text = "";
             this.txtTelefono.TrailingIcon = null;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblTelefono
             // 
-            this.lblTelefono.BackColor = System.Drawing.SystemColors.Window;
+            this.lblTelefono.BackColor = System.Drawing.Color.White;
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblTelefono.Enabled = false;
             this.lblTelefono.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -421,6 +422,7 @@
             this.txtID.TabIndex = 93;
             this.txtID.Text = "";
             this.txtID.TrailingIcon = null;
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // lblID
             // 
@@ -485,7 +487,7 @@
             // 
             // picBuscar
             // 
-            this.picBuscar.Enabled = false;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
             this.picBuscar.Location = new System.Drawing.Point(1098, 49);
             this.picBuscar.Name = "picBuscar";
@@ -493,6 +495,7 @@
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBuscar.TabIndex = 101;
             this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
             // 
             // frmClientes
             // 

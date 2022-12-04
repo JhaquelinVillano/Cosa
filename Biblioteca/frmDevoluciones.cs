@@ -14,9 +14,11 @@ namespace Proyecto.Biblioteca
 {
     public partial class frmDevoluciones : Form
     {
+        Metodos.Devoluciones devoluciones = new Metodos.Devoluciones();
         public frmDevoluciones()
         {
             InitializeComponent();
+            devoluciones.consultarDevoluciones(dgvDevoluciones, txtConsultar, cbxBusqueda);
         }
 
         private void picCerrar_Click(object sender, EventArgs e)
@@ -54,6 +56,22 @@ namespace Proyecto.Biblioteca
         private void btnDevolver_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        {
+            devoluciones.consultarDevoluciones(dgvDevoluciones, txtConsultar, cbxBusqueda);
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            devoluciones.consultarDevoluciones(dgvDevoluciones, txtConsultar, cbxBusqueda);
+        }
+
+        private void frmDevoluciones_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

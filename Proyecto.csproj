@@ -219,6 +219,7 @@
     </Compile>
     <Compile Include="Metodos\Clientes.cs" />
     <Compile Include="Metodos\Conexion.cs" />
+    <Compile Include="Metodos\Devoluciones.cs" />
     <Compile Include="Metodos\Empleados.cs" />
     <Compile Include="Metodos\Excel.cs" />
     <Compile Include="Metodos\Inventa.cs" />

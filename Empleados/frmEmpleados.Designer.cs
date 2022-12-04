@@ -305,6 +305,8 @@
             this.txtID.TabIndex = 35;
             this.txtID.Text = "";
             this.txtID.TrailingIcon = null;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtID_KeyPress);
             // 
             // picUsuarios
             // 
@@ -422,6 +424,7 @@
             this.txtTelefono.TabIndex = 49;
             this.txtTelefono.Text = "";
             this.txtTelefono.TrailingIcon = null;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // lblTelefono
             // 
@@ -515,7 +518,7 @@
             // 
             // picBuscar
             // 
-            this.picBuscar.Enabled = false;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
             this.picBuscar.Location = new System.Drawing.Point(1111, 40);
             this.picBuscar.Name = "picBuscar";
@@ -523,6 +526,7 @@
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBuscar.TabIndex = 100;
             this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
             // 
             // frmEmpleados
             // 

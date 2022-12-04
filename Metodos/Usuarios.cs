@@ -29,6 +29,13 @@ namespace Proyecto.Metodos
                     resultado = command.ExecuteReader();
                     dataTable.Load(resultado);
                     dgvUsuarios.DataSource = dataTable;
+                    //Agregando nombres a columnas
+                    dgvUsuarios.Columns[0].HeaderText = "ID del empleado";
+                    dgvUsuarios.Columns[1].HeaderText = "Usuario";
+                    dgvUsuarios.Columns[2].HeaderText = "DNI del empleado";
+                    dgvUsuarios.Columns[3].HeaderText = "Tipo de usuario";
+                    dgvUsuarios.Columns[4].HeaderText = "Acceso a biblioteca";
+                    dgvUsuarios.Columns[5].HeaderText = "Acceso a inventario";
                     consultaDB.Close();
                 }
                 if (txtConsultar.Text != "")
@@ -45,6 +52,13 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvUsuarios.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvUsuarios.Columns[0].HeaderText = "ID del empleado";
+                        dgvUsuarios.Columns[1].HeaderText = "Usuario";
+                        dgvUsuarios.Columns[2].HeaderText = "DNI del empleado";
+                        dgvUsuarios.Columns[3].HeaderText = "Tipo de usuario";
+                        dgvUsuarios.Columns[4].HeaderText = "Acceso a biblioteca";
+                        dgvUsuarios.Columns[5].HeaderText = "Acceso a inventario";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "Nombre")
@@ -59,6 +73,13 @@ namespace Proyecto.Metodos
                         resultado2 = command2.ExecuteReader();
                         dataTable2.Load(resultado2);
                         dgvUsuarios.DataSource = dataTable2;
+                        //Agregando nombres a columnas
+                        dgvUsuarios.Columns[0].HeaderText = "ID del empleado";
+                        dgvUsuarios.Columns[1].HeaderText = "Usuario";
+                        dgvUsuarios.Columns[2].HeaderText = "DNI del empleado";
+                        dgvUsuarios.Columns[3].HeaderText = "Tipo de usuario";
+                        dgvUsuarios.Columns[4].HeaderText = "Acceso a biblioteca";
+                        dgvUsuarios.Columns[5].HeaderText = "Acceso a inventario";
                         consultaDB2.Close();
                     }
                     if (cbxBusqueda.Text == "DNI")
@@ -73,6 +94,13 @@ namespace Proyecto.Metodos
                         resultado3 = command3.ExecuteReader();
                         dataTable3.Load(resultado3);
                         dgvUsuarios.DataSource = dataTable3;
+                        //Agregando nombres a columnas
+                        dgvUsuarios.Columns[0].HeaderText = "ID del empleado";
+                        dgvUsuarios.Columns[1].HeaderText = "Usuario";
+                        dgvUsuarios.Columns[2].HeaderText = "DNI del empleado";
+                        dgvUsuarios.Columns[3].HeaderText = "Tipo de usuario";
+                        dgvUsuarios.Columns[4].HeaderText = "Acceso a biblioteca";
+                        dgvUsuarios.Columns[5].HeaderText = "Acceso a inventario";
                         consultaDB3.Close();
                     }
                 }

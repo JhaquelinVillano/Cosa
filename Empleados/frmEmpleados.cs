@@ -14,6 +14,7 @@ namespace Proyecto.Empleados
     public partial class frmEmpleados : Form
     {
         Metodos.Empleados empleados = new Metodos.Empleados();
+        ErrorProvider error = new ErrorProvider();
         public frmEmpleados()
         {
             InitializeComponent();
@@ -111,6 +112,45 @@ namespace Proyecto.Empleados
                 txtTelefono.Text = "";
                 txtCorreo.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
+            }
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            empleados.consultarEmpleados(dgvEmpleados, txtConsultar, cbxBusqueda);
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Metodos.Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtID, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
+            }
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Mostrar el error
+            bool validar = Metodos.Validaciones.soloNumeros(e);
+            if (!validar)
+            {
+                error.SetError(txtTelefono, "Solo numeros");
+            }
+            else
+            {
+                error.Clear();
             }
         }
     }
