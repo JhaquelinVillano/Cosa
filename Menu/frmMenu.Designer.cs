@@ -255,6 +255,7 @@
             this.picDevoluciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picDevoluciones.TabIndex = 27;
             this.picDevoluciones.TabStop = false;
+            this.picDevoluciones.Click += new System.EventHandler(this.picDevoluciones_Click);
             // 
             // picInventario
             // 
@@ -391,7 +392,7 @@
             // 
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(700, 4);
+            this.picMinimizar.Location = new System.Drawing.Point(711, 4);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(25, 19);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -403,7 +404,7 @@
             // 
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(731, 4);
+            this.picCerrar.Location = new System.Drawing.Point(742, 3);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(25, 19);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

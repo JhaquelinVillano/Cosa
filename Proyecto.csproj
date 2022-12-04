@@ -145,6 +145,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biblioteca\frmDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biblioteca\frmDevoluciones.Designer.cs">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Biblioteca\Libros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     <Compile Include="Usuarios\frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Biblioteca\frmDevoluciones.resx">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Biblioteca\Libros.resx">
       <DependentUpon>Libros.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +402,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\bitacora1.png" />
     <None Include="Resources\bitacora.png" />
     <None Include="Resources\buscar_Inventario.png" />
     <None Include="Resources\buscar_libros.png" />

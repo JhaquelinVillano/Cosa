@@ -118,5 +118,12 @@ namespace Proyecto.Menu
             inventarios.Show();
             this.Hide();
         }
+
+        private void picDevoluciones_Click(object sender, EventArgs e)
+        {
+            frmDevoluciones devoluciones = new frmDevoluciones();
+            devoluciones.Show();
+            this.Hide();
+        }
     }
 }

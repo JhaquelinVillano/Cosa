@@ -34,8 +34,6 @@
             this.lblID = new System.Windows.Forms.TextBox();
             this.lblPrestamos = new System.Windows.Forms.TextBox();
             this.dgvP = new System.Windows.Forms.DataGridView();
-            this.prestamos_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPrestamo_p = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombreSolicitante = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCliente = new System.Windows.Forms.TextBox();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
@@ -45,22 +43,22 @@
             this.lblPrestamoID = new System.Windows.Forms.TextBox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
+            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.picBiblioteca = new System.Windows.Forms.PictureBox();
             this.picAtras = new System.Windows.Forms.PictureBox();
             this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picRestaurar = new System.Windows.Forms.PictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
-            this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlBiblioteca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBiblioteca
@@ -115,9 +113,9 @@
             this.lblPrestamos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPrestamos.Enabled = false;
             this.lblPrestamos.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrestamos.Location = new System.Drawing.Point(23, 34);
+            this.lblPrestamos.Location = new System.Drawing.Point(134, 35);
             this.lblPrestamos.Name = "lblPrestamos";
-            this.lblPrestamos.Size = new System.Drawing.Size(402, 45);
+            this.lblPrestamos.Size = new System.Drawing.Size(174, 45);
             this.lblPrestamos.TabIndex = 69;
             this.lblPrestamos.Text = "Prestamos";
             this.lblPrestamos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -137,25 +135,12 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvP.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.prestamos_id,
-            this.idPrestamo_p});
             this.dgvP.EnableHeadersVisualStyles = false;
             this.dgvP.Location = new System.Drawing.Point(458, 105);
             this.dgvP.Name = "dgvP";
             this.dgvP.Size = new System.Drawing.Size(697, 547);
             this.dgvP.TabIndex = 75;
             this.dgvP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvP_CellClick);
-            // 
-            // prestamos_id
-            // 
-            this.prestamos_id.HeaderText = "Prestamos";
-            this.prestamos_id.Name = "prestamos_id";
-            // 
-            // idPrestamo_p
-            // 
-            this.idPrestamo_p.HeaderText = "ID Prestamo";
-            this.idPrestamo_p.Name = "idPrestamo_p";
             // 
             // txtNombreSolicitante
             // 
@@ -333,6 +318,17 @@
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
+            // picBuscar
+            // 
+            this.picBuscar.Enabled = false;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
+            this.picBuscar.Location = new System.Drawing.Point(1102, 53);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(53, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 100;
+            this.picBuscar.TabStop = false;
+            // 
             // picBiblioteca
             // 
             this.picBiblioteca.Cursor = System.Windows.Forms.Cursors.Default;
@@ -409,17 +405,6 @@
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
-            // picBuscar
-            // 
-            this.picBuscar.Enabled = false;
-            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
-            this.picBuscar.Location = new System.Drawing.Point(1102, 53);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(53, 50);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBuscar.TabIndex = 100;
-            this.picBuscar.TabStop = false;
-            // 
             // frmPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -449,13 +434,13 @@
             this.Load += new System.EventHandler(this.frmPrestamos_Load);
             this.pnlBiblioteca.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBiblioteca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,8 +468,6 @@
         private System.Windows.Forms.TextBox lblPrestamoID;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prestamos_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPrestamo_p;
         private System.Windows.Forms.PictureBox picBuscar;
     }
 }
