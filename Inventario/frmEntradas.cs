@@ -20,6 +20,7 @@ namespace Proyecto.Inventario
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
         ErrorProvider error = new ErrorProvider();
+        public string Usuario;
 
         public frmEntradas()
         {
@@ -30,6 +31,7 @@ namespace Proyecto.Inventario
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }
@@ -250,6 +252,23 @@ namespace Proyecto.Inventario
         private void txtSumar_Click(object sender, EventArgs e)
         {
             inventario.sumarEntrada(txtCodigo.Text, int.Parse(txtCantidad.Text));
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "")
+            {
+                dgvEntradas.DataSource = inventario.busqueda("select * from `entradas` where " +
+                    "`codigoArticulo_e` like '%" + txtConsultar.Text + "%' or nombreArticulo_e like '%" + txtConsultar.Text + "' " +
+                    " or descripcion_e like '%" + txtConsultar.Text + "%' or fecha_e like '%" +
+                    txtConsultar.Text + "%' or tipo_e like '%" + txtConsultar.Text + "%'");
+
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarEntrada(dgvEntradas);
+            }
         }
     }
 }

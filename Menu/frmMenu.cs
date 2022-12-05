@@ -38,6 +38,7 @@ namespace Proyecto.Menu
         private void picUsuarios_Click(object sender, EventArgs e)
         {
             frmUsuarios Usuarios = new frmUsuarios();
+            Usuarios.Usuario = Usuario;
             Usuarios.Show();
             this.Hide();
 
@@ -46,6 +47,7 @@ namespace Proyecto.Menu
         private void picRestauracion_Click(object sender, EventArgs e)
         {
             frmRestauracion Restauracion = new frmRestauracion();
+            Restauracion.Usuario = Usuario;
             Restauracion.Show();
             this.Hide();
         }
@@ -53,6 +55,7 @@ namespace Proyecto.Menu
         private void picInventario_Click(object sender, EventArgs e)
         {
             frmEntradas Inventario = new frmEntradas();
+            Inventario.Usuario = Usuario;
             Inventario.Show();
             this.Hide();
         }
@@ -60,6 +63,7 @@ namespace Proyecto.Menu
         private void picDonadores_Click(object sender, EventArgs e)
         {
             frmDonadores Donadores = new frmDonadores();
+            Donadores.Usuario = Usuario;
             Donadores.Show();
             this.Hide();
         }
@@ -74,6 +78,7 @@ namespace Proyecto.Menu
         private void picLibros_Click(object sender, EventArgs e)
         {
             frmLibros Libros= new frmLibros();
+            Libros.Usuario = Usuario;
             Libros.Show();
             this.Hide();
         }
@@ -94,6 +99,7 @@ namespace Proyecto.Menu
         private void picEmpleados_Click(object sender, EventArgs e)
         {
             Empleados.frmEmpleados empleados = new Empleados.frmEmpleados();
+            empleados.Usuario = Usuario;
             empleados.Show();
             this.Hide();
         }
@@ -101,6 +107,7 @@ namespace Proyecto.Menu
         private void picSalidas_Click(object sender, EventArgs e)
         {
             frmSalidas salidas = new frmSalidas();
+            salidas.Usuario = Usuario;
             salidas.Show();
             this.Hide();
         }
@@ -108,6 +115,7 @@ namespace Proyecto.Menu
         private void picClientes_Click(object sender, EventArgs e)
         {
             Clientes.frmClientes clientes = new Clientes.frmClientes();
+            clientes.Usuario = Usuario;
             clientes.Show();
             this.Hide();
         }
@@ -115,6 +123,7 @@ namespace Proyecto.Menu
         private void picInventario_Click_1(object sender, EventArgs e)
         {
             Inventario.frmInventario inventarios = new frmInventario();
+            inventarios.Usuario = Usuario;
             inventarios.Show();
             this.Hide();
         }
@@ -122,6 +131,7 @@ namespace Proyecto.Menu
         private void picDevoluciones_Click(object sender, EventArgs e)
         {
             frmDevoluciones devoluciones = new frmDevoluciones();
+            devoluciones.Usuario = Usuario;
             devoluciones.Show();
             this.Hide();
         }

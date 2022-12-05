@@ -38,10 +38,8 @@
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.lblInventario = new System.Windows.Forms.TextBox();
             this.picInventario = new System.Windows.Forms.PictureBox();
-            this.btnEntradas = new MaterialSkin.Controls.MaterialButton();
             this.txtExportar = new System.Windows.Forms.TextBox();
             this.picExcel = new System.Windows.Forms.PictureBox();
-            this.btnSalidas = new MaterialSkin.Controls.MaterialButton();
             this.picBuscar = new System.Windows.Forms.PictureBox();
             this.pnlInventario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
@@ -194,28 +192,6 @@
             this.picInventario.TabIndex = 77;
             this.picInventario.TabStop = false;
             // 
-            // btnEntradas
-            // 
-            this.btnEntradas.AutoSize = false;
-            this.btnEntradas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEntradas.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnEntradas.Depth = 0;
-            this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntradas.HighEmphasis = true;
-            this.btnEntradas.Icon = null;
-            this.btnEntradas.Location = new System.Drawing.Point(21, 290);
-            this.btnEntradas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEntradas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEntradas.Name = "btnEntradas";
-            this.btnEntradas.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEntradas.Size = new System.Drawing.Size(202, 36);
-            this.btnEntradas.TabIndex = 79;
-            this.btnEntradas.Text = "Entradas";
-            this.btnEntradas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEntradas.UseAccentColor = false;
-            this.btnEntradas.UseVisualStyleBackColor = true;
-            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
-            // 
             // txtExportar
             // 
             this.txtExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -243,31 +219,9 @@
             this.picExcel.TabStop = false;
             this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
             // 
-            // btnSalidas
-            // 
-            this.btnSalidas.AutoSize = false;
-            this.btnSalidas.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSalidas.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSalidas.Depth = 0;
-            this.btnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalidas.HighEmphasis = true;
-            this.btnSalidas.Icon = null;
-            this.btnSalidas.Location = new System.Drawing.Point(21, 338);
-            this.btnSalidas.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSalidas.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSalidas.Name = "btnSalidas";
-            this.btnSalidas.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSalidas.Size = new System.Drawing.Size(202, 36);
-            this.btnSalidas.TabIndex = 83;
-            this.btnSalidas.Text = "Salidas";
-            this.btnSalidas.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSalidas.UseAccentColor = false;
-            this.btnSalidas.UseVisualStyleBackColor = true;
-            this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
-            // 
             // picBuscar
             // 
-            this.picBuscar.Enabled = false;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
             this.picBuscar.Location = new System.Drawing.Point(1112, 40);
             this.picBuscar.Name = "picBuscar";
@@ -275,6 +229,7 @@
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBuscar.TabIndex = 91;
             this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
             // 
             // frmInventario
             // 
@@ -283,10 +238,8 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1180, 680);
             this.Controls.Add(this.picBuscar);
-            this.Controls.Add(this.btnSalidas);
             this.Controls.Add(this.txtExportar);
             this.Controls.Add(this.picExcel);
-            this.Controls.Add(this.btnEntradas);
             this.Controls.Add(this.lblInventario);
             this.Controls.Add(this.picInventario);
             this.Controls.Add(this.txtConsultar);
@@ -323,10 +276,8 @@
         private System.Windows.Forms.DataGridView dgvInventario;
         private System.Windows.Forms.TextBox lblInventario;
         private System.Windows.Forms.PictureBox picInventario;
-        private MaterialSkin.Controls.MaterialButton btnEntradas;
         private System.Windows.Forms.TextBox txtExportar;
         private System.Windows.Forms.PictureBox picExcel;
-        private MaterialSkin.Controls.MaterialButton btnSalidas;
         private System.Windows.Forms.PictureBox picBuscar;
     }
 }

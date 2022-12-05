@@ -15,6 +15,7 @@ namespace Proyecto.Clientes
     {
         Metodos.Clientes clientes = new Metodos.Clientes();
         ErrorProvider error = new ErrorProvider();
+        public string Usuario;
         public frmClientes()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace Proyecto.Clientes
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

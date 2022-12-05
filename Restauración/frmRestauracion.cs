@@ -15,6 +15,7 @@ namespace Proyecto.Restauración
     public partial class frmRestauracion : Form
     {
         Respaldo respaldito = new Respaldo();
+        public string Usuario;
         public frmRestauracion()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace Proyecto.Restauración
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

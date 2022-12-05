@@ -450,7 +450,7 @@
             // 
             // picBuscar
             // 
-            this.picBuscar.Enabled = false;
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
             this.picBuscar.Location = new System.Drawing.Point(1112, 49);
             this.picBuscar.Name = "picBuscar";
@@ -458,6 +458,7 @@
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBuscar.TabIndex = 91;
             this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
             // 
             // picExcel
             // 

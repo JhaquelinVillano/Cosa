@@ -19,6 +19,7 @@ namespace Proyecto.Entradas_y_Salidas
         Metodos.Inventa inventario = new Metodos.Inventa();
         ErrorProvider error = new ErrorProvider();
         MySqlConnection conexionDB = Conexion.conexion();
+        public string Usuario;
         public frmSalidas()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace Proyecto.Entradas_y_Salidas
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }
@@ -165,6 +167,22 @@ namespace Proyecto.Entradas_y_Salidas
         private void lblNombre_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "")
+            {
+                dgvSalidas.DataSource = inventario.busqueda("select * from `salidas` where " +
+                    "`id_salidas` like '%" + txtConsultar.Text + "%' or nombreArticulo_s like '%" + txtConsultar.Text + "' " +
+                    " or fecha_s like '%" + txtConsultar.Text + "%'");
+
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarSalida(dgvSalidas);
+            }
         }
     }
 }

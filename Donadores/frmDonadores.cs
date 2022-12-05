@@ -13,6 +13,7 @@ namespace Proyecto.Donadores
 {
     public partial class frmDonadores : Form
     {
+        public string Usuario;
         public frmDonadores()
         {
             InitializeComponent();
@@ -46,6 +47,7 @@ namespace Proyecto.Donadores
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

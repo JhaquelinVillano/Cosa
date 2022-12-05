@@ -16,6 +16,7 @@ namespace Proyecto.Biblioteca
     {
         Metodos.Libros libros = new Metodos.Libros();
         ErrorProvider error = new ErrorProvider();
+        public string Usuario;
         public frmLibros()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace Proyecto.Biblioteca
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

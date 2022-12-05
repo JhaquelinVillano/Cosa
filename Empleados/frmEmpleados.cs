@@ -15,6 +15,7 @@ namespace Proyecto.Empleados
     {
         Metodos.Empleados empleados = new Metodos.Empleados();
         ErrorProvider error = new ErrorProvider();
+        public string Usuario;
         public frmEmpleados()
         {
             InitializeComponent();
@@ -42,6 +43,7 @@ namespace Proyecto.Empleados
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

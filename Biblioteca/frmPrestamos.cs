@@ -50,13 +50,13 @@ namespace Proyecto.Biblioteca
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }
 
         private void frmPrestamos_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void tmrTiempo_Tick(object sender, EventArgs e)

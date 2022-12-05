@@ -18,6 +18,7 @@ namespace Proyecto.Inventario
     {
         Metodos.Inventa inventario = new Metodos.Inventa();
         Excel export = new Excel();
+        public string Usuario;
         public frmInventario()
         {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace Proyecto.Inventario
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }
@@ -105,6 +107,22 @@ namespace Proyecto.Inventario
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {   //Si esta vacio le ingresamos los valores
+            if (txtConsultar.Text != "")
+            {
+                dgvInventario.DataSource = inventario.busqueda("select * from `productos` where " +
+                    "`codigo_p` like '%" + txtConsultar.Text + "%' or nombreArticulo_p like '%" + txtConsultar.Text + "' " +
+                    " or existencias_p like '%" + txtConsultar.Text + "%'");
+
+            }//Dado caso que no entre, que nos actualize la pagina
+            else
+            {
+                inventario.actualizarSalida(dgvInventario);
+            }
+        }
+
+        private void picBuscar_Click(object sender, EventArgs e)
+        {
+            //Si esta vacio le ingresamos los valores
             if (txtConsultar.Text != "")
             {
                 dgvInventario.DataSource = inventario.busqueda("select * from `productos` where " +

@@ -15,6 +15,7 @@ namespace Proyecto.Usuarios
     public partial class frmUsuarios : Form
     {
         Metodos.Usuarios usuarios = new Metodos.Usuarios();
+        public string Usuario;
         public frmUsuarios()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace Proyecto.Usuarios
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }

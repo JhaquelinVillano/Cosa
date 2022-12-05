@@ -15,6 +15,7 @@ namespace Proyecto.Biblioteca
     public partial class frmDevoluciones : Form
     {
         Metodos.Devoluciones devoluciones = new Metodos.Devoluciones();
+        public string Usuario;
         public frmDevoluciones()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace Proyecto.Biblioteca
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
+            menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
         }
