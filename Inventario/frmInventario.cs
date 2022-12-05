@@ -65,32 +65,12 @@ namespace Proyecto.Inventario
             this.Hide();
         }
 
-        private void btnSalidas_Click(object sender, EventArgs e)
-        {
-            frmSalidas salidas = new frmSalidas();
-            salidas.Show();
-            this.Hide();
-        }
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void picExcel_Click(object sender, EventArgs e)
         {   //Llamando metodo
             export.exportar(dgvInventario);
         }
 
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-            inventario.actualizarInventario(dgvInventario);
-        }
-
-        private void materialButton2_Click(object sender, EventArgs e)
-        {
-            inventario.actualizarInventario(dgvInventario);
-        }
 
         private void lblInventario_TextChanged(object sender, EventArgs e)
         {

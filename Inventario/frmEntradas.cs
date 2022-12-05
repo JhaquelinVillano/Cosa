@@ -135,6 +135,8 @@ namespace Proyecto.Inventario
             txtConsultar.Clear();
             txtDescripcion.Clear();
             txtNombre.Clear();
+            rbtnDonacion.Checked = false;
+            rbtnCompra.Checked = false;
         }
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -166,7 +168,7 @@ namespace Proyecto.Inventario
                 txtDescripcion.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
-}
+        }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {   //Si esta vacio le ingresamos los valores
@@ -252,6 +254,7 @@ namespace Proyecto.Inventario
         {
             inventario.sumarEntrada(txtCodigo.Text, int.Parse(txtCantidad.Text));
             inventario.actualizarEntrada(dgvEntradas);
+            limpiar();
         }
 
         private void picBuscar_Click(object sender, EventArgs e)

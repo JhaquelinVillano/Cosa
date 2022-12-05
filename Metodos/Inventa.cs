@@ -217,8 +217,8 @@ namespace Proyecto.Metodos
                         }
                     }
                     else
-                    {   //No se elimino la entrada
-                        MessageBox.Show("No se elimino");
+                    {   //No se elimino la salida
+                        MessageBox.Show("No se devolvio");
                     }
                 }//Cuando la persona pida el ultimo recurso se borrara automaticamente del inventario
                 else if (existencias == cantidad)
@@ -250,8 +250,8 @@ namespace Proyecto.Metodos
                         }
                     }
                     else
-                    {   //No se elimino la entrada
-                        MessageBox.Show("No se elimino");
+                    {   //No se elimino la salida
+                        MessageBox.Show("No se delvolvio el producto");
                     }
                 }
                 else
@@ -419,7 +419,8 @@ namespace Proyecto.Metodos
         }
         public void modificarInventario(string codigo, string nombre, int cantidad)
         {   //Query
-            string sql = "update productos set codigo_p='" + codigo + "', nombreArticulo_p='" + nombre + "', existencias_p='" + cantidad + "' where codigo_p = '" + codigo + "'";
+            string sql = "update productos set codigo_p='" + codigo + "', nombreArticulo_p='" + nombre + "', existencias_p='" + cantidad + "' " +
+                "where codigo_p = '" + codigo + "'";
             try
             {
                 conexionDB.Open();

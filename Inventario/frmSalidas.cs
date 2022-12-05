@@ -18,7 +18,6 @@ namespace Proyecto.Entradas_y_Salidas
     {   //LLamando clases
         Metodos.Inventa inventario = new Metodos.Inventa();
         ErrorProvider error = new ErrorProvider();
-        MySqlConnection conexionDB = Conexion.conexion();
         public string Usuario;
         public frmSalidas()
         {
@@ -117,7 +116,7 @@ namespace Proyecto.Entradas_y_Salidas
                 txtCantidad.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
-}
+        }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {   //Si esta vacio le ingresamos los valores
