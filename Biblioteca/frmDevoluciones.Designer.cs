@@ -225,7 +225,7 @@
             this.btnDevolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDevolver.HighEmphasis = true;
             this.btnDevolver.Icon = null;
-            this.btnDevolver.Location = new System.Drawing.Point(55, 345);
+            this.btnDevolver.Location = new System.Drawing.Point(55, 360);
             this.btnDevolver.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDevolver.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDevolver.Name = "btnDevolver";
