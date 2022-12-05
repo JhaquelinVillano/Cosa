@@ -124,7 +124,6 @@ namespace Proyecto.Inventario
         private void btnEliminar_Click(object sender, EventArgs e)
         {   //Metodos
             inventario.eliminarEntradas(txtCodigo.Text);
-            inventario.eliminarInventario(txtCodigo.Text);
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
         }
@@ -252,6 +251,7 @@ namespace Proyecto.Inventario
         private void txtSumar_Click(object sender, EventArgs e)
         {
             inventario.sumarEntrada(txtCodigo.Text, int.Parse(txtCantidad.Text));
+            inventario.actualizarEntrada(dgvEntradas);
         }
 
         private void picBuscar_Click(object sender, EventArgs e)

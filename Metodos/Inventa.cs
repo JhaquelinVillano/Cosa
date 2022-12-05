@@ -183,20 +183,20 @@ namespace Proyecto.Metodos
                 existencias = Convert.ToInt32(dato);
                 //Si lo que se encuentra en la base es mayor a la cantidad solicitada se ejecutara la salida
                 if (existencias > cantidad)
-                {   //Manejar errores
+                {   //Para asegurar si quiere devolver
+                    if (MessageBox.Show("Confirme, si desea ue salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {   //Manejar errores
                         try
                         {   //Conectando
                             conexionDB.Open();
                             //Comando para insertar datos
                             string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
-                                "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
-
+                                    "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
                             //Conectando comandos con base de datos
                             MySqlCommand comando = new MySqlCommand(sql, conexionDB);
                             //Ejecuntando comando en MySQL e ingresando la insercion
                             comando.ExecuteNonQuery();
                             MessageBox.Show("Devuelto con exito");
-
                             //Para estar existencias
                             string query = "update productos set existencias_p = existencias_p - @cantidad where codigo_p= @ID";
                             //Comando para restar existencias
@@ -215,31 +215,43 @@ namespace Proyecto.Metodos
                         {   //Finalizando conexion
                             conexionDB.Close();
                         }
+                    }
+                    else
+                    {   //No se elimino la entrada
+                        MessageBox.Show("No se elimino");
+                    }
                 }//Cuando la persona pida el ultimo recurso se borrara automaticamente del inventario
                 else if (existencias == cantidad)
-                {   //Manejar errores
-                    try
-                    {   //Conectando
-                        conexionDB.Open();
-                        //Comando para insertar datos
-                        string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
-                                "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
-                        //Conectando comandos con base de datos
-                        MySqlCommand comando = new MySqlCommand(sql, conexionDB);
-                        //Ejecuntando comando en MySQL e ingresando la insercion
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Devuelto con exito");
-                        conexionDB.Close();
-                        //Llamando metodo para eliminar
-                        eliminarInventario(codigo);
+                {   //Asegurando si realmente saldra el producto
+                    if (MessageBox.Show("Confirme, si desea ue salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {   //Manejar errores
+                        try
+                        {   //Conectando
+                            conexionDB.Open();
+                            //Comando para insertar datos
+                            string sql = "insert into salidas (id_salidas, nombreArticulo_s, cantidad_s, fecha_s) values " +
+                                    "('" + codigo + "','" + id + "', '" + cantidad + "', '" + fecha + "')";
+                            //Conectando comandos con base de datos
+                            MySqlCommand comando = new MySqlCommand(sql, conexionDB);
+                            //Ejecuntando comando en MySQL e ingresando la insercion
+                            comando.ExecuteNonQuery();
+                            MessageBox.Show("Devuelto con exito");
+                            conexionDB.Close();
+                            //Llamando metodo para eliminar
+                            eliminarInventario(codigo);
+                        }
+                        catch (MySqlException ex)
+                        {   //Mensaje de error
+                            MessageBox.Show("Error al devolver: " + ex.Message);
+                        }
+                        finally
+                        {   //Finalizando conexion
+                            conexionDB.Close();
+                        }
                     }
-                    catch (MySqlException ex)
-                    {   //Mensaje de error
-                        MessageBox.Show("Error al devolver: " + ex.Message);
-                    }
-                    finally
-                    {   //Finalizando conexion
-                        conexionDB.Close();
+                    else
+                    {   //No se elimino la entrada
+                        MessageBox.Show("No se elimino");
                     }
                 }
                 else
@@ -302,7 +314,7 @@ namespace Proyecto.Metodos
             string sql = "delete from salidas where id_salidas='" + id + "'";
             try
             {   //Mensaje de confirmacion
-                if (MessageBox.Show("Confirme, si desea eliminar esta salida?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Confirme, si desea eliminar esta recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     //Ejecutando conexion y comando
                     conexionDB.Open();
