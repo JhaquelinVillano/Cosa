@@ -251,7 +251,7 @@ namespace Proyecto.Inventario
         }
 
         private void txtSumar_Click(object sender, EventArgs e)
-        {
+        {   //Metodos
             inventario.sumarEntrada(txtCodigo.Text, int.Parse(txtCantidad.Text));
             inventario.actualizarEntrada(dgvEntradas);
             limpiar();
