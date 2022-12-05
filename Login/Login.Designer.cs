@@ -41,6 +41,8 @@
             this.picUsuario = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.TextBox();
+            this.lblContraseña = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNuevoUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizarLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrarLogin)).BeginInit();
@@ -62,12 +64,12 @@
             this.btnAcceder.ForeColor = System.Drawing.Color.LightGray;
             this.btnAcceder.HighEmphasis = true;
             this.btnAcceder.Icon = null;
-            this.btnAcceder.Location = new System.Drawing.Point(44, 365);
+            this.btnAcceder.Location = new System.Drawing.Point(34, 415);
             this.btnAcceder.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAcceder.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAcceder.Size = new System.Drawing.Size(292, 36);
+            this.btnAcceder.Size = new System.Drawing.Size(301, 36);
             this.btnAcceder.TabIndex = 3;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -84,14 +86,14 @@
             this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.LeadingIcon = null;
-            this.txtContraseña.Location = new System.Drawing.Point(90, 253);
+            this.txtContraseña.Location = new System.Drawing.Point(91, 309);
             this.txtContraseña.MaxLength = 50;
             this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(227, 50);
+            this.txtContraseña.Size = new System.Drawing.Size(245, 50);
             this.txtContraseña.TabIndex = 2;
-            this.txtContraseña.Text = "CONTRASEÑA";
+            this.txtContraseña.Text = "";
             this.txtContraseña.TrailingIcon = null;
             this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -106,14 +108,14 @@
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.LeadingIcon = null;
-            this.txtUsuario.Location = new System.Drawing.Point(90, 172);
+            this.txtUsuario.Location = new System.Drawing.Point(91, 210);
             this.txtUsuario.MaxLength = 50;
             this.txtUsuario.MouseState = MaterialSkin.MouseState.OUT;
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(227, 50);
+            this.txtUsuario.Size = new System.Drawing.Size(244, 50);
             this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Text = "";
             this.txtUsuario.TrailingIcon = null;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -124,7 +126,7 @@
             this.linkContraseña.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.linkContraseña.AutoSize = true;
             this.linkContraseña.LinkColor = System.Drawing.Color.DimGray;
-            this.linkContraseña.Location = new System.Drawing.Point(136, 306);
+            this.linkContraseña.Location = new System.Drawing.Point(125, 396);
             this.linkContraseña.Name = "linkContraseña";
             this.linkContraseña.Size = new System.Drawing.Size(146, 13);
             this.linkContraseña.TabIndex = 0;
@@ -171,9 +173,9 @@
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.Location = new System.Drawing.Point(38, 26);
+            this.picLogo.Location = new System.Drawing.Point(34, 26);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(297, 131);
+            this.picLogo.Size = new System.Drawing.Size(301, 131);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -183,7 +185,7 @@
             // 
             this.picContraseña.Enabled = false;
             this.picContraseña.Image = global::Proyecto.Properties.Resources.contraseña;
-            this.picContraseña.Location = new System.Drawing.Point(34, 255);
+            this.picContraseña.Location = new System.Drawing.Point(35, 309);
             this.picContraseña.Name = "picContraseña";
             this.picContraseña.Size = new System.Drawing.Size(50, 48);
             this.picContraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +197,7 @@
             this.picUsuario.BackColor = System.Drawing.Color.Transparent;
             this.picUsuario.Enabled = false;
             this.picUsuario.Image = global::Proyecto.Properties.Resources.usuario;
-            this.picUsuario.Location = new System.Drawing.Point(34, 172);
+            this.picUsuario.Location = new System.Drawing.Point(37, 210);
             this.picUsuario.Name = "picUsuario";
             this.picUsuario.Size = new System.Drawing.Size(48, 48);
             this.picUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -205,7 +207,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proyecto.Properties.Resources._1f7e0;
-            this.pictureBox1.Location = new System.Drawing.Point(-131, 309);
+            this.pictureBox1.Location = new System.Drawing.Point(-152, 363);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(261, 282);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,12 +217,38 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proyecto.Properties.Resources.icone_cercle_rempli_vert;
-            this.pictureBox2.Location = new System.Drawing.Point(294, 97);
+            this.pictureBox2.Location = new System.Drawing.Point(341, -36);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(355, 372);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblUsuario.Enabled = false;
+            this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(91, 181);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(244, 23);
+            this.lblUsuario.TabIndex = 94;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.BackColor = System.Drawing.Color.White;
+            this.lblContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblContraseña.Enabled = false;
+            this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(91, 280);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(244, 23);
+            this.lblContraseña.TabIndex = 95;
+            this.lblContraseña.Text = "Contraseña";
+            this.lblContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmLogin
             // 
@@ -228,6 +256,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(375, 566);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.picNuevoUsuario);
             this.Controls.Add(this.linkContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -272,6 +302,8 @@
         private MaterialSkin.Controls.MaterialTextBox txtUsuario;
         private System.Windows.Forms.LinkLabel linkContraseña;
         private System.Windows.Forms.PictureBox picNuevoUsuario;
+        private System.Windows.Forms.TextBox lblUsuario;
+        private System.Windows.Forms.TextBox lblContraseña;
     }
 }
 

@@ -178,8 +178,6 @@
             // 
             // lblEmpleados
             // 
-            this.lblEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmpleados.BackColor = System.Drawing.Color.White;
             this.lblEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEmpleados.Enabled = false;
@@ -311,7 +309,7 @@
             // picUsuarios
             // 
             this.picUsuarios.Enabled = false;
-            this.picUsuarios.Image = global::Proyecto.Properties.Resources._327527;
+            this.picUsuarios.Image = global::Proyecto.Properties.Resources.empleados;
             this.picUsuarios.Location = new System.Drawing.Point(161, 95);
             this.picUsuarios.Name = "picUsuarios";
             this.picUsuarios.Size = new System.Drawing.Size(145, 114);
@@ -471,6 +469,7 @@
             // 
             // cbxBusqueda
             // 
+            this.cbxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxBusqueda.AutoResize = false;
             this.cbxBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxBusqueda.Depth = 0;
@@ -518,6 +517,7 @@
             // 
             // picBuscar
             // 
+            this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
             this.picBuscar.Location = new System.Drawing.Point(1111, 40);

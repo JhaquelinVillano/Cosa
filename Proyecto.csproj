@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AdvancedStringBuilder, Version=0.1.0.0, Culture=neutral, PublicKeyToken=e818a2fc08933ddb, processorArchitecture=MSIL">
       <HintPath>packages\AdvancedStringBuilder.0.1.0\lib\net45\AdvancedStringBuilder.dll</HintPath>
@@ -402,6 +405,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icono.ico" />
     <Content Include="logo.ico" />
     <None Include="Resources\bitacora1.png" />
     <None Include="Resources\bitacora.png" />

@@ -149,8 +149,6 @@
             // 
             // lblBiblioteca
             // 
-            this.lblBiblioteca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBiblioteca.BackColor = System.Drawing.Color.White;
             this.lblBiblioteca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblBiblioteca.Enabled = false;
@@ -513,6 +511,7 @@
             // 
             // cbxBusqueda
             // 
+            this.cbxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxBusqueda.AutoResize = false;
             this.cbxBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxBusqueda.Depth = 0;
@@ -552,6 +551,7 @@
             // 
             // picBuscar
             // 
+            this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
             this.picBuscar.Location = new System.Drawing.Point(1103, 49);

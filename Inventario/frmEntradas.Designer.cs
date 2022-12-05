@@ -291,8 +291,6 @@
             // 
             // lblEntradas
             // 
-            this.lblEntradas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEntradas.BackColor = System.Drawing.Color.White;
             this.lblEntradas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEntradas.Enabled = false;
@@ -450,6 +448,7 @@
             // 
             // picBuscar
             // 
+            this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
             this.picBuscar.Location = new System.Drawing.Point(1112, 49);
