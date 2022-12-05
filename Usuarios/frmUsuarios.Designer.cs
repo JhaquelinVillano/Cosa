@@ -192,17 +192,16 @@
             // 
             // dgvUsuarios
             // 
-            this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUsuarios.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(509, 102);
+            this.dgvUsuarios.Location = new System.Drawing.Point(526, 102);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(659, 506);
+            this.dgvUsuarios.Size = new System.Drawing.Size(642, 506);
             this.dgvUsuarios.TabIndex = 19;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
@@ -323,15 +322,13 @@
             // 
             // lblUsuarios
             // 
-            this.lblUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarios.BackColor = System.Drawing.Color.White;
             this.lblUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblUsuarios.Enabled = false;
             this.lblUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(158, 51);
+            this.lblUsuarios.Location = new System.Drawing.Point(179, 51);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(202, 45);
+            this.lblUsuarios.Size = new System.Drawing.Size(145, 45);
             this.lblUsuarios.TabIndex = 29;
             this.lblUsuarios.Text = "Usuarios";
             this.lblUsuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -459,12 +456,12 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(509, 46);
+            this.txtConsultar.Location = new System.Drawing.Point(526, 46);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(392, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(375, 50);
             this.txtConsultar.TabIndex = 100;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
