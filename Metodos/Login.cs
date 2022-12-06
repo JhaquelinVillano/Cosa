@@ -16,6 +16,7 @@ namespace Proyecto.Metodos
         public string Rol = "";
         public string biblioteca = "";
         public string inventario = "";
+        public int verificar = 0;
         internal void iniciarSesion(string usuario, string contraseña)
         {
             try
@@ -61,6 +62,7 @@ namespace Proyecto.Metodos
                         MessageBox.Show("Bienvenido " + usuario,"Ventana de bienvenida");
                         Menu.frmMenu admin = new Menu.frmMenu();
                         admin.Usuario = usuario;
+                        verificar = 1;
                         admin.Show();
                     }
                     if (Rol == "Encargado")
@@ -70,7 +72,8 @@ namespace Proyecto.Metodos
                         trabajadores.Usuario = usuario;
                         trabajadores.Rol = Rol;
                         trabajadores.biblioteca = biblioteca;
-                        trabajadores.inventario = inventario; ;
+                        trabajadores.inventario = inventario;
+                        verificar = 1;
                         trabajadores.Show();
                     }
                 }
