@@ -37,9 +37,6 @@
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.cbxBusqueda = new MaterialSkin.Controls.MaterialComboBox();
-            this.txtPrestamoID = new MaterialSkin.Controls.MaterialTextBox();
-            this.lblPrestamoID = new System.Windows.Forms.TextBox();
-            this.btnDevolver = new MaterialSkin.Controls.MaterialButton();
             this.dgvDevoluciones = new System.Windows.Forms.DataGridView();
             this.lblDevoluciones = new System.Windows.Forms.TextBox();
             this.picBuscar = new System.Windows.Forms.PictureBox();
@@ -142,12 +139,12 @@
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(326, 30);
+            this.txtConsultar.Location = new System.Drawing.Point(246, 30);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(559, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(639, 50);
             this.txtConsultar.TabIndex = 113;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
@@ -184,60 +181,6 @@
             this.cbxBusqueda.StartIndex = 0;
             this.cbxBusqueda.TabIndex = 114;
             // 
-            // txtPrestamoID
-            // 
-            this.txtPrestamoID.AnimateReadOnly = false;
-            this.txtPrestamoID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPrestamoID.Depth = 0;
-            this.txtPrestamoID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPrestamoID.LeadingIcon = null;
-            this.txtPrestamoID.Location = new System.Drawing.Point(55, 258);
-            this.txtPrestamoID.MaxLength = 50;
-            this.txtPrestamoID.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPrestamoID.Multiline = false;
-            this.txtPrestamoID.Name = "txtPrestamoID";
-            this.txtPrestamoID.Size = new System.Drawing.Size(202, 50);
-            this.txtPrestamoID.TabIndex = 112;
-            this.txtPrestamoID.Text = "";
-            this.txtPrestamoID.TrailingIcon = null;
-            // 
-            // lblPrestamoID
-            // 
-            this.lblPrestamoID.BackColor = System.Drawing.Color.White;
-            this.lblPrestamoID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblPrestamoID.Enabled = false;
-            this.lblPrestamoID.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrestamoID.Location = new System.Drawing.Point(55, 229);
-            this.lblPrestamoID.Name = "lblPrestamoID";
-            this.lblPrestamoID.Size = new System.Drawing.Size(202, 23);
-            this.lblPrestamoID.TabIndex = 111;
-            this.lblPrestamoID.Text = "ID Prestamo";
-            this.lblPrestamoID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnDevolver
-            // 
-            this.btnDevolver.AutoSize = false;
-            this.btnDevolver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDevolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDevolver.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnDevolver.Depth = 0;
-            this.btnDevolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDevolver.HighEmphasis = true;
-            this.btnDevolver.Icon = null;
-            this.btnDevolver.Location = new System.Drawing.Point(55, 360);
-            this.btnDevolver.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnDevolver.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnDevolver.Name = "btnDevolver";
-            this.btnDevolver.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnDevolver.Size = new System.Drawing.Size(202, 36);
-            this.btnDevolver.TabIndex = 110;
-            this.btnDevolver.Text = "Hacer devolución";
-            this.btnDevolver.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnDevolver.UseAccentColor = false;
-            this.btnDevolver.UseVisualStyleBackColor = false;
-            this.btnDevolver.Click += new System.EventHandler(this.btnDevolver_Click);
-            // 
             // dgvDevoluciones
             // 
             this.dgvDevoluciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -254,9 +197,9 @@
             this.dgvDevoluciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDevoluciones.EnableHeadersVisualStyles = false;
-            this.dgvDevoluciones.Location = new System.Drawing.Point(326, 82);
+            this.dgvDevoluciones.Location = new System.Drawing.Point(246, 82);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
-            this.dgvDevoluciones.Size = new System.Drawing.Size(826, 547);
+            this.dgvDevoluciones.Size = new System.Drawing.Size(906, 547);
             this.dgvDevoluciones.TabIndex = 105;
             // 
             // lblDevoluciones
@@ -265,7 +208,7 @@
             this.lblDevoluciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDevoluciones.Enabled = false;
             this.lblDevoluciones.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevoluciones.Location = new System.Drawing.Point(55, 35);
+            this.lblDevoluciones.Location = new System.Drawing.Point(6, 35);
             this.lblDevoluciones.Name = "lblDevoluciones";
             this.lblDevoluciones.Size = new System.Drawing.Size(208, 45);
             this.lblDevoluciones.TabIndex = 104;
@@ -290,7 +233,7 @@
             this.picBiblioteca.Cursor = System.Windows.Forms.Cursors.Default;
             this.picBiblioteca.Enabled = false;
             this.picBiblioteca.Image = global::Proyecto.Properties.Resources.bitacora1;
-            this.picBiblioteca.Location = new System.Drawing.Point(83, 86);
+            this.picBiblioteca.Location = new System.Drawing.Point(34, 86);
             this.picBiblioteca.Name = "picBiblioteca";
             this.picBiblioteca.Size = new System.Drawing.Size(155, 119);
             this.picBiblioteca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,9 +249,6 @@
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxBusqueda);
-            this.Controls.Add(this.txtPrestamoID);
-            this.Controls.Add(this.lblPrestamoID);
-            this.Controls.Add(this.btnDevolver);
             this.Controls.Add(this.dgvDevoluciones);
             this.Controls.Add(this.lblDevoluciones);
             this.Controls.Add(this.picBiblioteca);
@@ -343,9 +283,6 @@
         private System.Windows.Forms.PictureBox picBuscar;
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
         private MaterialSkin.Controls.MaterialComboBox cbxBusqueda;
-        private MaterialSkin.Controls.MaterialTextBox txtPrestamoID;
-        private System.Windows.Forms.TextBox lblPrestamoID;
-        private MaterialSkin.Controls.MaterialButton btnDevolver;
         private System.Windows.Forms.DataGridView dgvDevoluciones;
         private System.Windows.Forms.TextBox lblDevoluciones;
         private System.Windows.Forms.PictureBox picBiblioteca;
