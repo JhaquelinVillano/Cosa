@@ -13,7 +13,6 @@ namespace Proyecto.Metodos
 {
     internal class Login
     {
-        public int verificar = 0;
         public string Rol = "";
         public string biblioteca = "";
         public string inventario = "";
@@ -62,7 +61,6 @@ namespace Proyecto.Metodos
                         MessageBox.Show("Bienvenido " + usuario,"Ventana de bienvenida");
                         Menu.frmMenu admin = new Menu.frmMenu();
                         admin.Usuario = usuario;
-                        verificar = 1;
                         admin.Show();
                     }
                     if (Rol == "Encargado")
