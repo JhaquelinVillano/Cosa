@@ -184,7 +184,7 @@ namespace Proyecto.Metodos
                 //Si lo que se encuentra en la base es mayor a la cantidad solicitada se ejecutara la salida
                 if (existencias > cantidad)
                 {   //Para asegurar si quiere devolver
-                    if (MessageBox.Show("Confirme, si desea ue salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Confirme, si desea que salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {   //Manejar errores
                         try
                         {   //Conectando
@@ -223,7 +223,7 @@ namespace Proyecto.Metodos
                 }//Cuando la persona pida el ultimo recurso se borrara automaticamente del inventario
                 else if (existencias == cantidad)
                 {   //Asegurando si realmente saldra el producto
-                    if (MessageBox.Show("Confirme, si desea ue salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    if (MessageBox.Show("Confirme, si desea que salga este recurso?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {   //Manejar errores
                         try
                         {   //Conectando
@@ -251,7 +251,7 @@ namespace Proyecto.Metodos
                     }
                     else
                     {   //No se elimino la salida
-                        MessageBox.Show("No se delvolvio el producto");
+                        MessageBox.Show("No se devolvio el producto");
                     }
                 }
                 else
