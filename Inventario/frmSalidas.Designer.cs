@@ -37,7 +37,6 @@
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.dgvSalidas = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new MaterialSkin.Controls.MaterialButton();
-            this.btnModificar = new MaterialSkin.Controls.MaterialButton();
             this.btnRegistrar = new MaterialSkin.Controls.MaterialButton();
             this.lblSalidas = new System.Windows.Forms.TextBox();
             this.txtCantidad = new MaterialSkin.Controls.MaterialTextBox();
@@ -183,7 +182,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(105, 608);
+            this.btnEliminar.Location = new System.Drawing.Point(105, 580);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -195,28 +194,6 @@
             this.btnEliminar.UseAccentColor = false;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.AutoSize = false;
-            this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnModificar.Depth = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.HighEmphasis = true;
-            this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(105, 560);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnModificar.Size = new System.Drawing.Size(223, 36);
-            this.btnModificar.TabIndex = 105;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnModificar.UseAccentColor = false;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnRegistrar
             // 
@@ -394,7 +371,6 @@
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.dgvSalidas);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.lblSalidas);
             this.Controls.Add(this.picSalidas);
@@ -432,7 +408,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtConsultar;
         private System.Windows.Forms.DataGridView dgvSalidas;
         private MaterialSkin.Controls.MaterialButton btnEliminar;
-        private MaterialSkin.Controls.MaterialButton btnModificar;
         private MaterialSkin.Controls.MaterialButton btnRegistrar;
         private System.Windows.Forms.TextBox lblSalidas;
         private System.Windows.Forms.PictureBox picSalidas;
