@@ -449,6 +449,7 @@
             this.cbxBusqueda.Size = new System.Drawing.Size(202, 49);
             this.cbxBusqueda.StartIndex = 0;
             this.cbxBusqueda.TabIndex = 102;
+            this.cbxBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbxBusqueda_SelectedIndexChanged);
             // 
             // txtConsultar
             // 

@@ -28,517 +28,569 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlMenu = new System.Windows.Forms.Panel();
-            this.lblUsuarios = new System.Windows.Forms.TextBox();
-            this.lblLibros = new System.Windows.Forms.TextBox();
-            this.lblRespaldo = new System.Windows.Forms.TextBox();
-            this.lblEntradas = new System.Windows.Forms.TextBox();
-            this.txtDonadores = new System.Windows.Forms.TextBox();
-            this.lblLogin = new System.Windows.Forms.TextBox();
-            this.lblP = new System.Windows.Forms.TextBox();
-            this.lblEmpleados = new System.Windows.Forms.TextBox();
-            this.lblSalidas = new System.Windows.Forms.TextBox();
-            this.lblClientes = new System.Windows.Forms.TextBox();
-            this.lblInventario = new System.Windows.Forms.TextBox();
-            this.txtDevoluciones = new System.Windows.Forms.TextBox();
-            this.picDevoluciones = new System.Windows.Forms.PictureBox();
-            this.picInventario = new System.Windows.Forms.PictureBox();
-            this.picClientes = new System.Windows.Forms.PictureBox();
-            this.picSalidas = new System.Windows.Forms.PictureBox();
-            this.picEmpleados = new System.Windows.Forms.PictureBox();
-            this.picLogo = new System.Windows.Forms.PictureBox();
-            this.picP = new System.Windows.Forms.PictureBox();
-            this.picDonadores = new System.Windows.Forms.PictureBox();
-            this.picCerrarSesion = new System.Windows.Forms.PictureBox();
-            this.picRestauracion = new System.Windows.Forms.PictureBox();
-            this.picEntradas = new System.Windows.Forms.PictureBox();
-            this.picLibros = new System.Windows.Forms.PictureBox();
+            this.pnlTitulo = new System.Windows.Forms.Panel();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
-            this.picUsuarios = new System.Windows.Forms.PictureBox();
-            this.picVerde = new System.Windows.Forms.PictureBox();
-            this.picNaranja = new System.Windows.Forms.PictureBox();
-            this.pnlMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picDevoluciones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalidas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDonadores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarSesion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestauracion)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibros)).BeginInit();
+            this.picBarra = new System.Windows.Forms.PictureBox();
+            this.pnlLogo = new System.Windows.Forms.Panel();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.pnlMenuVertical = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
+            this.btnRestauracion = new FontAwesome.Sharp.IconButton();
+            this.pnlSubInventario = new System.Windows.Forms.Panel();
+            this.btnCatalogo = new FontAwesome.Sharp.IconButton();
+            this.btnSalidas = new FontAwesome.Sharp.IconButton();
+            this.btnEntradas = new FontAwesome.Sharp.IconButton();
+            this.btnInventario = new FontAwesome.Sharp.IconButton();
+            this.btnDonadores = new FontAwesome.Sharp.IconButton();
+            this.btnClientes = new FontAwesome.Sharp.IconButton();
+            this.pnlSubPersonal = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnEmpleados = new FontAwesome.Sharp.IconButton();
+            this.btnPersonal = new FontAwesome.Sharp.IconButton();
+            this.pnlSubBiblioteca = new System.Windows.Forms.Panel();
+            this.btnDevoluciones = new FontAwesome.Sharp.IconButton();
+            this.btnPrestamos = new FontAwesome.Sharp.IconButton();
+            this.btnLibros = new FontAwesome.Sharp.IconButton();
+            this.btnBiblioteca = new FontAwesome.Sharp.IconButton();
+            this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVerde)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picNaranja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBarra)).BeginInit();
+            this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            this.pnlMenuVertical.SuspendLayout();
+            this.pnlSubInventario.SuspendLayout();
+            this.pnlSubPersonal.SuspendLayout();
+            this.pnlSubBiblioteca.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnlMenu
+            // pnlTitulo
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(52)))), ((int)(((byte)(126)))));
-            this.pnlMenu.Controls.Add(this.picMinimizar);
-            this.pnlMenu.Controls.Add(this.picCerrar);
-            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenu.Location = new System.Drawing.Point(0, 0);
-            this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(779, 26);
-            this.pnlMenu.TabIndex = 1;
-            // 
-            // lblUsuarios
-            // 
-            this.lblUsuarios.BackColor = System.Drawing.Color.White;
-            this.lblUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblUsuarios.Enabled = false;
-            this.lblUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(495, 104);
-            this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(114, 23);
-            this.lblUsuarios.TabIndex = 10;
-            this.lblUsuarios.Text = "Usuarios";
-            this.lblUsuarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblLibros
-            // 
-            this.lblLibros.BackColor = System.Drawing.Color.White;
-            this.lblLibros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblLibros.Enabled = false;
-            this.lblLibros.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLibros.Location = new System.Drawing.Point(40, 274);
-            this.lblLibros.Name = "lblLibros";
-            this.lblLibros.Size = new System.Drawing.Size(114, 23);
-            this.lblLibros.TabIndex = 11;
-            this.lblLibros.Text = "Libros";
-            this.lblLibros.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblRespaldo
-            // 
-            this.lblRespaldo.BackColor = System.Drawing.Color.White;
-            this.lblRespaldo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblRespaldo.Enabled = false;
-            this.lblRespaldo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRespaldo.Location = new System.Drawing.Point(495, 440);
-            this.lblRespaldo.Name = "lblRespaldo";
-            this.lblRespaldo.Size = new System.Drawing.Size(114, 23);
-            this.lblRespaldo.TabIndex = 12;
-            this.lblRespaldo.Text = "Restauración";
-            this.lblRespaldo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblEntradas
-            // 
-            this.lblEntradas.BackColor = System.Drawing.Color.White;
-            this.lblEntradas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblEntradas.Enabled = false;
-            this.lblEntradas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntradas.Location = new System.Drawing.Point(348, 440);
-            this.lblEntradas.Name = "lblEntradas";
-            this.lblEntradas.Size = new System.Drawing.Size(114, 23);
-            this.lblEntradas.TabIndex = 13;
-            this.lblEntradas.Text = "Entradas";
-            this.lblEntradas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtDonadores
-            // 
-            this.txtDonadores.BackColor = System.Drawing.Color.White;
-            this.txtDonadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDonadores.Enabled = false;
-            this.txtDonadores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonadores.Location = new System.Drawing.Point(642, 274);
-            this.txtDonadores.Name = "txtDonadores";
-            this.txtDonadores.Size = new System.Drawing.Size(114, 23);
-            this.txtDonadores.TabIndex = 14;
-            this.txtDonadores.Text = "Donadores";
-            this.txtDonadores.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblLogin
-            // 
-            this.lblLogin.BackColor = System.Drawing.Color.White;
-            this.lblLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblLogin.Enabled = false;
-            this.lblLogin.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(642, 440);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(114, 23);
-            this.lblLogin.TabIndex = 15;
-            this.lblLogin.Text = "Salir al Login";
-            this.lblLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblP
-            // 
-            this.lblP.BackColor = System.Drawing.Color.White;
-            this.lblP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblP.Enabled = false;
-            this.lblP.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP.Location = new System.Drawing.Point(194, 274);
-            this.lblP.Name = "lblP";
-            this.lblP.Size = new System.Drawing.Size(114, 23);
-            this.lblP.TabIndex = 17;
-            this.lblP.Text = "Prestamos";
-            this.lblP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblEmpleados
-            // 
-            this.lblEmpleados.BackColor = System.Drawing.Color.White;
-            this.lblEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblEmpleados.Enabled = false;
-            this.lblEmpleados.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.Location = new System.Drawing.Point(642, 104);
-            this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(114, 23);
-            this.lblEmpleados.TabIndex = 20;
-            this.lblEmpleados.Text = "Empleados";
-            this.lblEmpleados.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblSalidas
-            // 
-            this.lblSalidas.BackColor = System.Drawing.Color.White;
-            this.lblSalidas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblSalidas.Enabled = false;
-            this.lblSalidas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalidas.Location = new System.Drawing.Point(194, 440);
-            this.lblSalidas.Name = "lblSalidas";
-            this.lblSalidas.Size = new System.Drawing.Size(114, 23);
-            this.lblSalidas.TabIndex = 22;
-            this.lblSalidas.Text = "Salidas";
-            this.lblSalidas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblClientes
-            // 
-            this.lblClientes.BackColor = System.Drawing.Color.White;
-            this.lblClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblClientes.Enabled = false;
-            this.lblClientes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(495, 274);
-            this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(114, 23);
-            this.lblClientes.TabIndex = 24;
-            this.lblClientes.Text = "Clientes";
-            this.lblClientes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblInventario
-            // 
-            this.lblInventario.BackColor = System.Drawing.Color.White;
-            this.lblInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblInventario.Enabled = false;
-            this.lblInventario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventario.Location = new System.Drawing.Point(40, 440);
-            this.lblInventario.Name = "lblInventario";
-            this.lblInventario.Size = new System.Drawing.Size(114, 23);
-            this.lblInventario.TabIndex = 26;
-            this.lblInventario.Text = "Inventario";
-            this.lblInventario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtDevoluciones
-            // 
-            this.txtDevoluciones.BackColor = System.Drawing.Color.White;
-            this.txtDevoluciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDevoluciones.Enabled = false;
-            this.txtDevoluciones.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDevoluciones.Location = new System.Drawing.Point(348, 274);
-            this.txtDevoluciones.Name = "txtDevoluciones";
-            this.txtDevoluciones.Size = new System.Drawing.Size(114, 23);
-            this.txtDevoluciones.TabIndex = 28;
-            this.txtDevoluciones.Text = "Devoluciones";
-            this.txtDevoluciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // picDevoluciones
-            // 
-            this.picDevoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDevoluciones.Image = global::Proyecto.Properties.Resources.bitacora;
-            this.picDevoluciones.Location = new System.Drawing.Point(348, 303);
-            this.picDevoluciones.Name = "picDevoluciones";
-            this.picDevoluciones.Size = new System.Drawing.Size(114, 111);
-            this.picDevoluciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDevoluciones.TabIndex = 27;
-            this.picDevoluciones.TabStop = false;
-            this.picDevoluciones.Click += new System.EventHandler(this.picDevoluciones_Click);
-            // 
-            // picInventario
-            // 
-            this.picInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picInventario.Image = global::Proyecto.Properties.Resources.inventario;
-            this.picInventario.Location = new System.Drawing.Point(40, 469);
-            this.picInventario.Name = "picInventario";
-            this.picInventario.Size = new System.Drawing.Size(114, 111);
-            this.picInventario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picInventario.TabIndex = 25;
-            this.picInventario.TabStop = false;
-            this.picInventario.Click += new System.EventHandler(this.picInventario_Click_1);
-            // 
-            // picClientes
-            // 
-            this.picClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picClientes.Image = global::Proyecto.Properties.Resources.Clientes;
-            this.picClientes.Location = new System.Drawing.Point(495, 303);
-            this.picClientes.Name = "picClientes";
-            this.picClientes.Size = new System.Drawing.Size(114, 111);
-            this.picClientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClientes.TabIndex = 23;
-            this.picClientes.TabStop = false;
-            this.picClientes.Click += new System.EventHandler(this.picClientes_Click);
-            // 
-            // picSalidas
-            // 
-            this.picSalidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picSalidas.Image = global::Proyecto.Properties.Resources.Salidas;
-            this.picSalidas.Location = new System.Drawing.Point(194, 469);
-            this.picSalidas.Name = "picSalidas";
-            this.picSalidas.Size = new System.Drawing.Size(114, 111);
-            this.picSalidas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSalidas.TabIndex = 21;
-            this.picSalidas.TabStop = false;
-            this.picSalidas.Click += new System.EventHandler(this.picSalidas_Click);
-            // 
-            // picEmpleados
-            // 
-            this.picEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picEmpleados.Image = global::Proyecto.Properties.Resources.empleados;
-            this.picEmpleados.Location = new System.Drawing.Point(642, 133);
-            this.picEmpleados.Name = "picEmpleados";
-            this.picEmpleados.Size = new System.Drawing.Size(114, 111);
-            this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEmpleados.TabIndex = 19;
-            this.picEmpleados.TabStop = false;
-            this.picEmpleados.Click += new System.EventHandler(this.picEmpleados_Click);
-            // 
-            // picLogo
-            // 
-            this.picLogo.Enabled = false;
-            this.picLogo.Image = global::Proyecto.Properties.Resources.logos_educarte_letra_negro;
-            this.picLogo.Location = new System.Drawing.Point(40, 42);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(422, 202);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 18;
-            this.picLogo.TabStop = false;
-            // 
-            // picP
-            // 
-            this.picP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picP.Image = global::Proyecto.Properties.Resources.libros_011;
-            this.picP.Location = new System.Drawing.Point(194, 303);
-            this.picP.Name = "picP";
-            this.picP.Size = new System.Drawing.Size(114, 111);
-            this.picP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picP.TabIndex = 16;
-            this.picP.TabStop = false;
-            this.picP.Click += new System.EventHandler(this.picPD_Click);
-            // 
-            // picDonadores
-            // 
-            this.picDonadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDonadores.Image = global::Proyecto.Properties.Resources.Solicitud_1;
-            this.picDonadores.Location = new System.Drawing.Point(642, 303);
-            this.picDonadores.Name = "picDonadores";
-            this.picDonadores.Size = new System.Drawing.Size(114, 111);
-            this.picDonadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDonadores.TabIndex = 7;
-            this.picDonadores.TabStop = false;
-            this.picDonadores.Click += new System.EventHandler(this.picDonadores_Click);
-            // 
-            // picCerrarSesion
-            // 
-            this.picCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrarSesion.Image = global::Proyecto.Properties.Resources.salir;
-            this.picCerrarSesion.Location = new System.Drawing.Point(642, 469);
-            this.picCerrarSesion.Name = "picCerrarSesion";
-            this.picCerrarSesion.Size = new System.Drawing.Size(114, 111);
-            this.picCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrarSesion.TabIndex = 6;
-            this.picCerrarSesion.TabStop = false;
-            this.picCerrarSesion.Click += new System.EventHandler(this.picCerrarSesion_Click);
-            // 
-            // picRestauracion
-            // 
-            this.picRestauracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRestauracion.Image = global::Proyecto.Properties.Resources.Respaldo;
-            this.picRestauracion.Location = new System.Drawing.Point(495, 469);
-            this.picRestauracion.Name = "picRestauracion";
-            this.picRestauracion.Size = new System.Drawing.Size(114, 111);
-            this.picRestauracion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRestauracion.TabIndex = 5;
-            this.picRestauracion.TabStop = false;
-            this.picRestauracion.Click += new System.EventHandler(this.picRestauracion_Click);
-            // 
-            // picEntradas
-            // 
-            this.picEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picEntradas.Image = global::Proyecto.Properties.Resources.Entradas;
-            this.picEntradas.Location = new System.Drawing.Point(348, 469);
-            this.picEntradas.Name = "picEntradas";
-            this.picEntradas.Size = new System.Drawing.Size(114, 111);
-            this.picEntradas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picEntradas.TabIndex = 4;
-            this.picEntradas.TabStop = false;
-            this.picEntradas.Click += new System.EventHandler(this.picInventario_Click);
-            // 
-            // picLibros
-            // 
-            this.picLibros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLibros.Image = global::Proyecto.Properties.Resources.Biblioteca1;
-            this.picLibros.Location = new System.Drawing.Point(40, 303);
-            this.picLibros.Name = "picLibros";
-            this.picLibros.Size = new System.Drawing.Size(114, 111);
-            this.picLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLibros.TabIndex = 3;
-            this.picLibros.TabStop = false;
-            this.picLibros.Click += new System.EventHandler(this.picLibros_Click);
+            this.pnlTitulo.BackColor = System.Drawing.Color.SlateBlue;
+            this.pnlTitulo.Controls.Add(this.picMinimizar);
+            this.pnlTitulo.Controls.Add(this.picCerrar);
+            this.pnlTitulo.Controls.Add(this.picBarra);
+            this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlTitulo.Location = new System.Drawing.Point(250, 0);
+            this.pnlTitulo.Name = "pnlTitulo";
+            this.pnlTitulo.Size = new System.Drawing.Size(930, 32);
+            this.pnlTitulo.TabIndex = 30;
+            this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
             // 
             // picMinimizar
             // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(711, 4);
+            this.picMinimizar.Location = new System.Drawing.Point(859, 3);
             this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 3;
+            this.picMinimizar.Size = new System.Drawing.Size(26, 29);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMinimizar.TabIndex = 2;
             this.picMinimizar.TabStop = false;
             this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
             // picCerrar
             // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(742, 3);
+            this.picCerrar.Location = new System.Drawing.Point(891, 3);
             this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(25, 19);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 2;
+            this.picCerrar.Size = new System.Drawing.Size(27, 29);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCerrar.TabIndex = 1;
             this.picCerrar.TabStop = false;
             this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
-            // picUsuarios
+            // picBarra
             // 
-            this.picUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picUsuarios.Image = global::Proyecto.Properties.Resources._327527;
-            this.picUsuarios.Location = new System.Drawing.Point(495, 133);
-            this.picUsuarios.Name = "picUsuarios";
-            this.picUsuarios.Size = new System.Drawing.Size(114, 111);
-            this.picUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picUsuarios.TabIndex = 0;
-            this.picUsuarios.TabStop = false;
-            this.picUsuarios.Click += new System.EventHandler(this.picUsuarios_Click);
+            this.picBarra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBarra.Image = global::Proyecto.Properties.Resources.barra5;
+            this.picBarra.Location = new System.Drawing.Point(6, 3);
+            this.picBarra.Name = "picBarra";
+            this.picBarra.Size = new System.Drawing.Size(26, 29);
+            this.picBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBarra.TabIndex = 0;
+            this.picBarra.TabStop = false;
+            this.picBarra.Click += new System.EventHandler(this.picBarra_Click);
             // 
-            // picVerde
+            // pnlLogo
             // 
-            this.picVerde.Enabled = false;
-            this.picVerde.Image = global::Proyecto.Properties.Resources.icone_cercle_rempli_vert;
-            this.picVerde.Location = new System.Drawing.Point(688, 545);
-            this.picVerde.Name = "picVerde";
-            this.picVerde.Size = new System.Drawing.Size(253, 232);
-            this.picVerde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picVerde.TabIndex = 8;
-            this.picVerde.TabStop = false;
+            this.pnlLogo.Controls.Add(this.picLogo);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(250, 141);
+            this.pnlLogo.TabIndex = 38;
             // 
-            // picNaranja
+            // picLogo
             // 
-            this.picNaranja.Enabled = false;
-            this.picNaranja.Image = global::Proyecto.Properties.Resources._1f7e0;
-            this.picNaranja.Location = new System.Drawing.Point(-230, 12);
-            this.picNaranja.Name = "picNaranja";
-            this.picNaranja.Size = new System.Drawing.Size(264, 232);
-            this.picNaranja.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picNaranja.TabIndex = 9;
-            this.picNaranja.TabStop = false;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picLogo.Image = global::Proyecto.Properties.Resources.LogoEducarte;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(250, 141);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 0;
+            this.picLogo.TabStop = false;
+            // 
+            // pnlMenuVertical
+            // 
+            this.pnlMenuVertical.AutoScroll = true;
+            this.pnlMenuVertical.BackColor = System.Drawing.Color.SlateBlue;
+            this.pnlMenuVertical.Controls.Add(this.btnCerrarSesion);
+            this.pnlMenuVertical.Controls.Add(this.btnRestauracion);
+            this.pnlMenuVertical.Controls.Add(this.pnlSubInventario);
+            this.pnlMenuVertical.Controls.Add(this.btnInventario);
+            this.pnlMenuVertical.Controls.Add(this.btnDonadores);
+            this.pnlMenuVertical.Controls.Add(this.btnClientes);
+            this.pnlMenuVertical.Controls.Add(this.pnlSubPersonal);
+            this.pnlMenuVertical.Controls.Add(this.btnPersonal);
+            this.pnlMenuVertical.Controls.Add(this.pnlSubBiblioteca);
+            this.pnlMenuVertical.Controls.Add(this.btnBiblioteca);
+            this.pnlMenuVertical.Controls.Add(this.pnlLogo);
+            this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
+            this.pnlMenuVertical.Name = "pnlMenuVertical";
+            this.pnlMenuVertical.Size = new System.Drawing.Size(250, 788);
+            this.pnlMenuVertical.TabIndex = 29;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarSesion.IconSize = 35;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 753);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 76, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 35);
+            this.btnCerrarSesion.TabIndex = 49;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnRestauracion
+            // 
+            this.btnRestauracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestauracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRestauracion.FlatAppearance.BorderSize = 0;
+            this.btnRestauracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestauracion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestauracion.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRestauracion.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnRestauracion.IconColor = System.Drawing.Color.White;
+            this.btnRestauracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRestauracion.IconSize = 35;
+            this.btnRestauracion.Location = new System.Drawing.Point(0, 617);
+            this.btnRestauracion.Name = "btnRestauracion";
+            this.btnRestauracion.Size = new System.Drawing.Size(250, 35);
+            this.btnRestauracion.TabIndex = 48;
+            this.btnRestauracion.Text = "Restauracion";
+            this.btnRestauracion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRestauracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRestauracion.UseVisualStyleBackColor = true;
+            this.btnRestauracion.Click += new System.EventHandler(this.btnRestauracion_Click);
+            // 
+            // pnlSubInventario
+            // 
+            this.pnlSubInventario.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlSubInventario.Controls.Add(this.btnCatalogo);
+            this.pnlSubInventario.Controls.Add(this.btnSalidas);
+            this.pnlSubInventario.Controls.Add(this.btnEntradas);
+            this.pnlSubInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubInventario.Location = new System.Drawing.Point(0, 505);
+            this.pnlSubInventario.Name = "pnlSubInventario";
+            this.pnlSubInventario.Size = new System.Drawing.Size(250, 112);
+            this.pnlSubInventario.TabIndex = 46;
+            // 
+            // btnCatalogo
+            // 
+            this.btnCatalogo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCatalogo.FlatAppearance.BorderSize = 0;
+            this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCatalogo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCatalogo.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnCatalogo.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnCatalogo.IconColor = System.Drawing.Color.White;
+            this.btnCatalogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCatalogo.IconSize = 35;
+            this.btnCatalogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalogo.Location = new System.Drawing.Point(0, 70);
+            this.btnCatalogo.Name = "btnCatalogo";
+            this.btnCatalogo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnCatalogo.Size = new System.Drawing.Size(250, 35);
+            this.btnCatalogo.TabIndex = 42;
+            this.btnCatalogo.Text = "Catálogo";
+            this.btnCatalogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCatalogo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCatalogo.UseVisualStyleBackColor = true;
+            this.btnCatalogo.Click += new System.EventHandler(this.btnCatalogo_Click);
+            // 
+            // btnSalidas
+            // 
+            this.btnSalidas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalidas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSalidas.FlatAppearance.BorderSize = 0;
+            this.btnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalidas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalidas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSalidas.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnSalidas.IconColor = System.Drawing.Color.White;
+            this.btnSalidas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalidas.IconSize = 35;
+            this.btnSalidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalidas.Location = new System.Drawing.Point(0, 35);
+            this.btnSalidas.Name = "btnSalidas";
+            this.btnSalidas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnSalidas.Size = new System.Drawing.Size(250, 35);
+            this.btnSalidas.TabIndex = 41;
+            this.btnSalidas.Text = "Salidas";
+            this.btnSalidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalidas.UseVisualStyleBackColor = true;
+            this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
+            // 
+            // btnEntradas
+            // 
+            this.btnEntradas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntradas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEntradas.FlatAppearance.BorderSize = 0;
+            this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntradas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntradas.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEntradas.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnEntradas.IconColor = System.Drawing.Color.White;
+            this.btnEntradas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEntradas.IconSize = 35;
+            this.btnEntradas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradas.Location = new System.Drawing.Point(0, 0);
+            this.btnEntradas.Name = "btnEntradas";
+            this.btnEntradas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEntradas.Size = new System.Drawing.Size(250, 35);
+            this.btnEntradas.TabIndex = 40;
+            this.btnEntradas.Text = "Entradas";
+            this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntradas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEntradas.UseVisualStyleBackColor = true;
+            this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
+            // 
+            // btnInventario
+            // 
+            this.btnInventario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventario.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnInventario.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnInventario.IconColor = System.Drawing.Color.White;
+            this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInventario.IconSize = 35;
+            this.btnInventario.Location = new System.Drawing.Point(0, 470);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(250, 35);
+            this.btnInventario.TabIndex = 45;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
+            // 
+            // btnDonadores
+            // 
+            this.btnDonadores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDonadores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDonadores.FlatAppearance.BorderSize = 0;
+            this.btnDonadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDonadores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonadores.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDonadores.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnDonadores.IconColor = System.Drawing.Color.White;
+            this.btnDonadores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDonadores.IconSize = 35;
+            this.btnDonadores.Location = new System.Drawing.Point(0, 435);
+            this.btnDonadores.Name = "btnDonadores";
+            this.btnDonadores.Size = new System.Drawing.Size(250, 35);
+            this.btnDonadores.TabIndex = 44;
+            this.btnDonadores.Text = "Donadores";
+            this.btnDonadores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDonadores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDonadores.UseVisualStyleBackColor = true;
+            this.btnDonadores.Click += new System.EventHandler(this.btnDonadores_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnClientes.IconColor = System.Drawing.Color.White;
+            this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClientes.IconSize = 35;
+            this.btnClientes.Location = new System.Drawing.Point(0, 400);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(250, 35);
+            this.btnClientes.TabIndex = 43;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // pnlSubPersonal
+            // 
+            this.pnlSubPersonal.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlSubPersonal.Controls.Add(this.btnUsuarios);
+            this.pnlSubPersonal.Controls.Add(this.btnEmpleados);
+            this.pnlSubPersonal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubPersonal.Location = new System.Drawing.Point(0, 323);
+            this.pnlSubPersonal.Name = "pnlSubPersonal";
+            this.pnlSubPersonal.Size = new System.Drawing.Size(250, 77);
+            this.pnlSubPersonal.TabIndex = 42;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 35;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 35);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(250, 35);
+            this.btnUsuarios.TabIndex = 41;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpleados.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnEmpleados.IconColor = System.Drawing.Color.White;
+            this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpleados.IconSize = 35;
+            this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 0);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEmpleados.Size = new System.Drawing.Size(250, 35);
+            this.btnEmpleados.TabIndex = 40;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnPersonal
+            // 
+            this.btnPersonal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPersonal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPersonal.FlatAppearance.BorderSize = 0;
+            this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonal.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonal.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnPersonal.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnPersonal.IconColor = System.Drawing.Color.White;
+            this.btnPersonal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPersonal.IconSize = 35;
+            this.btnPersonal.Location = new System.Drawing.Point(0, 288);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(250, 35);
+            this.btnPersonal.TabIndex = 41;
+            this.btnPersonal.Text = "Personal";
+            this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPersonal.UseVisualStyleBackColor = true;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
+            // 
+            // pnlSubBiblioteca
+            // 
+            this.pnlSubBiblioteca.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlSubBiblioteca.Controls.Add(this.btnDevoluciones);
+            this.pnlSubBiblioteca.Controls.Add(this.btnPrestamos);
+            this.pnlSubBiblioteca.Controls.Add(this.btnLibros);
+            this.pnlSubBiblioteca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubBiblioteca.Location = new System.Drawing.Point(0, 176);
+            this.pnlSubBiblioteca.Name = "pnlSubBiblioteca";
+            this.pnlSubBiblioteca.Size = new System.Drawing.Size(250, 112);
+            this.pnlSubBiblioteca.TabIndex = 40;
+            // 
+            // btnDevoluciones
+            // 
+            this.btnDevoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDevoluciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDevoluciones.FlatAppearance.BorderSize = 0;
+            this.btnDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevoluciones.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevoluciones.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDevoluciones.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnDevoluciones.IconColor = System.Drawing.Color.White;
+            this.btnDevoluciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDevoluciones.IconSize = 35;
+            this.btnDevoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDevoluciones.Location = new System.Drawing.Point(0, 70);
+            this.btnDevoluciones.Name = "btnDevoluciones";
+            this.btnDevoluciones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDevoluciones.Size = new System.Drawing.Size(250, 35);
+            this.btnDevoluciones.TabIndex = 42;
+            this.btnDevoluciones.Text = "Devoluciones";
+            this.btnDevoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDevoluciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDevoluciones.UseVisualStyleBackColor = true;
+            this.btnDevoluciones.Click += new System.EventHandler(this.btnDevoluciones_Click);
+            // 
+            // btnPrestamos
+            // 
+            this.btnPrestamos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrestamos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestamos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnPrestamos.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnPrestamos.IconColor = System.Drawing.Color.White;
+            this.btnPrestamos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrestamos.IconSize = 35;
+            this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestamos.Location = new System.Drawing.Point(0, 35);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnPrestamos.Size = new System.Drawing.Size(250, 35);
+            this.btnPrestamos.TabIndex = 41;
+            this.btnPrestamos.Text = "Prestamos";
+            this.btnPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrestamos.UseVisualStyleBackColor = true;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
+            // 
+            // btnLibros
+            // 
+            this.btnLibros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLibros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLibros.FlatAppearance.BorderSize = 0;
+            this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibros.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibros.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLibros.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnLibros.IconColor = System.Drawing.Color.White;
+            this.btnLibros.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLibros.IconSize = 35;
+            this.btnLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLibros.Location = new System.Drawing.Point(0, 0);
+            this.btnLibros.Name = "btnLibros";
+            this.btnLibros.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnLibros.Size = new System.Drawing.Size(250, 35);
+            this.btnLibros.TabIndex = 40;
+            this.btnLibros.Text = "Libros";
+            this.btnLibros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLibros.UseVisualStyleBackColor = true;
+            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click_1);
+            // 
+            // btnBiblioteca
+            // 
+            this.btnBiblioteca.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBiblioteca.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBiblioteca.FlatAppearance.BorderSize = 0;
+            this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBiblioteca.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBiblioteca.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnBiblioteca.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnBiblioteca.IconColor = System.Drawing.Color.White;
+            this.btnBiblioteca.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBiblioteca.IconSize = 35;
+            this.btnBiblioteca.Location = new System.Drawing.Point(0, 141);
+            this.btnBiblioteca.Name = "btnBiblioteca";
+            this.btnBiblioteca.Size = new System.Drawing.Size(250, 35);
+            this.btnBiblioteca.TabIndex = 39;
+            this.btnBiblioteca.Text = "Biblioteca";
+            this.btnBiblioteca.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBiblioteca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBiblioteca.UseVisualStyleBackColor = true;
+            this.btnBiblioteca.Click += new System.EventHandler(this.btnBiblioteca_Click);
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(779, 619);
-            this.Controls.Add(this.txtDevoluciones);
-            this.Controls.Add(this.picDevoluciones);
-            this.Controls.Add(this.picInventario);
-            this.Controls.Add(this.lblInventario);
-            this.Controls.Add(this.picClientes);
-            this.Controls.Add(this.lblClientes);
-            this.Controls.Add(this.picSalidas);
-            this.Controls.Add(this.lblSalidas);
-            this.Controls.Add(this.picEmpleados);
-            this.Controls.Add(this.lblEmpleados);
-            this.Controls.Add(this.picLogo);
-            this.Controls.Add(this.picP);
-            this.Controls.Add(this.lblP);
-            this.Controls.Add(this.lblLogin);
-            this.Controls.Add(this.picDonadores);
-            this.Controls.Add(this.picCerrarSesion);
-            this.Controls.Add(this.picRestauracion);
-            this.Controls.Add(this.picEntradas);
-            this.Controls.Add(this.picLibros);
-            this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.picUsuarios);
-            this.Controls.Add(this.picVerde);
-            this.Controls.Add(this.picNaranja);
-            this.Controls.Add(this.lblUsuarios);
-            this.Controls.Add(this.lblLibros);
-            this.Controls.Add(this.lblRespaldo);
-            this.Controls.Add(this.lblEntradas);
-            this.Controls.Add(this.txtDonadores);
+            this.ClientSize = new System.Drawing.Size(1180, 788);
+            this.Controls.Add(this.pnlTitulo);
+            this.Controls.Add(this.pnlMenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
-            this.pnlMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picDevoluciones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picSalidas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEmpleados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDonadores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrarSesion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestauracion)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picEntradas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLibros)).EndInit();
+            this.pnlTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picVerde)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picNaranja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBarra)).EndInit();
+            this.pnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            this.pnlMenuVertical.ResumeLayout(false);
+            this.pnlSubInventario.ResumeLayout(false);
+            this.pnlSubPersonal.ResumeLayout(false);
+            this.pnlSubBiblioteca.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picUsuarios;
-        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlTitulo;
+        private System.Windows.Forms.PictureBox picBarra;
         private System.Windows.Forms.PictureBox picMinimizar;
         private System.Windows.Forms.PictureBox picCerrar;
-        private System.Windows.Forms.PictureBox picLibros;
-        private System.Windows.Forms.PictureBox picEntradas;
-        private System.Windows.Forms.PictureBox picRestauracion;
-        private System.Windows.Forms.PictureBox picCerrarSesion;
-        private System.Windows.Forms.PictureBox picDonadores;
-        private System.Windows.Forms.PictureBox picVerde;
-        private System.Windows.Forms.PictureBox picNaranja;
-        private System.Windows.Forms.TextBox lblUsuarios;
-        private System.Windows.Forms.TextBox lblLibros;
-        private System.Windows.Forms.TextBox lblRespaldo;
-        private System.Windows.Forms.TextBox lblEntradas;
-        private System.Windows.Forms.TextBox txtDonadores;
-        private System.Windows.Forms.TextBox lblLogin;
-        private System.Windows.Forms.PictureBox picP;
-        private System.Windows.Forms.TextBox lblP;
+        private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.PictureBox picEmpleados;
-        private System.Windows.Forms.TextBox lblEmpleados;
-        private System.Windows.Forms.PictureBox picSalidas;
-        private System.Windows.Forms.TextBox lblSalidas;
-        private System.Windows.Forms.PictureBox picClientes;
-        private System.Windows.Forms.TextBox lblClientes;
-        private System.Windows.Forms.PictureBox picInventario;
-        private System.Windows.Forms.TextBox lblInventario;
-        private System.Windows.Forms.PictureBox picDevoluciones;
-        private System.Windows.Forms.TextBox txtDevoluciones;
+        private System.Windows.Forms.Panel pnlMenuVertical;
+        private FontAwesome.Sharp.IconButton btnBiblioteca;
+        private System.Windows.Forms.Panel pnlSubPersonal;
+        private FontAwesome.Sharp.IconButton btnUsuarios;
+        private FontAwesome.Sharp.IconButton btnEmpleados;
+        private FontAwesome.Sharp.IconButton btnPersonal;
+        private System.Windows.Forms.Panel pnlSubBiblioteca;
+        private FontAwesome.Sharp.IconButton btnDevoluciones;
+        private FontAwesome.Sharp.IconButton btnPrestamos;
+        private FontAwesome.Sharp.IconButton btnLibros;
+        private System.Windows.Forms.Panel pnlSubInventario;
+        private FontAwesome.Sharp.IconButton btnCatalogo;
+        private FontAwesome.Sharp.IconButton btnSalidas;
+        private FontAwesome.Sharp.IconButton btnEntradas;
+        private FontAwesome.Sharp.IconButton btnInventario;
+        private FontAwesome.Sharp.IconButton btnDonadores;
+        private FontAwesome.Sharp.IconButton btnClientes;
+        private FontAwesome.Sharp.IconButton btnRestauracion;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
     }
 }

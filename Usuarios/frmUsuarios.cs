@@ -172,5 +172,10 @@ namespace Proyecto.Usuarios
             txtConsultar.Text = "";
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
+
+        private void cbxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

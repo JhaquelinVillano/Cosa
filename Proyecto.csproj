@@ -407,6 +407,25 @@
   <ItemGroup>
     <Content Include="icono.ico" />
     <Content Include="logo.ico" />
+    <None Include="Resources\LogoEducarte.png" />
+    <None Include="Resources\personal1.png" />
+    <None Include="Resources\asd.png" />
+    <None Include="Resources\Usuarios.png" />
+    <None Include="Resources\personal4.png" />
+    <None Include="Resources\prestamos2.png" />
+    <None Include="Resources\personal3.png" />
+    <None Include="Resources\personal.png" />
+    <None Include="Resources\empleados1.png" />
+    <None Include="Resources\personal2.png" />
+    <None Include="Resources\Devoluciones.png" />
+    <None Include="Resources\biblioteca3.png" />
+    <None Include="Resources\biblioteca2.png" />
+    <None Include="Resources\atrass.png" />
+    <None Include="Resources\barra5.png" />
+    <None Include="Resources\barra3.png" />
+    <None Include="Resources\MinimizarCirculo.png" />
+    <None Include="Resources\BarraaLateral.png" />
+    <None Include="Resources\botonBarraLateral.png" />
     <None Include="Resources\bitacora1.png" />
     <None Include="Resources\bitacora.png" />
     <None Include="Resources\buscar_Inventario.png" />

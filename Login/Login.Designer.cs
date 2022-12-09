@@ -83,7 +83,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.White;
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Depth = 0;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtContraseña.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.LeadingIcon = null;
             this.txtContraseña.Location = new System.Drawing.Point(91, 309);
@@ -91,13 +91,11 @@
             this.txtContraseña.MouseState = MaterialSkin.MouseState.OUT;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Password = true;
             this.txtContraseña.Size = new System.Drawing.Size(245, 50);
             this.txtContraseña.TabIndex = 2;
             this.txtContraseña.Text = "";
             this.txtContraseña.TrailingIcon = null;
-            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // txtUsuario
             // 
@@ -105,7 +103,7 @@
             this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Depth = 0;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsuario.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.LeadingIcon = null;
             this.txtUsuario.Location = new System.Drawing.Point(91, 210);
@@ -117,9 +115,6 @@
             this.txtUsuario.TabIndex = 1;
             this.txtUsuario.Text = "";
             this.txtUsuario.TrailingIcon = null;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
-            this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
-            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // linkContraseña
             // 
@@ -167,7 +162,7 @@
             this.picCerrarLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCerrarLogin.TabIndex = 19;
             this.picCerrarLogin.TabStop = false;
-            this.picCerrarLogin.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.picCerrarLogin.Click += new System.EventHandler(this.picCerrarLogin_Click);
             // 
             // picLogo
             // 
@@ -179,7 +174,6 @@
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.picLogo_Click_1);
             // 
             // picContraseña
             // 
@@ -230,9 +224,9 @@
             this.lblUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblUsuario.Enabled = false;
             this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(91, 181);
+            this.lblUsuario.Location = new System.Drawing.Point(37, 181);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(244, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(298, 23);
             this.lblUsuario.TabIndex = 94;
             this.lblUsuario.Text = "Usuario";
             this.lblUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -243,9 +237,9 @@
             this.lblContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblContraseña.Enabled = false;
             this.lblContraseña.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(91, 280);
+            this.lblContraseña.Location = new System.Drawing.Point(37, 280);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(244, 23);
+            this.lblContraseña.Size = new System.Drawing.Size(298, 23);
             this.lblContraseña.TabIndex = 95;
             this.lblContraseña.Text = "Contraseña";
             this.lblContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -275,7 +269,6 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picNuevoUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizarLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrarLogin)).EndInit();

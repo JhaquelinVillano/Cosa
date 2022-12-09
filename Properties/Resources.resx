@@ -130,8 +130,11 @@
   <data name="png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Devoluciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Devoluciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="libros-011" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libros-011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +142,17 @@
   <data name="libros-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libros-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="atrass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\atrass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="buscar_Inventario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buscar_Inventario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonBarraLateral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonBarraLateral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-transparent-computer-icons-microsoft-windows-icon-minimize-miscellaneous-angle-text" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-computer-icons-microsoft-windows-icon-minimize-miscellaneous-angle-text.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +166,14 @@
   <data name="atras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="327527" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\327527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="barra3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="personal4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="159699" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\159699.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +181,23 @@
   <data name="1f7e0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1f7e0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="327527" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\327527.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\asd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6073873" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6073873.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="empleados1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\empleados1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barra5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barra5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Salidas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Salidas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,11 +214,14 @@
   <data name="bitacora" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bitacora.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bitacora1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bitacora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buscar_libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar_libros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="personal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\min.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,11 +232,17 @@
   <data name="png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-interface-maximize-minimize-minus-plus-user-interface-line-icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BarraaLateral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BarraaLateral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="contraseña" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\contraseña.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biblioteca3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="soporte_tecnico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\soporte_tecnico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,22 +256,40 @@
   <data name="Solicitud_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Solicitud_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="biblioteca2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biblioteca2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\max.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Entradas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Entradas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MinimizarCirculo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinimizarCirculo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Biblioteca1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Biblioteca1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prestamos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\prestamos2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscar_libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscar_libros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="empleados" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empleados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="personal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bitacora1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bitacora1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoEducarte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogoEducarte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

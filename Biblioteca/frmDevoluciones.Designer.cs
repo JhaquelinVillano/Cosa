@@ -69,7 +69,7 @@
             // picAtras
             // 
             this.picAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAtras.Image = global::Proyecto.Properties.Resources.atras;
+            this.picAtras.Image = global::Proyecto.Properties.Resources.atrass;
             this.picAtras.Location = new System.Drawing.Point(6, 4);
             this.picAtras.Name = "picAtras";
             this.picAtras.Size = new System.Drawing.Size(24, 17);

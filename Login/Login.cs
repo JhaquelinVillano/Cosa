@@ -22,57 +22,12 @@ namespace Proyecto
             InitializeComponent();
         }
         public int verificar=0;
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picLoginCirculo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-
-        }
-
-        private void txtUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void picMinimizarLogin_Click(object sender, EventArgs e)
         {
                 WindowState = FormWindowState.Minimized;
         }
 
-        private void txtUsuario_Enter(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void txtContraseña_Enter(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void txtContraseña_Leave(object sender, EventArgs e)
-        {
-         
-        }
 
         private void btnAcceder_Click_1(object sender, EventArgs e)
         {
@@ -82,30 +37,15 @@ namespace Proyecto
                 this.Hide();
             }
         }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picLogo_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void linkContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
 
-        private void frmLogin_Load(object sender, EventArgs e)
+        private void picCerrarLogin_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
+            this.Close();
         }
     }
 }
