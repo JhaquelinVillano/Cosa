@@ -22,47 +22,12 @@ namespace Proyecto.Usuarios
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
-            
-        }
-
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
             menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
-        }
-
-        private void cbxAdmin_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbxEmpleados_CheckedChanged(object sender, EventArgs e)
-        {
         }
 
         private void cbxEmpleado_CheckedChanged(object sender, EventArgs e)
@@ -83,16 +48,6 @@ namespace Proyecto.Usuarios
         {
             usuarios.registrarUsuarios(txtNombre,txtContraseña, txtDniEmpleado, cbxAdmin,cbxEncargado,cbxBiblioteca,cbxInventario);
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
-        }
-
-        private void frmUsuarios_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tmrUsuarios_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         private void cbxBiblioteca_CheckedChanged(object sender, EventArgs e)
@@ -142,11 +97,6 @@ namespace Proyecto.Usuarios
             }
         }
 
-        private void picBusquedaPR_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
@@ -171,11 +121,6 @@ namespace Proyecto.Usuarios
         {
             txtConsultar.Text = "";
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
-        }
-
-        private void cbxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -16,23 +16,23 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using FontAwesome.Sharp;
 using System.Windows.Media;
+using Proyecto.Empleados;
+using Proyecto.Clientes;
 
 namespace Proyecto.Menu
 {
     public partial class frmMenu : Form
     {
         private IconButton currentBtn;
-        private Panel leftBorderBtn;
         public string Usuario;
-        private System.Drawing.Color color;
+        private Form currentChildForm;
 
         public frmMenu()
         {
             InitializeComponent();
             customizeDesing();
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 35);
-            pnlMenuVertical.Controls.Add(leftBorderBtn);
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private struct RGBColors
@@ -50,7 +50,7 @@ namespace Proyecto.Menu
             if (senderBtn != null)
             {
                 DisableButton();
-                //Button
+                //Colores de los botones
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = System.Drawing.Color.FromArgb(37, 36, 81);
                 currentBtn.ForeColor = color;
@@ -58,11 +58,9 @@ namespace Proyecto.Menu
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
-                leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
+                //Cambia la imagen de la barra superior conforme el formulario abierto en el menu
+                picHijoActual.IconChar = currentBtn.IconChar;
+                lblTituloFormHijo.Text = " ";
             }
         }
 
@@ -130,7 +128,9 @@ namespace Proyecto.Menu
             {
                 pnlMenuVertical.Width = 250;
             }
+            
         }
+
         private void picCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -159,9 +159,9 @@ namespace Proyecto.Menu
             ActivateButton(sender, RGBColors.color1);
             frmLibros Libros = new frmLibros();
             Libros.Usuario = Usuario;
-            Libros.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmLibros());
+            
         }
 
         private void btnPrestamos_Click(object sender, EventArgs e)
@@ -169,19 +169,17 @@ namespace Proyecto.Menu
             ActivateButton(sender, RGBColors.color1);
             frmPrestamos PD = new frmPrestamos();
             PD.Usuario = Usuario;
-            PD.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmPrestamos());
         }
 
         private void btnDevoluciones_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmDevoluciones devoluciones = new frmDevoluciones();
             devoluciones.Usuario = Usuario;
-            devoluciones.Show();
-            this.Hide();
+            ActivateButton(sender, RGBColors.color1);
             hideSubMenu();
+            openChildForm(new frmDevoluciones());
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
@@ -191,23 +189,19 @@ namespace Proyecto.Menu
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
+        {    
             Empleados.frmEmpleados empleados = new Empleados.frmEmpleados();
             empleados.Usuario = Usuario;
-            empleados.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmEmpleados()); 
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmUsuarios Usuarios = new frmUsuarios();
             Usuarios.Usuario = Usuario;
-            Usuarios.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmUsuarios());
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -215,9 +209,8 @@ namespace Proyecto.Menu
             ActivateButton(sender, RGBColors.color1);
             Clientes.frmClientes clientes = new Clientes.frmClientes();
             clientes.Usuario = Usuario;
-            clientes.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmClientes());
         }
 
         private void btnDonadores_Click(object sender, EventArgs e)
@@ -225,9 +218,8 @@ namespace Proyecto.Menu
             ActivateButton(sender, RGBColors.color1);
             frmDonadores Donadores = new frmDonadores();
             Donadores.Usuario = Usuario;
-            Donadores.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmDonadores());
         }
         private void btnInventario_Click(object sender, EventArgs e)
         {
@@ -237,32 +229,26 @@ namespace Proyecto.Menu
 
         private void btnEntradas_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmEntradas entradas = new frmEntradas();
             entradas.Usuario = Usuario;
-            entradas.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmEntradas());
         }
 
         private void btnSalidas_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmSalidas salidas = new frmSalidas();
             salidas.Usuario = Usuario;
-            salidas.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmSalidas());
         }
 
         private void btnCatalogo_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             Inventario.frmInventario inventarios = new frmInventario();
             inventarios.Usuario = Usuario;
-            inventarios.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmInventario()); 
         }
 
         private void btnRestauracion_Click(object sender, EventArgs e)
@@ -270,28 +256,65 @@ namespace Proyecto.Menu
             ActivateButton(sender, RGBColors.color1);
             frmRestauracion Restauracion = new frmRestauracion();
             Restauracion.Usuario = Usuario;
-            Restauracion.Show();
-            this.Hide();
             hideSubMenu();
+            openChildForm(new frmRestauracion());
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            this.Close();
             frmLogin Login = new frmLogin();
             Login.Show();
             hideSubMenu();
+            
+
         }
 
         private void picLogo_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
 
         private void Reset()
         {
             DisableButton();
-            leftBorderBtn.Visible = false;
+            picHijoActual.IconChar = IconChar.Home;
+            lblTituloFormHijo.Text = "Home";
+
+        }
+        
+        private void openChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlControl.Controls.Add(childForm);
+            pnlControl.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTituloFormHijo.Text = childForm.Text;
+                
+                
+        }
+        private void picMaximizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            picMaximizar.Visible = false;
+            picRestaurar.Visible = true;
+        }
+
+        private void picRestaurar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Normal;
+            picRestaurar.Visible = false;
+            picMaximizar.Visible = true;
         }
     }
 }

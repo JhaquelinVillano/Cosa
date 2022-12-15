@@ -212,7 +212,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRestauracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRestauracion";
+            this.Text = "Restauracion";
             this.Load += new System.EventHandler(this.frmRestauracion_Load);
             this.pnlRestauracion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();

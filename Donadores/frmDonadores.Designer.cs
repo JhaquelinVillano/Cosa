@@ -494,7 +494,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDonadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDonadores";
+            this.Text = "Donadores";
             this.Load += new System.EventHandler(this.frmDonadores_Load);
             this.pnlBiblioteca.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();

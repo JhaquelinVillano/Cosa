@@ -561,7 +561,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEmpleados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmEmpleados";
+            this.Text = "Empleados";
             this.Load += new System.EventHandler(this.frmEmpleados_Load);
             this.pnlUsuario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();

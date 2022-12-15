@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.picMaximizar = new System.Windows.Forms.PictureBox();
+            this.lblTituloFormHijo = new System.Windows.Forms.Label();
+            this.picHijoActual = new FontAwesome.Sharp.IconPictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picBarra = new System.Windows.Forms.PictureBox();
+            this.picRestaurar = new FontAwesome.Sharp.IconPictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
@@ -54,37 +58,84 @@
             this.btnLibros = new FontAwesome.Sharp.IconButton();
             this.btnBiblioteca = new FontAwesome.Sharp.IconButton();
             this.pnlControl = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlMenuVertical.SuspendLayout();
             this.pnlSubInventario.SuspendLayout();
             this.pnlSubPersonal.SuspendLayout();
             this.pnlSubBiblioteca.SuspendLayout();
+            this.pnlControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.SlateBlue;
+            this.pnlTitulo.Controls.Add(this.picMaximizar);
+            this.pnlTitulo.Controls.Add(this.lblTituloFormHijo);
+            this.pnlTitulo.Controls.Add(this.picHijoActual);
             this.pnlTitulo.Controls.Add(this.picMinimizar);
             this.pnlTitulo.Controls.Add(this.picCerrar);
             this.pnlTitulo.Controls.Add(this.picBarra);
+            this.pnlTitulo.Controls.Add(this.picRestaurar);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(250, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(930, 32);
+            this.pnlTitulo.Size = new System.Drawing.Size(750, 32);
             this.pnlTitulo.TabIndex = 30;
             this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
+            // 
+            // picMaximizar
+            // 
+            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
+            this.picMaximizar.Location = new System.Drawing.Point(679, 3);
+            this.picMaximizar.Name = "picMaximizar";
+            this.picMaximizar.Size = new System.Drawing.Size(26, 29);
+            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMaximizar.TabIndex = 5;
+            this.picMaximizar.TabStop = false;
+            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
+            // 
+            // lblTituloFormHijo
+            // 
+            this.lblTituloFormHijo.AutoSize = true;
+            this.lblTituloFormHijo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFormHijo.ForeColor = System.Drawing.SystemColors.Menu;
+            this.lblTituloFormHijo.Location = new System.Drawing.Point(69, 9);
+            this.lblTituloFormHijo.Name = "lblTituloFormHijo";
+            this.lblTituloFormHijo.Size = new System.Drawing.Size(41, 18);
+            this.lblTituloFormHijo.TabIndex = 4;
+            this.lblTituloFormHijo.Text = "Home";
+            // 
+            // picHijoActual
+            // 
+            this.picHijoActual.BackColor = System.Drawing.Color.SlateBlue;
+            this.picHijoActual.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.picHijoActual.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.picHijoActual.IconColor = System.Drawing.Color.LightSteelBlue;
+            this.picHijoActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.picHijoActual.IconSize = 24;
+            this.picHijoActual.Location = new System.Drawing.Point(39, 4);
+            this.picHijoActual.Name = "picHijoActual";
+            this.picHijoActual.Size = new System.Drawing.Size(24, 25);
+            this.picHijoActual.TabIndex = 3;
+            this.picHijoActual.TabStop = false;
             // 
             // picMinimizar
             // 
             this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(859, 3);
+            this.picMinimizar.Location = new System.Drawing.Point(647, 3);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(26, 29);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +148,7 @@
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(891, 3);
+            this.picCerrar.Location = new System.Drawing.Point(711, 3);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(27, 29);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,6 +167,22 @@
             this.picBarra.TabIndex = 0;
             this.picBarra.TabStop = false;
             this.picBarra.Click += new System.EventHandler(this.picBarra_Click);
+            // 
+            // picRestaurar
+            // 
+            this.picRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picRestaurar.BackColor = System.Drawing.Color.SlateBlue;
+            this.picRestaurar.ForeColor = System.Drawing.SystemColors.Window;
+            this.picRestaurar.IconChar = FontAwesome.Sharp.IconChar.Compress;
+            this.picRestaurar.IconColor = System.Drawing.SystemColors.Window;
+            this.picRestaurar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.picRestaurar.IconSize = 26;
+            this.picRestaurar.Location = new System.Drawing.Point(679, 4);
+            this.picRestaurar.Name = "picRestaurar";
+            this.picRestaurar.Size = new System.Drawing.Size(26, 29);
+            this.picRestaurar.TabIndex = 7;
+            this.picRestaurar.TabStop = false;
+            this.picRestaurar.Click += new System.EventHandler(this.picRestaurar_Click);
             // 
             // pnlLogo
             // 
@@ -157,7 +224,7 @@
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuVertical.Name = "pnlMenuVertical";
-            this.pnlMenuVertical.Size = new System.Drawing.Size(250, 788);
+            this.pnlMenuVertical.Size = new System.Drawing.Size(250, 720);
             this.pnlMenuVertical.TabIndex = 29;
             // 
             // btnCerrarSesion
@@ -167,13 +234,13 @@
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 35;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 753);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 685);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 76, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(250, 35);
@@ -191,8 +258,8 @@
             this.btnRestauracion.FlatAppearance.BorderSize = 0;
             this.btnRestauracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestauracion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestauracion.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRestauracion.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnRestauracion.ForeColor = System.Drawing.Color.White;
+            this.btnRestauracion.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnRestauracion.IconColor = System.Drawing.Color.White;
             this.btnRestauracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRestauracion.IconSize = 35;
@@ -200,7 +267,7 @@
             this.btnRestauracion.Location = new System.Drawing.Point(0, 617);
             this.btnRestauracion.Name = "btnRestauracion";
             this.btnRestauracion.Size = new System.Drawing.Size(250, 35);
-            this.btnRestauracion.TabIndex = 48;
+            this.btnRestauracion.TabIndex = 39;
             this.btnRestauracion.Text = "Restauracion";
             this.btnRestauracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestauracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -227,7 +294,7 @@
             this.btnCatalogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCatalogo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCatalogo.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCatalogo.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnCatalogo.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCatalogo.IconColor = System.Drawing.Color.White;
             this.btnCatalogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCatalogo.IconSize = 35;
@@ -239,7 +306,6 @@
             this.btnCatalogo.TabIndex = 42;
             this.btnCatalogo.Text = "Catálogo";
             this.btnCatalogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCatalogo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCatalogo.UseVisualStyleBackColor = true;
             this.btnCatalogo.Click += new System.EventHandler(this.btnCatalogo_Click);
             // 
@@ -251,7 +317,7 @@
             this.btnSalidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalidas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalidas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnSalidas.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnSalidas.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSalidas.IconColor = System.Drawing.Color.White;
             this.btnSalidas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalidas.IconSize = 35;
@@ -263,7 +329,6 @@
             this.btnSalidas.TabIndex = 41;
             this.btnSalidas.Text = "Salidas";
             this.btnSalidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalidas.UseVisualStyleBackColor = true;
             this.btnSalidas.Click += new System.EventHandler(this.btnSalidas_Click);
             // 
@@ -275,7 +340,7 @@
             this.btnEntradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntradas.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntradas.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEntradas.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnEntradas.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEntradas.IconColor = System.Drawing.Color.White;
             this.btnEntradas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEntradas.IconSize = 35;
@@ -287,7 +352,6 @@
             this.btnEntradas.TabIndex = 40;
             this.btnEntradas.Text = "Entradas";
             this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntradas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEntradas.UseVisualStyleBackColor = true;
             this.btnEntradas.Click += new System.EventHandler(this.btnEntradas_Click);
             // 
@@ -298,8 +362,8 @@
             this.btnInventario.FlatAppearance.BorderSize = 0;
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventario.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnInventario.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnInventario.ForeColor = System.Drawing.Color.White;
+            this.btnInventario.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
             this.btnInventario.IconColor = System.Drawing.Color.White;
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 35;
@@ -307,7 +371,7 @@
             this.btnInventario.Location = new System.Drawing.Point(0, 470);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(250, 35);
-            this.btnInventario.TabIndex = 45;
+            this.btnInventario.TabIndex = 39;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -321,8 +385,8 @@
             this.btnDonadores.FlatAppearance.BorderSize = 0;
             this.btnDonadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonadores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonadores.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDonadores.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnDonadores.ForeColor = System.Drawing.Color.White;
+            this.btnDonadores.IconChar = FontAwesome.Sharp.IconChar.PeopleRoof;
             this.btnDonadores.IconColor = System.Drawing.Color.White;
             this.btnDonadores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDonadores.IconSize = 35;
@@ -330,7 +394,7 @@
             this.btnDonadores.Location = new System.Drawing.Point(0, 435);
             this.btnDonadores.Name = "btnDonadores";
             this.btnDonadores.Size = new System.Drawing.Size(250, 35);
-            this.btnDonadores.TabIndex = 44;
+            this.btnDonadores.TabIndex = 39;
             this.btnDonadores.Text = "Donadores";
             this.btnDonadores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDonadores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -344,8 +408,8 @@
             this.btnClientes.FlatAppearance.BorderSize = 0;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
             this.btnClientes.IconColor = System.Drawing.Color.White;
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.IconSize = 35;
@@ -353,7 +417,7 @@
             this.btnClientes.Location = new System.Drawing.Point(0, 400);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(250, 35);
-            this.btnClientes.TabIndex = 43;
+            this.btnClientes.TabIndex = 39;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -379,7 +443,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnUsuarios.IconColor = System.Drawing.Color.White;
             this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUsuarios.IconSize = 35;
@@ -391,7 +455,6 @@
             this.btnUsuarios.TabIndex = 41;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
@@ -403,7 +466,7 @@
             this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpleados.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpleados.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnEmpleados.IconColor = System.Drawing.Color.White;
             this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEmpleados.IconSize = 35;
@@ -415,7 +478,6 @@
             this.btnEmpleados.TabIndex = 40;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEmpleados.UseVisualStyleBackColor = true;
             this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
@@ -426,8 +488,8 @@
             this.btnPersonal.FlatAppearance.BorderSize = 0;
             this.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPersonal.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonal.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPersonal.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnPersonal.ForeColor = System.Drawing.Color.White;
+            this.btnPersonal.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnPersonal.IconColor = System.Drawing.Color.White;
             this.btnPersonal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPersonal.IconSize = 35;
@@ -435,7 +497,7 @@
             this.btnPersonal.Location = new System.Drawing.Point(0, 288);
             this.btnPersonal.Name = "btnPersonal";
             this.btnPersonal.Size = new System.Drawing.Size(250, 35);
-            this.btnPersonal.TabIndex = 41;
+            this.btnPersonal.TabIndex = 39;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPersonal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -462,7 +524,7 @@
             this.btnDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDevoluciones.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevoluciones.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnDevoluciones.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnDevoluciones.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnDevoluciones.IconColor = System.Drawing.Color.White;
             this.btnDevoluciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDevoluciones.IconSize = 35;
@@ -474,7 +536,6 @@
             this.btnDevoluciones.TabIndex = 42;
             this.btnDevoluciones.Text = "Devoluciones";
             this.btnDevoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDevoluciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDevoluciones.UseVisualStyleBackColor = true;
             this.btnDevoluciones.Click += new System.EventHandler(this.btnDevoluciones_Click);
             // 
@@ -486,7 +547,7 @@
             this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrestamos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamos.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPrestamos.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnPrestamos.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnPrestamos.IconColor = System.Drawing.Color.White;
             this.btnPrestamos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPrestamos.IconSize = 35;
@@ -498,7 +559,6 @@
             this.btnPrestamos.TabIndex = 41;
             this.btnPrestamos.Text = "Prestamos";
             this.btnPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrestamos.UseVisualStyleBackColor = true;
             this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
@@ -510,7 +570,7 @@
             this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibros.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLibros.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnLibros.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.btnLibros.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLibros.IconColor = System.Drawing.Color.White;
             this.btnLibros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLibros.IconSize = 35;
@@ -522,7 +582,6 @@
             this.btnLibros.TabIndex = 40;
             this.btnLibros.Text = "Libros";
             this.btnLibros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLibros.UseVisualStyleBackColor = true;
             this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click_1);
             // 
@@ -533,7 +592,7 @@
             this.btnBiblioteca.FlatAppearance.BorderSize = 0;
             this.btnBiblioteca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBiblioteca.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBiblioteca.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnBiblioteca.ForeColor = System.Drawing.Color.White;
             this.btnBiblioteca.IconChar = FontAwesome.Sharp.IconChar.Book;
             this.btnBiblioteca.IconColor = System.Drawing.Color.White;
             this.btnBiblioteca.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -551,18 +610,26 @@
             // 
             // pnlControl
             // 
+            this.pnlControl.Controls.Add(this.label1);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControl.Location = new System.Drawing.Point(250, 32);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(930, 756);
+            this.pnlControl.Size = new System.Drawing.Size(750, 688);
             this.pnlControl.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1180, 788);
+            this.ClientSize = new System.Drawing.Size(1000, 720);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlMenuVertical);
@@ -572,15 +639,20 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.pnlTitulo.ResumeLayout(false);
+            this.pnlTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlMenuVertical.ResumeLayout(false);
             this.pnlSubInventario.ResumeLayout(false);
             this.pnlSubPersonal.ResumeLayout(false);
             this.pnlSubBiblioteca.ResumeLayout(false);
+            this.pnlControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -612,5 +684,10 @@
         private FontAwesome.Sharp.IconButton btnRestauracion;
         private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private System.Windows.Forms.Panel pnlControl;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconPictureBox picHijoActual;
+        private System.Windows.Forms.Label lblTituloFormHijo;
+        private System.Windows.Forms.PictureBox picMaximizar;
+        private FontAwesome.Sharp.IconPictureBox picRestaurar;
     }
 }

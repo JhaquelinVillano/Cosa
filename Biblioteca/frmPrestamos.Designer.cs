@@ -435,7 +435,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrestamos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPrestamosDevoluciones";
+            this.Text = "Prestamos";
             this.Load += new System.EventHandler(this.frmPrestamos_Load);
             this.pnlBiblioteca.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
