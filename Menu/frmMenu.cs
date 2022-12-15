@@ -283,5 +283,15 @@ namespace Proyecto.Menu
             hideSubMenu();
         }
 
+        private void picLogo_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
+        }
     }
 }
