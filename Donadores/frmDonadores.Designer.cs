@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlBiblioteca = new System.Windows.Forms.Panel();
-            this.picAtras = new System.Windows.Forms.PictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
-            this.picRestaurar = new System.Windows.Forms.PictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
             this.txtCorreo = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNombreDonadores = new MaterialSkin.Controls.MaterialTextBox();
             this.lblCorreo = new System.Windows.Forms.TextBox();
@@ -41,7 +35,6 @@
             this.txtTelefono = new MaterialSkin.Controls.MaterialTextBox();
             this.lblNacionalidad = new System.Windows.Forms.TextBox();
             this.lblTeléfono = new System.Windows.Forms.TextBox();
-            this.lblDonadores = new System.Windows.Forms.TextBox();
             this.lblRedesSociales = new System.Windows.Forms.TextBox();
             this.txtRedesSociales = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNacionalidad = new MaterialSkin.Controls.MaterialTextBox();
@@ -54,104 +47,19 @@
             this.dgvDonadores = new System.Windows.Forms.DataGridView();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.picBuscar = new System.Windows.Forms.PictureBox();
-            this.picDonadores = new System.Windows.Forms.PictureBox();
-            this.pnlBiblioteca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDonadores)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnlBiblioteca
-            // 
-            this.pnlBiblioteca.BackColor = System.Drawing.Color.Orange;
-            this.pnlBiblioteca.Controls.Add(this.picAtras);
-            this.pnlBiblioteca.Controls.Add(this.picMaximizar);
-            this.pnlBiblioteca.Controls.Add(this.picRestaurar);
-            this.pnlBiblioteca.Controls.Add(this.picMinimizar);
-            this.pnlBiblioteca.Controls.Add(this.picCerrar);
-            this.pnlBiblioteca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBiblioteca.Location = new System.Drawing.Point(0, 0);
-            this.pnlBiblioteca.Name = "pnlBiblioteca";
-            this.pnlBiblioteca.Size = new System.Drawing.Size(1180, 24);
-            this.pnlBiblioteca.TabIndex = 3;
-            // 
-            // picAtras
-            // 
-            this.picAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picAtras.Image = global::Proyecto.Properties.Resources.atras;
-            this.picAtras.Location = new System.Drawing.Point(6, 4);
-            this.picAtras.Name = "picAtras";
-            this.picAtras.Size = new System.Drawing.Size(24, 17);
-            this.picAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAtras.TabIndex = 8;
-            this.picAtras.TabStop = false;
-            this.picAtras.Click += new System.EventHandler(this.picAtras_Click);
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
-            this.picMaximizar.Location = new System.Drawing.Point(1112, 3);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(25, 19);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximizar.TabIndex = 5;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
-            // 
-            // picRestaurar
-            // 
-            this.picRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picRestaurar.Image = global::Proyecto.Properties.Resources._159699;
-            this.picRestaurar.Location = new System.Drawing.Point(1112, 3);
-            this.picRestaurar.Name = "picRestaurar";
-            this.picRestaurar.Size = new System.Drawing.Size(25, 19);
-            this.picRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picRestaurar.TabIndex = 7;
-            this.picRestaurar.TabStop = false;
-            this.picRestaurar.Click += new System.EventHandler(this.picRestaurar_Click);
-            // 
-            // picMinimizar
-            // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(1081, 3);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(25, 19);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimizar.TabIndex = 6;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(1143, 3);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(25, 19);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCerrar.TabIndex = 4;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.AnimateReadOnly = false;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Depth = 0;
             this.txtCorreo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCorreo.LeadingIcon = null;
-            this.txtCorreo.Location = new System.Drawing.Point(29, 329);
+            this.txtCorreo.Location = new System.Drawing.Point(263, 49);
             this.txtCorreo.MaxLength = 50;
             this.txtCorreo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCorreo.Multiline = false;
@@ -163,12 +71,13 @@
             // 
             // txtNombreDonadores
             // 
+            this.txtNombreDonadores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombreDonadores.AnimateReadOnly = false;
             this.txtNombreDonadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreDonadores.Depth = 0;
             this.txtNombreDonadores.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombreDonadores.LeadingIcon = null;
-            this.txtNombreDonadores.Location = new System.Drawing.Point(29, 244);
+            this.txtNombreDonadores.Location = new System.Drawing.Point(20, 44);
             this.txtNombreDonadores.MaxLength = 50;
             this.txtNombreDonadores.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombreDonadores.Multiline = false;
@@ -180,11 +89,12 @@
             // 
             // lblCorreo
             // 
+            this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCorreo.BackColor = System.Drawing.Color.White;
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCorreo.Enabled = false;
             this.lblCorreo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(29, 300);
+            this.lblCorreo.Location = new System.Drawing.Point(263, 20);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(223, 23);
             this.lblCorreo.TabIndex = 72;
@@ -193,11 +103,12 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(29, 215);
+            this.lblNombre.Location = new System.Drawing.Point(20, 15);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(223, 23);
             this.lblNombre.TabIndex = 71;
@@ -206,12 +117,13 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.AnimateReadOnly = false;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Depth = 0;
             this.txtTelefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTelefono.LeadingIcon = null;
-            this.txtTelefono.Location = new System.Drawing.Point(29, 414);
+            this.txtTelefono.Location = new System.Drawing.Point(20, 222);
             this.txtTelefono.MaxLength = 50;
             this.txtTelefono.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTelefono.Multiline = false;
@@ -223,11 +135,12 @@
             // 
             // lblNacionalidad
             // 
+            this.lblNacionalidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNacionalidad.BackColor = System.Drawing.Color.White;
             this.lblNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNacionalidad.Enabled = false;
             this.lblNacionalidad.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNacionalidad.Location = new System.Drawing.Point(291, 215);
+            this.lblNacionalidad.Location = new System.Drawing.Point(20, 105);
             this.lblNacionalidad.Name = "lblNacionalidad";
             this.lblNacionalidad.Size = new System.Drawing.Size(223, 23);
             this.lblNacionalidad.TabIndex = 68;
@@ -236,37 +149,26 @@
             // 
             // lblTeléfono
             // 
+            this.lblTeléfono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTeléfono.BackColor = System.Drawing.Color.White;
             this.lblTeléfono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblTeléfono.Enabled = false;
             this.lblTeléfono.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeléfono.Location = new System.Drawing.Point(29, 385);
+            this.lblTeléfono.Location = new System.Drawing.Point(20, 193);
             this.lblTeléfono.Name = "lblTeléfono";
             this.lblTeléfono.Size = new System.Drawing.Size(223, 23);
             this.lblTeléfono.TabIndex = 67;
             this.lblTeléfono.Text = "Teléfono";
             this.lblTeléfono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // lblDonadores
-            // 
-            this.lblDonadores.BackColor = System.Drawing.Color.White;
-            this.lblDonadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lblDonadores.Enabled = false;
-            this.lblDonadores.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonadores.Location = new System.Drawing.Point(170, 34);
-            this.lblDonadores.Name = "lblDonadores";
-            this.lblDonadores.Size = new System.Drawing.Size(202, 45);
-            this.lblDonadores.TabIndex = 76;
-            this.lblDonadores.Text = "Donadores";
-            this.lblDonadores.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // lblRedesSociales
             // 
+            this.lblRedesSociales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRedesSociales.BackColor = System.Drawing.Color.White;
             this.lblRedesSociales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblRedesSociales.Enabled = false;
             this.lblRedesSociales.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedesSociales.Location = new System.Drawing.Point(291, 300);
+            this.lblRedesSociales.Location = new System.Drawing.Point(263, 193);
             this.lblRedesSociales.Name = "lblRedesSociales";
             this.lblRedesSociales.Size = new System.Drawing.Size(223, 23);
             this.lblRedesSociales.TabIndex = 78;
@@ -275,12 +177,13 @@
             // 
             // txtRedesSociales
             // 
+            this.txtRedesSociales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRedesSociales.AnimateReadOnly = false;
             this.txtRedesSociales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRedesSociales.Depth = 0;
             this.txtRedesSociales.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtRedesSociales.LeadingIcon = null;
-            this.txtRedesSociales.Location = new System.Drawing.Point(291, 329);
+            this.txtRedesSociales.Location = new System.Drawing.Point(263, 222);
             this.txtRedesSociales.MaxLength = 50;
             this.txtRedesSociales.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRedesSociales.Multiline = false;
@@ -292,12 +195,13 @@
             // 
             // txtNacionalidad
             // 
+            this.txtNacionalidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNacionalidad.AnimateReadOnly = false;
             this.txtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNacionalidad.Depth = 0;
             this.txtNacionalidad.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNacionalidad.LeadingIcon = null;
-            this.txtNacionalidad.Location = new System.Drawing.Point(291, 244);
+            this.txtNacionalidad.Location = new System.Drawing.Point(20, 134);
             this.txtNacionalidad.MaxLength = 50;
             this.txtNacionalidad.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNacionalidad.Multiline = false;
@@ -309,12 +213,13 @@
             // 
             // txtPlataforma
             // 
+            this.txtPlataforma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPlataforma.AnimateReadOnly = false;
             this.txtPlataforma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPlataforma.Depth = 0;
             this.txtPlataforma.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPlataforma.LeadingIcon = null;
-            this.txtPlataforma.Location = new System.Drawing.Point(291, 414);
+            this.txtPlataforma.Location = new System.Drawing.Point(263, 134);
             this.txtPlataforma.MaxLength = 50;
             this.txtPlataforma.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPlataforma.Multiline = false;
@@ -326,11 +231,12 @@
             // 
             // lblPlataforma
             // 
+            this.lblPlataforma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlataforma.BackColor = System.Drawing.Color.White;
             this.lblPlataforma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPlataforma.Enabled = false;
             this.lblPlataforma.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlataforma.Location = new System.Drawing.Point(291, 385);
+            this.lblPlataforma.Location = new System.Drawing.Point(263, 105);
             this.lblPlataforma.Name = "lblPlataforma";
             this.lblPlataforma.Size = new System.Drawing.Size(223, 23);
             this.lblPlataforma.TabIndex = 82;
@@ -339,6 +245,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.AutoSize = false;
             this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -348,7 +255,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(137, 611);
+            this.btnEliminar.Location = new System.Drawing.Point(513, 174);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -362,6 +269,7 @@
             // 
             // btnModificar
             // 
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.AutoSize = false;
             this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -369,7 +277,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(137, 563);
+            this.btnModificar.Location = new System.Drawing.Point(514, 126);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -383,6 +291,7 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.AutoSize = false;
             this.btnRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -390,7 +299,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(137, 513);
+            this.btnRegistrar.Location = new System.Drawing.Point(513, 78);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -404,7 +313,8 @@
             // 
             // dtpDonadores
             // 
-            this.dtpDonadores.Location = new System.Drawing.Point(291, 470);
+            this.dtpDonadores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDonadores.Location = new System.Drawing.Point(513, 222);
             this.dtpDonadores.Name = "dtpDonadores";
             this.dtpDonadores.Size = new System.Drawing.Size(223, 20);
             this.dtpDonadores.TabIndex = 86;
@@ -416,26 +326,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDonadores.BackgroundColor = System.Drawing.Color.Moccasin;
             this.dgvDonadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDonadores.Location = new System.Drawing.Point(532, 111);
+            this.dgvDonadores.Location = new System.Drawing.Point(20, 367);
             this.dgvDonadores.Name = "dgvDonadores";
-            this.dgvDonadores.Size = new System.Drawing.Size(636, 557);
+            this.dgvDonadores.Size = new System.Drawing.Size(716, 309);
             this.dgvDonadores.TabIndex = 87;
             // 
             // txtConsultar
             // 
-            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.AnimateReadOnly = false;
             this.txtConsultar.BackColor = System.Drawing.Color.White;
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(532, 55);
+            this.txtConsultar.Location = new System.Drawing.Point(20, 299);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
             this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(573, 50);
+            this.txtConsultar.Size = new System.Drawing.Size(647, 50);
             this.txtConsultar.TabIndex = 89;
             this.txtConsultar.Text = "";
             this.txtConsultar.TrailingIcon = null;
@@ -445,30 +356,19 @@
             this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Enabled = false;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
-            this.picBuscar.Location = new System.Drawing.Point(1112, 55);
+            this.picBuscar.Location = new System.Drawing.Point(682, 299);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(56, 50);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBuscar.TabIndex = 90;
             this.picBuscar.TabStop = false;
             // 
-            // picDonadores
-            // 
-            this.picDonadores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picDonadores.Image = global::Proyecto.Properties.Resources.Solicitud_1;
-            this.picDonadores.Location = new System.Drawing.Point(190, 83);
-            this.picDonadores.Name = "picDonadores";
-            this.picDonadores.Size = new System.Drawing.Size(158, 126);
-            this.picDonadores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDonadores.TabIndex = 75;
-            this.picDonadores.TabStop = false;
-            // 
             // frmDonadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1180, 680);
+            this.ClientSize = new System.Drawing.Size(750, 688);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.dgvDonadores);
@@ -481,8 +381,6 @@
             this.Controls.Add(this.txtNacionalidad);
             this.Controls.Add(this.txtRedesSociales);
             this.Controls.Add(this.lblRedesSociales);
-            this.Controls.Add(this.lblDonadores);
-            this.Controls.Add(this.picDonadores);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtNombreDonadores);
             this.Controls.Add(this.lblCorreo);
@@ -490,34 +388,18 @@
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.lblNacionalidad);
             this.Controls.Add(this.lblTeléfono);
-            this.Controls.Add(this.pnlBiblioteca);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDonadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Donadores";
-            this.Load += new System.EventHandler(this.frmDonadores_Load);
-            this.pnlBiblioteca.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picAtras)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picDonadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox picAtras;
-        private System.Windows.Forms.PictureBox picMaximizar;
-        private System.Windows.Forms.PictureBox picMinimizar;
-        private System.Windows.Forms.PictureBox picCerrar;
-        private System.Windows.Forms.Panel pnlBiblioteca;
-        private System.Windows.Forms.PictureBox picRestaurar;
         private MaterialSkin.Controls.MaterialTextBox txtCorreo;
         private MaterialSkin.Controls.MaterialTextBox txtNombreDonadores;
         private System.Windows.Forms.TextBox lblCorreo;
@@ -525,8 +407,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtTelefono;
         private System.Windows.Forms.TextBox lblNacionalidad;
         private System.Windows.Forms.TextBox lblTeléfono;
-        private System.Windows.Forms.PictureBox picDonadores;
-        private System.Windows.Forms.TextBox lblDonadores;
         private System.Windows.Forms.TextBox lblRedesSociales;
         private MaterialSkin.Controls.MaterialTextBox txtRedesSociales;
         private MaterialSkin.Controls.MaterialTextBox txtNacionalidad;

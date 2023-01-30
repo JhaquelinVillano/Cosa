@@ -25,23 +25,9 @@ namespace Proyecto.Donadores
             this.Close();
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
         }
 
         private void picAtras_Click(object sender, EventArgs e)
@@ -50,11 +36,6 @@ namespace Proyecto.Donadores
             menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
-        }
-
-        private void frmDonadores_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
