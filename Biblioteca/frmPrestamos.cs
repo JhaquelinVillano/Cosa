@@ -28,23 +28,9 @@ namespace Proyecto.Biblioteca
             this.Close();
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
         }
 
         private void picAtras_Click(object sender, EventArgs e)
@@ -53,15 +39,6 @@ namespace Proyecto.Biblioteca
             menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
-        }
-
-        private void frmPrestamos_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void tmrTiempo_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -82,16 +59,6 @@ namespace Proyecto.Biblioteca
             prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
         }
 
-        private void dgvP_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void picBusquedaPR_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {
             prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
@@ -101,11 +68,6 @@ namespace Proyecto.Biblioteca
         {
             txtConsultar.Text = "";
             prestamos.consultarPrestamos(dgvP, txtConsultar, cbxBusqueda);
-        }
-
-        private void txtPrestamoID_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtPrestamoID_KeyPress(object sender, KeyPressEventArgs e)

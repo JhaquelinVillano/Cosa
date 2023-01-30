@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.lblTituloFormHijo = new System.Windows.Forms.Label();
             this.picHijoActual = new FontAwesome.Sharp.IconPictureBox();
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picBarra = new System.Windows.Forms.PictureBox();
-            this.picRestaurar = new FontAwesome.Sharp.IconPictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
@@ -60,12 +58,10 @@
             this.pnlControl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlMenuVertical.SuspendLayout();
@@ -78,32 +74,17 @@
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.SlateBlue;
-            this.pnlTitulo.Controls.Add(this.picMaximizar);
             this.pnlTitulo.Controls.Add(this.lblTituloFormHijo);
             this.pnlTitulo.Controls.Add(this.picHijoActual);
             this.pnlTitulo.Controls.Add(this.picMinimizar);
             this.pnlTitulo.Controls.Add(this.picCerrar);
             this.pnlTitulo.Controls.Add(this.picBarra);
-            this.pnlTitulo.Controls.Add(this.picRestaurar);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(250, 0);
             this.pnlTitulo.Name = "pnlTitulo";
             this.pnlTitulo.Size = new System.Drawing.Size(750, 32);
             this.pnlTitulo.TabIndex = 30;
             this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
-            // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
-            this.picMaximizar.Location = new System.Drawing.Point(679, 3);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(26, 29);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMaximizar.TabIndex = 5;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
             // 
             // lblTituloFormHijo
             // 
@@ -135,7 +116,7 @@
             this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(647, 3);
+            this.picMinimizar.Location = new System.Drawing.Point(679, 3);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(26, 29);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,22 +148,6 @@
             this.picBarra.TabIndex = 0;
             this.picBarra.TabStop = false;
             this.picBarra.Click += new System.EventHandler(this.picBarra_Click);
-            // 
-            // picRestaurar
-            // 
-            this.picRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picRestaurar.BackColor = System.Drawing.Color.SlateBlue;
-            this.picRestaurar.ForeColor = System.Drawing.SystemColors.Window;
-            this.picRestaurar.IconChar = FontAwesome.Sharp.IconChar.Compress;
-            this.picRestaurar.IconColor = System.Drawing.SystemColors.Window;
-            this.picRestaurar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.picRestaurar.IconSize = 26;
-            this.picRestaurar.Location = new System.Drawing.Point(679, 4);
-            this.picRestaurar.Name = "picRestaurar";
-            this.picRestaurar.Size = new System.Drawing.Size(26, 29);
-            this.picRestaurar.TabIndex = 7;
-            this.picRestaurar.TabStop = false;
-            this.picRestaurar.Click += new System.EventHandler(this.picRestaurar_Click);
             // 
             // pnlLogo
             // 
@@ -640,12 +605,10 @@
             this.Text = "Menu";
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRestaurar)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlMenuVertical.ResumeLayout(false);
@@ -687,7 +650,5 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox picHijoActual;
         private System.Windows.Forms.Label lblTituloFormHijo;
-        private System.Windows.Forms.PictureBox picMaximizar;
-        private FontAwesome.Sharp.IconPictureBox picRestaurar;
     }
 }

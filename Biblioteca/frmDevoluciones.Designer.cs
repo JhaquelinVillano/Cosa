@@ -39,14 +39,15 @@
             // 
             // txtConsultar
             // 
-            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.AnimateReadOnly = false;
             this.txtConsultar.BackColor = System.Drawing.Color.White;
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsultar.Depth = 0;
             this.txtConsultar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtConsultar.LeadingIcon = null;
-            this.txtConsultar.Location = new System.Drawing.Point(12, 31);
+            this.txtConsultar.Location = new System.Drawing.Point(12, 12);
             this.txtConsultar.MaxLength = 50;
             this.txtConsultar.MouseState = MaterialSkin.MouseState.OUT;
             this.txtConsultar.Multiline = false;
@@ -80,7 +81,7 @@
             "DNI - Empleado",
             "Fecha - Prestamo",
             "Fecha - Devolución"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(474, 31);
+            this.cbxBusqueda.Location = new System.Drawing.Point(474, 13);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -104,9 +105,9 @@
             this.dgvDevoluciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDevoluciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDevoluciones.EnableHeadersVisualStyles = false;
-            this.dgvDevoluciones.Location = new System.Drawing.Point(12, 105);
+            this.dgvDevoluciones.Location = new System.Drawing.Point(12, 69);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
-            this.dgvDevoluciones.Size = new System.Drawing.Size(726, 571);
+            this.dgvDevoluciones.Size = new System.Drawing.Size(726, 607);
             this.dgvDevoluciones.TabIndex = 105;
             // 
             // picBuscar
@@ -114,7 +115,7 @@
             this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
-            this.picBuscar.Location = new System.Drawing.Point(685, 30);
+            this.picBuscar.Location = new System.Drawing.Point(682, 13);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(53, 50);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

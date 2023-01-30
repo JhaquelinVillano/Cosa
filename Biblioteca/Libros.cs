@@ -29,23 +29,9 @@ namespace Proyecto.Biblioteca
             this.Close();
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
         }
 
         private void picAtras_Click(object sender, EventArgs e)
@@ -56,66 +42,12 @@ namespace Proyecto.Biblioteca
             this.Hide();
         }
 
-        private void pnlBiblioteca_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void frmBiblioteca_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void picBiblioteca_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblBiblioteca_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreBiblioteca_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpBiblioteca_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {
             libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-                
-        }
-        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             libros.registrarLibros(txtID,txtNombre,txtAutor,cbxCategoria,cbxIdioma,txtEdicion,txtExistencias);

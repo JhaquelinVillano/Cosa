@@ -156,17 +156,14 @@ namespace Proyecto.Menu
 
         private void btnLibros_Click_1(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmLibros Libros = new frmLibros();
             Libros.Usuario = Usuario;
             hideSubMenu();
             openChildForm(new frmLibros());
-            
         }
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
             frmPrestamos PD = new frmPrestamos();
             PD.Usuario = Usuario;
             hideSubMenu();
@@ -177,7 +174,6 @@ namespace Proyecto.Menu
         {
             frmDevoluciones devoluciones = new frmDevoluciones();
             devoluciones.Usuario = Usuario;
-            ActivateButton(sender, RGBColors.color1);
             hideSubMenu();
             openChildForm(new frmDevoluciones());
         }
@@ -303,18 +299,6 @@ namespace Proyecto.Menu
                 
                 
         }
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
 
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
-        }
     }
 }
