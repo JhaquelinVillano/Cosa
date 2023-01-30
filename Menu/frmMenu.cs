@@ -253,7 +253,9 @@ namespace Proyecto.Menu
             frmRestauracion Restauracion = new frmRestauracion();
             Restauracion.Usuario = Usuario;
             hideSubMenu();
-            openChildForm(new frmRestauracion());
+            this.Close();
+            Restauracion.Show();
+            //openChildForm(new frmRestauracion());
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
