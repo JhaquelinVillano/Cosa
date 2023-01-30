@@ -95,7 +95,7 @@
             this.dgvP.EnableHeadersVisualStyles = false;
             this.dgvP.Location = new System.Drawing.Point(246, 74);
             this.dgvP.Name = "dgvP";
-            this.dgvP.Size = new System.Drawing.Size(492, 539);
+            this.dgvP.Size = new System.Drawing.Size(492, 601);
             this.dgvP.TabIndex = 75;
             // 
             // txtNombreSolicitante
@@ -131,6 +131,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnEliminar.AutoSize = false;
             this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -140,7 +141,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(23, 356);
+            this.btnEliminar.Location = new System.Drawing.Point(23, 591);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -155,6 +156,7 @@
             // 
             // btnRegistrar
             // 
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRegistrar.AutoSize = false;
             this.btnRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -162,7 +164,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(23, 404);
+            this.btnRegistrar.Location = new System.Drawing.Point(23, 639);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -177,6 +179,7 @@
             // 
             // btnDevolver
             // 
+            this.btnDevolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDevolver.AutoSize = false;
             this.btnDevolver.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDevolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -186,7 +189,7 @@
             this.btnDevolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDevolver.HighEmphasis = true;
             this.btnDevolver.Icon = null;
-            this.btnDevolver.Location = new System.Drawing.Point(23, 308);
+            this.btnDevolver.Location = new System.Drawing.Point(23, 543);
             this.btnDevolver.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDevolver.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDevolver.Name = "btnDevolver";

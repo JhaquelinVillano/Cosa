@@ -55,6 +55,7 @@
             // 
             // txtAutor
             // 
+            this.txtAutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAutor.AnimateReadOnly = false;
             this.txtAutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAutor.Depth = 0;
@@ -72,6 +73,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCantidad.BackColor = System.Drawing.Color.White;
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Enabled = false;
@@ -85,7 +87,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.AutoSize = false;
             this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -110,7 +112,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.AutoSize = false;
             this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -133,7 +135,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.AutoSize = false;
             this.btnRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -156,6 +158,7 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.AnimateReadOnly = false;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Depth = 0;
@@ -174,6 +177,7 @@
             // 
             // lblAutor
             // 
+            this.lblAutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAutor.BackColor = System.Drawing.Color.White;
             this.lblAutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblAutor.Enabled = false;
@@ -187,6 +191,7 @@
             // 
             // lblID
             // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.BackColor = System.Drawing.Color.White;
             this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblID.Enabled = false;
@@ -200,7 +205,7 @@
             // 
             // txtEdicion
             // 
-            this.txtEdicion.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtEdicion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEdicion.AnimateReadOnly = false;
             this.txtEdicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEdicion.Depth = 0;
@@ -218,6 +223,7 @@
             // 
             // lblIdioma
             // 
+            this.lblIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdioma.BackColor = System.Drawing.Color.White;
             this.lblIdioma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblIdioma.Enabled = false;
@@ -231,6 +237,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.AnimateReadOnly = false;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Depth = 0;
@@ -248,6 +255,7 @@
             // 
             // lblEdicion
             // 
+            this.lblEdicion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEdicion.BackColor = System.Drawing.Color.White;
             this.lblEdicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEdicion.Enabled = false;
@@ -261,6 +269,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
@@ -274,6 +283,7 @@
             // 
             // cbxCategoria
             // 
+            this.cbxCategoria.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxCategoria.AutoResize = false;
             this.cbxCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxCategoria.Depth = 0;
@@ -310,6 +320,7 @@
             // 
             // cbxIdioma
             // 
+            this.cbxIdioma.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxIdioma.AutoResize = false;
             this.cbxIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxIdioma.Depth = 0;
@@ -338,7 +349,8 @@
             // 
             // dgvLibros
             // 
-            this.dgvLibros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvLibros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvLibros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(153)))), ((int)(((byte)(120)))));
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -352,7 +364,8 @@
             // 
             // txtConsultar
             // 
-            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.AnimateReadOnly = false;
             this.txtConsultar.BackColor = System.Drawing.Color.White;
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -372,6 +385,7 @@
             // 
             // txtExistencias
             // 
+            this.txtExistencias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtExistencias.AnimateReadOnly = false;
             this.txtExistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtExistencias.Depth = 0;
@@ -390,6 +404,7 @@
             // 
             // lblExistencias
             // 
+            this.lblExistencias.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExistencias.BackColor = System.Drawing.Color.White;
             this.lblExistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblExistencias.Enabled = false;

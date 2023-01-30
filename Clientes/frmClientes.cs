@@ -28,23 +28,9 @@ namespace Proyecto.Clientes
             this.Close();
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
         private void picMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
         }
 
         private void picAtras_Click(object sender, EventArgs e)
@@ -53,21 +39,6 @@ namespace Proyecto.Clientes
             menu.Usuario = Usuario;
             menu.Show();
             this.Hide();
-        }
-
-        private void txtDniCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmClientes_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tmrTiempo_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -86,10 +57,6 @@ namespace Proyecto.Clientes
         {
             clientes.eliminarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);
             clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
-        }
-
-        private void picBusquedaPR_Click(object sender, EventArgs e)
-        {
         }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)
@@ -118,11 +85,6 @@ namespace Proyecto.Clientes
                 txtTelefono.Text = "";
                 MessageBox.Show("Selecciona según la fila deseada.", "Ventana informativa");
             }
-        }
-
-        private void cbxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void picBuscar_Click(object sender, EventArgs e)

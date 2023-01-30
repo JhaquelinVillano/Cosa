@@ -55,6 +55,7 @@
             // 
             // txtDniEmpleado
             // 
+            this.txtDniEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDniEmpleado.AnimateReadOnly = false;
             this.txtDniEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDniEmpleado.Depth = 0;
@@ -72,6 +73,7 @@
             // 
             // lblDniEmpleado
             // 
+            this.lblDniEmpleado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDniEmpleado.BackColor = System.Drawing.Color.White;
             this.lblDniEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDniEmpleado.Enabled = false;
@@ -85,6 +87,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.AnimateReadOnly = false;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombre.Depth = 0;
@@ -102,7 +105,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEliminar.AutoSize = false;
             this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -127,7 +130,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnModificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModificar.AutoSize = false;
             this.btnModificar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnModificar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -150,7 +153,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.AutoSize = false;
             this.btnRegistrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnRegistrar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -173,6 +176,7 @@
             // 
             // lblID
             // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.BackColor = System.Drawing.Color.White;
             this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblID.Enabled = false;
@@ -186,6 +190,7 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.AnimateReadOnly = false;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Depth = 0;
@@ -221,6 +226,7 @@
             // 
             // lblNombre
             // 
+            this.lblNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNombre.BackColor = System.Drawing.Color.White;
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
@@ -234,6 +240,7 @@
             // 
             // txtApellidos
             // 
+            this.txtApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtApellidos.AnimateReadOnly = false;
             this.txtApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtApellidos.Depth = 0;
@@ -251,6 +258,7 @@
             // 
             // lblApellidos
             // 
+            this.lblApellidos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblApellidos.BackColor = System.Drawing.Color.White;
             this.lblApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblApellidos.Enabled = false;
@@ -264,6 +272,7 @@
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDireccion.AnimateReadOnly = false;
             this.txtDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDireccion.Depth = 0;
@@ -281,6 +290,7 @@
             // 
             // lblDireccion
             // 
+            this.lblDireccion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDireccion.BackColor = System.Drawing.Color.White;
             this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDireccion.Enabled = false;
@@ -294,6 +304,7 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefono.AnimateReadOnly = false;
             this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefono.Depth = 0;
@@ -312,6 +323,7 @@
             // 
             // lblTelefono
             // 
+            this.lblTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTelefono.BackColor = System.Drawing.Color.White;
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblTelefono.Enabled = false;
@@ -325,6 +337,7 @@
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCorreo.AnimateReadOnly = false;
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCorreo.Depth = 0;
@@ -342,6 +355,7 @@
             // 
             // lblCorreo
             // 
+            this.lblCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCorreo.BackColor = System.Drawing.Color.White;
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCorreo.Enabled = false;
