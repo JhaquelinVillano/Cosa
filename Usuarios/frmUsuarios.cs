@@ -122,5 +122,6 @@ namespace Proyecto.Usuarios
             txtConsultar.Text = "";
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
+
     }
 }
