@@ -26,39 +26,6 @@ namespace Proyecto.Entradas_y_Salidas
             inventario.actualizarSalida(dgvSalidas);
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
-        }
-
         private void limpiar()
         {
             txtCantidad.Text = "";
@@ -89,20 +56,11 @@ namespace Proyecto.Entradas_y_Salidas
             limpiar();
         }
 
-        private void cbxNombreArticulo_SelectedIndexChanged(object sender, EventArgs e)
-        {   
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             inventario.eliminarSalidas(cbxNombreArticulo.Text);
             inventario.actualizarSalida(dgvSalidas);
             limpiar();
-        }
-
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgvSalidas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -157,15 +115,6 @@ namespace Proyecto.Entradas_y_Salidas
             {
                 error.Clear();
             }
-        }
-
-        private void cbxID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void lblNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void picBuscar_Click(object sender, EventArgs e)

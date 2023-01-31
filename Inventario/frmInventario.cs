@@ -25,31 +25,6 @@ namespace Proyecto.Inventario
             inventario.actualizarInventario(dgvInventario);
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
-        }
-
         private void picAtras_Click(object sender, EventArgs e)
         {
             frmMenu menu = new frmMenu();
@@ -69,20 +44,6 @@ namespace Proyecto.Inventario
         private void picExcel_Click(object sender, EventArgs e)
         {   //Llamando metodo
             export.exportar(dgvInventario);
-        }
-
-
-        private void lblInventario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmInventario_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void txtConsultar_KeyUp(object sender, KeyEventArgs e)
-        {
         }
 
         private void txtConsultar_TextChanged(object sender, EventArgs e)

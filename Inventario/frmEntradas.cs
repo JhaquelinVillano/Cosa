@@ -28,26 +28,6 @@ namespace Proyecto.Inventario
             inventario.actualizarEntrada(dgvEntradas);
         }
 
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {   //Declarando variable para los radio buttons
             string tipo = "";
