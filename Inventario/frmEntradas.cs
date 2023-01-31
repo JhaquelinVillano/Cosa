@@ -41,29 +41,11 @@ namespace Proyecto.Inventario
             WindowState = FormWindowState.Minimized;
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            picMaximizar.Visible = false;
-            picRestaurar.Visible = true;
-        }
 
         private void picCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
             this.Close();
-        }
-
-        private void picRestaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            picRestaurar.Visible = false;
-            picMaximizar.Visible = true;
-        }
-
-        private void pnlInventario_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -138,20 +120,6 @@ namespace Proyecto.Inventario
             rbtnDonacion.Checked = false;
             rbtnCompra.Checked = false;
         }
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConsultar_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void frmEntradas_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void dgvEntradas_CellClick(object sender, DataGridViewCellEventArgs e)
         {   //Rellenar celdas con informacion
@@ -183,16 +151,6 @@ namespace Proyecto.Inventario
             {
                 inventario.actualizarEntrada(dgvEntradas);
             }
-        }
-
-        private void txtCantidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
-        {   
-
         }
 
         private void txtCodigo_Leave(object sender, EventArgs e)
@@ -243,11 +201,6 @@ namespace Proyecto.Inventario
             {
                 error.Clear();
             }
-        }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtSumar_Click(object sender, EventArgs e)
