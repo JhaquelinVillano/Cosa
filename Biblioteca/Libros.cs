@@ -23,26 +23,6 @@ namespace Proyecto.Biblioteca
             libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
-
         private void txtConsultar_TextChanged(object sender, EventArgs e)
         {
             libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
@@ -64,10 +44,6 @@ namespace Proyecto.Biblioteca
         {
             libros.modificarLibros(txtID, txtNombre, txtAutor, cbxCategoria, cbxIdioma, txtEdicion, txtExistencias);
             libros.consultarLibros(dgvLibros, txtConsultar, cbxBusqueda);
-        }
-
-        private void picBusquedaPR_Click(object sender, EventArgs e)
-        {
         }
 
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)

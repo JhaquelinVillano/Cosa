@@ -32,6 +32,5 @@ namespace Proyecto.Biblioteca
             txtConsultar.Text = "";
             devoluciones.consultarDevoluciones(dgvDevoluciones, txtConsultar, cbxBusqueda);
         }
-
     }
 }

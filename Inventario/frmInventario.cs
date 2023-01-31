@@ -25,22 +25,6 @@ namespace Proyecto.Inventario
             inventario.actualizarInventario(dgvInventario);
         }
 
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
-        private void btnEntradas_Click(object sender, EventArgs e)
-        {
-            frmEntradas entra = new frmEntradas();
-            entra.Show();
-            this.Hide();
-        }
-
-
         private void picExcel_Click(object sender, EventArgs e)
         {   //Llamando metodo
             export.exportar(dgvInventario);

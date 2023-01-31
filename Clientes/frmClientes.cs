@@ -22,25 +22,6 @@ namespace Proyecto.Clientes
             clientes.consultarClientes(dgvClientes, txtConsultar, cbxBusqueda);
         }
 
-        private void picCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-            this.Close();
-        }
-
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             clientes.registrarClientes(txtID, txtDniCliente, txtNombre, txtApellidos, txtDireccion, txtTelefono);

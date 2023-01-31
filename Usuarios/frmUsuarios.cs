@@ -22,14 +22,6 @@ namespace Proyecto.Usuarios
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
 
-        private void picAtras_Click(object sender, EventArgs e)
-        {
-            frmMenu menu = new frmMenu();
-            menu.Usuario = Usuario;
-            menu.Show();
-            this.Hide();
-        }
-
         private void cbxEmpleado_CheckedChanged(object sender, EventArgs e)
         {
             if (cbxEncargado.Checked == true)
@@ -122,6 +114,5 @@ namespace Proyecto.Usuarios
             txtConsultar.Text = "";
             usuarios.consultarUsuarios(dgvUsuarios, txtConsultar, cbxBusqueda);
         }
-
     }
 }
