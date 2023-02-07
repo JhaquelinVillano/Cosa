@@ -162,6 +162,7 @@
             this.txtID.AnimateReadOnly = false;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Depth = 0;
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtID.LeadingIcon = null;
             this.txtID.Location = new System.Drawing.Point(36, 46);
