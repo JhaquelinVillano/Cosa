@@ -271,7 +271,7 @@
             // 
             // dgvClientes
             // 
-            this.dgvClientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvClientes.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -332,7 +332,7 @@
             // 
             // cbxBusqueda
             // 
-            this.cbxBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxBusqueda.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.cbxBusqueda.AutoResize = false;
             this.cbxBusqueda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbxBusqueda.Depth = 0;
@@ -360,7 +360,7 @@
             // 
             // txtConsultar
             // 
-            this.txtConsultar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.AnimateReadOnly = false;
             this.txtConsultar.BackColor = System.Drawing.Color.White;
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -380,7 +380,7 @@
             // 
             // picBuscar
             // 
-            this.picBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picBuscar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_personal;
             this.picBuscar.Location = new System.Drawing.Point(687, 303);
