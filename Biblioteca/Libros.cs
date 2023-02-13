@@ -101,5 +101,10 @@ namespace Proyecto.Biblioteca
                 error.Clear();
             }
         }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

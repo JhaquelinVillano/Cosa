@@ -18,6 +18,7 @@ using FontAwesome.Sharp;
 using System.Windows.Media;
 using Proyecto.Empleados;
 using Proyecto.Clientes;
+using MySql.Data.MySqlClient;
 
 namespace Proyecto.Menu
 {
@@ -25,6 +26,9 @@ namespace Proyecto.Menu
     {
         private IconButton currentBtn;
         public string Usuario;
+        public string biblioteca;
+        public string inventario;
+        public string id_tipo;
         private Form currentChildForm;
 
         public frmMenu()
@@ -302,5 +306,34 @@ namespace Proyecto.Menu
                 
         }
 
+        private void pnlControl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            if (id_tipo == "Encargado")
+            {
+                btnPersonal.Enabled = false;
+                btnPersonal.Visible = false;
+                btnRestauracion.Enabled = false;
+                btnRestauracion.Visible = false;
+            }
+            if (biblioteca == "NO")
+            {
+                btnBiblioteca.Enabled = false;
+                btnBiblioteca.Visible = false;
+                btnClientes.Enabled = false;
+                btnClientes.Visible = false;
+            }
+            if (inventario == "NO")
+            {
+                btnInventario.Enabled = false;
+                btnInventario.Visible = false;
+                btnDonadores.Enabled = false;
+                btnDonadores.Visible = false;
+            }
+        }
     }
 }

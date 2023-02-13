@@ -163,7 +163,6 @@
             this.txtID.AnimateReadOnly = false;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.Depth = 0;
-            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtID.LeadingIcon = null;
             this.txtID.Location = new System.Drawing.Point(36, 46);
@@ -254,6 +253,7 @@
             this.txtNombre.TabIndex = 63;
             this.txtNombre.Text = "";
             this.txtNombre.TrailingIcon = null;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblEdicion
             // 

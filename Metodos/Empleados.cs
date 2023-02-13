@@ -46,7 +46,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Empleados
                         MySqlCommand command2 = new MySqlCommand("select * from empleados where idEmpleado like '%" + txtConsultar.Text + "%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -68,7 +68,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Empleados
                         MySqlCommand command2 = new MySqlCommand("select * from empleados where dni_empleado like '%" + txtConsultar.Text + "%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -90,7 +90,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB3 = Conexion.conexion();
                         DataTable dataTable3 = new DataTable();
                         MySqlDataReader resultado3;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Empleados
                         MySqlCommand command3 = new MySqlCommand("select * from empleados where nombre like '%" + txtConsultar.Text + "%';", consultaDB3);
                         command3.CommandType = CommandType.Text;
                         consultaDB3.Open();
@@ -112,7 +112,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB3 = Conexion.conexion();
                         DataTable dataTable3 = new DataTable();
                         MySqlDataReader resultado3;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Empleados
                         MySqlCommand command3 = new MySqlCommand("select * from empleados where telefono like '%" + txtConsultar.Text + "%';", consultaDB3);
                         command3.CommandType = CommandType.Text;
                         consultaDB3.Open();
@@ -153,7 +153,7 @@ namespace Proyecto.Metodos
                     MySqlConnection conexionDB = Conexion.conexion();
                     DataTable dataTableAdmin = new DataTable();
                     MySqlDataReader resultadoAdmin;
-                    //ingresando datos de nuevo usuario Admin
+                    //ingresando datos de nuevo Empleado
                     MySqlCommand commandAdmin = new MySqlCommand("insert into empleados (idEmpleado,dni_empleado,nombre,apellido,direccion,telefono,correo) values (default,'"+txtDNI.Text+"','"+txtNombre.Text+"','"+txtApelido.Text+"','"+txtDireccion.Text+"','"+txtTelefono.Text+"','"+txtCorreo.Text+"');", conexionDB);
                     commandAdmin.CommandType = CommandType.Text;
                     conexionDB.Open();
@@ -190,7 +190,7 @@ namespace Proyecto.Metodos
                         MySqlConnection conexionDB = Conexion.conexion();
                         DataTable dataTableAdmin = new DataTable();
                         MySqlDataReader resultadoAdmin;
-                        //ingresando datos de nuevo usuario Admin
+                        //modificando datos de empleado
                         MySqlCommand commandAdmin = new MySqlCommand("UPDATE empleados set dni_empleado='" + txtDNI.Text + "',nombre='" + txtNombre.Text + "',apellido='" + txtApelido.Text + "',direccion='" + txtDireccion.Text + "',telefono='" + txtTelefono.Text + "',correo='" + txtCorreo.Text + "' WHERE idEmpleado='" + txtID.Text + "';", conexionDB);
                         commandAdmin.CommandType = CommandType.Text;
                         conexionDB.Open();
@@ -230,7 +230,7 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres eliminar este empleado?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    if (txtID.Text == "" || txtDNI.Text != "" || txtNombre.Text != "" || txtApelido.Text != "" || txtDireccion.Text != "" || txtTelefono.Text != "" || txtCorreo.Text != "")
+                    if (txtID.Text == "")
                     {
                         txtApelido.Text = "";
                         txtCorreo.Text = "";
@@ -238,7 +238,7 @@ namespace Proyecto.Metodos
                         txtDNI.Text = "";
                         txtNombre.Text = "";
                         txtTelefono.Text = "";
-                        MessageBox.Show("Introduzca solo el ID.");
+                        MessageBox.Show("Introduzca el ID.");
                         return;
                     }
                     if (txtID.Text != "" || txtDNI.Text == "" || txtNombre.Text == "" || txtApelido.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "" || txtCorreo.Text == "")
@@ -246,7 +246,7 @@ namespace Proyecto.Metodos
                         MySqlConnection conexionDB = Conexion.conexion();
                         DataTable dataTableAdmin = new DataTable();
                         MySqlDataReader resultadoAdmin;
-                        //ingresando datos de nuevo usuario Admin
+                        //Eliminando empleado
                         MySqlCommand commandAdmin = new MySqlCommand("DELETE FROM empleados WHERE idEmpleado='"+txtID.Text+"';", conexionDB);
                         commandAdmin.CommandType = CommandType.Text;
                         conexionDB.Open();

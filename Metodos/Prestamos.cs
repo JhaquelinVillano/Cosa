@@ -269,11 +269,11 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres eliminar este prestamo?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    if (txtPrestamoID.Text == "" || txtLibroID.Text != "" || txtNombreSolicitante.Text != "")
+                    if (txtPrestamoID.Text == "")
                     {
                         txtLibroID.Text = "";
                         txtNombreSolicitante.Text = "";
-                        MessageBox.Show("Introduzca solo el ID del prestamo.");
+                        MessageBox.Show("Introduzca el ID del prestamo.");
                         return;
                     }
                     if (txtPrestamoID.Text != "" || txtLibroID.Text == "" || txtNombreSolicitante.Text == "")
@@ -332,11 +332,11 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Deseas continuar con la devolución del libro?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    if (txtPrestamoID.Text == "" || txtLibroID.Text != "" || txtNombreSolicitante.Text != "")
+                    if (txtPrestamoID.Text == "")
                     {
                         txtLibroID.Text = "";
                         txtNombreSolicitante.Text = "";
-                        MessageBox.Show("Introduzca solo el ID del prestamo.");
+                        MessageBox.Show("Introduzca el ID del prestamo.");
                         return;
                     }
                     if (txtPrestamoID.Text != "" || txtLibroID.Text == "" || txtNombreSolicitante.Text == "")

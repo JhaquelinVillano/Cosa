@@ -45,7 +45,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla clientes
                         MySqlCommand command2 = new MySqlCommand("select * from clientes where idCliente like '%"+txtConsultar.Text+"%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -66,7 +66,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla clientes
                         MySqlCommand command2 = new MySqlCommand("select * from clientes where dni_cliente like '%" + txtConsultar.Text + "%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -87,7 +87,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB3 = Conexion.conexion();
                         DataTable dataTable3 = new DataTable();
                         MySqlDataReader resultado3;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla clientes
                         MySqlCommand command3 = new MySqlCommand("select * from clientes where nombre like '%" + txtConsultar.Text + "%';", consultaDB3);
                         command3.CommandType = CommandType.Text;
                         consultaDB3.Open();
@@ -108,7 +108,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB3 = Conexion.conexion();
                         DataTable dataTable3 = new DataTable();
                         MySqlDataReader resultado3;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla clientes
                         MySqlCommand command3 = new MySqlCommand("select * from clientes where telefono like '%" + txtConsultar.Text + "%';", consultaDB3);
                         command3.CommandType = CommandType.Text;
                         consultaDB3.Open();
@@ -222,14 +222,14 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres eliminar este cliente?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    if (txtID.Text == "" || txtDNI.Text != "" || txtNombre.Text != "" || txtApelido.Text != "" || txtDireccion.Text != "" || txtTelefono.Text != "")
+                    if (txtID.Text == "")
                     {
                         txtApelido.Text = "";
                         txtDireccion.Text = "";
                         txtDNI.Text = "";
                         txtNombre.Text = "";
                         txtTelefono.Text = "";
-                        MessageBox.Show("Introduzca solo el ID.");
+                        MessageBox.Show("Introduzca el ID.");
                         return;
                     }
                     if (txtID.Text != "" || txtDNI.Text == "" || txtNombre.Text == "" || txtApelido.Text == "" || txtDireccion.Text == "" || txtTelefono.Text == "")

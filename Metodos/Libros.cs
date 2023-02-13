@@ -202,13 +202,13 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres eliminar este libro?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    if (txtID.Text == "" || txtnombre.Text != "" || txtAutor.Text != "" || txtEdicion.Text != "" || txtExistencias.Text != "")
+                    if (txtID.Text == "")
                 {
                     txtAutor.Text = "";
                     txtEdicion.Text = "";
                     txtExistencias.Text = "";
                     txtnombre.Text = "";
-                    MessageBox.Show("Introduzca el ID del libro unicamente");
+                    MessageBox.Show("Introduzca el ID del libro");
                     return;
                 }
                 if (txtID.Text != "")

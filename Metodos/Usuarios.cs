@@ -45,7 +45,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Usuarios
                         MySqlCommand command2 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where empleados_idEmpleado like '%" + txtConsultar.Text + "%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -66,7 +66,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB2 = Conexion.conexion();
                         DataTable dataTable2 = new DataTable();
                         MySqlDataReader resultado2;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Usuarios
                         MySqlCommand command2 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where id_usuario like '%" + txtConsultar.Text + "%';", consultaDB2);
                         command2.CommandType = CommandType.Text;
                         consultaDB2.Open();
@@ -87,7 +87,7 @@ namespace Proyecto.Metodos
                         MySqlConnection consultaDB3 = Conexion.conexion();
                         DataTable dataTable3 = new DataTable();
                         MySqlDataReader resultado3;
-                        //Consultado datos de la tabla libros
+                        //Consultado datos de la tabla Usuarios
                         MySqlCommand command3 = new MySqlCommand("select empleados_idEmpleado,id_usuario,empleados_dni_empleado,id_tipo,biblioteca,inventario from usuarios where empleados_dni_empleado like '%" + txtConsultar.Text + "%';", consultaDB3);
                         command3.CommandType = CommandType.Text;
                         consultaDB3.Open();
@@ -157,7 +157,7 @@ namespace Proyecto.Metodos
                         {
                             DataTable dataTableAdmin = new DataTable();
                             MySqlDataReader resultadoAdmin;
-                            //ingresando datos de nuevo usuario Admin
+                            //ingresando datos de nuevo Usuario ADMIN
                             MySqlCommand commandAdmin = new MySqlCommand("insert into usuarios (empleados_idEmpleado,id_usuario,empleados_dni_empleado,contraseña,id_tipo,biblioteca,inventario) values ("+EmpleadoID+",'" + txtnombre.Text+"','"+txtDNI.Text+"','"+txtcontraseña.Text+"','Administrador','SI','SI');", conexionDB);
                             commandAdmin.CommandType = CommandType.Text;
                             conexionDB.Open();
@@ -258,125 +258,145 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres modificar este usuario?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    string dniEmpleado = "";
-                //Consultado DNI
-                MySqlConnection conexionDB = Conexion.conexion();
-                DataTable dataTable = new DataTable();
-                MySqlDataReader resultado;
-                MySqlCommand command = new MySqlCommand("select  dni_empleado from empleados where dni_empleado='" + txtDNI.Text + "';", conexionDB);
-                command.CommandType = CommandType.Text;
-                conexionDB.Open();
-                resultado = command.ExecuteReader();
-                dataTable.Load(resultado);
-                dniEmpleado = Convert.ToString(command.ExecuteScalar());
-                conexionDB.Close();
-                //
-                if (txtnombre.Text == "" || txtDNI.Text == "" || txtcontraseña.Text == "")
-                {
-                    MessageBox.Show("Introduzca todos los datos");
-                    return;
-                }
-                if (txtnombre.Text != "" || txtDNI.Text != "" || txtcontraseña.Text != "")
-                {
-                    if (dniEmpleado != "")
+                    int x = 0;
+                    MySqlConnection consultaDB2 = Conexion.conexion();
+                    DataTable dataTable2 = new DataTable();
+                    MySqlDataReader resultado2;
+                    //instruccion para contar los administradores
+                    MySqlCommand command2 = new MySqlCommand("SELECT count(*) FROM usuarios where id_tipo = 'Administrador';", consultaDB2);
+                    command2.CommandType = CommandType.Text;
+                    consultaDB2.Open();
+                    resultado2 = command2.ExecuteReader();
+                    dataTable2.Load(resultado2);
+                    x = (Convert.ToInt32(command2.ExecuteScalar()));
+                    consultaDB2.Close();
+                    if (x == 1)
                     {
-                        if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false)
+                        MessageBox.Show("No puedes modificar al unico administrador");
+                        return;
+                    }
+                    if (x > 1)
+                    {
+                        string dniEmpleado = "";
+                        //Consultado DNI
+                        MySqlConnection conexionDB = Conexion.conexion();
+                        DataTable dataTable = new DataTable();
+                        MySqlDataReader resultado;
+                        MySqlCommand command = new MySqlCommand("select  dni_empleado from empleados where dni_empleado='" + txtDNI.Text + "';", conexionDB);
+                        command.CommandType = CommandType.Text;
+                        conexionDB.Open();
+                        resultado = command.ExecuteReader();
+                        dataTable.Load(resultado);
+                        dniEmpleado = Convert.ToString(command.ExecuteScalar());
+                        conexionDB.Close();
+                        //
+                        if (txtnombre.Text == "" || txtDNI.Text == "" || txtcontraseña.Text == "")
                         {
-                            MessageBox.Show("No elegiste los permisos");
+                            MessageBox.Show("Introduzca todos los datos");
+                            return;
                         }
-                        if (cbxAdmin.Checked == true)
+                        if (txtnombre.Text != "" || txtDNI.Text != "" || txtcontraseña.Text != "")
                         {
-                            DataTable dataTableAdmin = new DataTable();
-                            MySqlDataReader resultadoAdmin;
-                            //modificando datos de usuario Admin
-                            MySqlCommand commandAdmin = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='"+txtDNI.Text+"',contraseña='"+txtcontraseña.Text+"',id_tipo='Administrador',biblioteca='SI',inventario='SI' where id_usuario='"+txtnombre.Text+"';", conexionDB);
-                            commandAdmin.CommandType = CommandType.Text;
-                            conexionDB.Open();
-                            resultadoAdmin = commandAdmin.ExecuteReader();
-                            dataTableAdmin.Load(resultadoAdmin);
-                            conexionDB.Close();
-                            txtnombre.Text = "";
-                            txtcontraseña.Text = "";
-                            txtDNI.Text = "";
-                            cbxAdmin.Checked = false;
-                            cbxBiblioteca.Checked = false;
-                            cbxEmpleado.Checked = false;
-                            cbxInventario.Checked = false;
-                            MessageBox.Show("El usuario se ha modificado correctamente");
-                        }
-                        if (cbxEmpleado.Checked == true && cbxInventario.Checked == false && cbxBiblioteca.Checked == false)
-                        {
-                            MessageBox.Show("No elegiste los permisos");
-                        }
-                        if (cbxEmpleado.Checked == true)
-                        {
-                            if (cbxBiblioteca.Checked == true && cbxInventario.Checked == true)
+                            if (dniEmpleado != "")
                             {
-                                DataTable dataTableEnByI = new DataTable();
-                                MySqlDataReader resultadoEnByI;
-                                //modificando datos de usuario Encargado con acceso a biblioteca y inventario
-                                MySqlCommand commandEnByI = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='SI',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
-                                commandEnByI.CommandType = CommandType.Text;
-                                conexionDB.Open();
-                                resultadoEnByI = commandEnByI.ExecuteReader();
-                                dataTableEnByI.Load(resultadoEnByI);
-                                conexionDB.Close();
-                                txtnombre.Text = "";
-                                txtcontraseña.Text = "";
-                                txtDNI.Text = "";
-                                cbxAdmin.Checked = false;
-                                cbxBiblioteca.Checked = false;
-                                cbxEmpleado.Checked = false;
-                                cbxInventario.Checked = false;
-                                MessageBox.Show("El usuario se ha modificado correctamente");
+                                if (cbxAdmin.Checked == false && cbxEmpleado.Checked == false)
+                                {
+                                    MessageBox.Show("No elegiste los permisos");
+                                }
+                                if (cbxAdmin.Checked == true)
+                                {
+                                    DataTable dataTableAdmin = new DataTable();
+                                    MySqlDataReader resultadoAdmin;
+                                    //modificando datos de usuario Admin
+                                    MySqlCommand commandAdmin = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Administrador',biblioteca='SI',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
+                                    commandAdmin.CommandType = CommandType.Text;
+                                    conexionDB.Open();
+                                    resultadoAdmin = commandAdmin.ExecuteReader();
+                                    dataTableAdmin.Load(resultadoAdmin);
+                                    conexionDB.Close();
+                                    txtnombre.Text = "";
+                                    txtcontraseña.Text = "";
+                                    txtDNI.Text = "";
+                                    cbxAdmin.Checked = false;
+                                    cbxBiblioteca.Checked = false;
+                                    cbxEmpleado.Checked = false;
+                                    cbxInventario.Checked = false;
+                                    MessageBox.Show("El usuario se ha modificado correctamente");
+                                }
+                                if (cbxEmpleado.Checked == true && cbxInventario.Checked == false && cbxBiblioteca.Checked == false)
+                                {
+                                    MessageBox.Show("No elegiste los permisos");
+                                }
+                                if (cbxEmpleado.Checked == true)
+                                {
+                                    if (cbxBiblioteca.Checked == true && cbxInventario.Checked == true)
+                                    {
+                                        DataTable dataTableEnByI = new DataTable();
+                                        MySqlDataReader resultadoEnByI;
+                                        //modificando datos de usuario Encargado con acceso a biblioteca y inventario
+                                        MySqlCommand commandEnByI = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='SI',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
+                                        commandEnByI.CommandType = CommandType.Text;
+                                        conexionDB.Open();
+                                        resultadoEnByI = commandEnByI.ExecuteReader();
+                                        dataTableEnByI.Load(resultadoEnByI);
+                                        conexionDB.Close();
+                                        txtnombre.Text = "";
+                                        txtcontraseña.Text = "";
+                                        txtDNI.Text = "";
+                                        cbxAdmin.Checked = false;
+                                        cbxBiblioteca.Checked = false;
+                                        cbxEmpleado.Checked = false;
+                                        cbxInventario.Checked = false;
+                                        MessageBox.Show("El usuario se ha modificado correctamente");
+                                    }
+                                    if (cbxBiblioteca.Checked == true && cbxInventario.Checked == false)
+                                    {
+                                        DataTable dataTableEnB = new DataTable();
+                                        MySqlDataReader resultadoEnB;
+                                        //modificando datos de usuario Encargado con acceso a biblioteca
+                                        MySqlCommand commandEnB = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='SI',inventario='NO' where id_usuario='" + txtnombre.Text + "';", conexionDB);
+                                        commandEnB.CommandType = CommandType.Text;
+                                        conexionDB.Open();
+                                        resultadoEnB = commandEnB.ExecuteReader();
+                                        dataTableEnB.Load(resultadoEnB);
+                                        conexionDB.Close();
+                                        txtnombre.Text = "";
+                                        txtcontraseña.Text = "";
+                                        txtDNI.Text = "";
+                                        cbxAdmin.Checked = false;
+                                        cbxBiblioteca.Checked = false;
+                                        cbxEmpleado.Checked = false;
+                                        cbxInventario.Checked = false;
+                                        MessageBox.Show("El usuario se ha modificado correctamente");
+                                    }
+                                    if (cbxInventario.Checked == true && cbxBiblioteca.Checked == false)
+                                    {
+                                        DataTable dataTableEnI = new DataTable();
+                                        MySqlDataReader resultadoEnI;
+                                        //modificando datos de Encargado con acceso a inventario
+                                        MySqlCommand commandEnI = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='NO',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
+                                        commandEnI.CommandType = CommandType.Text;
+                                        conexionDB.Open();
+                                        resultadoEnI = commandEnI.ExecuteReader();
+                                        dataTableEnI.Load(resultadoEnI);
+                                        conexionDB.Close();
+                                        txtnombre.Text = "";
+                                        txtcontraseña.Text = "";
+                                        txtDNI.Text = "";
+                                        cbxAdmin.Checked = false;
+                                        cbxBiblioteca.Checked = false;
+                                        cbxEmpleado.Checked = false;
+                                        cbxInventario.Checked = false;
+                                        MessageBox.Show("El usuario se ha modificado correctamente");
+                                    }
+                                }
                             }
-                            if (cbxBiblioteca.Checked == true && cbxInventario.Checked == false)
+                            if (dniEmpleado == "")
                             {
-                                DataTable dataTableEnB = new DataTable();
-                                MySqlDataReader resultadoEnB;
-                                //modificando datos de usuario Encargado con acceso a biblioteca
-                                MySqlCommand commandEnB = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='SI',inventario='NO' where id_usuario='" + txtnombre.Text + "';", conexionDB);
-                                commandEnB.CommandType = CommandType.Text;
-                                conexionDB.Open();
-                                resultadoEnB = commandEnB.ExecuteReader();
-                                dataTableEnB.Load(resultadoEnB);
-                                conexionDB.Close();
-                                txtnombre.Text = "";
-                                txtcontraseña.Text = "";
-                                txtDNI.Text = "";
-                                cbxAdmin.Checked = false;
-                                cbxBiblioteca.Checked = false;
-                                cbxEmpleado.Checked = false;
-                                cbxInventario.Checked = false;
-                                MessageBox.Show("El usuario se ha modificado correctamente");
-                            }
-                            if (cbxInventario.Checked == true && cbxBiblioteca.Checked == false)
-                            {
-                                DataTable dataTableEnI = new DataTable();
-                                MySqlDataReader resultadoEnI;
-                                //modificando datos de Encargado con acceso a inventario
-                                MySqlCommand commandEnI = new MySqlCommand("UPDATE usuarios set empleados_dni_empleado='" + txtDNI.Text + "',contraseña='" + txtcontraseña.Text + "',id_tipo='Encargado',biblioteca='NO',inventario='SI' where id_usuario='" + txtnombre.Text + "';", conexionDB);
-                                commandEnI.CommandType = CommandType.Text;
-                                conexionDB.Open();
-                                resultadoEnI = commandEnI.ExecuteReader();
-                                dataTableEnI.Load(resultadoEnI);
-                                conexionDB.Close();
-                                txtnombre.Text = "";
-                                txtcontraseña.Text = "";
-                                txtDNI.Text = "";
-                                cbxAdmin.Checked = false;
-                                cbxBiblioteca.Checked = false;
-                                cbxEmpleado.Checked = false;
-                                cbxInventario.Checked = false;
-                                MessageBox.Show("El usuario se ha modificado correctamente");
+                                MessageBox.Show("No se encontro el empleado");
                             }
                         }
                     }
-                    if (dniEmpleado == "")
-                    {
-                        MessageBox.Show("No se encontro el empleado");
-                    }
-                }
                 }
                 else
                 {
@@ -401,36 +421,60 @@ namespace Proyecto.Metodos
             {
                 if (MessageBox.Show("Quieres eliminar este usuario?", "Ventana de confirmación", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    
-                    MySqlConnection consultaDB = Conexion.conexion();
-                    DataTable dataTable = new DataTable();
-                    MySqlDataReader resultado;
-                    //Consultado datos sin la contraseña
-                    MySqlCommand command = new MySqlCommand("DELETE FROM usuarios WHERE id_usuario='"+txtnombre.Text+"';", consultaDB);
-                    command.CommandType = CommandType.Text;
-                    consultaDB.Open();
-                    resultado = command.ExecuteReader();
-                    dataTable.Load(resultado);
-                    consultaDB.Close();
-                    txtnombre.Text = "";
-                    txtcontraseña.Text = "";
-                    txtDNI.Text = "";
-                    cbxAdmin.Checked = false;
-                    cbxBiblioteca.Checked = false;
-                    cbxEmpleado.Checked = false;
-                    cbxInventario.Checked = false;
-                    MessageBox.Show("Se ha eliminado el usuario");
-                }
-                else
-                {
-                    txtnombre.Text = "";
-                    txtcontraseña.Text = "";
-                    txtDNI.Text = "";
-                    cbxAdmin.Checked = false;
-                    cbxBiblioteca.Checked = false;
-                    cbxEmpleado.Checked = false;
-                    cbxInventario.Checked = false;
-                    MessageBox.Show("No se elimino el usuario");
+                    if (txtnombre.Text == "")
+                    {
+                        txtnombre.Text = "";
+                        txtcontraseña.Text = "";
+                        txtDNI.Text = "";
+                        cbxAdmin.Checked = false;
+                        cbxBiblioteca.Checked = false;
+                        cbxEmpleado.Checked = false;
+                        cbxInventario.Checked = false;
+                        MessageBox.Show("Ingrese el nombre del usuario");
+                        return;
+                    }
+                    if (txtnombre.Text != "")
+                    {
+                        int x = 0;
+                        MySqlConnection consultaDB2 = Conexion.conexion();
+                        DataTable dataTable2 = new DataTable();
+                        MySqlDataReader resultado2;
+                        //instruccion para contar los administradores
+                        MySqlCommand command2 = new MySqlCommand("SELECT count(*) FROM usuarios where id_tipo = 'Administrador';", consultaDB2);
+                        command2.CommandType = CommandType.Text;
+                        consultaDB2.Open();
+                        resultado2 = command2.ExecuteReader();
+                        dataTable2.Load(resultado2);
+                        x = (Convert.ToInt32(command2.ExecuteScalar()));
+                        consultaDB2.Close();
+                        if (x == 1)
+                        {
+                            MessageBox.Show("No puedes eliminar al unico administrador");
+                            return;
+                        }
+                        if (x > 1)
+                        {
+                            MySqlConnection consultaDB = Conexion.conexion();
+                            DataTable dataTable = new DataTable();
+                            MySqlDataReader resultado;
+                            //eliminando usuario
+                            MySqlCommand command = new MySqlCommand("DELETE FROM usuarios WHERE id_usuario='" + txtnombre.Text + "';", consultaDB);
+                            command.CommandType = CommandType.Text;
+                            consultaDB.Open();
+                            resultado = command.ExecuteReader();
+                            dataTable.Load(resultado);
+                            consultaDB.Close();
+                            txtnombre.Text = "";
+                            txtcontraseña.Text = "";
+                            txtDNI.Text = "";
+                            cbxAdmin.Checked = false;
+                            cbxBiblioteca.Checked = false;
+                            cbxEmpleado.Checked = false;
+                            cbxInventario.Checked = false;
+                            MessageBox.Show("Se ha eliminado el usuario");
+                        }
+                    }
+
                 }
             }
             catch (Exception)
