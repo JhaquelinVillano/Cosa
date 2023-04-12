@@ -29,16 +29,25 @@
         private void InitializeComponent()
         {
             this.pnlTitulo = new System.Windows.Forms.Panel();
+            this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.lblTituloFormHijo = new System.Windows.Forms.Label();
             this.picHijoActual = new FontAwesome.Sharp.IconPictureBox();
-            this.picMinimizar = new System.Windows.Forms.PictureBox();
+            this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picBarra = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenuVertical = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.btnRestauracion = new FontAwesome.Sharp.IconButton();
+            this.pnlSubCentroAtencion = new System.Windows.Forms.Panel();
+            this.btnAsistenciaFamiliar = new FontAwesome.Sharp.IconButton();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
+            this.btnIncidencias = new FontAwesome.Sharp.IconButton();
+            this.btnCentroAtencion = new FontAwesome.Sharp.IconButton();
+            this.pnlSubMaestros = new System.Windows.Forms.Panel();
+            this.btnAlumnos = new FontAwesome.Sharp.IconButton();
+            this.btnMaestros = new FontAwesome.Sharp.IconButton();
+            this.btnCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.pnlSubInventario = new System.Windows.Forms.Panel();
             this.btnCatalogo = new FontAwesome.Sharp.IconButton();
             this.btnSalidas = new FontAwesome.Sharp.IconButton();
@@ -58,13 +67,16 @@
             this.pnlControl = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).BeginInit();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlMenuVertical.SuspendLayout();
+            this.pnlSubCentroAtencion.SuspendLayout();
+            this.pnlSubMaestros.SuspendLayout();
             this.pnlSubInventario.SuspendLayout();
             this.pnlSubPersonal.SuspendLayout();
             this.pnlSubBiblioteca.SuspendLayout();
@@ -74,9 +86,10 @@
             // pnlTitulo
             // 
             this.pnlTitulo.BackColor = System.Drawing.Color.SlateBlue;
+            this.pnlTitulo.Controls.Add(this.picMinimizar);
             this.pnlTitulo.Controls.Add(this.lblTituloFormHijo);
             this.pnlTitulo.Controls.Add(this.picHijoActual);
-            this.pnlTitulo.Controls.Add(this.picMinimizar);
+            this.pnlTitulo.Controls.Add(this.picMaximizar);
             this.pnlTitulo.Controls.Add(this.picCerrar);
             this.pnlTitulo.Controls.Add(this.picBarra);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,6 +98,19 @@
             this.pnlTitulo.Size = new System.Drawing.Size(750, 32);
             this.pnlTitulo.TabIndex = 30;
             this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlMenu_MouseDown);
+            // 
+            // picMinimizar
+            // 
+            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
+            this.picMinimizar.Location = new System.Drawing.Point(671, 0);
+            this.picMinimizar.Name = "picMinimizar";
+            this.picMinimizar.Size = new System.Drawing.Size(26, 32);
+            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMinimizar.TabIndex = 5;
+            this.picMinimizar.TabStop = false;
+            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
             // 
             // lblTituloFormHijo
             // 
@@ -101,7 +127,7 @@
             // 
             this.picHijoActual.BackColor = System.Drawing.Color.SlateBlue;
             this.picHijoActual.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.picHijoActual.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.picHijoActual.IconChar = FontAwesome.Sharp.IconChar.House;
             this.picHijoActual.IconColor = System.Drawing.Color.LightSteelBlue;
             this.picHijoActual.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.picHijoActual.IconSize = 24;
@@ -111,27 +137,27 @@
             this.picHijoActual.TabIndex = 3;
             this.picHijoActual.TabStop = false;
             // 
-            // picMinimizar
+            // picMaximizar
             // 
-            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(683, 3);
-            this.picMinimizar.Name = "picMinimizar";
-            this.picMinimizar.Size = new System.Drawing.Size(26, 29);
-            this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMinimizar.TabIndex = 2;
-            this.picMinimizar.TabStop = false;
-            this.picMinimizar.Click += new System.EventHandler(this.picMinimizar_Click);
+            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
+            this.picMaximizar.Location = new System.Drawing.Point(697, 0);
+            this.picMaximizar.Name = "picMaximizar";
+            this.picMaximizar.Size = new System.Drawing.Size(26, 32);
+            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picMaximizar.TabIndex = 2;
+            this.picMaximizar.TabStop = false;
+            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
             // 
             // picCerrar
             // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(713, 3);
+            this.picCerrar.Location = new System.Drawing.Point(723, 0);
             this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(27, 26);
+            this.picCerrar.Size = new System.Drawing.Size(27, 32);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picCerrar.TabIndex = 1;
             this.picCerrar.TabStop = false;
@@ -155,17 +181,16 @@
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(250, 141);
+            this.pnlLogo.Size = new System.Drawing.Size(233, 92);
             this.pnlLogo.TabIndex = 38;
             // 
             // picLogo
             // 
             this.picLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picLogo.Image = global::Proyecto.Properties.Resources.LogoEducarte;
             this.picLogo.Location = new System.Drawing.Point(0, 0);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(250, 141);
+            this.picLogo.Size = new System.Drawing.Size(250, 101);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picLogo.TabIndex = 0;
             this.picLogo.TabStop = false;
@@ -175,8 +200,12 @@
             // 
             this.pnlMenuVertical.AutoScroll = true;
             this.pnlMenuVertical.BackColor = System.Drawing.Color.SlateBlue;
-            this.pnlMenuVertical.Controls.Add(this.btnCerrarSesion);
             this.pnlMenuVertical.Controls.Add(this.btnRestauracion);
+            this.pnlMenuVertical.Controls.Add(this.pnlSubCentroAtencion);
+            this.pnlMenuVertical.Controls.Add(this.btnCentroAtencion);
+            this.pnlMenuVertical.Controls.Add(this.pnlSubMaestros);
+            this.pnlMenuVertical.Controls.Add(this.btnMaestros);
+            this.pnlMenuVertical.Controls.Add(this.btnCerrarSesion);
             this.pnlMenuVertical.Controls.Add(this.pnlSubInventario);
             this.pnlMenuVertical.Controls.Add(this.btnInventario);
             this.pnlMenuVertical.Controls.Add(this.btnDonadores);
@@ -189,32 +218,8 @@
             this.pnlMenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuVertical.Location = new System.Drawing.Point(0, 0);
             this.pnlMenuVertical.Name = "pnlMenuVertical";
-            this.pnlMenuVertical.Size = new System.Drawing.Size(250, 720);
+            this.pnlMenuVertical.Size = new System.Drawing.Size(250, 732);
             this.pnlMenuVertical.TabIndex = 29;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
-            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCerrarSesion.IconSize = 35;
-            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 685);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 76, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(250, 35);
-            this.btnCerrarSesion.TabIndex = 49;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnRestauracion
             // 
@@ -229,15 +234,201 @@
             this.btnRestauracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRestauracion.IconSize = 35;
             this.btnRestauracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRestauracion.Location = new System.Drawing.Point(0, 617);
+            this.btnRestauracion.Location = new System.Drawing.Point(0, 781);
             this.btnRestauracion.Name = "btnRestauracion";
-            this.btnRestauracion.Size = new System.Drawing.Size(250, 35);
-            this.btnRestauracion.TabIndex = 39;
+            this.btnRestauracion.Size = new System.Drawing.Size(233, 35);
+            this.btnRestauracion.TabIndex = 54;
             this.btnRestauracion.Text = "Restauracion";
             this.btnRestauracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestauracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRestauracion.UseVisualStyleBackColor = true;
             this.btnRestauracion.Click += new System.EventHandler(this.btnRestauracion_Click);
+            // 
+            // pnlSubCentroAtencion
+            // 
+            this.pnlSubCentroAtencion.Controls.Add(this.btnAsistenciaFamiliar);
+            this.pnlSubCentroAtencion.Controls.Add(this.btnReporte);
+            this.pnlSubCentroAtencion.Controls.Add(this.btnIncidencias);
+            this.pnlSubCentroAtencion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubCentroAtencion.Location = new System.Drawing.Point(0, 677);
+            this.pnlSubCentroAtencion.Name = "pnlSubCentroAtencion";
+            this.pnlSubCentroAtencion.Size = new System.Drawing.Size(233, 104);
+            this.pnlSubCentroAtencion.TabIndex = 53;
+            // 
+            // btnAsistenciaFamiliar
+            // 
+            this.btnAsistenciaFamiliar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnAsistenciaFamiliar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsistenciaFamiliar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAsistenciaFamiliar.FlatAppearance.BorderSize = 0;
+            this.btnAsistenciaFamiliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsistenciaFamiliar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsistenciaFamiliar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAsistenciaFamiliar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAsistenciaFamiliar.IconColor = System.Drawing.Color.White;
+            this.btnAsistenciaFamiliar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAsistenciaFamiliar.IconSize = 35;
+            this.btnAsistenciaFamiliar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsistenciaFamiliar.Location = new System.Drawing.Point(0, 70);
+            this.btnAsistenciaFamiliar.Name = "btnAsistenciaFamiliar";
+            this.btnAsistenciaFamiliar.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAsistenciaFamiliar.Size = new System.Drawing.Size(233, 35);
+            this.btnAsistenciaFamiliar.TabIndex = 44;
+            this.btnAsistenciaFamiliar.Text = "Asistencia Familiar";
+            this.btnAsistenciaFamiliar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAsistenciaFamiliar.UseVisualStyleBackColor = false;
+            this.btnAsistenciaFamiliar.Click += new System.EventHandler(this.btnAsistenciaFamiliar_Click);
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnReporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReporte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReporte.FlatAppearance.BorderSize = 0;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnReporte.IconColor = System.Drawing.Color.White;
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReporte.IconSize = 35;
+            this.btnReporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.Location = new System.Drawing.Point(0, 35);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnReporte.Size = new System.Drawing.Size(233, 35);
+            this.btnReporte.TabIndex = 43;
+            this.btnReporte.Text = "Reporte Semanal";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnIncidencias
+            // 
+            this.btnIncidencias.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnIncidencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncidencias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIncidencias.FlatAppearance.BorderSize = 0;
+            this.btnIncidencias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncidencias.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncidencias.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnIncidencias.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnIncidencias.IconColor = System.Drawing.Color.White;
+            this.btnIncidencias.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIncidencias.IconSize = 35;
+            this.btnIncidencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncidencias.Location = new System.Drawing.Point(0, 0);
+            this.btnIncidencias.Name = "btnIncidencias";
+            this.btnIncidencias.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnIncidencias.Size = new System.Drawing.Size(233, 35);
+            this.btnIncidencias.TabIndex = 42;
+            this.btnIncidencias.Text = "Incidencias";
+            this.btnIncidencias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIncidencias.UseVisualStyleBackColor = false;
+            this.btnIncidencias.Click += new System.EventHandler(this.btnIncidencias_Click);
+            // 
+            // btnCentroAtencion
+            // 
+            this.btnCentroAtencion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCentroAtencion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCentroAtencion.FlatAppearance.BorderSize = 0;
+            this.btnCentroAtencion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCentroAtencion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCentroAtencion.ForeColor = System.Drawing.Color.White;
+            this.btnCentroAtencion.IconChar = FontAwesome.Sharp.IconChar.HandHoldingHeart;
+            this.btnCentroAtencion.IconColor = System.Drawing.Color.White;
+            this.btnCentroAtencion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCentroAtencion.IconSize = 35;
+            this.btnCentroAtencion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCentroAtencion.Location = new System.Drawing.Point(0, 642);
+            this.btnCentroAtencion.Name = "btnCentroAtencion";
+            this.btnCentroAtencion.Size = new System.Drawing.Size(233, 35);
+            this.btnCentroAtencion.TabIndex = 52;
+            this.btnCentroAtencion.Text = "Centro de Atención";
+            this.btnCentroAtencion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCentroAtencion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCentroAtencion.UseVisualStyleBackColor = true;
+            this.btnCentroAtencion.Click += new System.EventHandler(this.btnCentroAtencion_Click);
+            // 
+            // pnlSubMaestros
+            // 
+            this.pnlSubMaestros.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.pnlSubMaestros.Controls.Add(this.btnAlumnos);
+            this.pnlSubMaestros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSubMaestros.Location = new System.Drawing.Point(0, 603);
+            this.pnlSubMaestros.Name = "pnlSubMaestros";
+            this.pnlSubMaestros.Size = new System.Drawing.Size(233, 39);
+            this.pnlSubMaestros.TabIndex = 51;
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlumnos.FlatAppearance.BorderSize = 0;
+            this.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlumnos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnos.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAlumnos.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAlumnos.IconColor = System.Drawing.Color.White;
+            this.btnAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAlumnos.IconSize = 35;
+            this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlumnos.Location = new System.Drawing.Point(0, 0);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAlumnos.Size = new System.Drawing.Size(233, 35);
+            this.btnAlumnos.TabIndex = 41;
+            this.btnAlumnos.Text = "Alumnos";
+            this.btnAlumnos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlumnos.UseVisualStyleBackColor = true;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnMaestros
+            // 
+            this.btnMaestros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaestros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaestros.FlatAppearance.BorderSize = 0;
+            this.btnMaestros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaestros.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaestros.ForeColor = System.Drawing.Color.White;
+            this.btnMaestros.IconChar = FontAwesome.Sharp.IconChar.PeopleRoof;
+            this.btnMaestros.IconColor = System.Drawing.Color.White;
+            this.btnMaestros.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMaestros.IconSize = 35;
+            this.btnMaestros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaestros.Location = new System.Drawing.Point(0, 568);
+            this.btnMaestros.Name = "btnMaestros";
+            this.btnMaestros.Size = new System.Drawing.Size(233, 35);
+            this.btnMaestros.TabIndex = 50;
+            this.btnMaestros.Text = "Maestros";
+            this.btnMaestros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaestros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMaestros.UseVisualStyleBackColor = true;
+            this.btnMaestros.Click += new System.EventHandler(this.btnMaestros_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btnCerrarSesion.IconColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCerrarSesion.IconSize = 35;
+            this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 816);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 76, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(233, 35);
+            this.btnCerrarSesion.TabIndex = 49;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pnlSubInventario
             // 
@@ -246,9 +437,9 @@
             this.pnlSubInventario.Controls.Add(this.btnSalidas);
             this.pnlSubInventario.Controls.Add(this.btnEntradas);
             this.pnlSubInventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubInventario.Location = new System.Drawing.Point(0, 505);
+            this.pnlSubInventario.Location = new System.Drawing.Point(0, 456);
             this.pnlSubInventario.Name = "pnlSubInventario";
-            this.pnlSubInventario.Size = new System.Drawing.Size(250, 112);
+            this.pnlSubInventario.Size = new System.Drawing.Size(233, 112);
             this.pnlSubInventario.TabIndex = 46;
             // 
             // btnCatalogo
@@ -267,7 +458,7 @@
             this.btnCatalogo.Location = new System.Drawing.Point(0, 70);
             this.btnCatalogo.Name = "btnCatalogo";
             this.btnCatalogo.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnCatalogo.Size = new System.Drawing.Size(250, 35);
+            this.btnCatalogo.Size = new System.Drawing.Size(233, 35);
             this.btnCatalogo.TabIndex = 42;
             this.btnCatalogo.Text = "Catálogo";
             this.btnCatalogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,7 +481,7 @@
             this.btnSalidas.Location = new System.Drawing.Point(0, 35);
             this.btnSalidas.Name = "btnSalidas";
             this.btnSalidas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSalidas.Size = new System.Drawing.Size(250, 35);
+            this.btnSalidas.Size = new System.Drawing.Size(233, 35);
             this.btnSalidas.TabIndex = 41;
             this.btnSalidas.Text = "Salidas";
             this.btnSalidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -313,7 +504,7 @@
             this.btnEntradas.Location = new System.Drawing.Point(0, 0);
             this.btnEntradas.Name = "btnEntradas";
             this.btnEntradas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEntradas.Size = new System.Drawing.Size(250, 35);
+            this.btnEntradas.Size = new System.Drawing.Size(233, 35);
             this.btnEntradas.TabIndex = 40;
             this.btnEntradas.Text = "Entradas";
             this.btnEntradas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,9 +524,9 @@
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 35;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 470);
+            this.btnInventario.Location = new System.Drawing.Point(0, 421);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(250, 35);
+            this.btnInventario.Size = new System.Drawing.Size(233, 35);
             this.btnInventario.TabIndex = 39;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -351,14 +542,14 @@
             this.btnDonadores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDonadores.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDonadores.ForeColor = System.Drawing.Color.White;
-            this.btnDonadores.IconChar = FontAwesome.Sharp.IconChar.PeopleRoof;
+            this.btnDonadores.IconChar = FontAwesome.Sharp.IconChar.Donate;
             this.btnDonadores.IconColor = System.Drawing.Color.White;
             this.btnDonadores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDonadores.IconSize = 35;
             this.btnDonadores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDonadores.Location = new System.Drawing.Point(0, 435);
+            this.btnDonadores.Location = new System.Drawing.Point(0, 386);
             this.btnDonadores.Name = "btnDonadores";
-            this.btnDonadores.Size = new System.Drawing.Size(250, 35);
+            this.btnDonadores.Size = new System.Drawing.Size(233, 35);
             this.btnDonadores.TabIndex = 39;
             this.btnDonadores.Text = "Donadores";
             this.btnDonadores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -379,9 +570,9 @@
             this.btnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClientes.IconSize = 35;
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 400);
+            this.btnClientes.Location = new System.Drawing.Point(0, 351);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(250, 35);
+            this.btnClientes.Size = new System.Drawing.Size(233, 35);
             this.btnClientes.TabIndex = 39;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -395,9 +586,9 @@
             this.pnlSubPersonal.Controls.Add(this.btnUsuarios);
             this.pnlSubPersonal.Controls.Add(this.btnEmpleados);
             this.pnlSubPersonal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubPersonal.Location = new System.Drawing.Point(0, 323);
+            this.pnlSubPersonal.Location = new System.Drawing.Point(0, 274);
             this.pnlSubPersonal.Name = "pnlSubPersonal";
-            this.pnlSubPersonal.Size = new System.Drawing.Size(250, 77);
+            this.pnlSubPersonal.Size = new System.Drawing.Size(233, 77);
             this.pnlSubPersonal.TabIndex = 42;
             // 
             // btnUsuarios
@@ -416,7 +607,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(0, 35);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(250, 35);
+            this.btnUsuarios.Size = new System.Drawing.Size(233, 35);
             this.btnUsuarios.TabIndex = 41;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -439,7 +630,7 @@
             this.btnEmpleados.Location = new System.Drawing.Point(0, 0);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnEmpleados.Size = new System.Drawing.Size(250, 35);
+            this.btnEmpleados.Size = new System.Drawing.Size(233, 35);
             this.btnEmpleados.TabIndex = 40;
             this.btnEmpleados.Text = "Empleados";
             this.btnEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,9 +650,9 @@
             this.btnPersonal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPersonal.IconSize = 35;
             this.btnPersonal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonal.Location = new System.Drawing.Point(0, 288);
+            this.btnPersonal.Location = new System.Drawing.Point(0, 239);
             this.btnPersonal.Name = "btnPersonal";
-            this.btnPersonal.Size = new System.Drawing.Size(250, 35);
+            this.btnPersonal.Size = new System.Drawing.Size(233, 35);
             this.btnPersonal.TabIndex = 39;
             this.btnPersonal.Text = "Personal";
             this.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,9 +667,9 @@
             this.pnlSubBiblioteca.Controls.Add(this.btnPrestamos);
             this.pnlSubBiblioteca.Controls.Add(this.btnLibros);
             this.pnlSubBiblioteca.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubBiblioteca.Location = new System.Drawing.Point(0, 176);
+            this.pnlSubBiblioteca.Location = new System.Drawing.Point(0, 127);
             this.pnlSubBiblioteca.Name = "pnlSubBiblioteca";
-            this.pnlSubBiblioteca.Size = new System.Drawing.Size(250, 112);
+            this.pnlSubBiblioteca.Size = new System.Drawing.Size(233, 112);
             this.pnlSubBiblioteca.TabIndex = 40;
             // 
             // btnDevoluciones
@@ -497,7 +688,7 @@
             this.btnDevoluciones.Location = new System.Drawing.Point(0, 70);
             this.btnDevoluciones.Name = "btnDevoluciones";
             this.btnDevoluciones.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnDevoluciones.Size = new System.Drawing.Size(250, 35);
+            this.btnDevoluciones.Size = new System.Drawing.Size(233, 35);
             this.btnDevoluciones.TabIndex = 42;
             this.btnDevoluciones.Text = "Devoluciones";
             this.btnDevoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -520,7 +711,7 @@
             this.btnPrestamos.Location = new System.Drawing.Point(0, 35);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnPrestamos.Size = new System.Drawing.Size(250, 35);
+            this.btnPrestamos.Size = new System.Drawing.Size(233, 35);
             this.btnPrestamos.TabIndex = 41;
             this.btnPrestamos.Text = "Prestamos";
             this.btnPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -543,7 +734,7 @@
             this.btnLibros.Location = new System.Drawing.Point(0, 0);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnLibros.Size = new System.Drawing.Size(250, 35);
+            this.btnLibros.Size = new System.Drawing.Size(233, 35);
             this.btnLibros.TabIndex = 40;
             this.btnLibros.Text = "Libros";
             this.btnLibros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -563,9 +754,9 @@
             this.btnBiblioteca.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBiblioteca.IconSize = 35;
             this.btnBiblioteca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBiblioteca.Location = new System.Drawing.Point(0, 141);
+            this.btnBiblioteca.Location = new System.Drawing.Point(0, 92);
             this.btnBiblioteca.Name = "btnBiblioteca";
-            this.btnBiblioteca.Size = new System.Drawing.Size(250, 35);
+            this.btnBiblioteca.Size = new System.Drawing.Size(233, 35);
             this.btnBiblioteca.TabIndex = 39;
             this.btnBiblioteca.Text = "Biblioteca";
             this.btnBiblioteca.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -579,13 +770,12 @@
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlControl.Location = new System.Drawing.Point(250, 32);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(750, 688);
+            this.pnlControl.Size = new System.Drawing.Size(750, 700);
             this.pnlControl.TabIndex = 31;
-            this.pnlControl.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlControl_Paint);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(282, 237);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
@@ -595,25 +785,27 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 720);
+            this.ClientSize = new System.Drawing.Size(1000, 732);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlMenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.frmMenu_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).EndInit();
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlMenuVertical.ResumeLayout(false);
+            this.pnlSubCentroAtencion.ResumeLayout(false);
+            this.pnlSubMaestros.ResumeLayout(false);
             this.pnlSubInventario.ResumeLayout(false);
             this.pnlSubPersonal.ResumeLayout(false);
             this.pnlSubBiblioteca.ResumeLayout(false);
@@ -625,7 +817,7 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox picBarra;
-        private System.Windows.Forms.PictureBox picMinimizar;
+        private System.Windows.Forms.PictureBox picMaximizar;
         private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox picLogo;
@@ -646,11 +838,20 @@
         private FontAwesome.Sharp.IconButton btnInventario;
         private FontAwesome.Sharp.IconButton btnDonadores;
         private FontAwesome.Sharp.IconButton btnClientes;
-        private FontAwesome.Sharp.IconButton btnRestauracion;
-        private FontAwesome.Sharp.IconButton btnCerrarSesion;
         private System.Windows.Forms.Panel pnlControl;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox picHijoActual;
         private System.Windows.Forms.Label lblTituloFormHijo;
+        private System.Windows.Forms.Panel pnlSubCentroAtencion;
+        private FontAwesome.Sharp.IconButton btnAsistenciaFamiliar;
+        private FontAwesome.Sharp.IconButton btnReporte;
+        private FontAwesome.Sharp.IconButton btnIncidencias;
+        private FontAwesome.Sharp.IconButton btnCentroAtencion;
+        private System.Windows.Forms.Panel pnlSubMaestros;
+        private FontAwesome.Sharp.IconButton btnAlumnos;
+        private FontAwesome.Sharp.IconButton btnMaestros;
+        private FontAwesome.Sharp.IconButton btnRestauracion;
+        private FontAwesome.Sharp.IconButton btnCerrarSesion;
+        private System.Windows.Forms.PictureBox picMinimizar;
     }
 }

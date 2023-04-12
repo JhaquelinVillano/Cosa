@@ -45,9 +45,9 @@
             this.txtExportar = new System.Windows.Forms.TextBox();
             this.rbtnCompra = new MaterialSkin.Controls.MaterialRadioButton();
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtSumar = new MaterialSkin.Controls.MaterialButton();
             this.picBuscar = new System.Windows.Forms.PictureBox();
             this.picExcel = new System.Windows.Forms.PictureBox();
-            this.txtSumar = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
@@ -133,7 +133,7 @@
             this.dgvEntradas.Name = "dgvEntradas";
             this.dgvEntradas.ReadOnly = true;
             this.dgvEntradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEntradas.Size = new System.Drawing.Size(492, 580);
+            this.dgvEntradas.Size = new System.Drawing.Size(492, 611);
             this.dgvEntradas.TabIndex = 37;
             this.dgvEntradas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntradas_CellClick);
             // 
@@ -303,9 +303,9 @@
             this.txtExportar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtExportar.Enabled = false;
             this.txtExportar.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExportar.Location = new System.Drawing.Point(109, 616);
+            this.txtExportar.Location = new System.Drawing.Point(166, 630);
             this.txtExportar.Name = "txtExportar";
-            this.txtExportar.Size = new System.Drawing.Size(121, 23);
+            this.txtExportar.Size = new System.Drawing.Size(74, 23);
             this.txtExportar.TabIndex = 49;
             this.txtExportar.Text = "Exportar";
             this.txtExportar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -347,32 +347,6 @@
             this.txtConsultar.TrailingIcon = null;
             this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
-            // picBuscar
-            // 
-            this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
-            this.picBuscar.Location = new System.Drawing.Point(682, 21);
-            this.picBuscar.Name = "picBuscar";
-            this.picBuscar.Size = new System.Drawing.Size(56, 50);
-            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picBuscar.TabIndex = 91;
-            this.picBuscar.TabStop = false;
-            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
-            // 
-            // picExcel
-            // 
-            this.picExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.picExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picExcel.Image = global::Proyecto.Properties.Resources.excel;
-            this.picExcel.Location = new System.Drawing.Point(134, 644);
-            this.picExcel.Name = "picExcel";
-            this.picExcel.Size = new System.Drawing.Size(62, 39);
-            this.picExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picExcel.TabIndex = 43;
-            this.picExcel.TabStop = false;
-            this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
-            // 
             // txtSumar
             // 
             this.txtSumar.AutoSize = false;
@@ -395,12 +369,38 @@
             this.txtSumar.UseVisualStyleBackColor = true;
             this.txtSumar.Click += new System.EventHandler(this.txtSumar_Click);
             // 
+            // picBuscar
+            // 
+            this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_Inventario;
+            this.picBuscar.Location = new System.Drawing.Point(682, 21);
+            this.picBuscar.Name = "picBuscar";
+            this.picBuscar.Size = new System.Drawing.Size(56, 50);
+            this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBuscar.TabIndex = 91;
+            this.picBuscar.TabStop = false;
+            this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
+            // 
+            // picExcel
+            // 
+            this.picExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.picExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picExcel.Image = global::Proyecto.Properties.Resources.excel;
+            this.picExcel.Location = new System.Drawing.Point(166, 659);
+            this.picExcel.Name = "picExcel";
+            this.picExcel.Size = new System.Drawing.Size(74, 39);
+            this.picExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picExcel.TabIndex = 43;
+            this.picExcel.TabStop = false;
+            this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
+            // 
             // frmEntradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.txtSumar);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);

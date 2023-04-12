@@ -81,7 +81,7 @@
             "DNI - Empleado",
             "Fecha - Prestamo",
             "Fecha - Devolución"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(474, 13);
+            this.cbxBusqueda.Location = new System.Drawing.Point(474, 12);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -108,7 +108,7 @@
             this.dgvDevoluciones.EnableHeadersVisualStyles = false;
             this.dgvDevoluciones.Location = new System.Drawing.Point(12, 69);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
-            this.dgvDevoluciones.Size = new System.Drawing.Size(726, 607);
+            this.dgvDevoluciones.Size = new System.Drawing.Size(726, 619);
             this.dgvDevoluciones.TabIndex = 105;
             // 
             // picBuscar
@@ -116,7 +116,7 @@
             this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picBuscar.Image = global::Proyecto.Properties.Resources.buscar_libros;
-            this.picBuscar.Location = new System.Drawing.Point(682, 13);
+            this.picBuscar.Location = new System.Drawing.Point(682, 11);
             this.picBuscar.Name = "picBuscar";
             this.picBuscar.Size = new System.Drawing.Size(53, 50);
             this.picBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxBusqueda);

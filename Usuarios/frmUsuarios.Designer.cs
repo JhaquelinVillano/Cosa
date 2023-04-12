@@ -119,7 +119,7 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(501, 600);
+            this.dgvUsuarios.Size = new System.Drawing.Size(501, 595);
             this.dgvUsuarios.TabIndex = 19;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             // 
@@ -163,7 +163,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(14, 534);
+            this.btnRegistrar.Location = new System.Drawing.Point(14, 529);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -186,7 +186,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(14, 582);
+            this.btnModificar.Location = new System.Drawing.Point(14, 577);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -211,7 +211,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(14, 630);
+            this.btnEliminar.Location = new System.Drawing.Point(14, 625);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -337,7 +337,7 @@
             "ID",
             "Nombre",
             "DNI"});
-            this.cbxBusqueda.Location = new System.Drawing.Point(477, 11);
+            this.cbxBusqueda.Location = new System.Drawing.Point(477, 10);
             this.cbxBusqueda.MaxDropDownItems = 4;
             this.cbxBusqueda.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxBusqueda.Name = "cbxBusqueda";
@@ -384,7 +384,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 683);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtConsultar);

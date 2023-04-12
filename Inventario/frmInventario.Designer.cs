@@ -32,11 +32,11 @@
             this.txtConsultar = new MaterialSkin.Controls.MaterialTextBox();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.txtExportar = new System.Windows.Forms.TextBox();
-            this.picExcel = new System.Windows.Forms.PictureBox();
             this.picBuscar = new System.Windows.Forms.PictureBox();
+            this.picExcel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).BeginInit();
             this.SuspendLayout();
             // 
             // txtConsultar
@@ -79,7 +79,7 @@
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.Location = new System.Drawing.Point(12, 68);
             this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.Size = new System.Drawing.Size(726, 595);
+            this.dgvInventario.Size = new System.Drawing.Size(726, 603);
             this.dgvInventario.TabIndex = 74;
             // 
             // txtExportar
@@ -96,19 +96,6 @@
             this.txtExportar.Text = "Exportar";
             this.txtExportar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // picExcel
-            // 
-            this.picExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picExcel.Image = global::Proyecto.Properties.Resources.excel;
-            this.picExcel.Location = new System.Drawing.Point(676, 23);
-            this.picExcel.Name = "picExcel";
-            this.picExcel.Size = new System.Drawing.Size(62, 39);
-            this.picExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picExcel.TabIndex = 80;
-            this.picExcel.TabStop = false;
-            this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
-            // 
             // picBuscar
             // 
             this.picBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -122,12 +109,25 @@
             this.picBuscar.TabStop = false;
             this.picBuscar.Click += new System.EventHandler(this.picBuscar_Click);
             // 
+            // picExcel
+            // 
+            this.picExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picExcel.Image = global::Proyecto.Properties.Resources.excel;
+            this.picExcel.Location = new System.Drawing.Point(676, 22);
+            this.picExcel.Name = "picExcel";
+            this.picExcel.Size = new System.Drawing.Size(62, 39);
+            this.picExcel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picExcel.TabIndex = 80;
+            this.picExcel.TabStop = false;
+            this.picExcel.Click += new System.EventHandler(this.picExcel_Click);
+            // 
             // frmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 683);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtExportar);
             this.Controls.Add(this.picExcel);
@@ -138,8 +138,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catálogo";
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picExcel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

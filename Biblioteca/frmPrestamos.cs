@@ -92,5 +92,10 @@ namespace Proyecto.Biblioteca
                 error.Clear();
             }
         }
+
+        private void txtPrestamoID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

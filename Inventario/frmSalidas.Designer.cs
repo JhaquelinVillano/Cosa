@@ -86,7 +86,7 @@
             this.dgvSalidas.Name = "dgvSalidas";
             this.dgvSalidas.ReadOnly = true;
             this.dgvSalidas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSalidas.Size = new System.Drawing.Size(472, 584);
+            this.dgvSalidas.Size = new System.Drawing.Size(472, 579);
             this.dgvSalidas.TabIndex = 108;
             this.dgvSalidas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalidas_CellClick);
             // 
@@ -102,7 +102,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(13, 623);
+            this.btnEliminar.Location = new System.Drawing.Point(13, 618);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -125,7 +125,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(12, 575);
+            this.btnRegistrar.Location = new System.Drawing.Point(12, 570);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -258,7 +258,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 683);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxID);
             this.Controls.Add(this.cbxNombreArticulo);

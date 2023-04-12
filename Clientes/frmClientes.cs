@@ -101,5 +101,10 @@ namespace Proyecto.Clientes
                 error.Clear();
             }
         }
+
+        private void frmClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

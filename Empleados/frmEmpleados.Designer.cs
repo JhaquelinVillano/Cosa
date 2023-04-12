@@ -62,7 +62,7 @@
             this.txtDniEmpleado.Depth = 0;
             this.txtDniEmpleado.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDniEmpleado.LeadingIcon = null;
-            this.txtDniEmpleado.Location = new System.Drawing.Point(274, 41);
+            this.txtDniEmpleado.Location = new System.Drawing.Point(265, 53);
             this.txtDniEmpleado.MaxLength = 50;
             this.txtDniEmpleado.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDniEmpleado.Multiline = false;
@@ -79,7 +79,7 @@
             this.lblDniEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDniEmpleado.Enabled = false;
             this.lblDniEmpleado.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDniEmpleado.Location = new System.Drawing.Point(274, 12);
+            this.lblDniEmpleado.Location = new System.Drawing.Point(265, 24);
             this.lblDniEmpleado.Name = "lblDniEmpleado";
             this.lblDniEmpleado.Size = new System.Drawing.Size(202, 23);
             this.lblDniEmpleado.TabIndex = 42;
@@ -94,7 +94,7 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(23, 126);
+            this.txtNombre.Location = new System.Drawing.Point(14, 142);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -116,7 +116,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(526, 232);
+            this.btnEliminar.Location = new System.Drawing.Point(517, 248);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -139,7 +139,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(526, 179);
+            this.btnModificar.Location = new System.Drawing.Point(517, 195);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -162,7 +162,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(526, 126);
+            this.btnRegistrar.Location = new System.Drawing.Point(517, 142);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -182,7 +182,7 @@
             this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblID.Enabled = false;
             this.lblID.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(23, 12);
+            this.lblID.Location = new System.Drawing.Point(14, 24);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(202, 23);
             this.lblID.TabIndex = 36;
@@ -197,7 +197,7 @@
             this.txtID.Depth = 0;
             this.txtID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtID.LeadingIcon = null;
-            this.txtID.Location = new System.Drawing.Point(23, 41);
+            this.txtID.Location = new System.Drawing.Point(14, 53);
             this.txtID.MaxLength = 50;
             this.txtID.MouseState = MaterialSkin.MouseState.OUT;
             this.txtID.Multiline = false;
@@ -231,7 +231,7 @@
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(726, 317);
+            this.dgvEmpleados.Size = new System.Drawing.Size(726, 329);
             this.dgvEmpleados.TabIndex = 33;
             this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellClick);
             // 
@@ -242,7 +242,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(23, 97);
+            this.lblNombre.Location = new System.Drawing.Point(14, 113);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 32;
@@ -257,7 +257,7 @@
             this.txtApellidos.Depth = 0;
             this.txtApellidos.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtApellidos.LeadingIcon = null;
-            this.txtApellidos.Location = new System.Drawing.Point(274, 126);
+            this.txtApellidos.Location = new System.Drawing.Point(265, 142);
             this.txtApellidos.MaxLength = 50;
             this.txtApellidos.MouseState = MaterialSkin.MouseState.OUT;
             this.txtApellidos.Multiline = false;
@@ -274,7 +274,7 @@
             this.lblApellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblApellidos.Enabled = false;
             this.lblApellidos.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(274, 97);
+            this.lblApellidos.Location = new System.Drawing.Point(265, 113);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(202, 23);
             this.lblApellidos.TabIndex = 44;
@@ -289,7 +289,7 @@
             this.txtDireccion.Depth = 0;
             this.txtDireccion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtDireccion.LeadingIcon = null;
-            this.txtDireccion.Location = new System.Drawing.Point(23, 218);
+            this.txtDireccion.Location = new System.Drawing.Point(14, 234);
             this.txtDireccion.MaxLength = 50;
             this.txtDireccion.MouseState = MaterialSkin.MouseState.OUT;
             this.txtDireccion.Multiline = false;
@@ -306,7 +306,7 @@
             this.lblDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblDireccion.Enabled = false;
             this.lblDireccion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(23, 189);
+            this.lblDireccion.Location = new System.Drawing.Point(14, 205);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(202, 23);
             this.lblDireccion.TabIndex = 46;
@@ -321,7 +321,7 @@
             this.txtTelefono.Depth = 0;
             this.txtTelefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTelefono.LeadingIcon = null;
-            this.txtTelefono.Location = new System.Drawing.Point(526, 41);
+            this.txtTelefono.Location = new System.Drawing.Point(517, 53);
             this.txtTelefono.MaxLength = 50;
             this.txtTelefono.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTelefono.Multiline = false;
@@ -339,7 +339,7 @@
             this.lblTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblTelefono.Enabled = false;
             this.lblTelefono.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(526, 12);
+            this.lblTelefono.Location = new System.Drawing.Point(517, 24);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(202, 23);
             this.lblTelefono.TabIndex = 48;
@@ -354,7 +354,7 @@
             this.txtCorreo.Depth = 0;
             this.txtCorreo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCorreo.LeadingIcon = null;
-            this.txtCorreo.Location = new System.Drawing.Point(274, 218);
+            this.txtCorreo.Location = new System.Drawing.Point(265, 234);
             this.txtCorreo.MaxLength = 50;
             this.txtCorreo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCorreo.Multiline = false;
@@ -371,7 +371,7 @@
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCorreo.Enabled = false;
             this.lblCorreo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(274, 189);
+            this.lblCorreo.Location = new System.Drawing.Point(265, 205);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(202, 23);
             this.lblCorreo.TabIndex = 50;
@@ -445,7 +445,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtConsultar);

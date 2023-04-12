@@ -62,7 +62,7 @@
             this.txtAutor.Depth = 0;
             this.txtAutor.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtAutor.LeadingIcon = null;
-            this.txtAutor.Location = new System.Drawing.Point(36, 129);
+            this.txtAutor.Location = new System.Drawing.Point(36, 143);
             this.txtAutor.MaxLength = 50;
             this.txtAutor.MouseState = MaterialSkin.MouseState.OUT;
             this.txtAutor.Multiline = false;
@@ -79,7 +79,7 @@
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCantidad.Enabled = false;
             this.txtCantidad.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(287, 100);
+            this.txtCantidad.Location = new System.Drawing.Point(287, 114);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(202, 23);
             this.txtCantidad.TabIndex = 58;
@@ -98,7 +98,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(515, 123);
+            this.btnEliminar.Location = new System.Drawing.Point(515, 120);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -121,7 +121,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(515, 180);
+            this.btnModificar.Location = new System.Drawing.Point(515, 177);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -144,7 +144,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(515, 237);
+            this.btnRegistrar.Location = new System.Drawing.Point(515, 234);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -165,7 +165,7 @@
             this.txtID.Depth = 0;
             this.txtID.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtID.LeadingIcon = null;
-            this.txtID.Location = new System.Drawing.Point(36, 46);
+            this.txtID.Location = new System.Drawing.Point(36, 45);
             this.txtID.MaxLength = 50;
             this.txtID.MouseState = MaterialSkin.MouseState.OUT;
             this.txtID.Multiline = false;
@@ -183,7 +183,7 @@
             this.lblAutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblAutor.Enabled = false;
             this.lblAutor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAutor.Location = new System.Drawing.Point(36, 100);
+            this.lblAutor.Location = new System.Drawing.Point(36, 114);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(202, 23);
             this.lblAutor.TabIndex = 49;
@@ -197,7 +197,7 @@
             this.lblID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblID.Enabled = false;
             this.lblID.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(36, 17);
+            this.lblID.Location = new System.Drawing.Point(36, 16);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(202, 23);
             this.lblID.TabIndex = 48;
@@ -212,7 +212,7 @@
             this.txtEdicion.Depth = 0;
             this.txtEdicion.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEdicion.LeadingIcon = null;
-            this.txtEdicion.Location = new System.Drawing.Point(515, 46);
+            this.txtEdicion.Location = new System.Drawing.Point(515, 45);
             this.txtEdicion.MaxLength = 50;
             this.txtEdicion.MouseState = MaterialSkin.MouseState.OUT;
             this.txtEdicion.Multiline = false;
@@ -229,7 +229,7 @@
             this.lblIdioma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblIdioma.Enabled = false;
             this.lblIdioma.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdioma.Location = new System.Drawing.Point(36, 193);
+            this.lblIdioma.Location = new System.Drawing.Point(36, 207);
             this.lblIdioma.Name = "lblIdioma";
             this.lblIdioma.Size = new System.Drawing.Size(202, 23);
             this.lblIdioma.TabIndex = 64;
@@ -244,7 +244,7 @@
             this.txtNombre.Depth = 0;
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(287, 46);
+            this.txtNombre.Location = new System.Drawing.Point(287, 45);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -262,7 +262,7 @@
             this.lblEdicion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblEdicion.Enabled = false;
             this.lblEdicion.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdicion.Location = new System.Drawing.Point(515, 17);
+            this.lblEdicion.Location = new System.Drawing.Point(515, 16);
             this.lblEdicion.Name = "lblEdicion";
             this.lblEdicion.Size = new System.Drawing.Size(202, 23);
             this.lblEdicion.TabIndex = 62;
@@ -276,7 +276,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(287, 17);
+            this.lblNombre.Location = new System.Drawing.Point(287, 16);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(202, 23);
             this.lblNombre.TabIndex = 61;
@@ -312,7 +312,7 @@
             "Deportes y Juegos",
             "Educación",
             "Terror"});
-            this.cbxCategoria.Location = new System.Drawing.Point(287, 131);
+            this.cbxCategoria.Location = new System.Drawing.Point(287, 145);
             this.cbxCategoria.MaxDropDownItems = 4;
             this.cbxCategoria.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxCategoria.Name = "cbxCategoria";
@@ -341,7 +341,7 @@
             "Ingles",
             "Portugues",
             "Mandarin"});
-            this.cbxIdioma.Location = new System.Drawing.Point(36, 224);
+            this.cbxIdioma.Location = new System.Drawing.Point(36, 238);
             this.cbxIdioma.MaxDropDownItems = 4;
             this.cbxIdioma.MouseState = MaterialSkin.MouseState.OUT;
             this.cbxIdioma.Name = "cbxIdioma";
@@ -370,7 +370,7 @@
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.ReadOnly = true;
             this.dgvLibros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLibros.Size = new System.Drawing.Size(695, 285);
+            this.dgvLibros.Size = new System.Drawing.Size(695, 329);
             this.dgvLibros.TabIndex = 70;
             this.dgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellClick);
             // 
@@ -403,7 +403,7 @@
             this.txtExistencias.Depth = 0;
             this.txtExistencias.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtExistencias.LeadingIcon = null;
-            this.txtExistencias.Location = new System.Drawing.Point(287, 226);
+            this.txtExistencias.Location = new System.Drawing.Point(287, 240);
             this.txtExistencias.MaxLength = 50;
             this.txtExistencias.MouseState = MaterialSkin.MouseState.OUT;
             this.txtExistencias.Multiline = false;
@@ -421,7 +421,7 @@
             this.lblExistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblExistencias.Enabled = false;
             this.lblExistencias.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExistencias.Location = new System.Drawing.Point(287, 197);
+            this.lblExistencias.Location = new System.Drawing.Point(287, 211);
             this.lblExistencias.Name = "lblExistencias";
             this.lblExistencias.Size = new System.Drawing.Size(202, 23);
             this.lblExistencias.TabIndex = 72;
@@ -473,7 +473,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.cbxBusqueda);
             this.Controls.Add(this.txtExistencias);

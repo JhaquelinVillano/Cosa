@@ -16,7 +16,7 @@ namespace Proyecto.Metodos
             try
 			{
 				//Comando de la informacion de la base de datos
-				string cadenaConexion = "server = localhost; port = 3306; user id = root; password = root; database = credu;";
+				string cadenaConexion = "server = localhost; port = 3306; user id = root; password = 1234; database = credu;";
 				//Haciendo conexion
 				MySqlConnection conex = new MySqlConnection(cadenaConexion);
 				//Regresando variable de la conexion

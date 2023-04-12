@@ -96,7 +96,7 @@
             this.dgvP.EnableHeadersVisualStyles = false;
             this.dgvP.Location = new System.Drawing.Point(246, 74);
             this.dgvP.Name = "dgvP";
-            this.dgvP.Size = new System.Drawing.Size(492, 601);
+            this.dgvP.Size = new System.Drawing.Size(492, 613);
             this.dgvP.TabIndex = 75;
             // 
             // txtNombreSolicitante
@@ -142,7 +142,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(23, 591);
+            this.btnEliminar.Location = new System.Drawing.Point(23, 603);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -165,7 +165,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(23, 639);
+            this.btnRegistrar.Location = new System.Drawing.Point(23, 651);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -190,7 +190,7 @@
             this.btnDevolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDevolver.HighEmphasis = true;
             this.btnDevolver.Icon = null;
-            this.btnDevolver.Location = new System.Drawing.Point(23, 543);
+            this.btnDevolver.Location = new System.Drawing.Point(23, 555);
             this.btnDevolver.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDevolver.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDevolver.Name = "btnDevolver";
@@ -219,6 +219,7 @@
             this.txtPrestamoID.TabIndex = 86;
             this.txtPrestamoID.Text = "";
             this.txtPrestamoID.TrailingIcon = null;
+            this.txtPrestamoID.TextChanged += new System.EventHandler(this.txtPrestamoID_TextChanged);
             this.txtPrestamoID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrestamoID_KeyPress);
             // 
             // lblPrestamoID
@@ -300,7 +301,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.cbxBusqueda);

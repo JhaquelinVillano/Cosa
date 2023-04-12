@@ -60,7 +60,7 @@
             this.txtCorreo.Depth = 0;
             this.txtCorreo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCorreo.LeadingIcon = null;
-            this.txtCorreo.Location = new System.Drawing.Point(263, 49);
+            this.txtCorreo.Location = new System.Drawing.Point(263, 55);
             this.txtCorreo.MaxLength = 50;
             this.txtCorreo.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCorreo.Multiline = false;
@@ -78,7 +78,7 @@
             this.txtNombreDonadores.Depth = 0;
             this.txtNombreDonadores.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombreDonadores.LeadingIcon = null;
-            this.txtNombreDonadores.Location = new System.Drawing.Point(20, 44);
+            this.txtNombreDonadores.Location = new System.Drawing.Point(20, 50);
             this.txtNombreDonadores.MaxLength = 50;
             this.txtNombreDonadores.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombreDonadores.Multiline = false;
@@ -95,7 +95,7 @@
             this.lblCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblCorreo.Enabled = false;
             this.lblCorreo.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(263, 20);
+            this.lblCorreo.Location = new System.Drawing.Point(263, 26);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(223, 23);
             this.lblCorreo.TabIndex = 72;
@@ -109,7 +109,7 @@
             this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNombre.Enabled = false;
             this.lblNombre.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(20, 15);
+            this.lblNombre.Location = new System.Drawing.Point(20, 21);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(223, 23);
             this.lblNombre.TabIndex = 71;
@@ -124,7 +124,7 @@
             this.txtTelefono.Depth = 0;
             this.txtTelefono.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtTelefono.LeadingIcon = null;
-            this.txtTelefono.Location = new System.Drawing.Point(20, 222);
+            this.txtTelefono.Location = new System.Drawing.Point(20, 228);
             this.txtTelefono.MaxLength = 50;
             this.txtTelefono.MouseState = MaterialSkin.MouseState.OUT;
             this.txtTelefono.Multiline = false;
@@ -141,7 +141,7 @@
             this.lblNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblNacionalidad.Enabled = false;
             this.lblNacionalidad.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNacionalidad.Location = new System.Drawing.Point(20, 105);
+            this.lblNacionalidad.Location = new System.Drawing.Point(20, 111);
             this.lblNacionalidad.Name = "lblNacionalidad";
             this.lblNacionalidad.Size = new System.Drawing.Size(223, 23);
             this.lblNacionalidad.TabIndex = 68;
@@ -155,7 +155,7 @@
             this.lblTeléfono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblTeléfono.Enabled = false;
             this.lblTeléfono.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeléfono.Location = new System.Drawing.Point(20, 193);
+            this.lblTeléfono.Location = new System.Drawing.Point(20, 199);
             this.lblTeléfono.Name = "lblTeléfono";
             this.lblTeléfono.Size = new System.Drawing.Size(223, 23);
             this.lblTeléfono.TabIndex = 67;
@@ -169,7 +169,7 @@
             this.lblRedesSociales.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblRedesSociales.Enabled = false;
             this.lblRedesSociales.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRedesSociales.Location = new System.Drawing.Point(263, 193);
+            this.lblRedesSociales.Location = new System.Drawing.Point(263, 199);
             this.lblRedesSociales.Name = "lblRedesSociales";
             this.lblRedesSociales.Size = new System.Drawing.Size(223, 23);
             this.lblRedesSociales.TabIndex = 78;
@@ -184,7 +184,7 @@
             this.txtRedesSociales.Depth = 0;
             this.txtRedesSociales.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtRedesSociales.LeadingIcon = null;
-            this.txtRedesSociales.Location = new System.Drawing.Point(263, 222);
+            this.txtRedesSociales.Location = new System.Drawing.Point(263, 228);
             this.txtRedesSociales.MaxLength = 50;
             this.txtRedesSociales.MouseState = MaterialSkin.MouseState.OUT;
             this.txtRedesSociales.Multiline = false;
@@ -202,7 +202,7 @@
             this.txtNacionalidad.Depth = 0;
             this.txtNacionalidad.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNacionalidad.LeadingIcon = null;
-            this.txtNacionalidad.Location = new System.Drawing.Point(20, 134);
+            this.txtNacionalidad.Location = new System.Drawing.Point(20, 140);
             this.txtNacionalidad.MaxLength = 50;
             this.txtNacionalidad.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNacionalidad.Multiline = false;
@@ -220,7 +220,7 @@
             this.txtPlataforma.Depth = 0;
             this.txtPlataforma.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPlataforma.LeadingIcon = null;
-            this.txtPlataforma.Location = new System.Drawing.Point(263, 134);
+            this.txtPlataforma.Location = new System.Drawing.Point(263, 140);
             this.txtPlataforma.MaxLength = 50;
             this.txtPlataforma.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPlataforma.Multiline = false;
@@ -237,7 +237,7 @@
             this.lblPlataforma.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblPlataforma.Enabled = false;
             this.lblPlataforma.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlataforma.Location = new System.Drawing.Point(263, 105);
+            this.lblPlataforma.Location = new System.Drawing.Point(263, 111);
             this.lblPlataforma.Name = "lblPlataforma";
             this.lblPlataforma.Size = new System.Drawing.Size(223, 23);
             this.lblPlataforma.TabIndex = 82;
@@ -256,7 +256,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnEliminar.HighEmphasis = true;
             this.btnEliminar.Icon = null;
-            this.btnEliminar.Location = new System.Drawing.Point(513, 174);
+            this.btnEliminar.Location = new System.Drawing.Point(513, 180);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEliminar.Name = "btnEliminar";
@@ -278,7 +278,7 @@
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.HighEmphasis = true;
             this.btnModificar.Icon = null;
-            this.btnModificar.Location = new System.Drawing.Point(514, 126);
+            this.btnModificar.Location = new System.Drawing.Point(514, 132);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModificar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModificar.Name = "btnModificar";
@@ -300,7 +300,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.HighEmphasis = true;
             this.btnRegistrar.Icon = null;
-            this.btnRegistrar.Location = new System.Drawing.Point(513, 78);
+            this.btnRegistrar.Location = new System.Drawing.Point(513, 84);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnRegistrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnRegistrar.Name = "btnRegistrar";
@@ -315,7 +315,7 @@
             // dtpDonadores
             // 
             this.dtpDonadores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDonadores.Location = new System.Drawing.Point(513, 222);
+            this.dtpDonadores.Location = new System.Drawing.Point(513, 228);
             this.dtpDonadores.Name = "dtpDonadores";
             this.dtpDonadores.Size = new System.Drawing.Size(223, 20);
             this.dtpDonadores.TabIndex = 86;
@@ -339,7 +339,7 @@
             this.dgvDonadores.EnableHeadersVisualStyles = false;
             this.dgvDonadores.Location = new System.Drawing.Point(20, 367);
             this.dgvDonadores.Name = "dgvDonadores";
-            this.dgvDonadores.Size = new System.Drawing.Size(716, 309);
+            this.dgvDonadores.Size = new System.Drawing.Size(716, 321);
             this.dgvDonadores.TabIndex = 87;
             // 
             // txtConsultar
@@ -379,7 +379,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(750, 688);
+            this.ClientSize = new System.Drawing.Size(750, 700);
             this.Controls.Add(this.picBuscar);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.dgvDonadores);

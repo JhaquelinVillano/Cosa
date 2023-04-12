@@ -19,6 +19,8 @@ using System.Windows.Media;
 using Proyecto.Empleados;
 using Proyecto.Clientes;
 using MySql.Data.MySqlClient;
+using Proyecto.Maestros;
+using Proyecto.Centro_de_Atención;
 
 namespace Proyecto.Menu
 {
@@ -37,6 +39,7 @@ namespace Proyecto.Menu
             customizeDesing();
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+
         }
 
         private struct RGBColors
@@ -81,24 +84,17 @@ namespace Proyecto.Menu
             }
         }
 
-        //Mover el formulario-----------------------------------
-        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
-
-        private extern static void SendMessage(System.IntPtr hwmd, int wnsg, int wparam, int lparam);
-
-        //---------------------------------------
-
+        //Aqui se ocultan los paneles de submenu
         private void customizeDesing()
         {
             pnlSubBiblioteca.Visible = false;
             pnlSubInventario.Visible = false;
             pnlSubPersonal.Visible = false;
+            pnlSubMaestros.Visible = false;
+            pnlSubCentroAtencion.Visible = false;
         }
 
-        //ocultar submenu
+        //esconder el submenu
         private void hideSubMenu()
         {
             if (pnlSubBiblioteca.Visible == true)
@@ -107,6 +103,10 @@ namespace Proyecto.Menu
                 pnlSubInventario.Visible = false;
             if (pnlSubPersonal.Visible == true)
                 pnlSubPersonal.Visible = false;
+            if (pnlSubMaestros.Visible == true)
+                pnlSubMaestros.Visible = false;
+            if (pnlSubCentroAtencion.Visible == true)
+                pnlSubCentroAtencion.Visible = false;
 
         }
 
@@ -141,11 +141,15 @@ namespace Proyecto.Menu
             this.Close();
         }
 
-        private void picMinimizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+        //Mover el formulario-----------------------------------
+        [DllImport("user32.Dll", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
 
+        [DllImport("user32.Dll", EntryPoint = "SendMessage")]
+
+        private extern static void SendMessage(System.IntPtr hwmd, int wnsg, int wparam, int lparam);
+
+        //---------------------------------------
         private void pnlMenu_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -251,17 +255,6 @@ namespace Proyecto.Menu
             openChildForm(new frmInventario()); 
         }
 
-        private void btnRestauracion_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.color1);
-            frmRestauracion Restauracion = new frmRestauracion();
-            Restauracion.Usuario = Usuario;
-            hideSubMenu();
-            this.Close();
-            Restauracion.Show();
-            //openChildForm(new frmRestauracion());
-        }
-
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
@@ -283,7 +276,7 @@ namespace Proyecto.Menu
         {
             DisableButton();
             picHijoActual.IconChar = IconChar.Home;
-            lblTituloFormHijo.Text = "Home";
+            lblTituloFormHijo.Text = "Inicio";
 
         }
         
@@ -304,11 +297,6 @@ namespace Proyecto.Menu
             lblTituloFormHijo.Text = childForm.Text;
                 
                 
-        }
-
-        private void pnlControl_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void frmMenu_Load(object sender, EventArgs e)
@@ -334,6 +322,74 @@ namespace Proyecto.Menu
                 btnDonadores.Enabled = false;
                 btnDonadores.Visible = false;
             }
+        }
+
+        private void btnMaestros_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlSubMaestros);
+        }
+
+        private void btnCentroAtencion_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            showSubMenu(pnlSubCentroAtencion);
+        }
+
+        private void btnAlumnos_Click(object sender, EventArgs e)
+        {
+            frmAlumnos alumnos = new frmAlumnos();
+            //alumnos.Usuario = Usuario;
+            hideSubMenu();
+            openChildForm(new frmAlumnos());
+        }
+
+        private void btnIncidencias_Click(object sender, EventArgs e)
+        {
+            frmIncidencias incidencias = new frmIncidencias();
+            //incidencias.Usuario = Usuario;
+            hideSubMenu();
+            openChildForm(new frmIncidencias());
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            frmReporteSemanal reporteSemanal = new frmReporteSemanal();
+            //reporteSemanal.Usuario = Usuario;
+            hideSubMenu();
+            openChildForm(new frmReporteSemanal());
+        }
+
+        private void btnAsistenciaFamiliar_Click(object sender, EventArgs e)
+        {
+            frmAsistenciaFamiliar asistenciaFamiliar = new frmAsistenciaFamiliar();
+            //asistenciaFamiliar.Usuario = Usuario;
+            hideSubMenu();
+            openChildForm(new frmAsistenciaFamiliar());
+        }
+
+        private void btnRestauracion_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            frmRestauracion Restauracion = new frmRestauracion();
+            Restauracion.Usuario = Usuario;
+            hideSubMenu();
+            this.Close();
+            Restauracion.Show();
+            //openChildForm(new frmRestauracion());
+        }
+
+        private void picMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void picMaximizar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
         }
     }
 }
