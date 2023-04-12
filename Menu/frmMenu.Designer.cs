@@ -32,7 +32,6 @@
             this.picMinimizar = new System.Windows.Forms.PictureBox();
             this.lblTituloFormHijo = new System.Windows.Forms.Label();
             this.picHijoActual = new FontAwesome.Sharp.IconPictureBox();
-            this.picMaximizar = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.picBarra = new System.Windows.Forms.PictureBox();
             this.pnlLogo = new System.Windows.Forms.Panel();
@@ -69,7 +68,6 @@
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).BeginInit();
             this.pnlLogo.SuspendLayout();
@@ -89,7 +87,6 @@
             this.pnlTitulo.Controls.Add(this.picMinimizar);
             this.pnlTitulo.Controls.Add(this.lblTituloFormHijo);
             this.pnlTitulo.Controls.Add(this.picHijoActual);
-            this.pnlTitulo.Controls.Add(this.picMaximizar);
             this.pnlTitulo.Controls.Add(this.picCerrar);
             this.pnlTitulo.Controls.Add(this.picBarra);
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -102,9 +99,8 @@
             // picMinimizar
             // 
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMinimizar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
-            this.picMinimizar.Location = new System.Drawing.Point(671, 0);
+            this.picMinimizar.Location = new System.Drawing.Point(686, 0);
             this.picMinimizar.Name = "picMinimizar";
             this.picMinimizar.Size = new System.Drawing.Size(26, 32);
             this.picMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,25 +133,11 @@
             this.picHijoActual.TabIndex = 3;
             this.picHijoActual.TabStop = false;
             // 
-            // picMaximizar
-            // 
-            this.picMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picMaximizar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.picMaximizar.Image = global::Proyecto.Properties.Resources.max;
-            this.picMaximizar.Location = new System.Drawing.Point(697, 0);
-            this.picMaximizar.Name = "picMaximizar";
-            this.picMaximizar.Size = new System.Drawing.Size(26, 32);
-            this.picMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picMaximizar.TabIndex = 2;
-            this.picMaximizar.TabStop = false;
-            this.picMaximizar.Click += new System.EventHandler(this.picMaximizar_Click);
-            // 
             // picCerrar
             // 
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
-            this.picCerrar.Location = new System.Drawing.Point(723, 0);
+            this.picCerrar.Location = new System.Drawing.Point(716, 0);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(27, 32);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -798,7 +780,6 @@
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHijoActual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBarra)).EndInit();
             this.pnlLogo.ResumeLayout(false);
@@ -817,7 +798,6 @@
         #endregion
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.PictureBox picBarra;
-        private System.Windows.Forms.PictureBox picMaximizar;
         private System.Windows.Forms.PictureBox picCerrar;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.PictureBox picLogo;

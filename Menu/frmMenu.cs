@@ -384,12 +384,12 @@ namespace Proyecto.Menu
             WindowState = FormWindowState.Minimized;
         }
 
-        private void picMaximizar_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
-        }
+      //private void picMaximizar_Click(object sender, EventArgs e)
+     // {
+    //     if (WindowState == FormWindowState.Normal)
+    //         WindowState = FormWindowState.Maximized;
+    //     else
+    //         WindowState = FormWindowState.Normal;
+     // }
     }
 }
