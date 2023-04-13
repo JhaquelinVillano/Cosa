@@ -672,7 +672,6 @@
             // 
             // dtpIngreso
             // 
-            this.dtpIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpIngreso.Location = new System.Drawing.Point(278, 662);
             this.dtpIngreso.Name = "dtpIngreso";
             this.dtpIngreso.Size = new System.Drawing.Size(134, 20);
@@ -680,14 +679,13 @@
             // 
             // lblFechaIngreso
             // 
-            this.lblFechaIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFechaIngreso.BackColor = System.Drawing.Color.White;
             this.lblFechaIngreso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lblFechaIngreso.Enabled = false;
             this.lblFechaIngreso.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIngreso.Location = new System.Drawing.Point(241, 633);
+            this.lblFechaIngreso.Location = new System.Drawing.Point(278, 633);
             this.lblFechaIngreso.Name = "lblFechaIngreso";
-            this.lblFechaIngreso.Size = new System.Drawing.Size(221, 23);
+            this.lblFechaIngreso.Size = new System.Drawing.Size(134, 23);
             this.lblFechaIngreso.TabIndex = 103;
             this.lblFechaIngreso.Text = "Fecha de Ingreso";
             this.lblFechaIngreso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
