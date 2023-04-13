@@ -98,6 +98,7 @@
             // 
             // picMinimizar
             // 
+            this.picMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picMinimizar.Image = global::Proyecto.Properties.Resources.min;
             this.picMinimizar.Location = new System.Drawing.Point(686, 0);
@@ -135,6 +136,7 @@
             // 
             // picCerrar
             // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCerrar.Image = global::Proyecto.Properties.Resources.cerrar;
             this.picCerrar.Location = new System.Drawing.Point(716, 0);

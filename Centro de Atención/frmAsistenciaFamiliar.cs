@@ -16,5 +16,6 @@ namespace Proyecto.Centro_de_Atención
         {
             InitializeComponent();
         }
+
     }
 }
